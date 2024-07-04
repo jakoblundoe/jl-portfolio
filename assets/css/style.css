@@ -9,7 +9,7 @@ body {
 }
 
 .backgroundcontainer{
-    background-image: url('../static/pressphoto-jln.jpeg');
+    background-image: url('/img/pressphoto-jln.jpeg');
     background-repeat: no-repeat;
     background-position: fixed;
     background-size: cover;

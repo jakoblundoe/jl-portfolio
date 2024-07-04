@@ -5,11 +5,11 @@
     </head>
     <body>
         <div class="backgroundcontainer">
+            {{ partial "header.html" . }}
+            {{ block "main" . }}
+            {{ end }}
+            {{ partial "nav.html" . }}
+            {{ partial "footer.html" . }}
         </div>
-        {{ partial "header.html" . }}
-        {{ block "main" . }}
-        {{ end }}
-        {{ partial "nav.html" . }}
-        {{ partial "footer.html" . }}
     </body>
 </html>
