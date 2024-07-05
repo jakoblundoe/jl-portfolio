@@ -8,7 +8,7 @@
 
 <div class="navbar">
     {{ $pages := .Site.GetPage "/pages"}}
-    {{ range $pages.Pages }}
+    {{ range sort $pages.Pages "Params.navbarOrder" }}
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     {{ end }}
 </div>
