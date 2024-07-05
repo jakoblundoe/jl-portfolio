@@ -1,7 +1,14 @@
+<!-- <div class="navbar">
+    <a href="/">Home</a>
+    <a href="/pages/mywork">About me</a>
+    <a href="/pages/showreel">Showreel</a>
+    <a href="/pages/about">My work</a>
+    <a href="/pages/otherprojects">Other projects</a>
+</div> -->
+
 <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="work.html">Work</a>
-    <a href="test.html">Test</a>
+    {{ $pages := .Site.GetPage "/pages"}}
+    {{ range $pages.Pages }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
 </div>

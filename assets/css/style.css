@@ -43,7 +43,7 @@ a {
     background-color: rgba(54, 54, 54, .55);
     box-shadow: 2px 4px 16px rgba(0,0,0,.06);
     border-radius: 2px;
-    margin: 20px auto;
+    margin: auto auto 30px auto;
     width: fit-content;
     
     display: flex;
@@ -109,7 +109,7 @@ a {
 .footer {
     display: flex;
     justify-content: center;
-    padding: 8px;
+    padding: 4px;
     background-color: rgb(100, 100, 100);
     opacity: 0.4;
     border: 1 px solid rgb(211, 211, 211);
