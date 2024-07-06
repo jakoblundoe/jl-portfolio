@@ -1,4 +1,7 @@
 <div class="navbar">
+    <div>
+        <a href="/" class="flex items-center"><img src="/img/jl-logo.png" alt="Jakob Lundoe homepage logo" class="pl-4 h-8 w-auto"></a>
+    </div>
     {{ $pages := .Site.GetPage "/pages"}}
     {{ range sort $pages.Pages "Params.navbarOrder" }}
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
