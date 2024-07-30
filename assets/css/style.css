@@ -28,18 +28,69 @@ a {
 }
 
 .header {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
+    align-items: center; */
+
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    padding: 12px 24px;
+    gap: 17px;
+
+    width: 1816px;
+    height: 118px;
+}
+
+.header .textcontainer {
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8.5px 0px;
+    gap: 6px;
+
+    width: 481px;
+    height: 100px;
 }
 
 .header h1 {
-    color: white;
-    font-size: 60px;
-    font-weight: 450;
-    text-shadow: 1px 4px 8px rgb(0, 0, 0);
-    margin: 24px 0 0 32px;
-    padding: 0;
+    width: 462px;
+    height: 48px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FFFFFF;
+    text-shadow: 1px 2px 8px #000000;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.header h2 {
+    width: 481px;
+    height: 29px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    text-shadow: 1px 2px 8px #000000;
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
 
 .navbar {
