@@ -28,48 +28,28 @@ a {
 }
 
 .header {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     padding: 12px 24px;
     gap: 17px;
-
-    width: 1816px;
-    height: 118px;
 }
 
 .header .textcontainer {
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 8.5px 0px;
-    gap: 6px;
+    flex-flow: column nowrap;
 
-    width: 481px;
-    height: 100px;
+    padding: 1vw 0vw;
+    gap: 0.5vw;
 }
 
 .header h1 {
-    width: 462px;
-    height: 48px;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 48px;
+    line-height: min(4vw, 40px);
     color: #FFFFFF;
     text-shadow: 1px 2px 8px #000000;
+
+    font-size: 40px; /* fallback font-size */
+    font-size: min(4vw, 40px);
 
     flex: none;
     order: 0;
@@ -77,17 +57,16 @@ a {
 }
 
 .header h2 {
-    width: 481px;
-    height: 29px;
-    
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
     line-height: 29px;
     color: #FFFFFF;
     text-shadow: 1px 2px 8px #000000;
     
+    font-size: 24px; /* fallback font-size */
+    font-size: min(2.4vw, 24px);
+
     flex: none;
     order: 1;
     flex-grow: 0;
