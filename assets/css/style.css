@@ -44,12 +44,12 @@ a {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    line-height: min(4vw, 40px);
+    line-height: min(6vw, 40px);
     color: #FFFFFF;
     text-shadow: 1px 2px 8px #000000;
 
     font-size: 40px; /* fallback font-size */
-    font-size: min(4vw, 40px);
+    font-size: min(6vw, 40px);
 
     flex: none;
     order: 0;
@@ -65,7 +65,7 @@ a {
     text-shadow: 1px 2px 8px #000000;
     
     font-size: 24px; /* fallback font-size */
-    font-size: min(2.4vw, 24px);
+    font-size: min(3.6vw, 24px);
 
     flex: none;
     order: 1;
