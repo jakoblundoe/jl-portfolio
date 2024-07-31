@@ -6,8 +6,15 @@
     </div>
     <div class="navbaritemcontainer">
         {{ $pages := .Site.GetPage "/pages"}}
-        {{ range sort $pages.Pages "Params.navbarOrder" }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ $currentPage := . }}
+        {{ with .Site.GetPage "/pages"}}
+            {{ range sort $pages.Pages "Params.navbarOrder" }}
+                {{ if eq .RelPermalink $currentPage.RelPermalink }}
+                    <a href="{{ .RelPermalink }}" class="activepage">{{ .Title }}</a>
+                {{ else }}
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                {{ end }}
+            {{ end }}
         {{ end }}
     </div>
 </div>

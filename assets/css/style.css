@@ -132,6 +132,19 @@ a {
     color: #262626;
 }
 
+.navbaritemcontainer a.activepage {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 22px;
+
+    color: #262626;
+
+    text-decoration: underline;
+}
+
 .navbaritemcontainer a:hover {
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
