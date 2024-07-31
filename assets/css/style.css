@@ -17,7 +17,7 @@ body {
 .backgroundcontainer{
     background-image: url('/img/pressphoto-jln.jpeg');
     background-repeat: no-repeat;
-    background-position: fixed;
+    background-position: center;
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -229,11 +229,10 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 14px 20px;
     gap: 21px;
     
-    width: 220px;
-    height: 65px;
+    width: 210px;
+    height: 60px;
     
     border: 2px solid #FFFFFF;
     filter: drop-shadow(1px 1px 4px #000000);
@@ -258,12 +257,9 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 14px 20px;
     gap: 21px;
 
     position: relative;
-    width: 220px;
-    height: 65px;
 
     background: #141414;
     border: 2px solid #FFFFFF;
@@ -291,12 +287,9 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 14px 20px;
     gap: 21px;
 
     position: relative;
-    width: 220px;
-    height: 65px;
 
     background: #444444;
     border: 2px solid #FFFFFF;
