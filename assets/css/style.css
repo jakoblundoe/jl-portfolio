@@ -18,7 +18,7 @@ body {
     background-size: cover;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     justify-content: space-between;
 }
 
@@ -31,20 +31,18 @@ body {
     display: flex;
     flex-flow: column nowrap;
 
-    padding: 1vw 0vw;
-    gap: 0.5vw;
+    padding: 4px 0px;
 }
 
 .header h1 {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
-    line-height: min(6vw, 40px);
     color: #FFFFFF;
     text-shadow: 1px 2px 8px #000000;
 
     font-size: 40px; /* fallback font-size */
-    font-size: min(6vw, 40px);
+    font-size: min(8vw, 50px);
 
     flex: none;
     order: 0;
@@ -60,7 +58,7 @@ body {
     text-shadow: 1px 2px 8px #000000;
     
     font-size: 24px; /* fallback font-size */
-    font-size: min(3.6vw, 24px);
+    font-size: min(4.48vw, 30px);
 
     flex: none;
     order: 1;
@@ -232,6 +230,7 @@ a {
     gap: 21px;
     
     border: 2px solid #FFFFFF;
+    background-color:#2424243d;
     filter: drop-shadow(1px 1px 4px #000000);
 
     transition:
