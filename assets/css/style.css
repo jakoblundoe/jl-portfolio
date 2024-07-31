@@ -8,21 +8,17 @@ body, main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.backgroundcontainer {
+    min-height: 100dvh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     background-color: rgb(51, 51, 51);
 }
 
-.aboutpagetest {
-    background-color: aqua;
-}
-
-.abouttext {
-    color: aqua;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 1rem;
-}
-
-.backgroundcontainer{
+.backgroundimgcontainer {
     background-image: url('/img/pressphoto-jln.jpeg');
     background-repeat: no-repeat;
     background-position: center;

@@ -1,6 +1,10 @@
+{{ with .Params.hide_header }}
+ <!-- No header here! -->
+{{ else }}
 <div class="header">
     <div class="textcontainer">
         <h1>Portfolio | Jakob Lundoe</h1>
         <h2>Sound Designer, Developer and Composer</h2>
     </div>
 </div>
+{{ end }}
