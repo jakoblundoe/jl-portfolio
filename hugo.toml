@@ -3,3 +3,4 @@ languageCode = 'en-us'
 title = 'JL-PORTFOLIO'
 [params]
 name = 'Jakob Lundoe'
+favicon = "my-icon.png"

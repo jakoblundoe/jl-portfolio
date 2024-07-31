@@ -11,6 +11,17 @@ body, main {
     background-color: rgb(51, 51, 51);
 }
 
+.aboutpagetest {
+    background-color: aqua;
+}
+
+.abouttext {
+    color: aqua;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 1rem;
+}
+
 .backgroundcontainer{
     background-image: url('/img/pressphoto-jln.jpeg');
     background-repeat: no-repeat;

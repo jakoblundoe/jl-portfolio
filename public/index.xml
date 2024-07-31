@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on JL-PORTFOLIO</title>
-    <link>https://portfolio.nenn.ink/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home on JL-PORTFOLIO</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://portfolio.nenn.ink/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>https://portfolio.nenn.ink/pages/about/</link>
+      <link>http://localhost:1313/pages/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://portfolio.nenn.ink/pages/about/</guid>
-      <description></description>
+      <guid>http://localhost:1313/pages/about/</guid>
+      <description>Test Test</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>https://portfolio.nenn.ink/pages/contact/</link>
+      <link>http://localhost:1313/pages/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://portfolio.nenn.ink/pages/contact/</guid>
-      <description></description>
+      <guid>http://localhost:1313/pages/contact/</guid>
+      <description>contact page test</description>
     </item>
     <item>
       <title>Showreel</title>
-      <link>https://portfolio.nenn.ink/pages/showreel/</link>
+      <link>http://localhost:1313/pages/showreel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://portfolio.nenn.ink/pages/showreel/</guid>
+      <guid>http://localhost:1313/pages/showreel/</guid>
       <description></description>
     </item>
     <item>
       <title>Work</title>
-      <link>https://portfolio.nenn.ink/pages/work/</link>
+      <link>http://localhost:1313/pages/work/work/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://portfolio.nenn.ink/pages/work/</guid>
+      <guid>http://localhost:1313/pages/work/work/</guid>
       <description></description>
     </item>
   </channel>
