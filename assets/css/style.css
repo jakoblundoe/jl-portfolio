@@ -278,7 +278,7 @@ a {
     border: 2px solid #FFFFFF;
     box-shadow: 1px 1px 4px #000000;
 
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
 .showreelbutton:hover p {
@@ -318,6 +318,138 @@ a {
     color: #ffffff;
     
     text-shadow: 0px 0px 0px #000000;
+}
+
+.contactcontent {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: center;
+    gap: 40px;
+
+    margin: 50px 0px;
+}
+
+.biotitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+}
+
+.biotitle h3 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    text-shadow: 1px 2px 8px #000000;
+}
+
+.emailcontainer {
+    display: flex; 
+    flex-flow: column nowrap;
+    align-self: center;
+    padding: 0px;
+
+    gap: 10px;
+}
+
+.buttoncontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+}
+
+.emailbutton {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 29px;
+    gap: 10px;
+
+    background: #292929;
+    border: 1.5px solid #FFFFFF;
+    border-radius: 7px;
+
+    transition:
+    all 100ms;
+}
+
+.emailbutton p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    transition:
+    all 100ms;
+}
+
+.emailbutton:hover {
+    /* background: #1a1a1a; */
+    box-sizing: border-box;
+
+    padding: 20px 29px;
+    gap: 10px;
+
+    position: relative;
+
+    background: #202020;
+    border: 1.5px solid #FFFFFF;
+    border-radius: 7px;
+
+    scale: 1.01;
+}
+
+.emailbutton:hover p {
+    background: #202020;
+    scale: 1.01;
+
+    font-weight: 500;
+}
+
+.emailbutton:active {
+    background: #707070;
+}
+
+.emailbutton:active p {
+    background: #707070;
+}
+
+.contactinfo {
+    display: flex;
+    align-self: center;
+    padding: 4px;
+    gap: 10px;
+}
+
+.contactinfo p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 17px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #FFFFFF;
 }
 
 .contentbox {

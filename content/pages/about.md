@@ -2,6 +2,7 @@
 layout: about
 title: About
 navbarOrder: 3
+hide_header: true
 background_class: backgroundcontainer
 ---
 

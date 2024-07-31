@@ -19,7 +19,7 @@
       <link>http://localhost:1313/pages/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/pages/contact/</guid>
-      <description>contact page test</description>
+      <description>Let&amp;rsquo;s talk!</description>
     </item>
     <item>
       <title>Showreel</title>
@@ -33,7 +33,7 @@
       <link>http://localhost:1313/pages/work/work/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/pages/work/work/</guid>
-      <description></description>
+      <description>test</description>
     </item>
   </channel>
 </rss>
