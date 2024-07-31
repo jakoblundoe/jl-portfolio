@@ -271,7 +271,6 @@ a {
 }
 
 .showreelbutton:hover p {
-    font-family: 'Roboto Mono', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 20px;
@@ -300,7 +299,6 @@ a {
 }
 
 .showreelbutton:active p {
-    font-family: 'Roboto Mono', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 20px;
