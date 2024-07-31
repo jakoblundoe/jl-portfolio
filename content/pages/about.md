@@ -1,5 +1,5 @@
 ---
-title: About me
-navbarOrder: 1
+title: About
+navbarOrder: 3
 ---
 About me content

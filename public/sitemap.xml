@@ -6,16 +6,16 @@
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
+    <loc>http://localhost:1313/pages/contact/</loc>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-  </url><url>
-    <loc>http://localhost:1313/pages/mywork/</loc>
-  </url><url>
-    <loc>http://localhost:1313/pages/otherprojects/</loc>
   </url><url>
     <loc>http://localhost:1313/pages/</loc>
   </url><url>
     <loc>http://localhost:1313/pages/showreel/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/pages/work/</loc>
   </url>
 </urlset>

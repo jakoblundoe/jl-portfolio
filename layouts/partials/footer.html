@@ -2,7 +2,9 @@
  <!-- No footer here! -->
 {{ else }}
 <div class="footer">
-    @2024 - All rights reserved
+    <div class="navbar">
+      {{ partial "nav.html" . }}
+    </div>
 </div>
 {{/* <!-- <footer>
    Website made by {{ .Site.Params.name }} in {{ now.Year }}

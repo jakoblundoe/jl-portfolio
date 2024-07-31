@@ -8,25 +8,18 @@
     <language>en-us</language>
     <atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>About me</title>
+      <title>About</title>
       <link>http://localhost:1313/pages/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/pages/about/</guid>
       <description>About me content</description>
     </item>
     <item>
-      <title>My work</title>
-      <link>http://localhost:1313/pages/mywork/</link>
+      <title>Contact</title>
+      <link>http://localhost:1313/pages/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/mywork/</guid>
-      <description>My work content</description>
-    </item>
-    <item>
-      <title>Other projects</title>
-      <link>http://localhost:1313/pages/otherprojects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/otherprojects/</guid>
-      <description>My other projects content</description>
+      <guid>http://localhost:1313/pages/contact/</guid>
+      <description>Contact page</description>
     </item>
     <item>
       <title>Showreel</title>
@@ -34,6 +27,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/pages/showreel/</guid>
       <description>My showreel content</description>
+    </item>
+    <item>
+      <title>Work</title>
+      <link>http://localhost:1313/pages/work/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pages/work/</guid>
+      <description>My work content</description>
     </item>
   </channel>
 </rss>

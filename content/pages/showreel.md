@@ -1,5 +1,5 @@
 ---
 title: Showreel
-navbarOrder: 2
+navbarOrder: 1
 ---
 My showreel content
