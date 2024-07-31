@@ -403,7 +403,6 @@ a {
 }
 
 .emailbutton:hover {
-    /* background: #1a1a1a; */
     box-sizing: border-box;
 
     padding: 20px 29px;
@@ -426,11 +425,11 @@ a {
 }
 
 .emailbutton:active {
-    background: #707070;
+    background: #444444;
 }
 
 .emailbutton:active p {
-    background: #707070;
+    background: #444444;
 }
 
 .contactinfo {
