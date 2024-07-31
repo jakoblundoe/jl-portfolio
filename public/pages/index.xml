@@ -12,28 +12,28 @@
       <link>http://localhost:1313/pages/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/pages/about/</guid>
-      <description>About me content</description>
+      <description></description>
     </item>
     <item>
       <title>Contact</title>
       <link>http://localhost:1313/pages/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/pages/contact/</guid>
-      <description>Contact page</description>
+      <description></description>
     </item>
     <item>
       <title>Showreel</title>
       <link>http://localhost:1313/pages/showreel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/pages/showreel/</guid>
-      <description>My showreel content</description>
+      <description></description>
     </item>
     <item>
       <title>Work</title>
       <link>http://localhost:1313/pages/work/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/pages/work/</guid>
-      <description>My work content</description>
+      <description></description>
     </item>
   </channel>
 </rss>

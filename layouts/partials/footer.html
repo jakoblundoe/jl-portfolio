@@ -2,11 +2,11 @@
  <!-- No footer here! -->
 {{ else }}
 <div class="footer">
-    <div class="navbar">
-      {{ partial "nav.html" . }}
-    </div>
+  <div class="navbar">
+    {{ partial "nav.html" . }}
+  </div>
+  <div class="somelinkcontainer">
+    {{ partial "somelinks.html" . }}
+  </div>
 </div>
-{{/* <!-- <footer>
-   Website made by {{ .Site.Params.name }} in {{ now.Year }}
- </footer> --> */}}
 {{ end }}
