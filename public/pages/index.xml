@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on JL-PORTFOLIO</title>
-    <link>http://localhost:1313/pages/</link>
+    <link>https://portfolio.nenn.ink/pages/</link>
     <description>Recent content in Pages on JL-PORTFOLIO</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://portfolio.nenn.ink/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>http://localhost:1313/pages/about/</link>
+      <link>https://portfolio.nenn.ink/pages/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/about/</guid>
+      <guid>https://portfolio.nenn.ink/pages/about/</guid>
       <description>Hi! My name is Jakob and I work with audio, interaction design and everything in between! As a sound designer and software developer I am highly passionate about designing and developing digital interactive experiences.&#xA;My experience includes work within the fields of sound design, digital design, software development, game development, scoring and music composition.&#xA;I am currently open to work and seeking a position, where these skills can be put to good use in the development of inspirational and meaningful products as well as digital experiences.</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>http://localhost:1313/pages/contact/</link>
+      <link>https://portfolio.nenn.ink/pages/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/contact/</guid>
+      <guid>https://portfolio.nenn.ink/pages/contact/</guid>
       <description>Let&amp;rsquo;s talk!</description>
     </item>
     <item>
       <title>Showreel</title>
-      <link>http://localhost:1313/pages/showreel/</link>
+      <link>https://portfolio.nenn.ink/pages/showreel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/showreel/</guid>
+      <guid>https://portfolio.nenn.ink/pages/showreel/</guid>
       <description></description>
     </item>
     <item>
       <title>Work</title>
-      <link>http://localhost:1313/pages/work/work/</link>
+      <link>https://portfolio.nenn.ink/pages/work/work/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/work/work/</guid>
+      <guid>https://portfolio.nenn.ink/pages/work/work/</guid>
       <description>test</description>
     </item>
   </channel>
