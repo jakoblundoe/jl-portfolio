@@ -1,4 +1,3 @@
-# Portfolio - Web Development Project
 ## Description
 #### This is the repository for the development of my portfolio website.
 
