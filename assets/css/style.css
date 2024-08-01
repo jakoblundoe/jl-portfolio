@@ -387,7 +387,7 @@ a {
     all 100ms;
 }
 
-.emailbutton p {
+.buttoncontainer a {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -417,7 +417,7 @@ a {
     scale: 1.01;
 }
 
-.emailbutton:hover p {
+.buttoncontainer:hover a {
     background: #202020;
     scale: 1.01;
 
@@ -428,7 +428,7 @@ a {
     background: #444444;
 }
 
-.emailbutton:active p {
+.buttoncontainer:active a {
     background: #444444;
 }
 
