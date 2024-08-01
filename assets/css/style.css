@@ -451,6 +451,120 @@ a {
     color: #FFFFFF;
 }
 
+.aboutcontentcontainer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: self-start;
+    justify-content: center;
+    padding: 0px;
+    gap: 6px;
+
+    margin: 50px 240px 0px 240px;
+}
+
+.aboutdescription {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 29px 34px;
+    gap: 17px;
+    flex: none;
+
+    width: 457px;
+}
+
+.aboutdescription .biotitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 29px 34px;
+    gap: 17px;
+}
+
+.biotitle h2 {
+    width: 27px;
+    height: 24px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 28px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    text-shadow: 1px 2px 8px #000000;
+}
+
+.aboutdescription .biosubtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    border-radius: 0px;
+}
+
+.biosubtitle h3 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 24px;
+    text-align: justify;
+
+    color: #FFFFFF;
+}
+
+.aboutdescription .biodescription {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    border-radius: 0px;
+}
+
+.biodescription p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 19px;
+    text-align: justify;
+    /* line-height: 17px; */
+
+    color: #FFFFFF;
+}
+
+.aboutpresent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 34px;
+    gap: 10px;
+
+    width: 520px;
+    height: 479px;
+
+    margin-top: 95px;
+
+    /* Inside auto layout */
+    flex: none;
+}
+
+.aboutpresent img {
+    display: flex;
+    flex: auto;
+    padding: 12px 34px;
+    gap: 10px;
+    size: 80%;
+}
+
+
 .contentbox {
     margin: 0;
     padding: 0;
