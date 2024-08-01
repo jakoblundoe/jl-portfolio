@@ -12,4 +12,4 @@ Obsidian as my project management tool!
 
 ### Img
 
-[alt text](portfolio_landingpage_img.png)
+![landing_page_img](portfolio_landingpage_img.png)
