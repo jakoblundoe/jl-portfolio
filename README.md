@@ -15,3 +15,4 @@ The development version can be accessed at [https://portfolio.jakoblundoe.com](h
 ## Img
 
 ![landing_page_img](portfolio_landingpage_img.png)
+Photo by Aske Stubkjær
