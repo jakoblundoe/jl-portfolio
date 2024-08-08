@@ -97,15 +97,16 @@ a, p, h1, h2, h3, h4, h5, h6 {
     justify-content: flex-start;
     align-items: center;
 
-    padding: 4px 1px;
     gap: 18px;
+    margin-right: -4px;
+
+    min-height: 56px;
 }
 
 .navbar .logocontainer {
     display: flex;
     width: 50px;
     height: auto;
-    padding: 4px 6px;
     align-items: center;
     justify-content: center;
     opacity: .8;
