@@ -152,16 +152,13 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .navbaritemcontainer a:hover {
-    font-weight: 900;
-    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-    transform: scale(1.01);
-    opacity: .8;
+    text-shadow: 0px 2px 10px rgba(1, 1, 1, 0.2);
+    /* transform: scale(1.01); */
+    opacity: .75;
 }
 
 .navbaritemcontainer a:active {
-    font-weight: 900;
     text-shadow: 1px 2px 4px rgba(0, 0, 0, 0);
-    transform: scale(1.01);
     opacity: .6;
 }
 
