@@ -66,12 +66,12 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .somelinkcontainer .someitem:hover {
-    opacity: .6;
+    opacity: .7;
     transform: scale(1.05);
 }
 
 .somelinkcontainer .someitem:active {
-    opacity: .2;
+    opacity: .5;
     transform: scale(1.05);
 }
 
@@ -115,12 +115,12 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar .logocontainer:hover {
-    opacity: 1;
+    opacity: .7;
     transform: scale(1.05);
 }
 
 .navbar .logocontainer:active {
-    opacity: .6;
+    opacity: .5;
     transform: scale(1.05);
 }
 
@@ -152,17 +152,17 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .navbaritemcontainer a:hover {
-    font-weight: 700;
-    color: #262626;
-    
+    font-weight: 900;
     text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+    opacity: .8;
 }
 
 .navbaritemcontainer a:active {
-    font-weight: 700;
-    color: #646464;
-    
+    font-weight: 900;
     text-shadow: 1px 2px 4px rgba(0, 0, 0, 0);
+    transform: scale(1.01);
+    opacity: .6;
 }
 
 .navbaritemcontainer .activepage {
