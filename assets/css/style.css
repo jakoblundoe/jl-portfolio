@@ -12,6 +12,7 @@ body {
 a, p, h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
     margin: 0;
     padding: 0;
 }
@@ -116,17 +117,11 @@ a, p, h1, h2, h3, h4, h5, h6 {
 .navbar .logocontainer:hover {
     opacity: 1;
     transform: scale(1.05);
-
-    transition:
-    all 100ms;
 }
 
 .navbar .logocontainer:active {
     opacity: .6;
     transform: scale(1.05);
-
-    transition:
-    all 100ms;
 }
 
 .navbar .logo {
@@ -187,48 +182,25 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .header h1 {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
     color: #FFFFFF;
     text-shadow: 1px 2px 8px #000000;
 
     font-size: 40px; /* fallback font-size */
     font-size: min(8vw, 50px);
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
 
 .header h2 {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
     line-height: 29px;
     color: #FFFFFF;
     text-shadow: 1px 2px 8px #000000;
     
     font-size: 24px; /* fallback font-size */
     font-size: min(4.48vw, 30px);
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
 }
 
 .showreelbutton {
-    box-sizing: border-box;
-    
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-
     padding: 18px 30px;
-
     gap: 21px;
-    
     border: 2px solid #FFFFFF;
     background-color:#2424243d;
     filter: drop-shadow(1px 1px 4px #000000);
@@ -239,8 +211,6 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
 .showreelbutton p {
     font-family: 'Roboto Mono', monospace;
-    font-style: normal;
-    font-weight: 400;
     font-size: 20px;
     line-height: 26px;
 
@@ -249,19 +219,10 @@ a, p, h1, h2, h3, h4, h5, h6 {
     text-shadow: 2px 4px 8px #000000;
 
     transition:
-    all 300ms;
+    all 200ms;
 }
 
 .showreelbutton:hover {
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-
     background: #141414b6;
     border: 2px solid #FFFFFF;
     box-shadow: 1px 1px 4px #000000;
@@ -270,7 +231,6 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .showreelbutton:hover p {
-    font-style: normal;
     font-weight: 900;
     font-size: 20px;
     line-height: 26px;
@@ -281,15 +241,6 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .showreelbutton:active {
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-
     background: #444444;
     border: 2px solid #FFFFFF;
     box-shadow: 0px 0px 0px #000000;
@@ -298,7 +249,6 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .showreelbutton:active p {
-    font-style: normal;
     font-weight: 900;
     font-size: 20px;
     line-height: 26px;
