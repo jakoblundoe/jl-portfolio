@@ -55,12 +55,19 @@ a, p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
     margin: auto 0 auto 0;
 }
 
-.videoplaceholder {
-    background-color: aquamarine;
+
+.videocontent video {
+    width: min(90vw, 90%);
+    height: auto;
+    max-width: 1200px;
+    max-height: auto;
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px #000000;
+
+    margin: 50px 0 34px 0;
 }
 
 .footer {
@@ -224,7 +231,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 34px 0 34px 0;
+    margin: 30px 0 34px 0;
 }
 
 .showreelbutton {
