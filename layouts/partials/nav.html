@@ -1,14 +1,14 @@
 <div class="navbar">
     <div class="logocontainer">
-        <a href="/">
+        <a href="/showreel">
             <img src="/img/jl-logo.png" alt="Jakob Lundoe homepage logo" class="logo">
         </a>
     </div>
     <div class="navbaritemcontainer">
         {{ $pages := .Site.GetPage "/pages"}}
         {{ $currentPage := . }}
-        {{ with .Site.GetPage "/pages"}}
-            {{ range sort $pages.Pages "Params.navbarOrder" }}
+        {{ with $pages }}
+            {{ range sort .Pages "Params.navbarOrder" }}
                 {{ if eq .RelPermalink $currentPage.RelPermalink }}
                     <a href="{{ .RelPermalink }}" class="activepage">{{ .Title }}</a>
                 {{ else }}

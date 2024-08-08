@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on JL-PORTFOLIO</title>
+    <title>Showreel on JL-PORTFOLIO</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Home on JL-PORTFOLIO</description>
+    <description>Recent content in Showreel on JL-PORTFOLIO</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>http://localhost:1313/pages/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>As a sound designer and software developer I am highly passionate about designing and developing digital interactive experiences.&#xA;My experience includes work within the fields of sound design, digital design, software development, game development, scoring and music composition.&#xA;I am currently open to work and seeking a position, where these skills can be put to good use in the development of inspirational and meaningful products as well as digital experiences.</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>http://localhost:1313/pages/contact/</link>
+      <link>http://localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/contact/</guid>
+      <guid>http://localhost:1313/contact/</guid>
       <description>LET&amp;rsquo;S TALK!</description>
     </item>
     <item>
       <title>Showreel</title>
-      <link>http://localhost:1313/pages/showreel/</link>
+      <link>http://localhost:1313/showreel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/showreel/</guid>
-      <description></description>
+      <guid>http://localhost:1313/showreel/</guid>
+      <description>Play Showreel</description>
     </item>
     <item>
       <title>Work</title>
-      <link>http://localhost:1313/pages/work/work/</link>
+      <link>http://localhost:1313/work/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/work/work/</guid>
-      <description>test</description>
+      <guid>http://localhost:1313/work/</guid>
+      <description>spacing</description>
     </item>
   </channel>
 </rss>

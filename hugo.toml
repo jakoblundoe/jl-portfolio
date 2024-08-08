@@ -3,3 +3,5 @@ languageCode = 'en-us'
 title = 'JL-PORTFOLIO'
 [params]
 name = 'Jakob Lundoe'
+[permalinks]
+pages = "/:slug/"
