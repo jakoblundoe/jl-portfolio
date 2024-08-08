@@ -141,18 +141,20 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
 .navbaritemcontainer a {
     font-family: 'Roboto Mono', monospace;
-    font-weight: 500;
+    font-weight: 400;
 
     font-size: 19px;
+    letter-spacing: 0.5px;
 
     color: #262626;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 
     transition:
     all 100ms;
 }
 
 .navbaritemcontainer a:hover {
-    text-shadow: 0px 2px 10px rgba(1, 1, 1, 0.2);
+    text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
     /* transform: scale(1.01); */
     opacity: .75;
 }
