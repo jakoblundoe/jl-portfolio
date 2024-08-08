@@ -60,7 +60,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
 
 .videocontent video {
-    width: min(90vw, 90%);
+    width: min(85vw, 90%);
     height: auto;
     max-width: 1200px;
     max-height: auto;
