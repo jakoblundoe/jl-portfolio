@@ -1,0 +1,7 @@
+{{ $js := resources.Get "js/main.js" }}
+{{ if hugo.IsProduction }}
+    {{ $js = $js | js.Build (dict "targetPath" "js/bundle.js" "minify" true) | fingerprint }}
+{{ else }}
+    {{ $js = $js | js.Build (dict "targetPath" "js/bundle.dev.js") }}
+{{ end }}
+<script src="{{ $js.RelPermalink }}"></script>
