@@ -470,6 +470,8 @@ a, p, h1, h2, h3, h4, h5, h6 {
     background: white;
     background-blend-mode: normal, soft-light;
     mix-blend-mode: normal;
+
+    padding-bottom: 56px;
 }
 
 .about_page a, .about_page p, .about_page h1, .about_page h2,
@@ -494,7 +496,9 @@ a, p, h1, h2, h3, h4, h5, h6 {
     flex-flow: row wrap;
     justify-content: center;
     gap: 60px;
-    margin: 30px 35px;
+    /* margin: 30px 35px; */
+    padding: 45px 55px;
+    margin: auto;
 }
 
 .aboutdescription {
