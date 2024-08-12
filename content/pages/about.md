@@ -3,7 +3,7 @@ layout: about
 title: About
 navbarOrder: 3
 hide_header: true
-background_class: backgroundcontainer
+page_class: default_page
 ---
 As a sound designer and software developer I am highly passionate about designing and developing digital interactive experiences.
 

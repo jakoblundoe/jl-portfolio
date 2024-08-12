@@ -2,6 +2,6 @@
 layout: showreel
 title: Showreel
 navbarOrder: 1
-background_class: backgroundimgcontainer
+page_class: showreel_page
 ---
 Play Showreel

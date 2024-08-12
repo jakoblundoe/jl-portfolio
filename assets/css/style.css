@@ -16,7 +16,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
-.backgroundcontainer {
+.default_page {
     min-height: 100dvh;
     display: flex;
     flex-flow: column nowrap;
@@ -31,7 +31,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     mix-blend-mode: normal;
 }
 
-.backgroundimgcontainer {
+.index_page, .showreel_page {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -305,11 +305,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     margin: 80px 0px 140px 0px;
 }
 
-.page-contact h1 h2 {
-    color: #000000;
-}
-
-.contactbgcontainer {
+.contact_page {
     min-height: 100dvh;
     display: flex;
     flex-flow: column nowrap;
@@ -322,6 +318,10 @@ a, p, h1, h2, h3, h4, h5, h6 {
     #ffffff;
     background-blend-mode: normal, soft-light;
     mix-blend-mode: normal;
+}
+
+.contact_page .header h1, .contact_page .header h2 {
+    color: #000000;
 }
 
 .biotitle {

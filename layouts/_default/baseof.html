@@ -4,7 +4,7 @@
         {{ partial "meta.html" . }}
     </head>
     <body>
-        <div class="{{ .Params.background_class | default "backgroundcontainer"}}">
+        <div class="{{ .Params.page_class | default "default_page"}}">
             {{ partial "header.html" . }}
             {{ block "main" . }}
             {{ end }}

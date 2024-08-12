@@ -2,6 +2,6 @@
 layout: redirect
 redirect: /showreel
 title: Showreel
-background_class: backgroundimgcontainer
+page_class: index_page
 ---
 Play Showreel
