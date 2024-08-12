@@ -363,8 +363,6 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .contacttitle p {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
     font-weight: 500;
     font-size: 54px;
     line-height: 24px;
@@ -413,8 +411,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .buttoncontainer a {
-    font-family: 'Inter', sans-serif;
-    font-weight: 00;
+    font-weight: 400;
     font-size: 30px;
     line-height: 17px;
     letter-spacing: 1px;
@@ -422,7 +419,8 @@ a, p, h1, h2, h3, h4, h5, h6 {
     text-shadow: 0.5px 1px 1px #000000b9;
 
     transition:
-    all 300ms;
+    all 300ms,
+    opacity 100ms;
 }
 
 .emailbutton:hover {
@@ -430,7 +428,9 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .emailbutton:active {
-    /* background: #444444; */
+    opacity: 70%;
+    transition:
+    opacity 100ms;
 }
 
 .contactinfo {
@@ -441,8 +441,6 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .contactinfo p {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
     font-weight: 300;
     font-size: 24px;
     letter-spacing: 1px;
@@ -504,8 +502,6 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .biotitle h2 {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
     font-weight: 600;
     font-size: 28px;
     text-align: center;
@@ -515,13 +511,10 @@ a, p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
     gap: 10px;
 }
 
 .biosubtitle h3 {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
     font-weight: 600;
     font-size: 19px;
     text-align: justify;
