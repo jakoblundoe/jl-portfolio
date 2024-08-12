@@ -320,12 +320,12 @@ a, p, h1, h2, h3, h4, h5, h6 {
     mix-blend-mode: normal;
 }
 
-.contact_page .header {
+.contact_page .header, .about_page .header {
     position: relative;
     /* border-bottom: 1px solid rgb(165, 165, 165); */
 }
 
-.contact_page .header::after {
+.contact_page .header::after, .about_page .header::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -349,7 +349,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     font-size: 18; /* fallback font-size */
     font-size: min(4.28vw, 22.5px);
 }
-.contact_page .footer {
+.contact_page .footer, .about_page .footer {
     border-top: 1px solid #000000;
 }
 
@@ -453,50 +453,62 @@ a, p, h1, h2, h3, h4, h5, h6 {
     color: #252525;
 }
 
+.about_page {
+    min-height: 100dvh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    background: white;
+    background-blend-mode: normal, soft-light;
+    mix-blend-mode: normal;
+}
+
+.about_page a, .about_page p, .about_page h1, .about_page h2,
+.about_page h3, .about_page h4, .about_page h5, .about_page h6 {
+    color: #3f3f3f;
+    text-shadow: none;
+}
+
+.about_page h1 {
+    font-size: 30px; /* fallback font-size */
+    font-size: min(8vw, 37.5px);
+}
+
+.about_page h2 {
+    font-size: 18; /* fallback font-size */
+    font-size: min(4.28vw, 22.5px);
+}
+
 .aboutcontentcontainer {
     display: flex;
     flex-flow: row wrap;
-    align-items: self-start;
     justify-content: center;
-    padding: 0px;
-    gap: 6px;
-
-    margin: 50px 240px 0px 240px;
+    gap: 60px;
+    margin: 30px 5px;
 }
 
 .aboutdescription {
     display: flex;
     flex-flow: column nowrap;
+    justify-content: flex-start;
     align-items: center;
-    padding: 29px 34px;
-    gap: 17px;
-    flex: none;
-
-    width: 457px;
+    width: 400px;
+    gap: 10px;
 }
 
 .aboutdescription .biotitle {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 29px 34px;
-    gap: 17px;
+    align-items: flex-start;
 }
 
 .biotitle h2 {
-    width: 27px;
-    height: 24px;
-
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
-    line-height: 28px;
     text-align: center;
-
-    color: #FFFFFF;
-
-    text-shadow: 1px 2px 8px #000000;
 }
 
 .aboutdescription .biosubtitle {
@@ -505,8 +517,6 @@ a, p, h1, h2, h3, h4, h5, h6 {
     align-items: flex-start;
     padding: 0px;
     gap: 10px;
-
-    border-radius: 0px;
 }
 
 .biosubtitle h3 {
@@ -514,10 +524,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     font-style: normal;
     font-weight: 600;
     font-size: 19px;
-    line-height: 24px;
     text-align: justify;
-
-    color: #FFFFFF;
 }
 
 .aboutdescription .biodescription {
@@ -536,59 +543,12 @@ a, p, h1, h2, h3, h4, h5, h6 {
     font-weight: 200;
     font-size: 19px;
     text-align: justify;
-    /* line-height: 17px; */
-
-    color: #FFFFFF;
 }
 
-.aboutpresent {
+.aboutimgcontainer {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
     padding: 12px 34px;
-    gap: 10px;
-
-    width: 520px;
-    height: 479px;
-
-    margin-top: 95px;
-}
-
-.aboutpresent img {
-    display: flex;
-    flex: auto;
-    padding: 12px 34px;
-    gap: 10px;
-    size: 80%;
-}
-
-
-.contentbox {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem;
-    flex-flow: row wrap;
-    flex: auto;
-    height: 100%;
-    min-height: 0;
-}
-
-.card {
-    background-color: #1a1d22;
-    border: 1px solid rgb(66, 66, 66);
-    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
-    border-radius: 4px;
-    flex: none;
-    margin: 16px;
-    padding: 0 16px 16px;
-    font-size: 20px;
-    font-weight: 500;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    max-height: 396px;
+    width: 460px;
+    height: auto;
 }
