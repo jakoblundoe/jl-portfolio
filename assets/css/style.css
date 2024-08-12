@@ -207,7 +207,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
 .header {
     padding: 2px 24px;
-    gap: 17px;
+    gap: 14px;
 }
 
 .header .textcontainer {
@@ -238,7 +238,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0 34px 0;
+    margin: 10px 0 34px 0;
 }
 
 .showreelbutton {
