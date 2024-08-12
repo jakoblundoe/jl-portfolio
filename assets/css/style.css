@@ -53,15 +53,24 @@ a, p, h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-.videocontent {
-    display: flex;
+#videocontainer {
     justify-content: center;
     align-items: center;
     margin: auto 0 auto 0;
 }
 
+.display_none {
+    display: none;
+    opacity: 0;
+}
 
-.videocontent video {
+.display_flex {
+    display: flex;
+    opacity: 1;
+}
+
+
+#videocontainer video {
     width: min(85vw, 90%);
     height: auto;
     max-width: 1200px;
@@ -70,6 +79,8 @@ a, p, h1, h2, h3, h4, h5, h6 {
     box-shadow: 1px 1px 4px #000000;
 
     margin: 50px 0 34px 0;
+
+    transition: opacity 0.5s ease, height 0.5s ease;
 }
 
 .footer {
@@ -241,7 +252,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     margin: 10px 0 34px 0;
 }
 
-.showreelbutton {
+#showreelbutton {
     box-sizing: border-box;
 
     padding: 18px 30px;
@@ -254,7 +265,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     all 200ms;
 }
 
-.showreelbutton p {
+#showreelbutton p {
     font-family: 'Roboto Mono', monospace;
     font-size: 20px;
     line-height: 26px;
@@ -267,7 +278,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     all 200ms;
 }
 
-.showreelbutton:hover {
+#showreelbutton:hover {
     background: #141414b6;
     border: 2px solid #FFFFFF;
     box-shadow: 1px 1px 4px #000000;
@@ -275,7 +286,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     transform: scale(1.03);
 }
 
-.showreelbutton:hover p {
+#showreelbutton:hover p {
     font-weight: 900;
     font-size: 20px;
     line-height: 26px;
@@ -285,7 +296,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     text-shadow: 2px 4px 8px #000000;
 }
 
-.showreelbutton:active {
+#showreelbutton:active {
     background: #444444;
     border: 2px solid #FFFFFF;
     box-shadow: 0px 0px 0px #000000;
@@ -293,7 +304,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     transform: scale(1.02);
 }
 
-.showreelbutton:active p {
+#showreelbutton:active p {
     font-weight: 900;
     font-size: 20px;
     line-height: 26px;
