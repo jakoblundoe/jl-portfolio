@@ -42,6 +42,8 @@ a, p, h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    padding-bottom: 56px;
 }
 
 .mainviewport {
@@ -304,10 +306,11 @@ a, p, h1, h2, h3, h4, h5, h6 {
 .contactcontent {
     display: flex;
     flex-flow: column nowrap;
-    align-self: center;
+    justify-content: center;
+    align-items: center;
     gap: 40px;
-
-    margin: 80px 0px 140px 0px;
+    margin: auto;
+    padding: 80px 40px 80px 40px;
 }
 
 .contact_page {
@@ -323,6 +326,8 @@ a, p, h1, h2, h3, h4, h5, h6 {
     #ffffff;
     background-blend-mode: normal, soft-light;
     mix-blend-mode: normal;
+
+    padding-bottom: 56px;
 }
 
 .contact_page .header, .about_page .header {
