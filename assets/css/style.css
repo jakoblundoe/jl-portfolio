@@ -466,6 +466,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 .about_page h3, .about_page h4, .about_page h5, .about_page h6 {
     color: #3f3f3f;
     text-shadow: none;
+    letter-spacing: 0.1px;
 }
 
 .about_page h1 {
@@ -483,7 +484,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     flex-flow: row wrap;
     justify-content: center;
     gap: 60px;
-    margin: 30px 5px;
+    margin: 30px 35px;
 }
 
 .aboutdescription {
@@ -491,7 +492,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    width: 400px;
+    width: 410px;
     gap: 10px;
 }
 
@@ -503,8 +504,9 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
 .biotitle h2 {
     font-weight: 600;
-    font-size: 28px;
+    font-size: 36px;
     text-align: center;
+    letter-spacing: 2px;
 }
 
 .aboutdescription .biosubtitle {
@@ -518,6 +520,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     font-size: 19px;
     text-align: justify;
+    letter-spacing: 0.6px;
 }
 
 .aboutdescription .biodescription {
@@ -530,7 +533,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .biodescription p {
-    font-weight: 200;
+    font-weight: 300;
     font-size: 19px;
     text-align: justify;
 }
@@ -538,7 +541,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 .aboutimgcontainer {
     display: flex;
     align-items: center;
-    padding: 12px 34px;
+    padding: 12px 5px;
     width: 460px;
     height: auto;
 }
