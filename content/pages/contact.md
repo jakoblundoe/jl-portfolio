@@ -2,6 +2,6 @@
 layout: contact
 title: Contact
 navbarOrder: 4
-background_class: backgroundcontainer
+background_class: contactbgcontainer
 ---
 LET'S TALK!
