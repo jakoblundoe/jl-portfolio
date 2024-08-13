@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://portfolio.nenn.ink/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://portfolio.nenn.ink/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://portfolio.nenn.ink/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/pages/</loc>
+    <loc>https://portfolio.nenn.ink/pages/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://portfolio.nenn.ink/</loc>
   </url><url>
-    <loc>http://localhost:1313/showreel/</loc>
+    <loc>https://portfolio.nenn.ink/showreel/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://portfolio.nenn.ink/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/work/</loc>
+    <loc>https://portfolio.nenn.ink/work/</loc>
   </url>
 </urlset>
