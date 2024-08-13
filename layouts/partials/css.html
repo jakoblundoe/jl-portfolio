@@ -3,6 +3,6 @@
 {{ if hugo.IsProduction }}
 	{{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
 {{ else }}
-	{{ $styles = $styles | resources.ExecuteAsTemplate (printf "css/style.dev.%v.css" now.UnixMilli) .}}
+	{{ $styles = $styles | resources.ExecuteAsTemplate "css/style.dev.css" . }}
 {{ end }}
 <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
