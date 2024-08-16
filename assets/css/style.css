@@ -25,7 +25,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    background-color: rgba(0, 0, 0, 0.70); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
     pointer-events: none;
@@ -38,7 +38,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
     padding: 0px 28px 0px 20px;
     
-    background-color: rgb(145, 145, 145); /* Black background with opacity */
+    background-color: rgb(110, 110, 110); /* Black background with opacity */
 
     position: fixed;
     bottom: 0;

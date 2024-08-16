@@ -5,6 +5,7 @@ document.addEventListener("keydown", function(keyDownEvent) {
         cinemaModule.helloworldmessage();
         cinemaModule.togglevideo();
         cinemaModule.overlayToggle();
+        cinemaModule.showreelButtonState();
     }
 });
 
@@ -14,5 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
         cinemaModule.helloworldmessage();
         cinemaModule.togglevideo();
         cinemaModule.overlayToggle();
+        cinemaModule.showreelButtonState();
     });
 });

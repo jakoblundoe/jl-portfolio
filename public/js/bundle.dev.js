@@ -25,20 +25,25 @@
   function overlayToggle() {
     const overlayContainer = document.getElementById("overlay");
     const overlayFooter = document.getElementById("footer");
-    const showreelButton = document.getElementById("showreelbutton");
-    if (overlayContainer.classList.contains("display_none") && overlayFooter.classList.contains("normal") && showreelButton.classList.contains("display_flex")) {
+    if (overlayContainer.classList.contains("display_none") && overlayFooter.classList.contains("normal")) {
       overlayContainer.classList.remove("display_none");
       overlayFooter.classList.remove("normal");
-      showreelButton.classList.remove("display_flex");
       overlayContainer.classList.add("display_flex");
       overlayFooter.classList.add("overlay");
-      showreelButton.classList.add("display_none");
-    } else if (overlayContainer.classList.contains("display_flex") && overlayFooter.classList.contains("overlay") && showreelButton.classList.contains("display_none")) {
+    } else if (overlayContainer.classList.contains("display_flex") && overlayFooter.classList.contains("overlay")) {
       overlayContainer.classList.remove("display_flex");
       overlayFooter.classList.remove("overlay");
-      showreelButton.classList.remove("display_none");
       overlayContainer.classList.add("display_none");
       overlayFooter.classList.add("normal");
+    }
+  }
+  function showreelButtonState() {
+    const showreelButton = document.getElementById("showreelbutton");
+    if (showreelButton.classList.contains("display_flex")) {
+      showreelButton.classList.remove("display_flex");
+      showreelButton.classList.add("display_none");
+    } else if (showreelButton.classList.contains("display_none")) {
+      showreelButton.classList.remove("display_none");
       showreelButton.classList.add("display_flex");
     }
   }
@@ -49,6 +54,7 @@
       helloworldmessage();
       togglevideo();
       overlayToggle();
+      showreelButtonState();
     }
   });
   document.addEventListener("DOMContentLoaded", function() {
@@ -57,6 +63,7 @@
       helloworldmessage();
       togglevideo();
       overlayToggle();
+      showreelButtonState();
     });
   });
 })();
