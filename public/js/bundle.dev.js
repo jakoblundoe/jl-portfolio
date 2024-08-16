@@ -1,16 +1,16 @@
 (() => {
   // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\cinemamodule.js
   function togglevideo() {
-    const videocontainer = document.getElementById("videocontainer");
+    const videocontainer2 = document.getElementById("videocontainer");
     const video = document.getElementById("showreelvideo");
     const resetDelay = 500;
-    if (videocontainer.classList.contains("display_none")) {
-      videocontainer.classList.remove("display_none");
-      videocontainer.classList.add("display_flex");
+    if (videocontainer2.classList.contains("display_none")) {
+      videocontainer2.classList.remove("display_none");
+      videocontainer2.classList.add("display_flex");
       video.play();
-    } else if (videocontainer.classList.contains("display_flex")) {
-      videocontainer.classList.remove("display_flex");
-      videocontainer.classList.add("display_none");
+    } else if (videocontainer2.classList.contains("display_flex")) {
+      videocontainer2.classList.remove("display_flex");
+      videocontainer2.classList.add("display_none");
       video.pause();
       setTimeout(() => {
         video.currentTime = 0;
@@ -49,13 +49,15 @@
   }
 
   // <stdin>
+  var firstClick = true;
   document.addEventListener("keydown", function(keyDownEvent) {
-    const videocontainer = document.getElementById("videocontainer");
-    if (keyDownEvent.key === "Escape" && videocontainer.classList.contains("display_flex")) {
+    const videocontainer2 = document.getElementById("videocontainer");
+    if (keyDownEvent.key === "Escape" && videocontainer2.classList.contains("display_flex")) {
+      firstClick = true;
       togglevideo();
       overlayToggle();
       showreelButtonState();
-      videocontainer.offsetHeight;
+      videocontainer2.offsetHeight;
       const showreelButton = document.getElementById("showreelbutton");
       showreelButton.offsetHeight;
       showreelButton.blur();
@@ -67,6 +69,24 @@
       togglevideo();
       overlayToggle();
       showreelButtonState();
+      firstClick = true;
+      videocontainer.offsetHeight;
+      const showreelButton = document.getElementById("showreelbutton");
+      showreelButton.offsetHeight;
+      showreelButton.blur();
     });
+  });
+  window.addEventListener("click", function(clickEvent) {
+    const videocontainer2 = document.getElementById("videocontainer");
+    const showreelvideo = document.getElementById("showreelvideo");
+    if (firstClick) {
+      firstClick = false;
+      return;
+    }
+    if (!document.getElementById("showreelvideo").contains(clickEvent.target) && videocontainer2.classList.contains("display_flex")) {
+      togglevideo();
+      overlayToggle();
+      showreelButtonState();
+    }
   });
 })();
