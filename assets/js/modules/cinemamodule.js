@@ -1,7 +1,3 @@
-export function printhelloworld() {
-    console.log("hello world!");
-}
-
 export function togglevideo(){
     document.addEventListener('DOMContentLoaded', (event) => {
         const button = document.getElementById('showreelbutton');
@@ -14,6 +10,7 @@ export function togglevideo(){
                 if (videocontainer.classList.contains('display_none')) {
                     videocontainer.classList.remove('display_none');
                     videocontainer.classList.add('display_flex');
+                    overlayOn ();
                     video.play();
                 } else {
                     videocontainer.classList.remove('display_flex');
@@ -21,6 +18,7 @@ export function togglevideo(){
                     video.pause();
                     setTimeout(() => {
                         video.currentTime = 0;
+                        overlayOff();
                     }, resetDelay);
                 }
             });
@@ -28,4 +26,12 @@ export function togglevideo(){
             console.error('Button or videocontainer element not found');
         }
     });
+}
+
+function overlayOn () {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function overlayOff() {
+    document.getElementById("overlay").style.display = "none";
 }
