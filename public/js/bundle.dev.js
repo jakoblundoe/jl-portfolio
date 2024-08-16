@@ -17,9 +17,9 @@
             videocontainer.classList.remove("display_flex");
             videocontainer.classList.add("display_none");
             video.pause();
+            overlayOff();
             setTimeout(() => {
               video.currentTime = 0;
-              overlayOff();
             }, resetDelay);
           }
         });
@@ -29,10 +29,18 @@
     });
   }
   function overlayOn() {
-    document.getElementById("overlay").style.display = "block";
+    const overlayContainer = document.getElementById("overlay");
+    if (overlayContainer.classList.contains("display_none")) {
+      overlayContainer.classList.remove("display_none");
+      overlayContainer.classList.add("display_flex");
+    }
   }
   function overlayOff() {
-    document.getElementById("overlay").style.display = "none";
+    const overlayContainer = document.getElementById("overlay");
+    if (overlayContainer.classList.contains("display_flex")) {
+      overlayContainer.classList.remove("display_flex");
+      overlayContainer.classList.add("display_none");
+    }
   }
 
   // <stdin>

@@ -5,7 +5,7 @@
     </head>
     <body>
         <div class="{{ .Params.page_class | default "default_page"}}">
-            <div id="overlay"></div>
+            <div id="overlay" class="display_none"></div>
             {{ partial "header.html" . }}
             {{ block "main" . }}
             {{ end }}
