@@ -6,6 +6,14 @@ document.addEventListener("keydown", function(keyDownEvent) {
         cinemaModule.togglevideo();
         cinemaModule.overlayToggle();
         cinemaModule.showreelButtonState();
+
+        // Force reflow on specific elements
+        videocontainer.offsetHeight; // Trigger reflow
+        const showreelButton = document.getElementById("showreelbutton");
+        showreelButton.offsetHeight; // Trigger reflow
+
+        // Blur the focus from the button
+        showreelButton.blur();
     }
 });
 

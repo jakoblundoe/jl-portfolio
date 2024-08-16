@@ -55,6 +55,10 @@
       togglevideo();
       overlayToggle();
       showreelButtonState();
+      videocontainer.offsetHeight;
+      const showreelButton = document.getElementById("showreelbutton");
+      showreelButton.offsetHeight;
+      showreelButton.blur();
     }
   });
   document.addEventListener("DOMContentLoaded", function() {

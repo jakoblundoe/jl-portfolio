@@ -40,12 +40,10 @@ export function overlayToggle () {
 export function showreelButtonState() {
     const showreelButton = document.getElementById("showreelbutton");
     const showreelButtonText = showreelButton.querySelector("p");
-
     if (showreelButton.classList.contains("notPlaying")) {
         showreelButton.classList.remove("notPlaying");
         showreelButton.classList.add("playing");
-        showreelButtonText.textContent = "Stop Showreel";
-        
+        showreelButtonText.textContent = "Stop Showreel"; 
     } else if (showreelButton.classList.contains("playing")) {
         showreelButton.classList.remove("playing");
         showreelButton.classList.add("notPlaying");
