@@ -1,6 +1,3 @@
-export function helloworldmessage () {
-    console.log("hello world");
-}
 
 export function togglevideo () {
     const videocontainer = document.getElementById("videocontainer");
@@ -42,12 +39,16 @@ export function overlayToggle () {
 
 export function showreelButtonState() {
     const showreelButton = document.getElementById("showreelbutton");
-    if (showreelButton.classList.contains("display_flex")) {
-        showreelButton.classList.remove("display_flex");
-        showreelButton.classList.add("display_none");
+    const showreelButtonText = showreelButton.querySelector("p");
+
+    if (showreelButton.classList.contains("notPlaying")) {
+        showreelButton.classList.remove("notPlaying");
+        showreelButton.classList.add("playing");
+        showreelButtonText.textContent = "Stop Showreel";
         
-    } else if (showreelButton.classList.contains("display_none")) {
-        showreelButton.classList.remove("display_none");
-        showreelButton.classList.add("display_flex");
+    } else if (showreelButton.classList.contains("playing")) {
+        showreelButton.classList.remove("playing");
+        showreelButton.classList.add("notPlaying");
+        showreelButtonText.textContent = "Play Showreel";
     }
 }

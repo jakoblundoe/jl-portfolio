@@ -1,8 +1,5 @@
 (() => {
   // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\cinemamodule.js
-  function helloworldmessage() {
-    console.log("hello world");
-  }
   function togglevideo() {
     const videocontainer = document.getElementById("videocontainer");
     const video = document.getElementById("showreelvideo");
@@ -39,19 +36,22 @@
   }
   function showreelButtonState() {
     const showreelButton = document.getElementById("showreelbutton");
-    if (showreelButton.classList.contains("display_flex")) {
-      showreelButton.classList.remove("display_flex");
-      showreelButton.classList.add("display_none");
-    } else if (showreelButton.classList.contains("display_none")) {
-      showreelButton.classList.remove("display_none");
-      showreelButton.classList.add("display_flex");
+    const showreelButtonText = showreelButton.querySelector("p");
+    if (showreelButton.classList.contains("notPlaying")) {
+      showreelButton.classList.remove("notPlaying");
+      showreelButton.classList.add("playing");
+      showreelButtonText.textContent = "Stop Showreel";
+    } else if (showreelButton.classList.contains("playing")) {
+      showreelButton.classList.remove("playing");
+      showreelButton.classList.add("notPlaying");
+      showreelButtonText.textContent = "Play Showreel";
     }
   }
 
   // <stdin>
   document.addEventListener("keydown", function(keyDownEvent) {
-    if (keyDownEvent.key === "Escape") {
-      helloworldmessage();
+    const videocontainer = document.getElementById("videocontainer");
+    if (keyDownEvent.key === "Escape" && videocontainer.classList.contains("display_flex")) {
       togglevideo();
       overlayToggle();
       showreelButtonState();
@@ -60,7 +60,6 @@
   document.addEventListener("DOMContentLoaded", function() {
     const button = document.getElementById("showreelbutton");
     button.addEventListener("click", function(buttonClickEvent) {
-      helloworldmessage();
       togglevideo();
       overlayToggle();
       showreelButtonState();
