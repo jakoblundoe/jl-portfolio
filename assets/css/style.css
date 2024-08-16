@@ -31,6 +31,25 @@ a, p, h1, h2, h3, h4, h5, h6 {
     pointer-events: none;
 }
 
+#footer.overlay {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    padding: 0px 28px 0px 20px;
+    
+    background-color: rgb(145, 145, 145); /* Black background with opacity */
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    z-index: 4;
+
+    transition:
+    all 500ms;
+}
+
 .default_page {
     min-height: 100dvh;
     display: flex;
@@ -72,6 +91,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     margin: auto 0 auto 0;
+    z-index: 2;
 }
 
 .display_none {
@@ -118,7 +138,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     transition: opacity 0.5s ease, height 0.5s ease;
 }
 
-.footer {
+#footer.normal {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -130,7 +150,10 @@ a, p, h1, h2, h3, h4, h5, h6 {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
+
+    transition:
+    all 500ms;
 }
 
 .somelinkcontainer {
@@ -400,7 +423,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     font-size: 18; /* fallback font-size */
     font-size: min(4.28vw, 22.5px);
 }
-.contact_page .footer, .about_page .footer {
+.contact_page #footer, .about_page #footer {
     border-top: 1px solid #000000;
 }
 

@@ -30,17 +30,24 @@ export function togglevideo(){
 
 function overlayOn () {
     const overlayContainer = document.getElementById("overlay");
+    const overlayFooter = document.getElementById("footer");
 
-    if (overlayContainer.classList.contains("display_none")) {
+    if (overlayContainer.classList.contains("display_none") && overlayFooter.classList.contains("normal")) {
         overlayContainer.classList.remove("display_none");
+        overlayFooter.classList.remove("normal");
         overlayContainer.classList.add("display_flex");
+        overlayFooter.classList.add("overlay");
     }
 }
 
 function overlayOff() {
     const overlayContainer = document.getElementById("overlay");
-    if (overlayContainer.classList.contains("display_flex")) {
+    const overlayFooter = document.getElementById("footer");
+
+    if (overlayContainer.classList.contains("display_flex") && overlayFooter.classList.contains("overlay")) {
         overlayContainer.classList.remove("display_flex");
+        overlayFooter.classList.remove("overlay");
         overlayContainer.classList.add("display_none");
+        overlayFooter.classList.add("normal");
     }
 }
