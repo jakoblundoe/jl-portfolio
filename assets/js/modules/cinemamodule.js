@@ -7,12 +7,17 @@ export function togglevideo () {
     if (videocontainer.classList.contains("display_none")) {
         videocontainer.classList.remove("display_none");
         videocontainer.classList.add("display_flex");
-        video.play();
+        video.volume = 0;
+        fadeInVolume(video, 800, 1);
+        setTimeout(() => {
+            video.play();
+        }, resetDelay);
     } else if (videocontainer.classList.contains("display_flex")) {
         videocontainer.classList.remove("display_flex");
         videocontainer.classList.add("display_none");
-        video.pause();
+        fadeOutVolume(video, 500);
         setTimeout(() => {
+            video.pause();
             video.currentTime = 0;
         }, resetDelay);
     } else {
@@ -49,4 +54,34 @@ export function showreelButtonState() {
         showreelButton.classList.add("notPlaying");
         showreelButtonText.textContent = "Play Showreel";
     }
+}
+
+function fadeOutVolume(video, duration) {
+
+    const step = 0.05; // Volume decrement step
+    const interval = duration / (video.volume / step); // Calculate interval time
+
+    const fadeAudio = setInterval(() => {
+        if (video.volume > 0) {
+            video.volume = Math.max(video.volume - step, 0);
+        } else {
+            video.volume = 0;
+            clearInterval(fadeAudio);
+        }
+    }, interval);
+}
+
+function fadeInVolume(video, duration, targetVolume) {
+
+    const step = 0.05; // Volume increment step
+    const interval = duration / (targetVolume / step);
+    
+    const fadeAudio = setInterval(() => {
+        if (video.volume < targetVolume) {
+            video.volume = Math.min(video.volume + step, targetVolume);
+        } else {
+            video.volume = targetVolume;
+            clearInterval(fadeAudio);
+        }
+    }, interval);
 }

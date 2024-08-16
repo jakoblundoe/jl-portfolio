@@ -7,12 +7,17 @@
     if (videocontainer2.classList.contains("display_none")) {
       videocontainer2.classList.remove("display_none");
       videocontainer2.classList.add("display_flex");
-      video.play();
+      video.volume = 0;
+      fadeInVolume(video, 800, 1);
+      setTimeout(() => {
+        video.play();
+      }, resetDelay);
     } else if (videocontainer2.classList.contains("display_flex")) {
       videocontainer2.classList.remove("display_flex");
       videocontainer2.classList.add("display_none");
-      video.pause();
+      fadeOutVolume(video, 500);
       setTimeout(() => {
+        video.pause();
         video.currentTime = 0;
       }, resetDelay);
     } else {
@@ -46,6 +51,30 @@
       showreelButton.classList.add("notPlaying");
       showreelButtonText.textContent = "Play Showreel";
     }
+  }
+  function fadeOutVolume(video, duration) {
+    const step = 0.05;
+    const interval = duration / (video.volume / step);
+    const fadeAudio = setInterval(() => {
+      if (video.volume > 0) {
+        video.volume = Math.max(video.volume - step, 0);
+      } else {
+        video.volume = 0;
+        clearInterval(fadeAudio);
+      }
+    }, interval);
+  }
+  function fadeInVolume(video, duration, targetVolume) {
+    const step = 0.05;
+    const interval = duration / (targetVolume / step);
+    const fadeAudio = setInterval(() => {
+      if (video.volume < targetVolume) {
+        video.volume = Math.min(video.volume + step, targetVolume);
+      } else {
+        video.volume = targetVolume;
+        clearInterval(fadeAudio);
+      }
+    }, interval);
   }
 
   // <stdin>
