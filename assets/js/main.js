@@ -1,15 +1,18 @@
 import * as cinemaModule from './modules/cinemamodule.js';
 
-cinemaModule.togglevideo();
+document.addEventListener("keydown", function(keyDownEvent) {
+    if (keyDownEvent.key === "Escape") {
+        cinemaModule.helloworldmessage();
+        cinemaModule.togglevideo();
+        cinemaModule.overlayToggle();
+    }
+});
 
-// play showreel functionality
-// document.addEventListener("DOMContentLoaded", function() {
-//     if (window.location.pathname === "/showreel/")
-//     {
-//         // cinemaModule.togglevideo();
-//         console.log("current page is showreel");
-//     }
-//     else{
-//         console.log("current page is not showreel");
-//     }
-// });
+document.addEventListener("DOMContentLoaded", function() {
+    const button = document.getElementById("showreelbutton");
+    button.addEventListener("click", function(buttonClickEvent) {
+        cinemaModule.helloworldmessage();
+        cinemaModule.togglevideo();
+        cinemaModule.overlayToggle();
+    });
+});
