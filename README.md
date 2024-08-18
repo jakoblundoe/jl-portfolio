@@ -10,7 +10,7 @@ The development version can be accessed at [https://portfolio.jakoblundoe.com](h
 > Figma as the design tool<br>
 > CSS, HTML and JS<br>
 > Git as the version control tool<br>
-> Obsidian as my project management tool!
+> Obsidian as my project management tool
 
 ## Img
 
