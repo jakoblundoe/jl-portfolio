@@ -887,11 +887,6 @@ a, p, h1, h2, h3, h4, h5, h6 {
     min-height: 100dvh;
 
     background-color: #ffffff;
-    /* background-image: url('/img/textured_bg_dark_4.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
-
     padding-bottom: 56px;
 }
 .contact_page a, .contact_page p, .contact_page h3, .contact_page h4, .contact_page h5, .contact_page h6 {
@@ -1094,11 +1089,13 @@ a, p, h1, h2, h3, h4, h5, h6 {
 .aboutimgcontainer {
     display: flex;
     align-items: center;
-    width: 480px;
+    width: 438px;
     height: auto;
 
     box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.39);
     border-radius: 2px;
+
+    margin-top: 15px;
 }
 .aboutimgcontainer img {
     border-radius: 1.5px;
