@@ -5,10 +5,10 @@
         </a>
     </div>
     <div class="navbaritemcontainer">
-        {{ $pages := .Site.GetPage "/pages"}}
+        {{ $pages := where .Site.Pages "Params.inNavbar" true}}
         {{ $currentPage := . }}
         {{ with $pages }}
-            {{ range sort .Pages "Params.navbarOrder" }}
+            {{ range sort $pages "Params.navbarOrder" }}
                 {{ if eq .RelPermalink $currentPage.RelPermalink }}
                     <a href="{{ .RelPermalink }}" class="activepage">{{ .Title }}</a>
                 {{ else }}
