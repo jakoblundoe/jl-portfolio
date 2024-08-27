@@ -887,16 +887,20 @@ a, p, h1, h2, h3, h4, h5, h6 {
     min-height: 100dvh;
 
     background-color: #ffffff;
-    background-image: url('/img/textured_bg_dark_4.webp');
+    /* background-image: url('/img/textured_bg_dark_4.webp');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
 
     padding-bottom: 56px;
 }
+.contact_page a, .contact_page p, .contact_page h1, .contact_page h2,
+.contact_page h3, .contact_page h4, .contact_page h5, .contact_page h6 {
+    letter-spacing: 0.1px;
+    color: #141414;
+}
 .contact_page .header, .about_page .header {
     position: relative;
-    /* border-bottom: 1px solid rgb(165, 165, 165); */
 }
 .contact_page .header::after, .about_page .header::after {
     content: '';
@@ -933,8 +937,6 @@ a, p, h1, h2, h3, h4, h5, h6 {
     letter-spacing: 3px;
     text-align: center;
 
-    color: #ffffff;
-
     /* text-shadow: 1px 2px 8px #000000; */
 }
 .emailcontainer {
@@ -964,38 +966,40 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
     margin-top: 30px;
 
-    /* border: 2px solid #e33c72; */
-    border: 2px solid white;
+    border: 2px solid #e33c72;
+    /* border: 2px solid rgb(70, 70, 70); */
 
     border-radius: 7px;
-    box-shadow: 2px 4px 3px black;
-    text-shadow: 2px 4px 3px black;
+    /* box-shadow: 0.5px 0.5px 2px black;
+    text-shadow: 0.5px 0.5px 1px black; */
+    box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.185);
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.164);
 
     transition:
-    all 300ms;
+    all 200ms;
 }
-.buttoncontainer a {
+.buttoncontainer p {
     font-weight: 400;
     font-size: 30px;
     line-height: 17px;
     letter-spacing: 1px;
-    /* color: #e33c72; */
-    color: white;
-
+    color: #e33c72;
     transition:
-    all 300ms,
-    opacity 100ms;
+    all 200ms
 }
 #emailbutton:hover {
-    background: #141414b6;
-    box-shadow: 1px 1px 4px #000000;
+    background: #ffffffb6;
+    box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.575);
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.479);
 
-    transform: scale(1.03);
+    transform: scale(1.02);
+    transition:
+    all 200ms;
 }
 #emailbutton:active {
-    opacity: 70%;
+    opacity: 0.7;
     transition:
-    opacity 100ms;
+    all 200ms;
 }
 .contactinfo {
     display: flex;
@@ -1012,7 +1016,6 @@ a, p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
 
     /* color: #252525; */
-    color: white;
 }
 .about_page {
     display: flex;
@@ -1030,7 +1033,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.1px;
     color: #141414;
 }
-.about_page h1, .about_page h2 {
+.about_page h1, .about_page h2, .contact_page h1, .contact_page h2 {
     text-shadow: 0.2px 0.2px 3.5px #1414142c;
     /* text-shadow: none; */
 }
