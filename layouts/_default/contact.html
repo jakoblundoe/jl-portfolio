@@ -1,14 +1,26 @@
 {{ define "main" }}
 <div class="contactcontent">
     <div class="contacttitle">
-        <p>{{.Params.pageheader}}</p>
+        <p>
+            {{ with .Resources.Get "pagecontent/description.md" }}
+                {{ .Content }}
+            {{ end }}
+        </p>
     </div>
     <div class="emailcontainer">
         <div class="contactinfo">
-            <p>me@jakoblundoe.com</p>
+            <p>
+                {{ with .Resources.Get "pagecontent/email.md"}}
+                    {{ .Content }}
+                {{ end }}
+            </p>
         </div>
         <div class="buttoncontainer">
-            <a href="mailto:me@jakoblundoe.com" id="emailbutton">CLICK TO EMAIL</a>
+            <a href="mailto:me@jakoblundoe.com" id="emailbutton">
+                {{ with .Resources.Get "pagecontent/buttontext.md" }}
+                    {{ .Content }}
+                {{ end }}
+            </a>
         </div>
     </div>
 </div>
