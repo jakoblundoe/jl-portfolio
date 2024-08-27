@@ -569,7 +569,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
     min-height: 100dvh;
 
-    background-image: url('/img/pressphoto-jln.jpeg');
+    background-image: url('/img/pressphoto-jln.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -887,7 +887,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     min-height: 100dvh;
 
     background-color: #000000;
-    background-image: url('/img/textured_bg_dark_4.PNG');
+    background-image: url('/img/textured_bg_dark_4.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1022,7 +1022,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     min-height: 100dvh;
 
     background-color: #bdbdbd;
-    background-image: url('/img/textured_bg_dark_4.PNG');
+    background-image: url('/img/textured_bg_dark_4.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1119,7 +1119,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     min-height: 100dvh;
 
     background-color: #000000;
-    background-image: url('/img/textured_bg_dark_5.PNG');
+    background-image: url('/img/textured_bg_dark_5.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
