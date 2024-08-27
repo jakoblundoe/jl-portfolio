@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on JL-PORTFOLIO</title>
-    <link>http://localhost:1313/pages/</link>
+    <link>https://portfolio.jakoblundoe.com/pages/</link>
     <description>Recent content in Pages on JL-PORTFOLIO</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://portfolio.jakoblundoe.com/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://portfolio.jakoblundoe.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://portfolio.jakoblundoe.com/about/</guid>
       <description></description>
     </item>
     <item>
       <title>Contact</title>
-      <link>http://localhost:1313/contact/</link>
+      <link>https://portfolio.jakoblundoe.com/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
+      <guid>https://portfolio.jakoblundoe.com/contact/</guid>
       <description></description>
     </item>
     <item>
       <title>Showreel</title>
-      <link>http://localhost:1313/showreel/</link>
+      <link>https://portfolio.jakoblundoe.com/showreel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/showreel/</guid>
+      <guid>https://portfolio.jakoblundoe.com/showreel/</guid>
       <description></description>
     </item>
     <item>
       <title>Work</title>
-      <link>http://localhost:1313/work/</link>
+      <link>https://portfolio.jakoblundoe.com/work/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/work/</guid>
+      <guid>https://portfolio.jakoblundoe.com/work/</guid>
       <description></description>
     </item>
   </channel>
