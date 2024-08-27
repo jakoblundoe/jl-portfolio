@@ -428,7 +428,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
     min-height: 100dvh;
 
-    background-color: #000000;
+    background-color: #ffffff;
     background-image: url('/img/textured_bg_dark_4.webp');
     background-repeat: no-repeat;
     background-position: center;
@@ -461,7 +461,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     font-size: 18; /* fallback font-size */
     font-size: min(4.28vw, 22.5px);
 }
-.contact_page #footer, .about_page #footer {
+.contact_page #footer, .about_page #footer, .work_page #footer {
     border-top: 1px solid #000000;
 }
 
@@ -647,11 +647,11 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .biosubtitle h4 {
-    font-weight: 500;
-    font-size: 21px;
+    font-weight: 400;
+    font-size: 20px;
     text-align: center;
     letter-spacing: 0.4px;
-    max-width: 390px;
+    max-width: 450px;
 }
 
 .aboutdescription .biodescription {
@@ -669,7 +669,6 @@ a, p, h1, h2, h3, h4, h5, h6 {
 .biodescription p {
     font-weight: 300;
     font-size: 19px;
-    
 }
 
 .aboutimgcontainer {
@@ -692,11 +691,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
     min-height: 100dvh;
 
-    background-color: #000000;
-    background-image: url('/img/textured_bg_dark_4.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: #ffffff;
 
     padding-bottom: 56px;
 }
