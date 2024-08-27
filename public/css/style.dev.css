@@ -894,8 +894,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
     padding-bottom: 56px;
 }
-.contact_page a, .contact_page p, .contact_page h1, .contact_page h2,
-.contact_page h3, .contact_page h4, .contact_page h5, .contact_page h6 {
+.contact_page a, .contact_page p, .contact_page h3, .contact_page h4, .contact_page h5, .contact_page h6 {
     letter-spacing: 0.1px;
     color: #141414;
 }
@@ -1029,8 +1028,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
     padding-bottom: 80px;
 }
-.about_page a, .about_page p, .about_page h1, .about_page h2,
-.about_page h3, .about_page h4, .about_page h5, .about_page h6 {
+.about_page a, .about_page p, .about_page h3, .about_page h4, .about_page h5, .about_page h6 {
     letter-spacing: 0.1px;
     color: #141414;
 }
