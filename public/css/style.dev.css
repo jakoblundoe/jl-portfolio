@@ -520,9 +520,9 @@ video {
 .font-light {
   font-weight: 300;
 }
-.text-pink {
+.text-black {
   --tw-text-opacity: 1;
-  color: rgb(227 60 114 / var(--tw-text-opacity));
+  color: rgb(20 20 20 / var(--tw-text-opacity));
 }
 a, p, h1, h2, h3, h4, h5, h6 {
     /* color: white; */
@@ -1175,4 +1175,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 .active\:\[\&_a\]\:opacity-65 a:active {
   opacity: 0.65;
+}
+.\[\&_p\]\:-mt-16 p {
+  margin-top: -4rem;
 }
