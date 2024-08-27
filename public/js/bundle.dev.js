@@ -80,42 +80,63 @@
   // <stdin>
   var firstClick = true;
   document.addEventListener("keydown", function(keyDownEvent) {
-    const videocontainer2 = document.getElementById("videocontainer");
-    if (keyDownEvent.key === "Escape" && videocontainer2.classList.contains("display_flex")) {
-      firstClick = true;
-      togglevideo();
-      overlayToggle();
-      showreelButtonState();
-      videocontainer2.offsetHeight;
-      const showreelButton = document.getElementById("showreelbutton");
-      showreelButton.offsetHeight;
-      showreelButton.blur();
-    }
+    $(document).ready(function() {
+      if (document.body.getAttribute("data-page").toLowerCase() == "showreel") {
+        console.log("conditions met");
+        const videocontainer2 = document.getElementById("videocontainer");
+        if (keyDownEvent.key === "Escape" && videocontainer2.classList.contains("display_flex")) {
+          firstClick = true;
+          togglevideo();
+          overlayToggle();
+          showreelButtonState();
+          videocontainer2.offsetHeight;
+          const showreelButton = document.getElementById("showreelbutton");
+          showreelButton.offsetHeight;
+          showreelButton.blur();
+        }
+      } else {
+        console.log("conditions not met");
+      }
+    });
   });
   document.addEventListener("DOMContentLoaded", function() {
-    const button = document.getElementById("showreelbutton");
-    button.addEventListener("click", function(buttonClickEvent) {
-      togglevideo();
-      overlayToggle();
-      showreelButtonState();
-      firstClick = true;
-      videocontainer.offsetHeight;
-      const showreelButton = document.getElementById("showreelbutton");
-      showreelButton.offsetHeight;
-      showreelButton.blur();
+    $(document).ready(function() {
+      if (document.body.getAttribute("data-page").toLowerCase() == "showreel") {
+        console.log("conditions met");
+        const button = document.getElementById("showreelbutton");
+        button.addEventListener("click", function(buttonClickEvent) {
+          togglevideo();
+          overlayToggle();
+          showreelButtonState();
+          firstClick = true;
+          videocontainer.offsetHeight;
+          const showreelButton = document.getElementById("showreelbutton");
+          showreelButton.offsetHeight;
+          showreelButton.blur();
+        });
+      } else {
+        console.log("conditions not met");
+      }
     });
   });
   window.addEventListener("click", function(clickEvent) {
-    const videocontainer2 = document.getElementById("videocontainer");
-    const showreelvideo = document.getElementById("showreelvideo");
-    if (firstClick) {
-      firstClick = false;
-      return;
-    }
-    if (!document.getElementById("showreelvideo").contains(clickEvent.target) && videocontainer2.classList.contains("display_flex")) {
-      togglevideo();
-      overlayToggle();
-      showreelButtonState();
-    }
+    $(document).ready(function() {
+      if (document.body.getAttribute("data-page").toLowerCase() == "showreel") {
+        console.log("conditions met");
+        const videocontainer2 = document.getElementById("videocontainer");
+        const showreelvideo = document.getElementById("showreelvideo");
+        if (firstClick) {
+          firstClick = false;
+          return;
+        }
+        if (!document.getElementById("showreelvideo").contains(clickEvent.target) && videocontainer2.classList.contains("display_flex")) {
+          togglevideo();
+          overlayToggle();
+          showreelButtonState();
+        }
+      } else {
+        console.log("conditions not met");
+      }
+    });
   });
 })();

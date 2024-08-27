@@ -4,4 +4,5 @@
 {{ else }}
     {{ $js = $js | js.Build (dict "targetPath" "js/bundle.dev.js") }}
 {{ end }}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{{ $js.RelPermalink }}"></script>
