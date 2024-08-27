@@ -1,0 +1,7 @@
+{{ define "main" }}
+<div class="contentcontainer">
+    {{ with .Resources.Get "pagecontent/workinprogress.md" }}
+        {{ .Content }}
+    {{ end }}
+</div>
+{{ end }}

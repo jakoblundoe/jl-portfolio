@@ -899,10 +899,10 @@ a, p, h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.1px;
     color: #141414;
 }
-.contact_page .header, .about_page .header {
+.contact_page .header, .about_page .header, .work_page .header {
     position: relative;
 }
-.contact_page .header::after, .about_page .header::after {
+.contact_page .header::after, .about_page .header::after, .work_page .header::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -911,13 +911,17 @@ a, p, h1, h2, h3, h4, h5, h6 {
     /* border-bottom: 1px solid rgb(165, 165, 165); */
     border-bottom: 1px solid rgb(165, 165, 165);
 }
-.contact_page .header h1 {
+.contact_page .header h1, .about_page .header h1, .work_page .header h1 {
     font-size: 30px; /* fallback font-size */
     font-size: min(8vw, 37.5px);
+    color: #141414;
+    text-shadow: 0.2px 0.2px 3.5px #1414142c;
 }
-.contact_page .header h2 {
+.contact_page .header h2, .about_page .header h2, .work_page .header h2 {
     font-size: 18; /* fallback font-size */
     font-size: min(4.28vw, 22.5px);
+    color: #141414;
+    text-shadow: 0.2px 0.2px 3.5px #1414142c;
 }
 .contact_page #footer, .about_page #footer, .work_page #footer {
     border-top: 1px solid #000000;
@@ -967,11 +971,8 @@ a, p, h1, h2, h3, h4, h5, h6 {
     margin-top: 30px;
 
     border: 2px solid #e33c72;
-    /* border: 2px solid rgb(70, 70, 70); */
 
     border-radius: 7px;
-    /* box-shadow: 0.5px 0.5px 2px black;
-    text-shadow: 0.5px 0.5px 1px black; */
     box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.185);
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.164);
 
@@ -1032,20 +1033,6 @@ a, p, h1, h2, h3, h4, h5, h6 {
 .about_page h3, .about_page h4, .about_page h5, .about_page h6 {
     letter-spacing: 0.1px;
     color: #141414;
-}
-.about_page h1, .about_page h2, .contact_page h1, .contact_page h2 {
-    text-shadow: 0.2px 0.2px 3.5px #1414142c;
-    /* text-shadow: none; */
-}
-.about_page h1 {
-    font-size: 30px; /* fallback font-size */
-    font-size: min(8vw, 37.5px);
-    letter-spacing: 0.5px;
-}
-.about_page h2 {
-    font-size: 18; /* fallback font-size */
-    font-size: min(4.28vw, 22.5px);
-    letter-spacing: 0.5px;
 }
 .aboutcontentcontainer {
     display: flex;
@@ -1127,4 +1114,24 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
     padding-bottom: 56px;
 }
-
+.work_page .contentcontainer {
+    margin: auto 250px auto 250px;
+}
+.work_page .contentcontainer p, .work_page .contentcontainer a {
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: -50px;
+    letter-spacing: 0.1px;
+    color: #141414;
+}
+.work_page .contentcontainer a {
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    color: #e33c72;
+}
+.work_page .contentcontainer a:hover {
+    opacity: 0.8;
+}
+.work_page .contentcontainer a:active {
+    opacity: 0.65;
+}
