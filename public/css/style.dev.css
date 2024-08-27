@@ -1057,7 +1057,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    width: 410px;
+    width: 420px;
     gap: 10px;
 }
 .aboutdescription .biotitle {
@@ -1067,21 +1067,24 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 .biotitle h3 {
     font-weight: 500;
-    font-size: 42px;
+    font-size: 58px;
     letter-spacing: 4px;
 
-    margin-top: -5px;
+    margin-top: -10px;
 }
 .aboutdescription .biosubtitle {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 10px;
+    margin-top: -12px;
 }
 .biosubtitle h4 {
-    font-weight: 600;
-    font-size: 19px;
-    letter-spacing: 0.6px;
+    font-weight: 500;
+    font-size: 21px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    max-width: 390px;
 }
 .aboutdescription .biodescription {
     display: flex;
@@ -1092,16 +1095,17 @@ a, p, h1, h2, h3, h4, h5, h6 {
     border-radius: 0px;
 
     margin-bottom: -35px;
+    margin-top: 20px;
 }
 .biodescription p {
     font-weight: 300;
     font-size: 19px;
-    /* text-align: justify; */
+    
 }
 .aboutimgcontainer {
     display: flex;
     align-items: center;
-    width: 430px;
+    width: 480px;
     height: auto;
 
     box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.39);
