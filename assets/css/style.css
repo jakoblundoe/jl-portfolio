@@ -686,31 +686,3 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
     padding-bottom: 56px;
 }
-
-/* .work_page .contentcontainer {
-    margin: auto;
-    padding: 100px;
-    max-width: 800px;
-}
-
-.work_page .contentcontainer p, .work_page .contentcontainer a {
-    font-weight: 300;
-    font-size: 19px;
-    margin-top: -50px;
-    letter-spacing: 0.1px;
-    color: #141414;
-}
-
-.work_page .contentcontainer a {
-    font-weight: 500;
-    letter-spacing: 0.1px;
-    color: #e33c72;
-}
-
-.work_page .contentcontainer a:hover {
-    opacity: 0.8;
-}
-
-.work_page .contentcontainer a:active {
-    opacity: 0.65;
-} */
