@@ -7,11 +7,9 @@
 </div>
 <div class="showreelbuttoncontainer">
     <button id="showreelbutton" class="notPlaying">
-        <p>
-            {{ with .Resources.Get "pagecontent/buttontext.md" }}
-                {{ .Content }}
-            {{ end }}
-        </p>
+        {{ with .Resources.Get "pagecontent/buttontext.md" }}
+            {{ .Content }}
+        {{ end }}
     </button>
 </div>
 {{ end }}

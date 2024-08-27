@@ -2,25 +2,19 @@
 <div class="aboutcontentcontainer">
     <div class="aboutdescription">
         <div class="biotitle">
-            <h2>
-                {{ with .Resources.Get "pagecontent/header.md" }}
-                    {{ .Content }}
-                {{ end }}
-            </h2>
+            {{ with .Resources.Get "pagecontent/header.md" }}
+                {{ .Content }}
+            {{ end }}
         </div>
         <div class="biosubtitle">
-            <h3>
-                {{ with .Resources.Get "pagecontent/subheader.md" }}
-                    {{ .Content }}
-                {{ end }}
-            </h3>
+            {{ with .Resources.Get "pagecontent/subheader.md" }}
+                {{ .Content }}
+            {{ end }}
         </div>
         <div class="biodescription">
-            <p>
-                {{ with .Resources.Get "pagecontent/description.md" }}
-                    {{ .Content }}
-                {{ end }}
-            </p>
+            {{ with .Resources.Get "pagecontent/description.md" }}
+                {{ .Content }}
+            {{ end }}
         </div>
     </div>
     <div class="aboutimgcontainer">

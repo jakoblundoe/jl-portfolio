@@ -578,11 +578,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 
     min-height: 100dvh;
 
-    background-color: #bdbdbd;
-    background-image: url('/img/textured_bg_dark_4.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: #ffffff;
 
     padding-bottom: 80px;
 }
@@ -590,6 +586,12 @@ a, p, h1, h2, h3, h4, h5, h6 {
 .about_page a, .about_page p, .about_page h1, .about_page h2,
 .about_page h3, .about_page h4, .about_page h5, .about_page h6 {
     letter-spacing: 0.1px;
+    color: #141414;
+}
+
+.about_page h1, .about_page h2 {
+    text-shadow: 0.2px 0.2px 3.5px #1414142c;
+    /* text-shadow: none; */
 }
 
 .about_page h1 {
@@ -628,11 +630,10 @@ a, p, h1, h2, h3, h4, h5, h6 {
     align-items: flex-start;
 }
 
-.biotitle h2 {
-    font-weight: 600;
-    font-size: 36px;
-    text-align: center;
-    letter-spacing: 2px;
+.biotitle h3 {
+    font-weight: 500;
+    font-size: 42px;
+    letter-spacing: 4px;
 
     margin-top: -5px;
 }
@@ -644,10 +645,9 @@ a, p, h1, h2, h3, h4, h5, h6 {
     gap: 10px;
 }
 
-.biosubtitle h3 {
+.biosubtitle h4 {
     font-weight: 600;
     font-size: 19px;
-    text-align: justify;
     letter-spacing: 0.6px;
 }
 
@@ -665,7 +665,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 .biodescription p {
     font-weight: 300;
     font-size: 19px;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 .aboutimgcontainer {
@@ -674,11 +674,11 @@ a, p, h1, h2, h3, h4, h5, h6 {
     width: 430px;
     height: auto;
 
-    box-shadow: 0.5px 0.5px 4px rgba(0, 0, 0, 0.582);
+    box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.39);
     border-radius: 2px;
 }
 .aboutimgcontainer img {
-    border-radius: 1px;
+    border-radius: 1.5px;
 }
 
 .work_page {
@@ -689,7 +689,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     min-height: 100dvh;
 
     background-color: #000000;
-    background-image: url('/img/textured_bg_dark_5.webp');
+    background-image: url('/img/textured_bg_dark_4.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
