@@ -611,6 +611,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
     align-items: center;
     width: 420px;
     gap: 10px;
+    margin-right: 10px;
 }
 
 .aboutdescription .biotitle {
@@ -658,6 +659,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 .biodescription p {
     font-weight: 300;
     font-size: 19px;
+    letter-spacing: 0.2px;
 }
 
 .aboutimgcontainer {
@@ -686,7 +688,9 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .work_page .contentcontainer {
-    margin: auto 250px auto 250px;
+    margin: auto;
+    padding: 100px;
+    max-width: 800px;
 }
 
 .work_page .contentcontainer p, .work_page .contentcontainer a {
