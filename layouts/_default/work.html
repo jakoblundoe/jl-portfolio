@@ -1,5 +1,7 @@
 {{ define "main" }}
-<div class="m-auto p-24 max-w-3xl text-black text-base font-light [&_p]:-mt-16 [&_a]:text-pink [&_a]:font-medium hover:[&_a]:opacity-80 active:[&_a]:opacity-65">
+<div class="m-auto p-24 max-w-3xl text-black text-base font-light
+            [&_p]:-mt-16
+            [&_a]:text-pink [&_a]:font-medium hover:[&_a]:opacity-80 active:[&_a]:opacity-65">
     {{ with .Resources.Get "pagecontent/workinprogress.md" }}
         {{ .Content }}
     {{ end }}
