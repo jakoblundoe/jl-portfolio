@@ -2,14 +2,24 @@
 <div class="aboutcontentcontainer">
     <div class="aboutdescription">
         <div class="biotitle">
-            <h2>Hi!</h2>
+            <h2>
+                {{ with .Resources.Get "pagecontent/header.md" }}
+                    {{ .Content }}
+                {{ end }}
+            </h2>
         </div>
         <div class="biosubtitle">
-            <h3>My name is Jakob and I work with audio design, interaction design and everything in between!</h3>
+            <h3>
+                {{ with .Resources.Get "pagecontent/subheader.md" }}
+                    {{ .Content }}
+                {{ end }}
+            </h3>
         </div>
         <div class="biodescription">
             <p>
-                {{ .Content }}
+                {{ with .Resources.Get "pagecontent/description.md" }}
+                    {{ .Content }}
+                {{ end }}
             </p>
         </div>
     </div>
