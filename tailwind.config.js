@@ -9,6 +9,7 @@ module.exports = {
       'pink': '#e33c72',
       'black': '#141414',
       'white': '#FFFFFF',
+      'grey': '#a5a5a5',
     },
     fontFamily: {
       'inter': ['Inter', 'sans-serif'],

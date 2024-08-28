@@ -1,24 +1,25 @@
 {{ define "main" }}
-<div class="contactcontent">
-    <div class="contacttitle">
-        {{ with .Resources.Get "pagecontent/description.md" }}
-            {{ .Content }}
-        {{ end }}
-    </div>
-    <div class="emailcontainer">
-        <div class="contactinfo">
-            {{ with .Resources.Get "pagecontent/email.md"}}
+<div class="bg-pink">
+    <div class="flex-col flex-nowrap justify-center items-center gap-5 m-auto py-20 px-10">
+        <div class="contacttitle">
+            {{ with .Resources.Get "pagecontent/description.md" }}
                 {{ .Content }}
             {{ end }}
         </div>
-        <div class="buttoncontainer">
-            <a href="mailto:me@jakoblundoe.com" id="emailbutton">
-                {{ with .Resources.Get "pagecontent/buttontext.md" }}
+        <div class="flex-col flex-nowrap self-center gap-2.5">
+            <div class="text-center leading-4 [&_a]:text-2xl [&_a]:tracking-wide">
+                {{ with .Resources.Get "pagecontent/email.md"}}
                     {{ .Content }}
                 {{ end }}
-            </a>
+            </div>
+            <div class="buttoncontainer">
+                <a href="mailto:me@jakoblundoe.com" id="emailbutton">
+                    {{ with .Resources.Get "pagecontent/buttontext.md" }}
+                        {{ .Content }}
+                    {{ end }}
+                </a>
+            </div>
         </div>
     </div>
 </div>
-<!-- <div class="spacer"></div> -->
 {{ end }}

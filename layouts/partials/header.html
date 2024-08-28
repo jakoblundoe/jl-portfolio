@@ -1,10 +1,14 @@
-{{ with .Params.hide_header }}
- <!-- No header here! -->
-{{ else }}
+{{ $currentPage := . }}
 <div class="py-4 px-6 flex-col gap-3.5">
+    {{ if eq $currentPage.Title "Showreel" }}
     <div class="text-white shadow-black text-shadow-md text-nowrap">
         <h1 class="text-5xl" style="font-size: min(8vw, 50px);">Portfolio | Jakob Lundoe</h1>
         <h2 class="text-3xl py-2" style="font-size: min(4.28vw, 30px);">Sound Designer, Developer and Composer</h2>
     </div>
+    {{ else }}
+    <div class="text-black text-nowrap relative after:absolute after:bottom after:left-1 after:right-1 after:border after:border-b-0 after:border-grey">
+        <h1 class="text-5xl" style="font-size: min(8vw, 37.5px);">Portfolio | Jakob Lundoe</h1>
+        <h2 class="text-3xl py-1" style="font-size: min(4.28vw, 22.5px);">Sound Designer, Developer and Composer</h2>
+    </div>
+    {{ end }}
 </div>
-{{ end }}

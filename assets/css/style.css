@@ -58,20 +58,7 @@
     mix-blend-mode: normal;
 }
 
-.index_page, .showreel_page {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
 
-    min-height: 100dvh;
-
-    background-image: url('/img/pressphoto-jln.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    padding-bottom: 56px;
-}
 
 .mainviewport {
     display: flex;
@@ -387,7 +374,7 @@
     /* text-shadow: 0px 0px 0px #000000; */
 }
 
-.contactcontent {
+/* .contactcontent {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -395,9 +382,9 @@
     gap: 40px;
     margin: auto;
     padding: 80px 40px 80px 40px;
-}
+} */
 
-.contact_page {
+/* .contact_page {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -408,37 +395,47 @@
     padding-bottom: 56px;
 }
 
+.about_page {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    min-height: 100dvh;
+
+    background-color: #ffffff;
+
+    padding-bottom: 80px;
+}
+
+.work_page { 
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    min-height: 100dvh;
+
+    background-color: #ffffff;
+
+    padding-bottom: 56px;
+}
+
+.index_page, .showreel_page {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    min-height: 100dvh;
+
+    background-image: url('/img/pressphoto-jln.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    padding-bottom: 56px;
+} */
+
 .contact_page a, .contact_page p, .contact_page h3, .contact_page h4, .contact_page h5, .contact_page h6 {
     letter-spacing: 0.1px;
-    color: #141414;
-}
-
-.contact_page .header, .about_page .header, .work_page .header {
-    position: relative;
-}
-
-.contact_page .header::after, .about_page .header::after, .work_page .header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 25px; /* Adjust to control the starting point */
-    right: 25px; /* Adjust to control the ending point */
-    /* border-bottom: 1px solid rgb(165, 165, 165); */
-    border-bottom: 1px solid rgb(165, 165, 165);
-}
-
-.contact_page .header h1, .about_page .header h1, .work_page .header h1 {
-    font-size: 30px; /* fallback font-size */
-    font-size: min(8vw, 37.5px);
-    color: #141414;
-    /* text-shadow: 0.2px 0.2px 3.5px #1414142c; */
-}
-
-.contact_page .header h2, .about_page .header h2, .work_page .header h2 {
-    font-size: 18; /* fallback font-size */
-    font-size: min(4.28vw, 22.5px);
-    color: #141414;
-    /* text-shadow: 0.2px 0.2px 3.5px #1414142c; */
 }
 
 .contact_page #footer, .about_page #footer, .work_page #footer {
@@ -462,15 +459,6 @@
     text-align: center;
 
     /* text-shadow: 1px 2px 8px #000000; */
-}
-
-.emailcontainer {
-    display: flex; 
-    flex-flow: column nowrap;
-    align-self: center;
-    padding: 0px;
-
-    gap: 10px;
 }
 
 .buttoncontainer {
@@ -540,23 +528,6 @@
     font-weight: 300;
     font-size: 24px;
     letter-spacing: 1px;
-    line-height: 17px;
-    /* identical to box height */
-    text-align: center;
-
-    /* color: #252525; */
-}
-
-.about_page {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-
-    min-height: 100dvh;
-
-    background-color: #ffffff;
-
-    padding-bottom: 80px;
 }
 
 .about_page a, .about_page p, .about_page h3, .about_page h4, .about_page h5, .about_page h6 {
@@ -644,16 +615,4 @@
 }
 .aboutimgcontainer img {
     border-radius: 1.5px;
-}
-
-.work_page {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-
-    min-height: 100dvh;
-
-    background-color: #ffffff;
-
-    padding-bottom: 56px;
 }

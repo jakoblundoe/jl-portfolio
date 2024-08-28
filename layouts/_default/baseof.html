@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        {{ partial "meta.html" . }}
-    </head>
+    {{ partial "meta.html" . }}
     <body data-page="{{ .Params.title }}">
-        <div class="{{ .Params.page_class | default "default_page"}}">
-            <div id="overlay" class="display_none"></div>
-            {{ partial "header.html" . }}
+        <div class="flex-col flex-nowrap justify-between min-h-dvh">
             {{ block "main" . }}
             {{ end }}
-            {{ partial "footer.html" . }}
         </div>
     </body>
 </html>

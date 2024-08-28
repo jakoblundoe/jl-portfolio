@@ -1,15 +1,19 @@
 {{ define "main" }}
-<div id="videocontainer" class="display_none">
-    <video id="showreelvideo" controls>
-        <source src="/videos/alexgraphicsconverted.webm" type="video/webm">
-        Your browser does not support the video tag.
-    </video>
-</div>
-<div class="showreelbuttoncontainer">
-    <button id="showreelbutton" class="notPlaying">
-        {{ with .Resources.Get "pagecontent/buttontext.md" }}
-            {{ .Content }}
-        {{ end }}
-    </button>
+<div class="bg-pink">
+    {{ partial "header.html" . }}
+    <div id="videocontainer" class="display_none">
+        <video id="showreelvideo" controls>
+            <source src="/videos/alexgraphicsconverted.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="showreelbuttoncontainer">
+        <button id="showreelbutton" class="notPlaying">
+            {{ with .Resources.Get "pagecontent/buttontext.md" }}
+                {{ .Content }}
+            {{ end }}
+        </button>
+    </div>
+    {{ partial "footer.html" . }}
 </div>
 {{ end }}
