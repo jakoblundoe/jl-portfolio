@@ -5,6 +5,11 @@ module.exports = {
     colors: {
       'pink': '#e33c72',
       'black': '#141414',
+      'white': '#FFFFFF',
+    },
+    fontFamily: {
+      'inter': ['Inter', 'sans-serif'],
+      'mono': ['Roboto Mono', 'monospace'],
     },
     extend: {},
   },
