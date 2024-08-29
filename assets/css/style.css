@@ -115,27 +115,6 @@
     }
 }
 
-.showreelbuttoncontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0 34px 0;
-}
-
-#showreelbutton.notPlaying {
-    box-sizing: border-box;
-
-    padding: 18px 30px;
-    gap: 21px;
-    border: 2px solid #FFFFFF;
-    border: 2px solid #FFFFFF;
-    background-color:#2424243d;
-    /* filter: drop-shadow(1px 1px 4px #000000); */
-    
-    transition:
-    all 200ms;
-}
-
 #showreelbutton.playing {
     box-sizing: border-box;
 
@@ -153,36 +132,13 @@
     all 200ms;
 }
 
-#showreelbutton p {
-    /* font-family: 'Roboto Mono', monospace; */
-    font-size: 20px;
-    line-height: 26px;
-
-    color: #FFFFFF;
-
-    /* text-shadow: 2px 4px 8px #000000; */
-
-    transition:
-    all 200ms;
-}
-
-#showreelbutton:hover {
-    background: #141414b6;
-    border: 2px solid #FFFFFF;
-    /* box-shadow: 1px 1px 4px #000000; */
-
-    scale: 1.03
-}
-
-#showreelbutton:hover p {
+/* #showreelbutton:hover p {
     font-weight: 900;
     font-size: 20px;
     line-height: 26px;
     
     color: #ffffff;
-    
-    /* text-shadow: 2px 4px 8px #000000; */
-}
+} */
 
 #showreelbutton:active {
     background: #444444;

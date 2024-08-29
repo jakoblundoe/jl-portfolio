@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="flex-col flex-nowrap justify-between min-h-dvh bg-no-repeat bg-center bg-cover" style="background-image: url('/img/pressphoto-jln.webp');">
+<div class="flex flex-col flex-nowrap justify-between min-h-dvh bg-no-repeat bg-center bg-cover" style="background-image: url('/img/pressphoto-jln.webp');">
     <div id="overlay" class="display_none"></div>
     {{ partial "header.html" . }}
     <div id="videocontainer" class="display_none">
@@ -8,8 +8,9 @@
             Your browser does not support the video tag.
         </video>
     </div>
-    <div class="flex-row justify-center items-center m-auto">
-        <button id="showreelbutton" class="notPlaying">
+    <div class="flex justify-center items-center mt-2.5 mb-24">
+        <button class="font-mono text-xl tracking-wide text-white box-border py-4 px-7 border-2 border-solid border-white bg-transp-black gap-5 transition duration:200
+                        hover:bg-less-transp-black hover:scale-105 hover:font-black hover:text-xl">
             {{ with .Resources.Get "pagecontent/buttontext.md" }}
                 {{ .Content }}
             {{ end }}
