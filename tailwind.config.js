@@ -14,6 +14,7 @@ module.exports = {
       'light-black': '#262626',
       'transp-black': '#2424243d',
       'less-transp-black': '#141414b6',
+      'transp-grey': '#e2e2e23d'
     },
     fontFamily: {
       'inter': ['Inter', 'sans-serif'],

@@ -132,18 +132,6 @@
     all 200ms;
 }
 
-#emailbutton:hover {
-    background: #ffffffb6;
-    /* transform: scale(1.02); */
-    /* transition:
-    all 200ms; */
-}
-
-#emailbutton:active {
-    opacity: 0.7;
-    transition:
-    all 200ms;
-}
 
 .about_page a, .about_page p, .about_page h3, .about_page h4, .about_page h5, .about_page h6 {
     letter-spacing: 0.1px;

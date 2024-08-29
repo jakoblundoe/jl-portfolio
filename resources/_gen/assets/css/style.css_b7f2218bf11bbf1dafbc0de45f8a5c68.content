@@ -531,6 +531,10 @@ video {
   margin-right: -0.25rem;
 }
 
+.-mt-4 {
+  margin-top: -1rem;
+}
+
 .mb-24 {
   margin-bottom: 6rem;
 }
@@ -549,6 +553,14 @@ video {
 
 .mt-2\.5 {
   margin-top: 0.625rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-9 {
+  margin-top: 2.25rem;
 }
 
 .box-border {
@@ -619,6 +631,10 @@ video {
   flex-wrap: nowrap;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
 }
@@ -637,6 +653,10 @@ video {
 
 .gap-1\.5 {
   gap: 0.375rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-2 {
@@ -663,8 +683,16 @@ video {
   gap: 2rem;
 }
 
+.self-center {
+  align-self: center;
+}
+
 .text-nowrap {
   text-wrap: nowrap;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .border-2 {
@@ -682,6 +710,11 @@ video {
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(20 20 20 / var(--tw-border-opacity));
+}
+
+.border-pink {
+  --tw-border-opacity: 1;
+  border-color: rgb(227 60 114 / var(--tw-border-opacity));
 }
 
 .border-white {
@@ -710,6 +743,10 @@ video {
   background-repeat: no-repeat;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .p-24 {
   padding: 6rem;
 }
@@ -724,6 +761,11 @@ video {
   padding-right: 0.375rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -732,6 +774,11 @@ video {
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .py-1 {
@@ -744,9 +791,23 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.pb-14 {
+  padding-bottom: 3.5rem;
 }
 
 .pl-5 {
@@ -757,8 +818,17 @@ video {
   padding-right: 1.75rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .font-mono {
   font-family: Roboto Mono, monospace;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl {
@@ -784,6 +854,10 @@ video {
   font-weight: 500;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .tracking-wide {
   letter-spacing: 0.025em;
 }
@@ -795,6 +869,11 @@ video {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(20 20 20 / var(--tw-text-opacity));
+}
+
+.text-pink {
+  --tw-text-opacity: 1;
+  color: rgb(227 60 114 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -975,19 +1054,6 @@ video {
     all 200ms;
 }
 
-#emailbutton:hover {
-    background: #ffffffb6;
-    /* transform: scale(1.02); */
-    /* transition:
-    all 200ms; */
-}
-
-#emailbutton:active {
-    opacity: 0.7;
-    transition:
-    all 200ms;
-}
-
 .about_page a, .about_page p, .about_page h3, .about_page h4, .about_page h5, .about_page h6 {
     letter-spacing: 0.1px;
     color: #141414;
@@ -1117,6 +1183,10 @@ video {
   background-color: #141414b6;
 }
 
+.hover\:bg-transp-grey:hover {
+  background-color: #e2e2e23d;
+}
+
 .hover\:text-xl:hover {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1143,6 +1213,10 @@ video {
 
 .active\:opacity-50:active {
   opacity: 0.5;
+}
+
+.active\:opacity-70:active {
+  opacity: 0.7;
 }
 
 .\[\&_a\]\:font-mono a {
