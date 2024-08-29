@@ -12,7 +12,7 @@ document.addEventListener("keydown", function(keyDownEvent) {
                 
                 firstClick = true;
                 cinemaModule.togglevideo();
-                // cinemaModule.overlayToggle();
+                cinemaModule.overlayToggle();
                 cinemaModule.showreelButtonState();
             }
         }
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const button = document.getElementById("showreelbutton");
             button.addEventListener("click", function(buttonClickEvent) {
                 cinemaModule.togglevideo();
-                // cinemaModule.overlayToggle();
+                cinemaModule.overlayToggle();
                 cinemaModule.showreelButtonState();
                 firstClick = true;
             });
@@ -47,7 +47,7 @@ window.addEventListener('click', function(clickEvent){
         }
         if (!video.contains(clickEvent.target) && videocontainer.classList.contains("flex")){
             cinemaModule.togglevideo();
-            // cinemaModule.overlayToggle();
+            cinemaModule.overlayToggle();
             cinemaModule.showreelButtonState();
         }
     }

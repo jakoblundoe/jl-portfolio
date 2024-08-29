@@ -27,22 +27,23 @@ export function togglevideo () {
     }
 }
 
-// export function overlayToggle () {
-//     const overlayContainer = document.getElementById("overlay");
-//     const overlayFooter = document.getElementById("footer");
+export function overlayToggle () {
+    const overlayContainer = document.getElementById("overlay");
+    const overlayFooter = document.getElementById("footer");
 
-//     if (overlayContainer.classList.contains("display_none") && overlayFooter.classList.contains("normal")) {
-//         overlayContainer.classList.remove("display_none");
-//         overlayFooter.classList.remove("normal");
-//         overlayContainer.classList.add("display_flex");
-//         overlayFooter.classList.add("overlay");
-//     } else if (overlayContainer.classList.contains("display_flex") && overlayFooter.classList.contains("overlay")) {
-//         overlayContainer.classList.remove("display_flex");
-//         overlayFooter.classList.remove("overlay");
-//         overlayContainer.classList.add("display_none");
-//         overlayFooter.classList.add("normal");
-//     }
-// }
+    if (overlayContainer.classList.contains("opacity-0") && overlayFooter.classList.contains("bg-white")) {
+        console.log("check");
+        overlayContainer.classList.remove("animate-fadeout");
+        overlayFooter.classList.remove("bg-white");
+        overlayContainer.classList.add("animate-fadein");
+        overlayFooter.classList.add("bg-[#6e6e6e]");
+    } else if (overlayContainer.classList.contains("animate-fadein") && overlayFooter.classList.contains("bg-[#6e6e6e]")) {
+        overlayContainer.classList.remove("animate-fadein");
+        overlayFooter.classList.remove("bg-[#6e6e6e]");
+        overlayContainer.classList.add("animate-fadeout");
+        overlayFooter.classList.add("bg-white");
+    }
+}
 
 export function showreelButtonState() {
     const showreelButton = document.getElementById("showreelbutton");

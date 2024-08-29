@@ -10,13 +10,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#footer.overlay {
-    background-color: rgb(110, 110, 110); /* Black background with opacity */
-    z-index: 4;
-    transition:
-    all 500ms;
-}
-
 @media (max-width: 640px) {
     .somelinkcontainer {
         display: none;
