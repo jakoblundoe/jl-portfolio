@@ -1,19 +1,20 @@
 {{ define "main" }}
-<div class="bg-pink">
-    <div class="flex-col flex-nowrap justify-center items-center gap-5 m-auto py-20 px-10">
-        <div class="contacttitle">
+<div class="flex flex-col flex-nowrap min-h-dvh bg-white">
+    {{ partial "header.html" . }}
+    <div class="flex flex-col flex-nowrap items-center m-auto">
+        <div class="gap-2.5 font-medium text-5xl tracking-wider">
             {{ with .Resources.Get "pagecontent/description.md" }}
                 {{ .Content }}
             {{ end }}
         </div>
-        <div class="flex-col flex-nowrap self-center gap-2.5">
-            <div class="text-center leading-4 [&_a]:text-2xl [&_a]:tracking-wide">
+        <div class="">
+            <div class="">
                 {{ with .Resources.Get "pagecontent/email.md"}}
                     {{ .Content }}
                 {{ end }}
             </div>
-            <div class="buttoncontainer">
-                <a href="mailto:me@jakoblundoe.com" id="emailbutton">
+            <div class="">
+                <a href="mailto:me@jakoblundoe.com" class="">
                     {{ with .Resources.Get "pagecontent/buttontext.md" }}
                         {{ .Content }}
                     {{ end }}
@@ -21,5 +22,6 @@
             </div>
         </div>
     </div>
+    {{ partial "footer.html" . }}
 </div>
 {{ end }}

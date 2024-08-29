@@ -1,24 +1,28 @@
 {{ define "main" }}
-<div class="aboutcontentcontainer">
-    <div class="aboutdescription">
-        <div class="biotitle">
-            {{ with .Resources.Get "pagecontent/header.md" }}
-                {{ .Content }}
-            {{ end }}
+<div class="bg-white">
+    {{ partial "header.html" . }}
+    <div class="aboutcontentcontainer">
+        <div class="aboutdescription">
+            <div class="biotitle">
+                {{ with .Resources.Get "pagecontent/header.md" }}
+                    {{ .Content }}
+                {{ end }}
+            </div>
+            <div class="biosubtitle">
+                {{ with .Resources.Get "pagecontent/subheader.md" }}
+                    {{ .Content }}
+                {{ end }}
+            </div>
+            <div class="biodescription">
+                {{ with .Resources.Get "pagecontent/description.md" }}
+                    {{ .Content }}
+                {{ end }}
+            </div>
         </div>
-        <div class="biosubtitle">
-            {{ with .Resources.Get "pagecontent/subheader.md" }}
-                {{ .Content }}
-            {{ end }}
-        </div>
-        <div class="biodescription">
-            {{ with .Resources.Get "pagecontent/description.md" }}
-                {{ .Content }}
-            {{ end }}
+        <div class="aboutimgcontainer">
+            <img src="/img/profilephoto_jakoblundoe.webp" alt="Jakob Lundoe profile photo">
         </div>
     </div>
-    <div class="aboutimgcontainer">
-        <img src="/img/profilephoto_jakoblundoe.webp" alt="Jakob Lundoe profile photo">
-    </div>
+    {{ partial "footer.html" . }}
 </div>
 {{ end }}

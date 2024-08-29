@@ -1,5 +1,6 @@
 {{ define "main" }}
-<div class="bg-pink">
+<div class="flex-col flex-nowrap justify-between min-h-dvh bg-no-repeat bg-center bg-cover" style="background-image: url('/img/pressphoto-jln.webp');">
+    <div id="overlay" class="display_none"></div>
     {{ partial "header.html" . }}
     <div id="videocontainer" class="display_none">
         <video id="showreelvideo" controls>
@@ -7,7 +8,7 @@
             Your browser does not support the video tag.
         </video>
     </div>
-    <div class="showreelbuttoncontainer">
+    <div class="flex-row justify-center items-center m-auto">
         <button id="showreelbutton" class="notPlaying">
             {{ with .Resources.Get "pagecontent/buttontext.md" }}
                 {{ .Content }}

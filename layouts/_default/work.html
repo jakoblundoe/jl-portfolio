@@ -1,14 +1,13 @@
 {{ define "main" }}
-<div class="bg-white ">
-    <div id="overlay" class="display_none"></div>
+<div class="flex flex-col flex-nowrap justify-between bg-white min-h-dvh">
     {{ partial "header.html" . }}
     <div class="m-auto p-24 max-w-3xl text-black text-xl font-light
                 [&_p]:-mt-16
                 [&_a]:text-pink [&_a]:font-medium hover:[&_a]:opacity-80 active:[&_a]:opacity-65">
     {{ with .Resources.Get "pagecontent/workinprogress.md" }}
         {{ .Content }}
-    </div>
-    {{ end }}   
+    {{ end }}
+    </div> 
     {{ partial "footer.html" . }}
 </div>
 {{ end }}

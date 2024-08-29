@@ -43,30 +43,6 @@
     all 500ms;
 }
 
-.default_page {
-    min-height: 100dvh;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-
-    background: linear-gradient(359.91deg, rgba(255, 255, 255, 0.06) 0.07%,
-                                           rgba(138, 138, 138, 0.12) 65.47%,
-                                           rgba(88, 88, 88, 0.1) 82.95%,
-                                           rgba(54, 54, 54, 0.2) 99.92%),
-                                           #000000;
-    background-blend-mode: normal, soft-light;
-    mix-blend-mode: normal;
-}
-
-
-
-.mainviewport {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
 #videocontainer {
     justify-content: center;
     align-items: center;
@@ -374,160 +350,21 @@
     /* text-shadow: 0px 0px 0px #000000; */
 }
 
-/* .contactcontent {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin: auto;
-    padding: 80px 40px 80px 40px;
-} */
-
-/* .contact_page {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-
-    min-height: 100dvh;
-
-    background-color: #ffffff;
-    padding-bottom: 56px;
-}
-
-.about_page {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-
-    min-height: 100dvh;
-
-    background-color: #ffffff;
-
-    padding-bottom: 80px;
-}
-
-.work_page { 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-
-    min-height: 100dvh;
-
-    background-color: #ffffff;
-
-    padding-bottom: 56px;
-}
-
-.index_page, .showreel_page {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-
-    min-height: 100dvh;
-
-    background-image: url('/img/pressphoto-jln.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    padding-bottom: 56px;
-} */
-
-.contact_page a, .contact_page p, .contact_page h3, .contact_page h4, .contact_page h5, .contact_page h6 {
-    letter-spacing: 0.1px;
-}
-
 .contact_page #footer, .about_page #footer, .work_page #footer {
     border-top: 1px solid #000000;
 }
 
-.contacttitle {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 10px;
-}
-
-.contacttitle p {
-    font-weight: 500;
-    font-size: 54px;
-    line-height: 24px;
-    letter-spacing: 3px;
-    text-align: center;
-
-    /* text-shadow: 1px 2px 8px #000000; */
-}
-
-.buttoncontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    margin-top: 34px;
-    gap: 10px;
-}
-
-#emailbutton {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 36px;
-    gap: 10px;
-
-    margin-top: 30px;
-
-    border: 2px solid #e33c72;
-
-    border-radius: 7px;
-    /* box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.185); */
-    /* text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.164); */
-
-    transition:
-    all 200ms;
-}
-
-.buttoncontainer p {
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 17px;
-    letter-spacing: 1px;
-    color: #e33c72;
-    transition:
-    all 200ms,
-}
-
 #emailbutton:hover {
     background: #ffffffb6;
-    /* box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.575); */
-    /* text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.479); */
-
-    transform: scale(1.02);
-    transition:
-    all 200ms;
+    /* transform: scale(1.02); */
+    /* transition:
+    all 200ms; */
 }
 
 #emailbutton:active {
     opacity: 0.7;
     transition:
     all 200ms;
-}
-
-.contactinfo {
-    display: flex;
-    align-self: center;
-    padding: 4px;
-    gap: 10px;
-}
-
-.contactinfo p {
-    font-weight: 300;
-    font-size: 24px;
-    letter-spacing: 1px;
 }
 
 .about_page a, .about_page p, .about_page h3, .about_page h4, .about_page h5, .about_page h6 {

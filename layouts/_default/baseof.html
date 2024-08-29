@@ -2,9 +2,10 @@
 <html lang="en">
     {{ partial "meta.html" . }}
     <body data-page="{{ .Params.title }}">
-        <div class="flex-col flex-nowrap justify-between min-h-dvh">
+        <div class="flex flex-col flex-nowrap">
             {{ block "main" . }}
             {{ end }}
         </div>
     </body>
 </html>
+
