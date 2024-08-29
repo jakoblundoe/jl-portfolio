@@ -202,10 +202,6 @@
     /* text-shadow: 0px 0px 0px #000000; */
 }
 
-.contact_page #footer, .about_page #footer, .work_page #footer {
-    border-top: 1px solid #000000;
-}
-
 #emailbutton:hover {
     background: #ffffffb6;
     /* transform: scale(1.02); */

@@ -1,5 +1,7 @@
+{{ $currentPage := . }}
 <!-- below class belongs to #footer.normal -->
-<div class="flex flex-row flex-nowrap justify-between pr-7 pl-5 bg-white fixed bottom-0 w-full z-30 transition duration-500">
+<div class="flex flex-row flex-nowrap justify-between pr-7 pl-5 bg-white fixed bottom-0 w-full z-30 transition duration-500
+{{ if ne $currentPage.Title "Showreel"}}border-t border-solid border-black{{ end }}">
   {{ partial "nav.html" . }}
   {{ partial "somebar.html" . }}
 </div>

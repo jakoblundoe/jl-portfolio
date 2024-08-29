@@ -651,6 +651,19 @@ video {
   text-wrap: nowrap;
 }
 
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(20 20 20 / var(--tw-border-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -975,10 +988,6 @@ video {
     color: #ffffff;
     
     /* text-shadow: 0px 0px 0px #000000; */
-}
-
-.contact_page #footer, .about_page #footer, .work_page #footer {
-    border-top: 1px solid #000000;
 }
 
 #emailbutton:hover {
