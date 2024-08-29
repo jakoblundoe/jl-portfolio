@@ -1,7 +1,5 @@
-{{ with .Params.hide_footer }}
- <!-- No footer here! -->
-{{ else }}
-<div id="footer" class="normal">
+<!-- below class belongs to #footer.normal -->
+<div class="flex flex-row flex-nowrap justify-between pr-7 pl-5 bg-white fixed bottom-0 w-full z-30 transition duration-500">
   <div class="navbar">
     {{ partial "nav.html" . }}
   </div>
@@ -9,4 +7,3 @@
     {{ partial "somelinks.html" . }}
   </div>
 </div>
-{{ end }}

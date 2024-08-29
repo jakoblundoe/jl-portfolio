@@ -10,6 +10,7 @@ module.exports = {
       'black': '#141414',
       'white': '#FFFFFF',
       'grey': '#a5a5a5',
+      'light-black': '#262626',
     },
     fontFamily: {
       'inter': ['Inter', 'sans-serif'],
