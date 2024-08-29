@@ -14,7 +14,7 @@ module.exports = {
       'light-black': '#262626',
       'transp-black': '#2424243d',
       'less-transp-black': '#141414b6',
-      'transp-grey': '#e2e2e23d'
+      'transp-grey': '#e2e2e21f'
     },
     fontFamily: {
       'inter': ['Inter', 'sans-serif'],
@@ -27,6 +27,9 @@ module.exports = {
         md: '1px 2px 8px var(--tw-shadow-color)',
         lg: '0 8px 16px var(--tw-shadow-color)',
       },
+      scale: {
+        '102': '1.02',
+      }
     },
   },
   plugins: [

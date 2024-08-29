@@ -897,6 +897,12 @@ video {
   opacity: 0.8;
 }
 
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-black {
   --tw-shadow-color: #141414;
   --tw-shadow: var(--tw-shadow-colored);
@@ -928,6 +934,10 @@ video {
 
 .text-shadow-md {
   text-shadow: 1px 2px 8px var(--tw-shadow-color);
+}
+
+.text-shadow-sm {
+  text-shadow: 0 1px 2px var(--tw-shadow-color);
 }
 
 #overlay {
@@ -1173,6 +1183,12 @@ video {
   border-color: rgb(165 165 165 / var(--tw-border-opacity));
 }
 
+.hover\:scale-102:hover {
+  --tw-scale-x: 1.02;
+  --tw-scale-y: 1.02;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -1184,7 +1200,7 @@ video {
 }
 
 .hover\:bg-transp-grey:hover {
-  background-color: #e2e2e23d;
+  background-color: #e2e2e21f;
 }
 
 .hover\:text-xl:hover {
