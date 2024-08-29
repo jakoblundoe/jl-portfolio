@@ -103,46 +103,6 @@
     all 500ms;
 }
 
-.somelinkcontainer {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3px 0 3px 24px;
-    gap: 6px;
-}
-
-.somelinkcontainer .someitem {
-    transition:
-    all 140ms;
-}
-
-.somelinkcontainer .someitem:hover {
-    opacity: .7;
-    transform: scale(1.05);
-}
-
-.somelinkcontainer .someitem:active {
-    opacity: .5;
-    transform: scale(1.05);
-}
-
-#linkedin-icon {
-    width: 36px;
-    height: auto;
-}
-
-#instagram-icon {
-    width: 28px;
-    height: auto;
-}
-
-#github-icon {
-    width: 50px;
-    height: auto;
-    margin-right: 2px;
-}
-
 @media (max-width: 640px) {
     .somelinkcontainer {
         display: none;
