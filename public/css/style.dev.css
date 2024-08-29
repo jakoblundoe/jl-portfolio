@@ -1156,6 +1156,14 @@ video {
   opacity: 0.65;
 }
 
+.\[\&_p\]\:-mt-12 p {
+  margin-top: -3rem;
+}
+
 .\[\&_p\]\:-mt-16 p {
   margin-top: -4rem;
+}
+
+.\[\&_p\]\:mb-12 p {
+  margin-bottom: 3rem;
 }
