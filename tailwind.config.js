@@ -16,6 +16,7 @@ module.exports = {
         'transp-black': '#2424243d',
         'less-transp-black': '#141414b6',
         'transp-grey': '#e2e2e21f',
+        'overlay-color': '#000000b3',
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],

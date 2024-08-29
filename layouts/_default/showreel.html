@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="flex flex-col flex-nowrap justify-between min-h-dvh bg-no-repeat bg-center bg-cover pb-14" style="background-image: url('/img/pressphoto-jln.webp');">
-    <div id="overlay" class="hidden"></div> 
+    <div id="overlay" class="fixed w-full h-full bg-overlay-color z-20 cursor-pointer pointer-events-none"></div> 
     {{ partial "header.html" . }}
     <div id="showreelvideocontainer" class="hidden justify-center items-center my-auto z-20 w-full h-[20vh]">
         <video id="showreelvideo" class="flex-1 justify-center self-center basis-[500px] shrink-[5] m-5 object-contain object-center overflow-hidden h-auto max-w-[1400px] rounded-sm" style="margin: min(5vw, 95%)" controls>

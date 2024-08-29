@@ -507,6 +507,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .fixed {
   position: fixed;
 }
@@ -628,6 +632,10 @@ video {
   height: auto;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -724,6 +732,10 @@ video {
 
 .animate-fadeout {
   animation: display_fadeout 2s forwards;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-row {
@@ -847,6 +859,10 @@ video {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.bg-overlay-color {
+  background-color: #000000b3;
 }
 
 .bg-transp-black {
@@ -1109,20 +1125,6 @@ video {
 
 .text-shadow-sm {
   text-shadow: 0 1px 2px var(--tw-shadow-color);
-}
-
-#overlay {
-    position: fixed; /* Sit on top of the page content */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.70); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
-    pointer-events: none;
 }
 
 #footer.overlay {
