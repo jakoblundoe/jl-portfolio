@@ -806,6 +806,14 @@ video {
   text-decoration-line: underline;
 }
 
+.decoration-light-black {
+  text-decoration-color: #262626;
+}
+
+.decoration-1 {
+  text-decoration-thickness: 1px;
+}
+
 .opacity-80 {
   opacity: 0.8;
 }
