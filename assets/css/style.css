@@ -132,32 +132,6 @@
     all 200ms;
 }
 
-/* #showreelbutton:hover p {
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 26px;
-    
-    color: #ffffff;
-} */
-
-#showreelbutton:active {
-    background: #444444;
-    border: 2px solid #FFFFFF;
-    /* box-shadow: 0px 0px 0px #000000; */
-
-    transform: scale(1.02);
-}
-
-#showreelbutton:active p {
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 26px;
-    
-    color: #ffffff;
-    
-    /* text-shadow: 0px 0px 0px #000000; */
-}
-
 #emailbutton:hover {
     background: #ffffffb6;
     /* transform: scale(1.02); */
