@@ -1,15 +1,15 @@
 {{ define "main" }}
 <div class="flex flex-col flex-nowrap justify-between min-h-dvh bg-no-repeat bg-center bg-cover pb-14" style="background-image: url('/img/pressphoto-jln.webp');">
-    <div id="overlay" class="display_none"></div>
+    <div id="overlay" class="hidden"></div> 
     {{ partial "header.html" . }}
-    <div id="videocontainer" class="display_none">
-        <video id="showreelvideo" controls>
+    <div id="showreelvideocontainer" class="hidden justify-center items-center my-auto z-20 w-full h-[20vh]">
+        <video id="showreelvideo" class="flex-1 justify-center self-center basis-[500px] shrink-[5] m-5 object-contain object-center overflow-hidden h-auto max-w-[1400px] rounded-sm" style="margin: min(5vw, 95%)" controls>
             <source src="/videos/alexgraphicsconverted.webm" type="video/webm">
             Your browser does not support the video tag.
         </video>
     </div>
     <div class="flex justify-center items-center mt-2.5 mb-10">
-        <button class="font-mono text-xl tracking-wide text-white box-border py-4 px-7 border-2 border-solid border-white bg-transp-black gap-5 transition duration-200
+        <button id="showreelbutton" class="font-mono text-xl tracking-wide text-white box-border py-4 px-7 border-2 border-solid border-white bg-transp-black gap-5 transition duration-200
                         hover:bg-less-transp-black hover:scale-102 hover:font-black hover:text-xl
                         active:bg-dark-grey">
             {{ with .Resources.Get "pagecontent/buttontext.md" }}

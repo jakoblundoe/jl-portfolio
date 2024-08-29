@@ -11,7 +11,7 @@
   box-sizing: border-box; /* 1 */
   border-width: 0; /* 2 */
   border-style: solid; /* 2 */
-  border-color: currentColor; /* 2 */
+  border-color: #e5e7eb; /* 2 */
 }
 
 ::before,
@@ -519,12 +519,25 @@ video {
   bottom: 0px;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .z-30 {
   z-index: 30;
 }
 
+.m-5 {
+  margin: 1.25rem;
+}
+
 .m-auto {
   margin: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .-mb-9 {
@@ -599,6 +612,14 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
+.h-\[20vh\] {
+  height: 20vh;
+}
+
 .h-auto {
   height: auto;
 }
@@ -647,12 +668,58 @@ video {
   max-width: 48rem;
 }
 
+.max-w-\[1400px\] {
+  max-width: 1400px;
+}
+
 .max-w-\[450px\] {
   max-width: 450px;
 }
 
 .max-w-full {
   max-width: 100%;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.shrink-\[5\] {
+  flex-shrink: 5;
+}
+
+.basis-\[500px\] {
+  flex-basis: 500px;
+}
+
+@keyframes display_fadein {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadein {
+  animation: display_fadein 2s forwards;
+}
+
+@keyframes display_fadeout {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fadeout {
+  animation: display_fadeout 2s forwards;
 }
 
 .flex-row {
@@ -735,6 +802,10 @@ video {
   align-self: center;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .text-nowrap {
   text-wrap: nowrap;
 }
@@ -793,6 +864,16 @@ video {
 
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-1 {
@@ -994,6 +1075,11 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1038,81 +1124,6 @@ video {
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
     pointer-events: none;
-}
-
-#videocontainer {
-    justify-content: center;
-    align-items: center;
-    margin: auto 0 auto 0;
-    z-index: 2;
-
-    width: 100%;
-    height: 20vh;
-}
-
-.display_none {
-    display: none;
-    animation: disappear 500ms;
-    opacity: 0;
-}
-
-.display_flex {
-    display: flex;
-    animation: appear 500ms;
-}
-
-@keyframes appear {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes disappear {
-    from {
-        display: flex;
-        opacity: 1;
-    }
-    to {
-        display: none;
-        opacity: 0;
-    }
-}
-
-#showreelvideo {
-    display: flex;
-    justify-self: center;
-    align-self: center;
-    flex-basis: 500px;
-    flex-shrink: 5;
-
-    margin: 20px;
-    
-    -o-object-fit: contain;
-    
-       object-fit: contain;
-    -o-object-position: center;
-       object-position: center;
-
-    overflow: hidden;
-}
-
-#videocontainer video {
-    justify-self: center;
-    align-self: center;
-    flex: 1;
-    overflow: hidden;
-
-    margin: min(5vw, 95%);
-    height: auto;
-    max-width: 1400px;
-    max-height: auto;
-    border-radius: 2px;
-    /* box-shadow: 1px 1px 4px #000000; */
-
-    transition: opacity 0.5s ease, height 0.5s ease;
 }
 
 #footer.overlay {

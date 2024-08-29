@@ -1,55 +1,31 @@
 (() => {
-  // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\cinemamodule.js
+  // ns-hugo:D:\FileFolder\repos\jl-portfolio\assets\js\modules\cinemamodule.js
   function togglevideo() {
-    const videocontainer2 = document.getElementById("videocontainer");
+    const videocontainer = document.getElementById("showreelvideocontainer");
+    console.log(videocontainer);
     const video = document.getElementById("showreelvideo");
     const resetDelay = 500;
-    if (videocontainer2.classList.contains("display_none")) {
-      videocontainer2.classList.remove("display_none");
-      videocontainer2.classList.add("display_flex");
+    if (videocontainer.classList.contains("hidden")) {
+      console.log("hidden found");
+      videocontainer.classList.remove("hidden", "animate-fadeout");
+      videocontainer.classList.add("flex", "animate-fadein");
       video.volume = 0;
       fadeInVolume(video, 800, 1);
       setTimeout(() => {
         video.play();
       }, resetDelay);
-    } else if (videocontainer2.classList.contains("display_flex")) {
-      videocontainer2.classList.remove("display_flex");
-      videocontainer2.classList.add("display_none");
+    } else if (videocontainer.classList.contains("animate-fadein")) {
+      videocontainer.classList.remove("animate-fadein");
+      videocontainer.classList.add("animate-fadeout");
       fadeOutVolume(video, 500);
       setTimeout(() => {
         video.pause();
+        videocontainer.classList.remove("flex");
+        videocontainer.classList.add("hidden");
         video.currentTime = 0;
       }, resetDelay);
     } else {
       console.error("Button or videocontainer element not found");
-    }
-  }
-  function overlayToggle() {
-    const overlayContainer = document.getElementById("overlay");
-    const overlayFooter = document.getElementById("footer");
-    if (overlayContainer.classList.contains("display_none") && overlayFooter.classList.contains("normal")) {
-      overlayContainer.classList.remove("display_none");
-      overlayFooter.classList.remove("normal");
-      overlayContainer.classList.add("display_flex");
-      overlayFooter.classList.add("overlay");
-    } else if (overlayContainer.classList.contains("display_flex") && overlayFooter.classList.contains("overlay")) {
-      overlayContainer.classList.remove("display_flex");
-      overlayFooter.classList.remove("overlay");
-      overlayContainer.classList.add("display_none");
-      overlayFooter.classList.add("normal");
-    }
-  }
-  function showreelButtonState() {
-    const showreelButton = document.getElementById("showreelbutton");
-    const showreelButtonText = showreelButton.querySelector("p");
-    if (showreelButton.classList.contains("notPlaying")) {
-      showreelButton.classList.remove("notPlaying");
-      showreelButton.classList.add("playing");
-      showreelButtonText.textContent = "Stop Showreel";
-    } else if (showreelButton.classList.contains("playing")) {
-      showreelButton.classList.remove("playing");
-      showreelButton.classList.add("notPlaying");
-      showreelButtonText.textContent = "Play Showreel";
     }
   }
   function fadeOutVolume(video, duration) {
@@ -78,18 +54,16 @@
   }
 
   // <stdin>
-  var firstClick = true;
-  document.addEventListener("keydown", function(keyDownEvent) {
-    $(document).ready(function() {
+  $(document).ready(function() {
+    let firstClick2 = true;
+    document.addEventListener("keydown", function(keyDownEvent) {
       if (document.body.getAttribute("data-page").toLowerCase() == "showreel") {
         console.log("conditions met");
-        const videocontainer2 = document.getElementById("videocontainer");
-        if (keyDownEvent.key === "Escape" && videocontainer2.classList.contains("display_flex")) {
-          firstClick = true;
+        const videocontainer = document.getElementById("showreelvideocontainer");
+        if (keyDownEvent.key === "Escape" && videocontainer.classList.contains("hidden")) {
+          firstClick2 = true;
           togglevideo();
-          overlayToggle();
-          showreelButtonState();
-          videocontainer2.offsetHeight;
+          videocontainer.offsetHeight;
           const showreelButton = document.getElementById("showreelbutton");
           showreelButton.offsetHeight;
           showreelButton.blur();
@@ -106,10 +80,7 @@
         const button = document.getElementById("showreelbutton");
         button.addEventListener("click", function(buttonClickEvent) {
           togglevideo();
-          overlayToggle();
-          showreelButtonState();
           firstClick = true;
-          videocontainer.offsetHeight;
           const showreelButton = document.getElementById("showreelbutton");
           showreelButton.offsetHeight;
           showreelButton.blur();
@@ -123,16 +94,14 @@
     $(document).ready(function() {
       if (document.body.getAttribute("data-page").toLowerCase() == "showreel") {
         console.log("conditions met");
-        const videocontainer2 = document.getElementById("videocontainer");
-        const showreelvideo = document.getElementById("showreelvideo");
+        const videocontainer = document.getElementById("showreelvideocontainer");
+        const video = document.getElementById("showreelvideo");
         if (firstClick) {
           firstClick = false;
           return;
         }
-        if (!document.getElementById("showreelvideo").contains(clickEvent.target) && videocontainer2.classList.contains("display_flex")) {
+        if (video.contains(clickEvent.target) && videocontainer.classList.contains("display_flex")) {
           togglevideo();
-          overlayToggle();
-          showreelButtonState();
         }
       } else {
         console.log("conditions not met");

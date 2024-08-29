@@ -1,19 +1,20 @@
 import * as cinemaModule from './modules/cinemamodule.js';
 
+$(document).ready(function() {// jquery library $function() executes when whole DOM is loaded
+
 let firstClick = true;
 
 document.addEventListener("keydown", function(keyDownEvent) {
-    $(document).ready(function() {// jquery library $function() executes when whole DOM is loaded
         if(document.body.getAttribute("data-page").toLowerCase() == "showreel")
         {
             console.log("conditions met");
 
-            const videocontainer = document.getElementById("videocontainer")
-            if (keyDownEvent.key === "Escape" && videocontainer.classList.contains("display_flex")) {
+            const videocontainer = document.getElementById("showreelvideocontainer")
+            if (keyDownEvent.key === "Escape" && videocontainer.classList.contains("hidden")) {
                 firstClick = true;
                 cinemaModule.togglevideo();
-                cinemaModule.overlayToggle();
-                cinemaModule.showreelButtonState();
+                // cinemaModule.overlayToggle();
+                // cinemaModule.showreelButtonState();
         
                 // Force reflow on specific elements
                 videocontainer.offsetHeight; // Trigger reflow
@@ -39,12 +40,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const button = document.getElementById("showreelbutton");
             button.addEventListener("click", function(buttonClickEvent) {
                 cinemaModule.togglevideo();
-                cinemaModule.overlayToggle();
-                cinemaModule.showreelButtonState();
+                // cinemaModule.overlayToggle();
+                // cinemaModule.showreelButtonState();
                 firstClick = true;
         
                 // Force reflow on specific elements
-                videocontainer.offsetHeight; // Trigger reflow
+                // videocontainer.offsetHeight; // Trigger reflow
                 const showreelButton = document.getElementById("showreelbutton");
                 showreelButton.offsetHeight; // Trigger reflow
         
@@ -64,16 +65,16 @@ window.addEventListener('click', function(clickEvent){
         {
             console.log("conditions met");
 
-            const videocontainer = document.getElementById("videocontainer");
-            const showreelvideo = document.getElementById("showreelvideo");
+            const videocontainer = document.getElementById("showreelvideocontainer");
+            const video = document.getElementById("showreelvideo");
             if (firstClick) {
                 firstClick = false;
                 return;
             }
-            if (!document.getElementById("showreelvideo").contains(clickEvent.target) && videocontainer.classList.contains("display_flex")){
+            if (video.contains(clickEvent.target) && videocontainer.classList.contains("display_flex")){
                 cinemaModule.togglevideo();
-                cinemaModule.overlayToggle();
-                cinemaModule.showreelButtonState();
+                // cinemaModule.overlayToggle();
+                // cinemaModule.showreelButtonState();
             }
         }
         else {
