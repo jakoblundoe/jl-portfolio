@@ -155,35 +155,6 @@
     }
 }
 
-.navbaritemcontainer a {
-    /* font-family: 'Roboto Mono', monospace; */
-    font-weight: 400;
-    letter-spacing: 0.2px;
-
-    font-size: 19px;
-
-    color: #262626;
-    /* text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); */
-
-    transition:
-    all 100ms;
-}
-
-.navbaritemcontainer a:hover {
-    /* text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2); */
-    /* transform: scale(1.01); */
-    opacity: .75;
-}
-
-.navbaritemcontainer a:active {
-    /* text-shadow: 1px 2px 4px rgba(0, 0, 0, 0); */
-    opacity: .6;
-}
-
-.navbaritemcontainer .activepage {
-    text-decoration: underline;
-}
-
 .showreelbuttoncontainer {
     display: flex;
     justify-content: center;
