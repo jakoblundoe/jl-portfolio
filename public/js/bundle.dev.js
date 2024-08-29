@@ -63,13 +63,13 @@
   }
 
   // <stdin>
+  var firstClick = true;
   $(document).ready(function() {
-    let firstClick2 = true;
     document.addEventListener("keydown", function(keyDownEvent) {
       if (document.body.getAttribute("data-page").toLowerCase() == "showreel") {
         const videocontainer = document.getElementById("showreelvideocontainer");
         if (keyDownEvent.key === "Escape" && videocontainer.classList.contains("flex")) {
-          firstClick2 = true;
+          firstClick = true;
           togglevideo();
           showreelButtonState();
         }
@@ -78,38 +78,28 @@
     });
   });
   document.addEventListener("DOMContentLoaded", function() {
-    $(document).ready(function() {
-      if (document.body.getAttribute("data-page").toLowerCase() == "showreel") {
-        const button = document.getElementById("showreelbutton");
-        button.addEventListener("click", function(buttonClickEvent) {
-          togglevideo();
-          showreelButtonState();
-          firstClick = true;
-          const showreelButton = document.getElementById("showreelbutton");
-          showreelButton.offsetHeight;
-          showreelButton.blur();
-        });
-      } else {
-      }
-    });
+    if (document.body.getAttribute("data-page").toLowerCase() === "showreel") {
+      const button = document.getElementById("showreelbutton");
+      button.addEventListener("click", function(buttonClickEvent) {
+        togglevideo();
+        showreelButtonState();
+        firstClick = true;
+      });
+    } else {
+    }
   });
   window.addEventListener("click", function(clickEvent) {
-    $(document).ready(function() {
-      if (document.body.getAttribute("data-page").toLowerCase() == "showreel") {
-        console.log("conditions met");
-        const videocontainer = document.getElementById("showreelvideocontainer");
-        const video = document.getElementById("showreelvideo");
-        if (firstClick) {
-          firstClick = false;
-          return;
-        }
-        if (video.contains(clickEvent.target) && videocontainer.classList.contains("display_flex")) {
-          togglevideo();
-          showreelButtonState();
-        }
-      } else {
-        console.log("conditions not met");
+    if (document.body.getAttribute("data-page").toLowerCase() === "showreel") {
+      const videocontainer = document.getElementById("showreelvideocontainer");
+      const video = document.getElementById("showreelvideo");
+      if (firstClick) {
+        firstClick = false;
+        return;
       }
-    });
+      if (!video.contains(clickEvent.target) && videocontainer.classList.contains("flex")) {
+        togglevideo();
+        showreelButtonState();
+      }
+    }
   });
 })();
