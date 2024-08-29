@@ -14,7 +14,7 @@ document.addEventListener("keydown", function(keyDownEvent) {
                 firstClick = true;
                 cinemaModule.togglevideo();
                 // cinemaModule.overlayToggle();
-                // cinemaModule.showreelButtonState();
+                cinemaModule.showreelButtonState();
         
                 // Force reflow on specific elements
                 videocontainer.offsetHeight; // Trigger reflow
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
             button.addEventListener("click", function(buttonClickEvent) {
                 cinemaModule.togglevideo();
                 // cinemaModule.overlayToggle();
-                // cinemaModule.showreelButtonState();
+                cinemaModule.showreelButtonState();
                 firstClick = true;
         
                 // Force reflow on specific elements
@@ -74,7 +74,7 @@ window.addEventListener('click', function(clickEvent){
             if (video.contains(clickEvent.target) && videocontainer.classList.contains("display_flex")){
                 cinemaModule.togglevideo();
                 // cinemaModule.overlayToggle();
-                // cinemaModule.showreelButtonState();
+                cinemaModule.showreelButtonState();
             }
         }
         else {

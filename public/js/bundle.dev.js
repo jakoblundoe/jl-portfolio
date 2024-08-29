@@ -6,7 +6,6 @@
     const video = document.getElementById("showreelvideo");
     const resetDelay = 500;
     if (videocontainer.classList.contains("hidden")) {
-      console.log("hidden found");
       videocontainer.classList.remove("hidden", "animate-fadeout");
       videocontainer.classList.add("flex", "animate-fadein");
       video.volume = 0;
@@ -26,6 +25,18 @@
       }, resetDelay);
     } else {
       console.error("Button or videocontainer element not found");
+    }
+  }
+  function showreelButtonState() {
+    const showreelButton = document.getElementById("showreelbutton");
+    const showreelButtonTextElement = showreelButton.querySelector("p");
+    if (showreelButtonTextElement.textContent === "Play Showreel") {
+      showreelButton.classList.add("z-50");
+      showreelButtonTextElement.textContent = "Stop Showreel";
+    } else if (showreelButtonTextElement.textContent === "Stop Showreel") {
+      showreelButton.classList.remove("z-50");
+      showreelButtonTextElement.textContent = "Play Showreel";
+      console.log(showreelButtonTextElement.textContent);
     }
   }
   function fadeOutVolume(video, duration) {
@@ -63,6 +74,7 @@
         if (keyDownEvent.key === "Escape" && videocontainer.classList.contains("hidden")) {
           firstClick2 = true;
           togglevideo();
+          showreelButtonState();
           videocontainer.offsetHeight;
           const showreelButton = document.getElementById("showreelbutton");
           showreelButton.offsetHeight;
@@ -80,6 +92,7 @@
         const button = document.getElementById("showreelbutton");
         button.addEventListener("click", function(buttonClickEvent) {
           togglevideo();
+          showreelButtonState();
           firstClick = true;
           const showreelButton = document.getElementById("showreelbutton");
           showreelButton.offsetHeight;
@@ -102,6 +115,7 @@
         }
         if (video.contains(clickEvent.target) && videocontainer.classList.contains("display_flex")) {
           togglevideo();
+          showreelButtonState();
         }
       } else {
         console.log("conditions not met");

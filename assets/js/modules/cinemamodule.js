@@ -6,7 +6,6 @@ export function togglevideo () {
     const resetDelay = 500;
 
     if (videocontainer.classList.contains("hidden")) {
-        console.log("hidden found");
         videocontainer.classList.remove("hidden", "animate-fadeout");
         videocontainer.classList.add("flex", "animate-fadein");
         video.volume = 0;
@@ -46,19 +45,19 @@ export function togglevideo () {
 //     }
 // }
 
-// export function showreelButtonState() {
-//     const showreelButton = document.getElementById("showreelbutton");
-//     const showreelButtonText = showreelButton.querySelector("p");
-//     if (showreelButton.classList.contains("notPlaying")) {
-//         showreelButton.classList.remove("notPlaying");
-//         showreelButton.classList.add("playing");
-//         showreelButtonText.textContent = "Stop Showreel"; 
-//     } else if (showreelButton.classList.contains("playing")) {
-//         showreelButton.classList.remove("playing");
-//         showreelButton.classList.add("notPlaying");
-//         showreelButtonText.textContent = "Play Showreel";
-//     }
-// }
+export function showreelButtonState() {
+    const showreelButton = document.getElementById("showreelbutton");
+    const showreelButtonTextElement = showreelButton.querySelector("p"); // DOM element (not yet a string)
+
+    if (showreelButtonTextElement.textContent === "Play Showreel") {
+        showreelButton.classList.add("z-50");
+        showreelButtonTextElement.textContent = "Stop Showreel";
+    } else if (showreelButtonTextElement.textContent === "Stop Showreel") {
+        showreelButton.classList.remove("z-50");
+        showreelButtonTextElement.textContent = "Play Showreel";
+        console.log(showreelButtonTextElement.textContent);
+    }
+}
 
 function fadeOutVolume(video, duration) {
 

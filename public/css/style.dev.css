@@ -527,6 +527,10 @@ video {
   z-index: 30;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
 .m-5 {
   margin: 1.25rem;
 }
@@ -1146,19 +1150,7 @@ video {
 }
 
 #showreelbutton.playing {
-    box-sizing: border-box;
-
-    padding: 18px 30px;
-    gap: 21px;
-    border: 2px solid #FFFFFF;
-    background-color:#2424243d;
-    /* filter: drop-shadow(1px 1px 4px #000000); */
-
     z-index: 5;
-    /* transform: translate(0, 20px); */
-    
-    transition:
-    all 200ms;
 }
 
 .after\:absolute::after {
