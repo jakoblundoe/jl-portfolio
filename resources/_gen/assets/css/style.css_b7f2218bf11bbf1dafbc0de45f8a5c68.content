@@ -1149,10 +1149,6 @@ video {
     }
 }
 
-#showreelbutton.playing {
-    z-index: 5;
-}
-
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;

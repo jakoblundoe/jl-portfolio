@@ -7,26 +7,24 @@ let firstClick = true;
 document.addEventListener("keydown", function(keyDownEvent) {
         if(document.body.getAttribute("data-page").toLowerCase() == "showreel")
         {
-            console.log("conditions met");
-
             const videocontainer = document.getElementById("showreelvideocontainer")
-            if (keyDownEvent.key === "Escape" && videocontainer.classList.contains("hidden")) {
+            if (keyDownEvent.key === "Escape" && videocontainer.classList.contains("flex")) {
+                
                 firstClick = true;
                 cinemaModule.togglevideo();
                 // cinemaModule.overlayToggle();
                 cinemaModule.showreelButtonState();
         
                 // Force reflow on specific elements
-                videocontainer.offsetHeight; // Trigger reflow
-                const showreelButton = document.getElementById("showreelbutton");
-                showreelButton.offsetHeight; // Trigger reflow
+                // videocontainer.offsetHeight; // Trigger reflow
+                // const showreelButton = document.getElementById("showreelbutton");
+                // showreelButton.offsetHeight; // Trigger reflow
         
                 // Blur the focus from the button
-                showreelButton.blur();
+                // showreelButton.blur();
             }
         }
         else {
-            console.log("conditions not met");
         }
     });
 });
@@ -35,8 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
     $(document).ready(function() {
         if(document.body.getAttribute("data-page").toLowerCase() == "showreel")
         {
-            console.log("conditions met");
-
             const button = document.getElementById("showreelbutton");
             button.addEventListener("click", function(buttonClickEvent) {
                 cinemaModule.togglevideo();
@@ -54,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
         else {
-            console.log("conditions not met");
         }
     });
 });

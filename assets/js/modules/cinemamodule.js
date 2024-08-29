@@ -1,7 +1,6 @@
 
 export function togglevideo () {
     const videocontainer = document.getElementById("showreelvideocontainer");
-    console.log(videocontainer);
     const video = document.getElementById("showreelvideo");
     const resetDelay = 500;
 
@@ -55,7 +54,6 @@ export function showreelButtonState() {
     } else if (showreelButtonTextElement.textContent === "Stop Showreel") {
         showreelButton.classList.remove("z-50");
         showreelButtonTextElement.textContent = "Play Showreel";
-        console.log(showreelButtonTextElement.textContent);
     }
 }
 

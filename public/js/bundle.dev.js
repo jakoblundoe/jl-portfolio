@@ -2,7 +2,6 @@
   // ns-hugo:D:\FileFolder\repos\jl-portfolio\assets\js\modules\cinemamodule.js
   function togglevideo() {
     const videocontainer = document.getElementById("showreelvideocontainer");
-    console.log(videocontainer);
     const video = document.getElementById("showreelvideo");
     const resetDelay = 500;
     if (videocontainer.classList.contains("hidden")) {
@@ -36,7 +35,6 @@
     } else if (showreelButtonTextElement.textContent === "Stop Showreel") {
       showreelButton.classList.remove("z-50");
       showreelButtonTextElement.textContent = "Play Showreel";
-      console.log(showreelButtonTextElement.textContent);
     }
   }
   function fadeOutVolume(video, duration) {
@@ -69,26 +67,19 @@
     let firstClick2 = true;
     document.addEventListener("keydown", function(keyDownEvent) {
       if (document.body.getAttribute("data-page").toLowerCase() == "showreel") {
-        console.log("conditions met");
         const videocontainer = document.getElementById("showreelvideocontainer");
-        if (keyDownEvent.key === "Escape" && videocontainer.classList.contains("hidden")) {
+        if (keyDownEvent.key === "Escape" && videocontainer.classList.contains("flex")) {
           firstClick2 = true;
           togglevideo();
           showreelButtonState();
-          videocontainer.offsetHeight;
-          const showreelButton = document.getElementById("showreelbutton");
-          showreelButton.offsetHeight;
-          showreelButton.blur();
         }
       } else {
-        console.log("conditions not met");
       }
     });
   });
   document.addEventListener("DOMContentLoaded", function() {
     $(document).ready(function() {
       if (document.body.getAttribute("data-page").toLowerCase() == "showreel") {
-        console.log("conditions met");
         const button = document.getElementById("showreelbutton");
         button.addEventListener("click", function(buttonClickEvent) {
           togglevideo();
@@ -99,7 +90,6 @@
           showreelButton.blur();
         });
       } else {
-        console.log("conditions not met");
       }
     });
   });
