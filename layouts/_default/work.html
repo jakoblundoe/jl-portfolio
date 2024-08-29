@@ -1,7 +1,7 @@
 {{ define "main" }}
-<div class="flex flex-col flex-nowrap justify-between bg-white min-h-dvh">
+<div class="flex flex-col flex-nowrap justify-between bg-white min-h-dvh pb-14">
     {{ partial "header.html" . }}
-    <div class="m-auto p-24 max-w-3xl text-black text-xl font-light
+    <div class="m-auto p-10 pt-20 max-w-3xl text-black text-xl font-light
                 [&_p]:-mt-12 [&_p]:mb-12
                 [&_a]:text-pink [&_a]:font-medium hover:[&_a]:opacity-80 active:[&_a]:opacity-65">
     {{ with .Resources.Get "pagecontent/workinprogress.md" }}
