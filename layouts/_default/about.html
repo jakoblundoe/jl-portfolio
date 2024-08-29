@@ -1,9 +1,9 @@
 {{ define "main" }}
-<div class="flex flex-col flex-nowrap min-h-dvh bg-white pb-14">
+<div class="flex flex-col flex-nowrap min-h-dvh bg-white pb-20">
     {{ partial "header.html" . }}
     <div class="flex flex-row flex-wrap justify-center gap-16 py-11 px-14 m-auto">
-        <div class="flex flex-col flex-nowrap justify-start items-center w-[420px] gap-2.5 mr-2.5">
-            <div class="flex flex-col items-start font-medium text-6xl tracking-wider mt-2.5">
+        <div class="flex flex-col flex-nowrap justify-start items-center w-[430px] gap-2.5 mr-2.5">
+            <div class="flex flex-col items-start font-medium text-6xl tracking-wider mt-2.5 mb-4">
                 {{ with .Resources.Get "pagecontent/header.md" }}
                     {{ .Content }}
                 {{ end }}
@@ -13,7 +13,7 @@
                     {{ .Content }}
                 {{ end }}
             </div>
-            <div class="flex flex-col items-start gap-2.5 mt-5 -mb-9 font-light text-lg">
+            <div class="flex flex-col items-start gap-2.5 mt-4 -mb-9 font-light text-lg">
                 {{ with .Resources.Get "pagecontent/description.md" }}
                     {{ .Content }}
                 {{ end }}
