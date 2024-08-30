@@ -57,12 +57,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuButton = document.getElementById("openmenubutton");
     const closeMenuButton = document.getElementById("closemenubutton");
     const sideBar = document.getElementById("sidebarnav");
+    const bottomNavbar = document.getElementById("bottomnavbar");
+
+    const menuButtonContainer = document.getElementById("menubuttoncontainer");
+    const footer = document.getElementById("footer");
 
     menuButton.addEventListener("click", function(buttonClickEvent) {
         if (menuButton && sideBar) {
             console.log(menuButton);
             menuButton.classList.remove("flex");
-            menuButton.classList.add("hidden");
+            menuButton.remove();
+            bottomNavbar.remove();
 
             sideBar.classList.remove("hidden");
             sideBar.classList.add("flex");
@@ -71,12 +76,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         }
     });
+
     closeMenuButton.addEventListener("click", function(buttonClickEvent) {
         if (closeMenuButton) {
-            console.log(closeMenuButton);
 
-            menuButton.classList.remove("hidden");
-            menuButton.classList.add("flex");
+            menuButtonContainer.appendChild(menuButton);
+            footer.prepend(bottomNavbar);
 
             sideBar.classList.remove("flex");
             sideBar.classList.add("hidden");
