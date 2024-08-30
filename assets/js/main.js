@@ -69,8 +69,8 @@ document.addEventListener("DOMContentLoaded", function() {
             menuButton.remove();
             bottomNavbar.remove();
 
-            sideBar.classList.remove("hidden");
-            sideBar.classList.add("flex");
+            sideBar.classList.remove("animate-slideout");
+            sideBar.classList.add("animate-slidein");
         }
         else {
 
@@ -83,8 +83,8 @@ document.addEventListener("DOMContentLoaded", function() {
             menuButtonContainer.appendChild(menuButton);
             footer.prepend(bottomNavbar);
 
-            sideBar.classList.remove("flex");
-            sideBar.classList.add("hidden");
+            sideBar.classList.remove("animate-slidein");
+            sideBar.classList.add("animate-slideout");
         }
     });
 });

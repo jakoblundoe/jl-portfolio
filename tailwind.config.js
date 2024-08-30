@@ -51,10 +51,20 @@ module.exports = {
           '0%': { opacity: '1'},
           '100%': { opacity: '0' },
         },
+        slide_right: {
+          '0%': { transform: 'translateX(-100%)'},
+          '100%': { transform: 'translateX(0)'},
+        },
+        slide_left: {
+          '0%': { transform: 'translateX(0)'},
+          '100%': { transform: 'translateX(-100%)'},
+        },
       },
       animation: {
         fadein: 'display_fadein 2s forwards',
         fadeout: 'display_fadeout 2s forwards',
+        slidein: 'slide_right 500ms forwards',
+        slideout: 'slide_left 500ms forwards',
       },
     },
   },
