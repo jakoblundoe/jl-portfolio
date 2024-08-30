@@ -1,6 +1,24 @@
-<button id="closemenubutton" class="flex flex-row w-12 h-auto items-center justify-start opacity-80 transition duration-100 flex-shrink-0
-        hover:opacity-70 hover:scale-105
-        active:opacity-50 active:scale-105
-        sm:hidden">
-    <img src="/img/close_cross_icon.webp" alt="close menu button logo" class="max-w-6 max-h-6 w-1/2">
-</button>
+<div class="flex flex-col flex-nowrap justify-end gap-8">
+    <div class="flex flex-col flex-nowrap shrink-0 self-center gap-4 items-start ml-6
+        [&_a]:font-mono [&_a]:text-light-black [&_a]:font-normal [&_a]:tracking-wide text-xl [&_a]:transition [&_a]:duration-100
+        hover:[&_a]:opacity-75 active:[&_a]:opacity-60
+        sm:justify-center sm:items-center">
+        {{ $pages := where .Site.Pages "Params.inNavbar" true}}
+        {{ $currentPage := . }}
+        {{ with $pages }}
+            {{ range sort $pages "Params.navbarOrder" }}
+                {{ if eq .RelPermalink $currentPage.RelPermalink }}
+                    <a href="{{ .RelPermalink }}" class="underline decoration-light-black decoration-1">{{ .Title }}</a>
+                {{ else }}
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </div>
+    <button id="closemenubutton" class="flex flex-col w-12 h-auto items-center justify-end opacity-80 transition duration-200 flex-shrink-0 ml-3 mb-4
+            hover:opacity-70 hover:scale-105
+            active:opacity-50 active:scale-105
+            sm:hidden">
+        <img src="/img/close_cross_icon.webp" alt="close menu button logo" class="max-w-6 max-h-6 w-1/2">
+    </button>
+</div>
