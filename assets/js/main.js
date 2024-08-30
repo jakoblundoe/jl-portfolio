@@ -77,4 +77,3 @@ addEventListener("resize", () => {
         sidebarOpen = false;
     }
 });
-
