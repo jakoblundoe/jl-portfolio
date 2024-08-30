@@ -1,8 +1,8 @@
 import * as cinemaModule from './modules/cinemamodule.js';
 import * as sidebarToggle from './modules/sidebartoggle.js';
 
-
 let firstClick = true;
+let sidebarOpen = false;
 
 $(document).ready(function() {// jquery library $function() executes when whole DOM is loaded
 document.addEventListener("keydown", function(keyDownEvent) {
@@ -59,10 +59,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuButton = document.getElementById("openmenubutton");
     
     menuButton.addEventListener("click", function(buttonClickEvent) {
-        sidebarToggle.openMenu(menuButton);
+        sidebarToggle.openMenu();
+        sidebarOpen = true;
     });
     
     closeMenuButton.addEventListener("click", function(buttonClickEvent) {
-        sidebarToggle.closeMenu(menuButton);
+        sidebarToggle.closeMenu();
+        sidebarOpen = false;
     });
 });
+
+addEventListener("resize", () => {
+    const width = window.innerWidth;
+    if (width > 640 && sidebarOpen)
+    {
+        sidebarToggle.closeMenu();
+        sidebarOpen = false;
+    }
+});
+
