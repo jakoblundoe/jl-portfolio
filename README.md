@@ -7,6 +7,7 @@ The development version can be accessed at [https://portfolio.jakoblundoe.com](h
 
 **Tools, languages and frameworks used:** <br>
 > Hugo as the SSG<br>
+> Tailwind CSS framework
 > Figma as the design tool<br>
 > CSS, HTML and JS<br>
 > Git as the version control tool<br>
