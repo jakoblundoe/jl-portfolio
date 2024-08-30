@@ -37,6 +37,7 @@ module.exports = {
         lg: '0 8px 16px var(--tw-shadow-color)',
       },
       scale: {
+        '101': '1.01',
         '102': '1.02',
       },
       transitionDuration: {

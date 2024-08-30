@@ -9,10 +9,7 @@
         </video>
     </div>
     <div class="flex justify-center items-center mt-2.5 mb-10">
-        <button id="showreelbutton" class="font-mono text-lg tracking-wide text-white box-border py-4 px-6 border-2 border-solid border-white bg-transp-black gap-5 transition duration-200 drop-shadow-user-md
-                        hover:bg-less-transp-black hover:scale-102 hover:font-black hover:text-xl hover:shadow-user-md
-                        active:bg-dark-grey
-                        sm:text-xl sm:py-4 sm:px-7">
+        <button id="showreelbutton" class="font-mono text-lg tracking-wide text-white box-border py-4 px-6 border-2 border-solid border-white bg-transp-black gap-5 transition duration-200 drop-shadow-user-md hover:bg-less-transp-black hover:scale-101 hover:font-bold hover:text-lg hover:shadow-user-md active:bg-dark-grey sm:text-xl sm:py-4 sm:px-7 sm:hover:scale-102 sm:hover:font-black sm:hover:text-xl">
             {{ with .Resources.Get "pagecontent/buttontext.md" }}
                 {{ .Content }}
             {{ end }}
