@@ -1,4 +1,5 @@
 import * as cinemaModule from './modules/cinemamodule.js';
+import * as sidebarToggle from './modules/sidebartoggle.js';
 
 
 let firstClick = true;
@@ -54,37 +55,14 @@ window.addEventListener('click', function(clickEvent){
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const menuButton = document.getElementById("openmenubutton");
     const closeMenuButton = document.getElementById("closemenubutton");
-    const sideBar = document.getElementById("sidebarnav");
-    const bottomNavbar = document.getElementById("bottomnavbar");
-
-    const menuButtonContainer = document.getElementById("menubuttoncontainer");
-    const footer = document.getElementById("footer");
-
+    const menuButton = document.getElementById("openmenubutton");
+    
     menuButton.addEventListener("click", function(buttonClickEvent) {
-        if (menuButton && sideBar) {
-            console.log(menuButton);
-            menuButton.classList.remove("flex");
-            menuButton.remove();
-            bottomNavbar.remove();
-
-            sideBar.classList.remove("animate-slideout");
-            sideBar.classList.add("animate-slidein");
-        }
-        else {
-
-        }
+        sidebarToggle.openMenu(menuButton);
     });
-
+    
     closeMenuButton.addEventListener("click", function(buttonClickEvent) {
-        if (closeMenuButton) {
-
-            menuButtonContainer.appendChild(menuButton);
-            footer.prepend(bottomNavbar);
-
-            sideBar.classList.remove("animate-slidein");
-            sideBar.classList.add("animate-slideout");
-        }
+        sidebarToggle.closeMenu(menuButton);
     });
 });

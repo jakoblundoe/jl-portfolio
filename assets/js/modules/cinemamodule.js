@@ -1,12 +1,16 @@
+import * as sidebarToggle from '../modules/sidebartoggle.js';
 
 export function togglevideo () {
     const videocontainer = document.getElementById("showreelvideocontainer");
     const video = document.getElementById("showreelvideo");
     const resetDelay = 500;
 
+    const menuButton = document.getElementById("openmenubutton");
+
     if (videocontainer.classList.contains("hidden")) {
         videocontainer.classList.remove("hidden", "animate-fadeout");
         videocontainer.classList.add("flex", "animate-fadein");
+        sidebarToggle.closeMenu(menuButton);
         video.volume = 0;
         fadeInVolume(video, 800, 1);
         setTimeout(() => {
