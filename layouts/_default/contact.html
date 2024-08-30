@@ -2,19 +2,21 @@
 <div class="flex flex-col flex-nowrap justify-between min-h-dvh bg-white pb-14">
     {{ partial "header.html" . }}
     <div class="flex flex-col flex-nowrap justify-center items-center gap-10 m-auto py-20 px-10">
-        <div class="flex flex-row justify-center items-start gap-2.5 text-5xl font-medium tracking-wider text-center">
+        <div class="flex flex-row justify-center items-start gap-2.5 text-4xl font-medium tracking-wider text-center
+                    sm:text-5xl">
             {{ with .Resources.Get "pagecontent/description.md" }}
                 {{ .Content }}
             {{ end }}
         </div>
         <div class="flex flex-col flex-nowrap self-center gap-2.5">
-            <div class="flex self-center p-1 gap-2.5 font-light text-2xl tracking-wide -mt-4">
+            <div class="flex self-center p-1 gap-2.5 font-light text-xl tracking-wide -mt-4
+                        sm:text-2xl">
                 {{ with .Resources.Get "pagecontent/email.md"}}
                     {{ .Content }}
                 {{ end }}
             </div>
             <div class="flex flex-col justify-center items-center mt-9 gap-2.5">
-                <a href="mailto:me@jakoblundoe.com" class="flex flex-row flex-nowrap justify-center items-center py-6 px-8 gap-2.5 mt-8 border-2 border-solid border-pink rounded-md transition duration-200 font-normal text-3xl text-pink tracking-wide shadow-user-xsm text-shadow-sm
+                <a href="mailto:me@jakoblundoe.com" class="flex flex-row flex-nowrap justify-center items-center py-5 px-7 gap-2.5 mt-8 border-2 border-solid border-pink rounded-md transition duration-200 font-normal text-2xl text-pink tracking-wide shadow-user-xsm text-shadow-sm
                 hover:bg-transp-grey hover:scale-102 hover:shadow-user-sm
                 active:opacity-70">
                     {{ with .Resources.Get "pagecontent/buttontext.md" }}
