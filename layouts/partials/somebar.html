@@ -1,4 +1,5 @@
-<div class="flex flex-row flex-nowrap justify-between items-center gap-1.5">
+<div class="flex flex-row flex-nowrap justify-end items-center gap-1.5
+            sm:justify-between sm:items-center">
 {{ $socials := where .Site.RegularPages "Section" "socials"}}
     {{ range sort $socials "Params.someOrder" }}
         <div class="transition duration-150
