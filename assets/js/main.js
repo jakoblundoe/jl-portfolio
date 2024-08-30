@@ -59,17 +59,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuButton = document.getElementById("openmenubutton");
     
     menuButton.addEventListener("click", function() {
-        if (!sidebarOpen){
-            sidebarToggle.openMenu();
-            sidebarOpen = true;
-        }
+        sidebarToggle.openMenu();
+        sidebarOpen = true;
     });
     
     closeMenuButton.addEventListener("click", function() {
-        if (sidebarOpen) {
-            sidebarToggle.closeMenu();
-            sidebarOpen = false;
-        }
+        sidebarToggle.closeMenu();
+        sidebarOpen = false;
     });
 });
 

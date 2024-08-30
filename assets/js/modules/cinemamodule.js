@@ -36,7 +36,6 @@ export function overlayToggle () {
     const overlayFooter = document.getElementById("footer");
 
     if (overlayContainer.classList.contains("opacity-0") && overlayFooter.classList.contains("bg-white")) {
-        console.log("check");
         overlayContainer.classList.remove("animate-fadeout");
         overlayFooter.classList.remove("bg-white");
         overlayContainer.classList.add("animate-fadein");
