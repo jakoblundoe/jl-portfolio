@@ -62,8 +62,8 @@ module.exports = {
         },
       },
       animation: {
-        fadein: 'display_fadein 2s forwards',
-        fadeout: 'display_fadeout 2s forwards',
+        fadein: 'display_fadein 1s forwards',
+        fadeout: 'display_fadeout 1s forwards',
         slidein: 'slide_right 500ms forwards',
         slideout: 'slide_left 500ms forwards',
       },
