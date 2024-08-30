@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(document.body.getAttribute("data-page").toLowerCase() === "showreel")
         {
             const button = document.getElementById("showreelbutton");
-            button.addEventListener("click", function(buttonClickEvent) {
+            button.addEventListener("click", function() {
                 cinemaModule.togglevideo();
                 cinemaModule.overlayToggle();
                 cinemaModule.showreelButtonState();
@@ -58,14 +58,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const closeMenuButton = document.getElementById("closemenubutton");
     const menuButton = document.getElementById("openmenubutton");
     
-    menuButton.addEventListener("click", function(buttonClickEvent) {
-        sidebarToggle.openMenu();
-        sidebarOpen = true;
+    menuButton.addEventListener("click", function() {
+        if (!sidebarOpen){
+            sidebarToggle.openMenu();
+            sidebarOpen = true;
+        }
     });
     
-    closeMenuButton.addEventListener("click", function(buttonClickEvent) {
-        sidebarToggle.closeMenu();
-        sidebarOpen = false;
+    closeMenuButton.addEventListener("click", function() {
+        if (sidebarOpen) {
+            sidebarToggle.closeMenu();
+            sidebarOpen = false;
+        }
     });
 });
 
@@ -75,5 +79,6 @@ addEventListener("resize", () => {
     {
         sidebarToggle.closeMenu();
         sidebarOpen = false;
+    } else {
     }
 });
