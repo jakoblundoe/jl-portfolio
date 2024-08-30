@@ -55,12 +55,31 @@ window.addEventListener('click', function(clickEvent){
 
 document.addEventListener("DOMContentLoaded", function() {
     const menuButton = document.getElementById("openmenubutton");
+    const closeMenuButton = document.getElementById("closemenubutton");
+    const sideBar = document.getElementById("sidebarnav");
 
     menuButton.addEventListener("click", function(buttonClickEvent) {
-        if (menuButton) {
+        if (menuButton && sideBar) {
             console.log(menuButton);
             menuButton.classList.remove("flex");
             menuButton.classList.add("hidden");
+
+            sideBar.classList.remove("hidden");
+            sideBar.classList.add("flex");
+        }
+        else {
+
+        }
+    });
+    closeMenuButton.addEventListener("click", function(buttonClickEvent) {
+        if (closeMenuButton) {
+            console.log(closeMenuButton);
+
+            menuButton.classList.remove("hidden");
+            menuButton.classList.add("flex");
+
+            sideBar.classList.remove("flex");
+            sideBar.classList.add("hidden");
         }
     });
 });
