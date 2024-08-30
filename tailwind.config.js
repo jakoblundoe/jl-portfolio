@@ -22,6 +22,14 @@ module.exports = {
         'inter': ['Inter', 'sans-serif'],
         'mono': ['Roboto Mono', 'monospace'],
       },
+      dropShadow: {
+        'user-md': '1px 1px 4px #000000',
+      },
+      boxShadow: {
+        'user-xsm': '0.5px 0.5px 2px rgba(0, 0, 0, 0.185)',
+        'user-sm': '0.5px 0.5px 2px rgba(0, 0, 0, 0.575)',
+        'user-md': '1px 1px 4px #0000008c',
+      },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',
         DEFAULT: '1px 2px 4px var(--tw-shadow-color)',
