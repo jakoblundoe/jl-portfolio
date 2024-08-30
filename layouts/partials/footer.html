@@ -1,13 +1,13 @@
 {{ $currentPage := . }}
 <!-- below class belongs to #footer.normal -->
 <div id="footer" class="flex flex-row flex-nowrap justify-start items-center pr-7 pl-5 bg-white fixed bottom-0 w-full z-30 transition duration-2000
-      sm:justify-between
+      sm:flex-row sm:justify-between
       {{ if ne $currentPage.Title "Showreel"}}border-t border-solid border-black{{ end }}">
       <div class="flex flex-row flex-nowrap mr-auto gap-2">
         {{ partial "nav.html" . }}
         {{ partial "smartphonenav.html" . }}
       </div>
-      <div>
+      <div class="">
         {{ partial "somebar.html" . }}
       </div>
 </div>

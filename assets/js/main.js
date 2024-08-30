@@ -52,3 +52,15 @@ window.addEventListener('click', function(clickEvent){
         }
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuButton = document.getElementById("openmenubutton");
+
+    menuButton.addEventListener("click", function(buttonClickEvent) {
+        if (menuButton) {
+            console.log(menuButton);
+            menuButton.classList.remove("flex");
+            menuButton.classList.add("hidden");
+        }
+    });
+});
