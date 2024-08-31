@@ -1,14 +1,14 @@
-<div class="flex flex-row flex-nowrap justify-center items-center gap-5 -mr-1 min-h-14">
+<div class="flex flex-row flex-nowrap justify-center items-center gap-3 -mr-1">
     <div class="hidden w-12 h-auto items-center justify-start opacity-80 transition duration-100
                 hover:opacity-70 hover:scale-105
                 active:opacity-50 active:scale-105
                 sm:flex sm:justify-center">
         <a href="/showreel">
-            <img src="/img/jl-logo.webp" alt="Jakob Lundoe homepage logo" class="max-w-full max-h-full w-8">
+            <img src="/img/jl-logo.webp" alt="Jakob Lundoe homepage logo" class="max-w-full max-h-full w-7">
         </a>
     </div>
     <div class="hidden flex-row flex-nowrap justify-center items-center py-1 px-1.5 gap-8
-                [&_a]:font-mono [&_a]:text-light-black [&_a]:font-normal [&_a]:tracking-wide text-xl [&_a]:transition [&_a]:duration-100
+                [&_a]:font-mono [&_a]:text-light-black [&_a]:font-normal [&_a]:tracking-wide text-lg [&_a]:transition [&_a]:duration-100
                 hover:[&_a]:opacity-75 active:[&_a]:opacity-60
                 sm:flex sm:justify-center sm:items-center">
         {{ $pages := where .Site.Pages "Params.inNavbar" true}}
