@@ -3,7 +3,7 @@
     {{ partial "meta.html" . }}
     <body data-page="{{ .Params.title }}">
         <div class="">
-            <div id="sidebarnav" class="fixed top-0 left-0 h-full -translate-x-full bg-white z-30 w-36">
+            <div id="sidebarnav" class="fixed top-0 left-0 h-full -translate-x-full bg-white z-30 px-4 border-r border-black">
                 {{ partial "sidebarnav" . }}
             </div>
             {{ block "main" . }}
