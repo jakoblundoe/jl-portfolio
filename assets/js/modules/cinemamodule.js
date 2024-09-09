@@ -34,17 +34,20 @@ export function togglevideo (delayTime) {
 export function overlayToggle () {
     const overlayContainer = document.getElementById("overlay");
     const overlayFooter = document.getElementById("footer");
+    const menuButtonContainer = document.getElementById("menubuttoncontainer");
 
     if (overlayContainer.classList.contains("opacity-0") && overlayFooter.classList.contains("bg-white")) {
         overlayContainer.classList.remove("animate-fadeout");
         overlayFooter.classList.remove("bg-white");
         overlayContainer.classList.add("animate-fadein");
         overlayFooter.classList.add("bg-[#6e6e6e]");
+        menuButtonContainer.classList.add("pointer-events-none");
     } else if (overlayContainer.classList.contains("animate-fadein") && overlayFooter.classList.contains("bg-[#6e6e6e]")) {
         overlayContainer.classList.remove("animate-fadein");
         overlayFooter.classList.remove("bg-[#6e6e6e]");
         overlayContainer.classList.add("animate-fadeout");
         overlayFooter.classList.add("bg-white");
+        menuButtonContainer.classList.remove("pointer-events-none");
     }
 }
 
