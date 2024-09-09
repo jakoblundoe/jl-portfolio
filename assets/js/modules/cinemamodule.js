@@ -5,12 +5,10 @@ export function togglevideo () {
     const video = document.getElementById("showreelvideo");
     const resetDelay = 500;
 
-    const menuButton = document.getElementById("openmenubutton");
-
     if (videocontainer.classList.contains("hidden")) {
         videocontainer.classList.remove("hidden", "animate-fadeout");
         videocontainer.classList.add("flex", "animate-fadein");
-        sidebarToggle.closeMenu(menuButton);
+        sidebarToggle.closeMenu(false);
         video.volume = 0;
         fadeInVolume(video, 800, 1);
         setTimeout(() => {

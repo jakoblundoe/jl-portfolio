@@ -28,7 +28,7 @@ export function closeMenu (sidebarOpen) {
 
             sideBar.classList.remove("animate-slidein");
             sideBar.classList.add("animate-slideout");
-            
+
             return false;
         }
 }
