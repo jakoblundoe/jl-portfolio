@@ -2,7 +2,6 @@ import * as cinemaModule from './modules/cinemamodule.js';
 import * as sidebarToggle from './modules/sidebartoggle.js';
 
 let firstClick = true;
-let sidebarOpen = false;
 
 $(document).ready(function() {// jquery library $function() executes when whole DOM is loaded
 document.addEventListener("keydown", function(keyDownEvent) {
@@ -54,38 +53,29 @@ window.addEventListener('click', function(clickEvent){
     }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
     const closeMenuButton = document.getElementById("closemenubutton");
     const menuButton = document.getElementById("openmenubutton");
-    
-    menuButton.addEventListener("click", function() {
-        sidebarToggle.openMenu();
-        sidebarOpen = true;
-    });
-    
-    closeMenuButton.addEventListener("click", function() {
-        sidebarToggle.closeMenu();
-        sidebarOpen = false;
-    });
-});
-
-document.addEventListener('click', function (clickEvent) {
     const sidebar = document.getElementById("sidebarnav");
-    const menubutton = document.getElementById("openmenubutton");
 
-    if (!sidebarOpen) {
-        return;
-    } else if (!sidebar.contains(clickEvent.target) && !menubutton.contains(clickEvent.target)) {
-        sidebarToggle.closeMenu();
-        sidebarOpen = false;
-    }
-});
+    let sidebarOpen = true;
 
-addEventListener("resize", () => {
-    const width = window.innerWidth;
-    if (width > 640 && sidebarOpen)
-        {
-            sidebarToggle.closeMenu();
-            sidebarOpen = false;
+    menuButton.addEventListener("click", () => (!sidebarOpen) ? sidebarOpen = sidebarToggle.openMenu(sidebarOpen) : sidebarOpen = sidebarToggle.closeMenu(sidebarOpen));
+    closeMenuButton.addEventListener("click", () => (sidebarOpen) ? sidebarOpen = sidebarToggle.closeMenu(sidebarOpen) : sidebarOpen = sidebarToggle.openMenu(sidebarOpen));
+    
+    document.addEventListener("click", (clickEvent) => {
+        if (!sidebarOpen) {
+            return;
+        } else if (!sidebar.contains(clickEvent.target) && !menuButton.contains(clickEvent.target)) {
+            sidebarOpen = sidebarToggle.closeMenu(sidebarOpen);
         }
+    });
+
+    addEventListener("resize", () => {
+        const width = window.innerWidth;
+        if (width > 640)
+            {
+                sidebarOpen = sidebarToggle.closeMenu(sidebarOpen);
+            }
+    });
 });

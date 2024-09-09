@@ -1,6 +1,4 @@
-let sidebarOpen;
-
-export function openMenu () {
+export function openMenu (sidebarOpen) {
     const sideBar = document.getElementById("sidebarnav");
     const bottomNavbar = document.getElementById("bottomnavbar");
     const menuButton = document.getElementById("openmenubutton");
@@ -13,15 +11,16 @@ export function openMenu () {
             sideBar.classList.remove("animate-slideout");
             sideBar.classList.add("animate-slidein");
 
-            sidebarOpen = true;
+            return true;
         }
 }
 
-export function closeMenu () {
+export function closeMenu (sidebarOpen) {
     const closeMenuButton = document.getElementById("closemenubutton");
     const sideBar = document.getElementById("sidebarnav");
     const bottomNavbar = document.getElementById("bottomnavbar");
     const menuButton = document.getElementById("openmenubutton");
+    
         if (closeMenuButton && sidebarOpen) {
             
             menuButton.classList.remove("hidden");
@@ -29,7 +28,6 @@ export function closeMenu () {
 
             sideBar.classList.remove("animate-slidein");
             sideBar.classList.add("animate-slideout");
-
-            sidebarOpen = false;
+            return false;
         }
 }
