@@ -20,7 +20,7 @@ export function closeMenu (sidebarOpen) {
     const sideBar = document.getElementById("sidebarnav");
     const bottomNavbar = document.getElementById("bottomnavbar");
     const menuButton = document.getElementById("openmenubutton");
-    
+
         if (closeMenuButton && sidebarOpen) {
             
             menuButton.classList.remove("hidden");
@@ -28,6 +28,7 @@ export function closeMenu (sidebarOpen) {
 
             sideBar.classList.remove("animate-slidein");
             sideBar.classList.add("animate-slideout");
+            
             return false;
         }
 }

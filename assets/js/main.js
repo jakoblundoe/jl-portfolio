@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuButton = document.getElementById("openmenubutton");
     const sidebar = document.getElementById("sidebarnav");
 
-    let sidebarOpen = true;
+    let sidebarOpen = false;
 
     menuButton.addEventListener("click", () => (!sidebarOpen) ? sidebarOpen = sidebarToggle.openMenu(sidebarOpen) : sidebarOpen = sidebarToggle.closeMenu(sidebarOpen));
     closeMenuButton.addEventListener("click", () => (sidebarOpen) ? sidebarOpen = sidebarToggle.closeMenu(sidebarOpen) : sidebarOpen = sidebarToggle.openMenu(sidebarOpen));
