@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("showreelvideo");
     const button = document.getElementById("showreelbutton");
     const showreelPageActive = (document.body.getAttribute("data-page").toLowerCase() === "showreel") || false;
-    console.log(showreelPageActive);
     let firstClick = true;
 
     if (!showreelPageActive)
