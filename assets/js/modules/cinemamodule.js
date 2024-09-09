@@ -1,9 +1,9 @@
 import * as sidebarToggle from '../modules/sidebartoggle.js';
 
-export function togglevideo (toggleState) {
+export function togglevideo (delayTime) {
     const videocontainer = document.getElementById("showreelvideocontainer");
     const video = document.getElementById("showreelvideo");
-    const resetDelay = 500;
+    // const delayTime = d;
 
     if (videocontainer.classList.contains("hidden")) {
         videocontainer.classList.remove("hidden", "animate-fadeout");
@@ -13,7 +13,7 @@ export function togglevideo (toggleState) {
         fadeInVolume(video, 800, 1);
         setTimeout(() => {
             video.play();
-        }, resetDelay);
+        }, delayTime);
         return true;
     } else if (videocontainer.classList.contains("animate-fadein")) {
         videocontainer.classList.remove("animate-fadein");
@@ -24,7 +24,7 @@ export function togglevideo (toggleState) {
             videocontainer.classList.remove("flex");
             videocontainer.classList.add("hidden");
             video.currentTime = 0;
-        }, resetDelay);
+        }, delayTime);
         return false;
     } else {
         console.error("Button or videocontainer element not found");

@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const videocontainer = document.getElementById("showreelvideocontainer");
     const video = document.getElementById("showreelvideo");
     const button = document.getElementById("showreelbutton");
+    const delayTime = 500;
+    let timerActive = false;
     const showreelPageActive = (document.body.getAttribute("data-page").toLowerCase() === "showreel") || false;
     let firstClick = true;
 
@@ -13,30 +15,51 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
 
     document.addEventListener("keydown", (keydownEvent) => {
+        if (timerActive)
+            return;
         if (keydownEvent.key === "Escape" && videocontainer.classList.contains("flex")) {
-            cinemaModule.togglevideo();
+            cinemaModule.togglevideo(delayTime);
             cinemaModule.overlayToggle();
             cinemaModule.showreelButtonState();
             firstClick = true;
+
+            timerActive = true;
+            setTimeout(() => {
+                timerActive = false;
+            }, delayTime);
         }
     });
 
     button.addEventListener("click", () => {
-            cinemaModule.togglevideo();
-            cinemaModule.overlayToggle();
-            cinemaModule.showreelButtonState();
-            firstClick = true;
+        if (timerActive)
+            return;
+        cinemaModule.togglevideo(delayTime);
+        cinemaModule.overlayToggle();
+        cinemaModule.showreelButtonState();
+        firstClick = true;
+
+        timerActive = true;
+        setTimeout(() => {
+            timerActive = false;
+        }, delayTime);
     });
 
     window.addEventListener("click", (clickEvent) => {
+        if (timerActive)
+            return;
         if (firstClick) {
             firstClick = false;
             return;
         }
         if (!video.contains(clickEvent.target) && videocontainer.classList.contains("flex")){
-            cinemaModule.togglevideo();
+            cinemaModule.togglevideo(delayTime);
             cinemaModule.overlayToggle();
             cinemaModule.showreelButtonState();
+
+            timerActive = true;
+            setTimeout(() => {
+                timerActive = false;
+            }, delayTime);
         }
     });
 });
