@@ -9,15 +9,3 @@
 
 @tailwind components;
 @tailwind utilities;
-
-@media (max-width: 640px) {
-    .somelinkcontainer {
-        display: none;
-        flex: none;
-        /* flex-flow: row nowrap; */
-        /* justify-content: space-between; */
-        /* align-items: left; */
-        padding: 3px 0 3px 24px;
-        gap: 6px;
-    }
-}
