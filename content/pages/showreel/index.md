@@ -1,6 +1,6 @@
 ---
 layout: showreel
-title: Showreel
+title: SHOWREEL
 inNavbar: true
 navbarOrder: 1
 page_class: showreel_page

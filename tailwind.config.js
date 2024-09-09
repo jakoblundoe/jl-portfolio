@@ -21,6 +21,7 @@ module.exports = {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
         'mono': ['Roboto Mono', 'monospace'],
+        'fjalla': ['Fjalla One', 'sans-serif']
       },
       dropShadow: {
         'user-md': '1px 1px 4px #000000',

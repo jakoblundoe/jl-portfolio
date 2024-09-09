@@ -1,6 +1,6 @@
 ---
 layout: work
-title: Work
+title: WORK
 inNavbar: true
 navbarOrder: 2
 page_class: work_page
