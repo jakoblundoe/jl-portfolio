@@ -1,46 +1,35 @@
 import * as cinemaModule from './modules/cinemamodule.js';
 import * as sidebarToggle from './modules/sidebartoggle.js';
 
-let firstClick = true;
+// VIDEO TOGGLE
+document.addEventListener("DOMContentLoaded", () => {
+    const videocontainer = document.getElementById("showreelvideocontainer");
+    const video = document.getElementById("showreelvideo");
+    const button = document.getElementById("showreelbutton");
+    const showreelPageActive = (document.body.getAttribute("data-page").toLowerCase() === "showreel") || false;
+    console.log(showreelPageActive);
+    let firstClick = true;
 
-$(document).ready(function() {// jquery library $function() executes when whole DOM is loaded
-document.addEventListener("keydown", function(keyDownEvent) {
-        if(document.body.getAttribute("data-page").toLowerCase() == "showreel")
-        {
-            const videocontainer = document.getElementById("showreelvideocontainer")
-            if (keyDownEvent.key === "Escape" && videocontainer.classList.contains("flex")) {
-                
-                firstClick = true;
-                cinemaModule.togglevideo();
-                cinemaModule.overlayToggle();
-                cinemaModule.showreelButtonState();
-            }
-        }
-        else {
+    if (!showreelPageActive)
+        return;
+
+    document.addEventListener("keydown", (keydownEvent) => {
+        if (keydownEvent.key === "Escape" && videocontainer.classList.contains("flex")) {
+            cinemaModule.togglevideo();
+            cinemaModule.overlayToggle();
+            cinemaModule.showreelButtonState();
+            firstClick = true;
         }
     });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
-        if(document.body.getAttribute("data-page").toLowerCase() === "showreel")
-        {
-            const button = document.getElementById("showreelbutton");
-            button.addEventListener("click", function() {
-                cinemaModule.togglevideo();
-                cinemaModule.overlayToggle();
-                cinemaModule.showreelButtonState();
-                firstClick = true;
-            });
-        }
-        else {
-        }
-});
+    button.addEventListener("click", () => {
+            cinemaModule.togglevideo();
+            cinemaModule.overlayToggle();
+            cinemaModule.showreelButtonState();
+            firstClick = true;
+    });
 
-window.addEventListener('click', function(clickEvent){
-    if(document.body.getAttribute("data-page").toLowerCase() === "showreel")
-    {   
-        const videocontainer = document.getElementById("showreelvideocontainer");
-        const video = document.getElementById("showreelvideo");
+    window.addEventListener("click", (clickEvent) => {
         if (firstClick) {
             firstClick = false;
             return;
@@ -50,9 +39,10 @@ window.addEventListener('click', function(clickEvent){
             cinemaModule.overlayToggle();
             cinemaModule.showreelButtonState();
         }
-    }
+    });
 });
 
+// NAV SIDEBAR TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
     const closeMenuButton = document.getElementById("closemenubutton");
     const menuButton = document.getElementById("openmenubutton");

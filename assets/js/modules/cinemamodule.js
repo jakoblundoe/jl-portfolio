@@ -1,6 +1,6 @@
 import * as sidebarToggle from '../modules/sidebartoggle.js';
 
-export function togglevideo () {
+export function togglevideo (toggleState) {
     const videocontainer = document.getElementById("showreelvideocontainer");
     const video = document.getElementById("showreelvideo");
     const resetDelay = 500;
@@ -14,6 +14,7 @@ export function togglevideo () {
         setTimeout(() => {
             video.play();
         }, resetDelay);
+        return true;
     } else if (videocontainer.classList.contains("animate-fadein")) {
         videocontainer.classList.remove("animate-fadein");
         videocontainer.classList.add("animate-fadeout");
@@ -24,6 +25,7 @@ export function togglevideo () {
             videocontainer.classList.add("hidden");
             video.currentTime = 0;
         }, resetDelay);
+        return false;
     } else {
         console.error("Button or videocontainer element not found");
     }
@@ -60,7 +62,6 @@ export function showreelButtonState() {
 }
 
 function fadeOutVolume(video, duration) {
-
     const step = 0.05; // Volume decrement step
     const interval = duration / (video.volume / step); // Calculate interval time
 
@@ -75,7 +76,6 @@ function fadeOutVolume(video, duration) {
 }
 
 function fadeInVolume(video, duration, targetVolume) {
-
     const step = 0.05; // Volume increment step
     const interval = duration / (targetVolume / step);
     
