@@ -104,4 +104,4 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
 
     dropdownButton.addEventListener("click", () => (!dropdownIsOpen) ? dropdownIsOpen = dropdownToggle.openDropdown(dropdownIsOpen) : dropdownIsOpen = dropdownToggle.closeDropdown(dropdownIsOpen));
-})
+});
