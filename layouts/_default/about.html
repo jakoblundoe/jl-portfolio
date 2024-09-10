@@ -3,7 +3,7 @@
     {{ partial "header.html" . }}
     <div class="flex flex-col flex-nowrap justify-center items-start m-auto max-w-[1280px] px-2
                 ">
-        <div class="flex flex-row flex-wrap justify-center items-start py-12 px-2 gap-14 -mt-4
+        <div class="flex flex-row flex-wrap justify-center items-start py-12 px-2 gap-5 -mt-4
                     ">
             <div class="flex flex-col flex-nowrap justify-start items-center w-[500px] gap-2.5 mt-2 px-8
                         "> 
@@ -19,7 +19,7 @@
                         {{ .Content }}
                     {{ end }}
                 </div>
-                <div class="flex flex-col items-start gap-2.5 mt-4 -mb-9 font-light text-lg text-justify
+                <div class="flex flex-col items-start gap-2.5 mt-4 pb-8 -mb-9 font-light text-lg text-justify
                             sm:text-left">
                     {{ with .Resources.Get "pagecontent/description.md" }}
                         {{ .Content }}
