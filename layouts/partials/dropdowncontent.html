@@ -19,7 +19,7 @@
             [&_h4]:font-bold [&_h4]:text-pink [&_h4]:text-base
             [&_h3]:font-bold [&_h3]:text-lg [&_h3]:text-semilightblack
             relative after:absolute after:border after:border-t-0 after:border-semilightblack after:w-[934px]">
-    <div id="dropdowncontent" class="">
+    <div id="dropdowncontent" class="hidden">
         {{ with .Resources.Get "pagecontent/tabcontent/education.md" }}
             {{ .Content }}
         {{ end }}

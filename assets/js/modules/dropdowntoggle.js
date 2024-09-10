@@ -5,6 +5,7 @@ export function openDropdown (dropdownIsOpen) {
     if (dropdownContainer && dropdownButton && !dropdownIsOpen) {
         console.log("test");
         dropdownButton.classList.remove("rotate-180");
+        dropdownContainer.classList.remove("hidden");
         return true;
     }
 
@@ -16,7 +17,7 @@ export function closeDropdown (dropdownIsOpen) {
 
     if (dropdownContainer && dropdownButton && dropdownIsOpen) {
         dropdownButton.classList.add("rotate-180");
-        
+        dropdownContainer.classList.add("hidden");
         return false;
     }
 }
