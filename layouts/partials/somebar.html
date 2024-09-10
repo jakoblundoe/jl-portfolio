@@ -2,7 +2,7 @@
             sm:justify-between sm:items-center">
 {{ $socials := where .Site.RegularPages "Section" "socials"}}
     {{ range sort $socials "Params.someOrder" }}
-        <div class="transition duration-150
+        <div class="transition ease-out duration-150
                     hover:opacity-70 hover:scale-105
                     active:opacity-50">
             <a href="{{ .Params.href }}" target="_blank" rel="noopener noreferrer">

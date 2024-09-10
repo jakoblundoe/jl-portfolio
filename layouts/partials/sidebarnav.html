@@ -3,7 +3,7 @@
         <img src="/img/jl-logo-new-black.webp" alt="jl logo alt" class="w-32">
     </div>
     <div class="flex flex-col flex-nowrap shrink-0 gap-4 items-start -mb-4
-        [&_a]:font-mono [&_a]:text-light-black [&_a]:font-normal [&_a]:tracking-widest text-base [&_a]:transition [&_a]:duration-100
+        [&_a]:font-mono [&_a]:text-light-black [&_a]:font-normal [&_a]:tracking-widest text-base [&_a]:transition [&_a]:ease-out [&_a]:duration-100
         hover:[&_a]:opacity-75 active:[&_a]:opacity-60
         sm:justify-center sm:items-center">
         {{ $pages := where .Site.Pages "Params.inNavbar" true}}
@@ -18,7 +18,7 @@
             {{ end }}
         {{ end }}
     </div>
-    <button id="closemenubutton" class="flex flex-col w-11 h-auto items-center justify-end opacity-80 transition duration-200 flex-shrink-0 mb-1 ml-16 -mr-2
+    <button id="closemenubutton" class="flex flex-col w-11 h-auto items-center justify-end opacity-80 transition ease-out duration-200 flex-shrink-0 mb-1 ml-16 -mr-2
             hover:opacity-70 hover:scale-105
             active:opacity-50 active:scale-105">
         <img src="/img/arrow-left-icon-v2.webp" alt="left arrow close menu icon" class="">
