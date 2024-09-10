@@ -45,6 +45,10 @@ module.exports = {
       transitionDuration: {
         '2000': '2000ms',
       },
+      gridTemplateRows: {
+        '0fr': '0fr',
+        '1fr': '1fr',
+      },
       keyframes: {
         display_fadein: {
           '0%': { opacity: '0'},
@@ -62,12 +66,22 @@ module.exports = {
           '0%': { transform: 'translateX(0)'},
           '100%': { transform: 'translateX(-100%)'},
         },
+        expand: {
+          '0%': { gridTemplateRows: '0fr'},
+          '100%': { gridTemplateRows: '1fr'},
+        },
+        collapse: {
+          '0%': { gridTemplateRows: '1fr'},
+          '100%': { gridTemplateRows: '0fr'},
+        },
       },
       animation: {
         fadein: 'display_fadein 1s forwards',
         fadeout: 'display_fadeout 1s forwards',
         slidein: 'slide_right 500ms forwards',
         slideout: 'slide_left 500ms forwards',
+        expand: 'expand 300ms forwards',
+        collapse: 'collapse 300ms forwards',
       },
     },
   },

@@ -4,7 +4,7 @@ title: Education
 
 #### 2021 - 2024
 ### Digital Design | Aarhus University
-Master of Science (MSc) in Information Technology (Digital Design)
+Master of Science (MSc) in Information Technology (Digital Design, Audio Design)
 
 #### Autumn 2022
 ### DADIU | The National Film School of Denmark
