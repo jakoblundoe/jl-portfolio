@@ -1,5 +1,6 @@
 import * as cinemaModule from './modules/cinemamodule.js';
 import * as sidebarToggle from './modules/sidebartoggle.js';
+import * as dropdownToggle from './modules/dropdowntoggle.js';
 
 // VIDEO TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
@@ -91,3 +92,16 @@ document.addEventListener("DOMContentLoaded", () => {
             }
     });
 });
+
+// DROPDOWN CONTENT TOGGLE
+document.addEventListener("DOMContentLoaded", () => {
+    const dropdownButton = document.getElementById("dropdownbutton");
+    const aboutPageActive = (document.body.getAttribute("data-page").toLowerCase() === "about") || false;
+
+    let dropdownIsOpen = false;
+
+    if (!aboutPageActive)
+        return;
+
+    dropdownButton.addEventListener("click", () => (!dropdownIsOpen) ? dropdownIsOpen = dropdownToggle.openDropdown(dropdownIsOpen) : dropdownIsOpen = dropdownToggle.closeDropdown(dropdownIsOpen));
+})

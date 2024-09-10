@@ -1,0 +1,22 @@
+export function openDropdown (dropdownIsOpen) {
+    const dropdownContainer = document.getElementById("dropdowncontent");
+    const dropdownButton = document.getElementById("dropdownbutton");
+
+    if (dropdownContainer && dropdownButton && !dropdownIsOpen) {
+        console.log("test");
+        dropdownButton.classList.remove("rotate-180");
+        return true;
+    }
+
+}
+
+export function closeDropdown (dropdownIsOpen) {
+    const dropdownContainer = document.getElementById("dropdowncontent");
+    const dropdownButton = document.getElementById("dropdownbutton");
+
+    if (dropdownContainer && dropdownButton && dropdownIsOpen) {
+        dropdownButton.classList.add("rotate-180");
+        
+        return false;
+    }
+}
