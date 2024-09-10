@@ -1,0 +1,25 @@
+<div class="">
+    <div class="flex flex-row flex-nowrap justify-start items-center mb-2">
+        <button class="flex justify-center w-1/5 transition duration-150
+                        hover:opacity-80 hover:scale-102
+                        active:opacity-60">
+            <img src="/img/arrow-up-icon.webp" alt="dropdown arrow icon" class="rotate-180 color">
+        </button>
+        <h2 class="font-inter font-medium text-3xl mx-2.5 text-semilightblack">
+            {{ with .Resources.Get "pagecontent/tabcontent/education.md" }}
+                {{ with .Params.title }}
+                    {{ . }}
+                    {{ end }}
+            {{ end }}
+        </h2>
+    </div>
+</div>
+<div id="dropdowncontent" class="ml-4
+                                [&_p]:pb-4
+                                [&_h4]:font-bold [&_h4]:text-pink [&_h4]:text-base
+                                [&_h3]:font-bold [&_h3]:text-lg [&_h3]:text-semilightblack
+                                relative after:absolute after:border after:border-t-0 after:border-semilightblack after:w-full">
+    {{ with .Resources.Get "pagecontent/tabcontent/education.md" }}
+        {{ .Content }}
+    {{ end }}
+</div>

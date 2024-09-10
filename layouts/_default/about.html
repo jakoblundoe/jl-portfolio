@@ -1,30 +1,40 @@
 {{ define "main" }}
 <div class="flex flex-col flex-nowrap min-h-dvh bg-white pb-20">
     {{ partial "header.html" . }}
-    <div class="flex flex-row flex-wrap justify-center gap-16 py-4 px-4 m-auto
-                sm:py-10 sm:px-12">
-        <div class="flex flex-col flex-nowrap justify-start items-center w-[300px] gap-2.5 mr-2.5
-                    sm:w-[430px]"> 
-            <div class="flex flex-col items-start font-medium text-6xl tracking-wider mt-2.5 mb-4">
-                {{ with .Resources.Get "pagecontent/header.md" }}
-                    {{ .Content }}
-                {{ end }}
+    <div class="flex flex-col flex-nowrap justify-center items-center m-auto max-w-[1280px] px-16
+                ">
+        <div class="flex flex-row flex-wrap justify-center items-center py-4 px-4 gap-14
+                    sm:py-10 sm:px-12">
+            <div class="flex flex-col flex-nowrap justify-start items-center w-[550px] gap-2.5
+                        sm:px-14"> 
+                <div class="flex flex-row gap-3 items-start font-medium text-pink text-6xl text-start tracking-wider mt-2.5 mb-4">
+                    {{ with .Resources.Get "pagecontent/header.md" }}
+                        {{ .Content }}
+                    {{ end }}
+                    <h1 class="text-semilightblack text-6xl font-extralight"> THERE! </h1>
+                </div>
+                <div class="">
+
+                </div>
+                <div class="flex flex-row items-start gap-2.5 -mt-3 font-normal text-xl text-justify tracking-wide
+                            sm:text-left">
+                    {{ with .Resources.Get "pagecontent/subheader.md" }}
+                        {{ .Content }}
+                    {{ end }}
+                </div>
+                <div class="flex flex-col items-start gap-2.5 mt-4 -mb-9 font-light text-lg text-justify
+                            sm:text-left">
+                    {{ with .Resources.Get "pagecontent/description.md" }}
+                        {{ .Content }}
+                    {{ end }}
+                </div>
             </div>
-            <div class="flex flex-row items-start gap-2.5 -mt-3 font-normal text-xl text-center tracking-wide max-w-[450px]">
-                {{ with .Resources.Get "pagecontent/subheader.md" }}
-                    {{ .Content }}
-                {{ end }}
-            </div>
-            <div class="flex flex-col items-start gap-2.5 mt-4 -mb-9 font-light text-lg text-center
-                        sm:text-left">
-                {{ with .Resources.Get "pagecontent/description.md" }}
-                    {{ .Content }}
-                {{ end }}
+            <div class="flex items-center w-[450px] h-auto rounded-sm mt-4 shadow-user-sm">
+                <img src="/img/profilephoto_jakoblundoe.webp" alt="Jakob Lundoe profile photo" class="rounded-sm">
             </div>
         </div>
-        <div class="flex items-center w-[320px] h-auto rounded-sm mt-4 shadow-user-sm
-                    sm:w-[438px]">
-            <img src="/img/profilephoto_jakoblundoe.webp" alt="Jakob Lundoe profile photo" class="rounded-sm">
+        <div class="flex flex-col flex-nowrap justify-center items-start">
+            {{ partial "dropdowncontent.html" . }}
         </div>
     </div>
     {{ partial "footer.html" . }}
