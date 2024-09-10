@@ -1,5 +1,5 @@
 <div class="">
-    <div class="flex flex-row flex-nowrap justify-start items-center mb-2 ml-2">
+    <div class="flex flex-row flex-nowrap justify-start items-center mb-2 ml-3">
         <button id="dropdownbutton" class="flex justify-center w-1/5 rotate-180 transition ease-out duration-300
                         hover:opacity-80 hover:scale-102
                         active:opacity-60">
@@ -14,12 +14,11 @@
         </h2>
     </div>
 </div>
-<div class="ml-5
-            [&_p]:pb-4
+<div class="[&_p]:pb-4
             [&_h4]:font-bold [&_h4]:text-pink [&_h4]:text-base
             [&_h3]:font-bold [&_h3]:text-lg [&_h3]:text-semilightblack
-            relative after:absolute after:border after:border-t-0 after:border-semilightblack after:w-[975px]">
-    <div id="dropdowncontent" class="grid grid-rows-0fr transition ease-out duration-1000">
+            relative after:absolute ml-6 after:border after:border-t-0 after:border-semilightblack after:w-full">
+    <div id="dropdowncontent" class="grid grid-rows-0fr">
         <div class="overflow-hidden">
             <div class="pl-1">
                 {{ with .Resources.Get "pagecontent/tabcontent/education.md" }}
