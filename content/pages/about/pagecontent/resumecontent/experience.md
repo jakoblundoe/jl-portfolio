@@ -1,5 +1,6 @@
 ---
-title: Education
+title: Experience
+someOrder: 2
 ---
 
 #### 2021 - 2024

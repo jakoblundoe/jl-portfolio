@@ -1,12 +1,14 @@
 <div class="">
     <div class="flex flex-row flex-nowrap justify-start items-center mb-2 ml-3">
-        <button id="dropdownbutton" class="flex justify-center w-1/5 rotate-180 transition ease-out duration-300
+        <button id="dropdownbutton" class="flex justify-center w-1/6 rotate-180 transition ease-out duration-300
                         hover:opacity-80 hover:scale-102
-                        active:opacity-60">
-            <img src="/img/arrow-up-icon.webp" alt="dropdown arrow icon" class="">
+                        active:opacity-60
+                        sm:w-1/5">
+            <img src="/img/arrow-up-icon.webp" alt="dropdown arrow icon">
         </button>
-        <h2 class="font-inter font-medium text-3xl mx-2.5 text-semilightblack">
-            {{ with .Resources.Get "pagecontent/tabcontent/education.md" }}
+        <h2 class="font-inter font-medium text-2xl mx-2.5 text-semilightblack
+                    sm:text-3xl">
+            {{ with .Resources.Get "/pagecontent/resumecontent/education.md" }}
                 {{ with .Params.title }}
                     {{ . }}
                     {{ end }}
@@ -14,14 +16,18 @@
         </h2>
     </div>
 </div>
-<div class="[&_p]:pb-4
+<div class="mr-4
+            [&_p]:pb-4
             [&_h4]:font-bold [&_h4]:text-pink [&_h4]:text-base
-            [&_h3]:font-bold [&_h3]:text-lg [&_h3]:text-semilightblack
-            relative after:absolute ml-6 after:border after:border-t-0 after:border-semilightblack after:w-full">
+            [&_h3]:font-bold [&_h3]:text-base [&_h3]:text-semilightblack
+            relative after:absolute ml-6 after:border after:border-t-0 after:border-semilightblack after:w-full
+            sm:mr-2
+            sm:[&_h3]:text-lg
+            sm:[&_h4]:text-sm">
     <div id="dropdowncontent" class="grid grid-rows-0fr">
         <div class="overflow-hidden">
             <div class="pl-1">
-                {{ with .Resources.Get "pagecontent/tabcontent/education.md" }}
+                {{ with .Resources.Get "/pagecontent/resumecontent/education.md" }}
                     {{ .Content }}
                 {{ end }}
             </div>

@@ -1,20 +1,22 @@
 {{ define "main" }}
 <div class="flex flex-col flex-nowrap min-h-dvh bg-white pb-20">
     {{ partial "header.html" . }}
-    <div class="flex flex-col flex-nowrap justify-center items-start m-auto max-w-[1280px] px-2
+    <div class="flex flex-col flex-nowrap justify-center items-start m-auto max-w-[1280px]
                 ">
         <div class="flex flex-row flex-wrap justify-center items-start py-12 px-2 gap-5 -mt-4
                     ">
-            <div class="flex flex-col flex-nowrap justify-start items-center w-[500px] gap-2.5 mt-2 px-8
-                        "> 
-                <div class="flex flex-row gap-3 items-start font-medium text-pink text-6xl text-start tracking-wider mt-2.5 mb-7">
+            <div class="flex flex-col flex-nowrap justify-start items-center max-w-[500px] gap-2.5 mt-1 px-8
+                        sm:max-w-[500px] sm:px-8 sm:mt-5"> 
+                <div class="flex flex-row gap-3 items-start font-medium text-pink text-5xl text-start tracking-wider mb-7
+                            sm:text-6xl">
                     {{ with .Resources.Get "pagecontent/header.md" }}
                         {{ .Content }}
                     {{ end }}
-                    <h1 class="text-semilightblack text-6xl font-extralight"> THERE! </h1>
+                    <h1 class="text-semilightblack text-5xl font-extralight
+                                sm:text-6xl"> THERE! </h1>
                 </div>
-                <div class="flex flex-row items-start gap-2.5 -mt-3 font-normal text-xl text-justify tracking-wide
-                            sm:text-left">
+                <div class="flex flex-row items-start gap-2.5 -mt-3 font-medium text-lg text-justify tracking-wide
+                            sm:text-left sm:text-xl sm:font-normal">
                     {{ with .Resources.Get "pagecontent/subheader.md" }}
                         {{ .Content }}
                     {{ end }}
@@ -26,8 +28,8 @@
                     {{ end }}
                 </div>
             </div>
-            <div class="flex items-center w-[440px] h-auto rounded-sm mt-4 shadow-user-sm
-                        ">
+            <div class="flex items-center max-w-[440px] h-auto rounded-sm mt-4 shadow-user-sm mx-7
+                        sm:max-w-[440px] sm:mx-0">
                 <img src="/img/profilephoto_jakoblundoe.webp" alt="Jakob Lundoe profile photo" class="rounded-sm">
             </div>
         </div>
