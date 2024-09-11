@@ -1,13 +1,13 @@
-<div class="">
+<div class="mt-2">
     <div class="flex flex-row flex-nowrap justify-start items-center mb-2 ml-3">
-        <button id="dropdownbutton" class="flex justify-center w-1/6 rotate-180 transition ease-out duration-300
+        <button id="educationbutton" class="flex justify-center rotate-180 transition ease-out duration-300
                         hover:opacity-80 hover:scale-102
                         active:opacity-60
-                        sm:w-1/5">
-            <img src="/img/arrow-up-icon.webp" alt="dropdown arrow icon">
+                        ">
+            <img src="/img/arrow-up-icon.webp" alt="dropdown arrow icon" style="width: 50px; height: auto;">
         </button>
-        <h2 class="font-inter font-medium text-2xl mx-2.5 text-semilightblack
-                    sm:text-3xl">
+        <h2 class="font-inter font-medium text-xl mx-2.5 text-semilightblack pt-1
+                    sm:text-2xl">
             {{ with .Resources.Get "/pagecontent/resumecontent/education.md" }}
                 {{ with .Params.title }}
                     {{ . }}
@@ -24,7 +24,7 @@
             sm:mr-2
             sm:[&_h3]:text-lg
             sm:[&_h4]:text-sm">
-    <div id="dropdowncontent" class="grid grid-rows-0fr">
+    <div id="educationcontent" class="grid grid-rows-0fr">
         <div class="overflow-hidden">
             <div class="pl-1">
                 {{ with .Resources.Get "/pagecontent/resumecontent/education.md" }}

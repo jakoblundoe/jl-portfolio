@@ -95,13 +95,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // DROPDOWN CONTENT TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
-    const dropdownButton = document.getElementById("dropdownbutton");
+    const educationButton = document.getElementById("educationbutton");
+    const experienceButton = document.getElementById("experiencebutton");
     const aboutPageActive = (document.body.getAttribute("data-page").toLowerCase() === "about") || false;
 
-    let dropdownIsOpen = false;
+    let educationIsOpen = false;
+    let experienceIsOpen = false;
 
     if (!aboutPageActive)
         return;
 
-    dropdownButton.addEventListener("click", () => (!dropdownIsOpen) ? dropdownIsOpen = dropdownToggle.openDropdown(dropdownIsOpen) : dropdownIsOpen = dropdownToggle.closeDropdown(dropdownIsOpen));
+    educationButton.addEventListener("click", () => (!educationIsOpen) ? educationIsOpen = dropdownToggle.openEducation(educationIsOpen) : educationIsOpen = dropdownToggle.closeEducation(educationIsOpen));
+    experienceButton.addEventListener("click", () => (!experienceIsOpen) ? experienceIsOpen = dropdownToggle.openExperience(experienceIsOpen) : experienceIsOpen = dropdownToggle.closeExperience(experienceIsOpen));
 });
