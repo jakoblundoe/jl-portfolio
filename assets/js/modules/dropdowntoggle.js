@@ -4,7 +4,6 @@ export function openEducation (dropdownIsOpen) {
     const dropdownButton = document.getElementById("educationbutton");
 
     if (dropdownContainer && dropdownButton && !dropdownIsOpen) {
-        console.log("test");
         dropdownButton.classList.remove("rotate-180");
         dropdownContainer.classList.remove("animate-collapse");
         dropdownContainer.classList.add("animate-expand");
@@ -31,7 +30,6 @@ export function openExperience (dropdownIsOpen) {
     const dropdownButton = document.getElementById("experiencebutton");
 
     if (dropdownContainer && dropdownButton && !dropdownIsOpen) {
-        console.log("test");
         dropdownButton.classList.remove("rotate-180");
         dropdownContainer.classList.remove("animate-collapse");
         dropdownContainer.classList.add("animate-expand");
