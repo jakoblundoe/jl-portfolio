@@ -4,6 +4,9 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   content: ['./layouts/**/*.html', './content/**/*.md', './assets/**/*.js'],
+  future: {
+    hoverOnlyWhenSupported: true
+  },
   theme: {
     extend: {
       colors: {
