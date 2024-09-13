@@ -21,21 +21,17 @@ export function openEducation (dropdownIsOpen) {
 
 function addAnimationEventListeners () {
     const animated = document.querySelector(".animate-expand");
-
     let activeAnimationFrameID;
-    let i = 0;
 
     const scrollWithAnimation = () => {
         const dropdownContainer = document.getElementById("educationcontent");
         dropdownContainer.scrollIntoView({ behaviour: "smooth", block: "end" });
-        console.log(i++);
         activeAnimationFrameID = requestAnimationFrame(scrollWithAnimation);
     }
 
     animated.addEventListener("animationstart", () => {
         animationActive = true;
         console.log(`Animationactive is: ${animationActive}`);
-        console.log(i);
         scrollWithAnimation();
     });
     animated.addEventListener("animationend", () => {
@@ -46,6 +42,7 @@ function addAnimationEventListeners () {
     
     animationListenersAdded = true;
 }
+
 
 export function closeEducation (dropdownIsOpen) {
     const dropdownContainer = document.getElementById("educationcontent");
