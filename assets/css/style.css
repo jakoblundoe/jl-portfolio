@@ -4,6 +4,7 @@
     html {
         @apply font-inter;
         @apply text-semilightblack;
+        overflow-y: scroll;
     }
 }
 
