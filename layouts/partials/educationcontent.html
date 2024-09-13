@@ -1,5 +1,5 @@
 <div class="mt-2">
-    <div class="flex flex-row flex-nowrap justify-start items-center mb-2 ml-3">
+    <div id="educationbuttoncontainer" class="flex flex-row flex-nowrap justify-start items-center mb-2 ml-3 hover:cursor-pointer">
         <button id="educationbutton" class="flex justify-center rotate-180 transition ease-out duration-300
                         hover:opacity-80 hover:scale-102
                         active:opacity-60
@@ -7,6 +7,8 @@
             <img src="/img/arrow-up-icon.webp" alt="dropdown arrow icon" style="width: 50px; height: auto;">
         </button>
         <h2 class="font-inter font-medium text-xl mx-2.5 text-semilightblack pt-1
+                    hover:opacity-80
+                    active:opacity-60
                     sm:text-2xl">
             {{ with .Resources.Get "/pagecontent/resumecontent/education.md" }}
                 {{ with .Params.title }}

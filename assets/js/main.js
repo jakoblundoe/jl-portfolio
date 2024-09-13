@@ -95,8 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // DROPDOWN CONTENT TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
-    const educationButton = document.getElementById("educationbutton");
-    const experienceButton = document.getElementById("experiencebutton");
+    const educationButtonContainer = document.getElementById("educationbuttoncontainer");
+    const experienceButtonContainer = document.getElementById("experiencebuttoncontainer");
     const aboutPageActive = (document.body.getAttribute("data-page").toLowerCase() === "about") || false;
 
     let educationIsOpen = false;
@@ -105,10 +105,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!aboutPageActive)
         return;
 
-    educationButton.addEventListener("click", () => (!educationIsOpen) ?
+    educationButtonContainer.addEventListener("click", () => (!educationIsOpen) ?
         educationIsOpen = dropdownToggle.openEducation(educationIsOpen) :
         educationIsOpen = dropdownToggle.closeEducation(educationIsOpen));
-    experienceButton.addEventListener("click", () => (!experienceIsOpen) ?
+    experienceButtonContainer.addEventListener("click", () => (!experienceIsOpen) ?
         experienceIsOpen = dropdownToggle.openExperience(experienceIsOpen) :
         experienceIsOpen = dropdownToggle.closeExperience(experienceIsOpen));
 });
