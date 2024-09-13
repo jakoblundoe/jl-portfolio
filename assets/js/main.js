@@ -105,6 +105,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!aboutPageActive)
         return;
 
-    educationButton.addEventListener("click", () => (!educationIsOpen) ? educationIsOpen = dropdownToggle.openEducation(educationIsOpen) : educationIsOpen = dropdownToggle.closeEducation(educationIsOpen));
-    experienceButton.addEventListener("click", () => (!experienceIsOpen) ? experienceIsOpen = dropdownToggle.openExperience(experienceIsOpen) : experienceIsOpen = dropdownToggle.closeExperience(experienceIsOpen));
+    educationButton.addEventListener("click", () => (!educationIsOpen) ?
+        educationIsOpen = dropdownToggle.openEducation(educationIsOpen) :
+        educationIsOpen = dropdownToggle.closeEducation(educationIsOpen));
+    experienceButton.addEventListener("click", () => (!experienceIsOpen) ?
+        experienceIsOpen = dropdownToggle.openExperience(experienceIsOpen) :
+        experienceIsOpen = dropdownToggle.closeExperience(experienceIsOpen));
 });
