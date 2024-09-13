@@ -24,8 +24,8 @@ function addAnimationEventListeners () {
     let activeAnimationFrameID;
 
     const scrollWithAnimation = () => {
-        const dropdownContainer = document.getElementById("educationcontent");
-        dropdownContainer.scrollIntoView({ behaviour: "smooth", block: "end" });
+        const dropdownContainer = document.getElementById("educationbutton");
+        dropdownContainer.scrollIntoView({ behaviour: "smooth", block: "start" });
         activeAnimationFrameID = requestAnimationFrame(scrollWithAnimation);
     }
 
