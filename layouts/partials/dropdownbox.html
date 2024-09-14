@@ -1,5 +1,5 @@
 {{ $section := .Site.GetPage "section" "resumecontent" }}
-{{ range $section.Pages }}
+{{ range sort $section.Pages "Params.order" }}
 {{ $pageTitle := .Params.title }}
 <div class="resume-content">
     <div class="mt-2">

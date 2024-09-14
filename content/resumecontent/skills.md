@@ -1,6 +1,6 @@
 ---
 title: Skills
-someOrder: 1
+order: 2
 ---
 
 #### 2024

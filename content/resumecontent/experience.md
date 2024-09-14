@@ -1,6 +1,6 @@
 ---
 title: Experience
-someOrder: 2
+order: 0
 ---
 
 #### Jun 2023 - present
