@@ -95,19 +95,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // DROPDOWN CONTENT TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
-    const resumeContentElements = [["dropdown-button-container-Education",
-                            "dropdown-button-Education",
-                            "dropdown-content-Education"],
-                            ["dropdown-button-container-Experience",
-                            "dropdown-button-Experience",
-                            "dropdown-content-Experience"]];
-
     const resumeContentElem = document.getElementsByClassName("resume-content");
+
+    const resumeContentElements = [[], [], []];
 
     for (const elem of resumeContentElem) {
         const buttonContainerElem = elem.firstElementChild.firstElementChild;
-        console.log(buttonContainerElem);
+        const buttonElem = buttonContainerElem;
+        const contentElem = elem.children[1]?.firstElementChild;
+
+        const buttonContainerElemID = buttonContainerElem.id;
+        const buttonElemID = buttonElem.querySelector("button").id;
+        const contentElemID = contentElem.id;
+        resumeContentElements[0].push(buttonContainerElemID);
+        resumeContentElements[1].push(buttonElemID);
+        resumeContentElements[2].push(contentElemID);
     }
+    console.log(resumeContentElements[0]);
 
     const aboutPageActive = (document.body.getAttribute("data-page").toLowerCase() === "about") || false;    
     if (!aboutPageActive)
@@ -115,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     for (const arr of resumeContentElements) {
         const dropdownButtonContainer = arr[0];
-        console.log(dropdownButtonContainer)
         const dropdownButton = arr[1];
         const dropdownContent = arr[2];
         const buttonContainerElem = document.getElementById(dropdownButtonContainer);
