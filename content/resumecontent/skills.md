@@ -1,5 +1,5 @@
 ---
-title: Skills
+title: skills
 someOrder: 1
 ---
 

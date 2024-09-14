@@ -95,20 +95,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // DROPDOWN CONTENT TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
-    const educationButtonContainer = document.getElementById("educationbuttoncontainer");
-    const experienceButtonContainer = document.getElementById("experiencebuttoncontainer");
-    const aboutPageActive = (document.body.getAttribute("data-page").toLowerCase() === "about") || false;
-
-    let educationIsOpen = false;
-    let experienceIsOpen = false;
-
+    //
+    const resumeContentElements = [["dropdown-button-container-education",
+                            "dropdown-button-education",
+                            "dropdown-content-education"],
+                            ["dropdown-button-container-experience",
+                            "dropdown-button-experience",
+                            "dropdown-content-experience"]];
+    //
+    const aboutPageActive = (document.body.getAttribute("data-page").toLowerCase() === "about") || false;    
     if (!aboutPageActive)
         return;
 
-    educationButtonContainer.addEventListener("click", () => (!educationIsOpen) ?
-        educationIsOpen = dropdownToggle.openEducation(educationIsOpen) :
-        educationIsOpen = dropdownToggle.closeEducation(educationIsOpen));
-    experienceButtonContainer.addEventListener("click", () => (!experienceIsOpen) ?
-        experienceIsOpen = dropdownToggle.openExperience(experienceIsOpen) :
-        experienceIsOpen = dropdownToggle.closeExperience(experienceIsOpen));
+    for (const arr of resumeContentElements) {
+        const dropdownButtonContainer = arr[0];
+        const dropdownButton = arr[1];
+        const dropdownContent = arr[2];
+        const buttonContainerElem = document.getElementById(dropdownButtonContainer);
+        const dropdownButtonElem = document.getElementById(dropdownButton);
+        const dropdownContentElem = document.getElementById(dropdownContent);
+
+        let isDropdownOpen = false;
+        buttonContainerElem.addEventListener("click", () => {
+            if (!isDropdownOpen) {
+                isDropdownOpen = dropdownToggle.openDropdown(isDropdownOpen, dropdownButtonElem, dropdownContentElem);
+            } else if (isDropdownOpen) {
+                isDropdownOpen = dropdownToggle.closeDropdown(isDropdownOpen, dropdownButtonElem, dropdownContentElem);
+            }
+        });
+
+    }
 });
