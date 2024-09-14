@@ -1,8 +1,9 @@
 {{ $section := .Site.GetPage "section" "resumecontent" }}
 {{ range $section.Pages }}
+{{ $pageTitle := .Params.title }}
     <div class="mt-2">
-        <div id="dropdown-button-container" class="flex flex-row flex-nowrap justify-start items-center mb-2 ml-3 hover:cursor-pointer">
-            <button id="dropdown-button" class="flex justify-center rotate-180 transition ease-out duration-300
+        <div id="dropdown-button-container-{{ $pageTitle }}" class="flex flex-row flex-nowrap justify-start items-center mb-2 ml-3 hover:cursor-pointer">
+            <button id="dropdown-button-{{ $pageTitle }}" class="flex justify-center rotate-180 transition ease-out duration-300
                             hover:opacity-80 hover:scale-102
                             active:opacity-60
                             ">
@@ -12,9 +13,7 @@
                         hover:opacity-80
                         active:opacity-60
                         sm:text-2xl">
-                {{ with .Params.title }}
-                    {{ . }}
-                {{ end }}
+                {{ $pageTitle }}
             </h2>
         </div>
     </div>
@@ -26,7 +25,7 @@
                 sm:mr-2
                 sm:[&_h3]:text-xl
                 sm:[&_h4]:text-lg">
-        <div id="dropdown-content" class="grid grid-rows-0fr scroll-mb-[4rem]">
+        <div id="dropdown-content-{{ $pageTitle }}" class="grid grid-rows-0fr scroll-mb-[4rem]">
             <div class="overflow-hidden">
                 <div class="pl-1">
                     {{ .Content }}
