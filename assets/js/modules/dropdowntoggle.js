@@ -1,5 +1,5 @@
 // Because the .animate-expand class does not exist when the openDropdownContent is called,
-// it was necessary to create a global bool to check if event listeners is added, to prevent adding them again.
+// it was necessary to create a global bool to check if event listeners is added (to prevent adding them again).
 let animationListenersAdded = false;
 let animationActive = false;
 
