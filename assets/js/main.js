@@ -101,8 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const resumeContentElem = document.getElementsByClassName("resume-content");
 
-    // const resumeContentElements = [[], [], []];
-
     for (const elem of resumeContentElem) {
         const buttonContainerElem = elem.firstElementChild.firstElementChild;
 

@@ -10,7 +10,9 @@ export function openDropdown (isDropdownOpen, dropdownButtonElem, dropdownConten
         dropdownButtonElem.classList.remove("rotate-180");
         dropdownContentElem.classList.remove("animate-collapse");
         dropdownContentElem.classList.add("animate-expand");
-        if (!animationListenersAdded) {
+        console.log(dropdownButtonElem);
+        // make sure listeners is only added once on each individual dropdownButtonElem
+        if (!dropdownButtonElem.animationListenersAdded) {
             addAnimationEventListeners(dropdownButtonElem);
         };
         return true;
@@ -46,5 +48,5 @@ function addAnimationEventListeners (dropdownButtonElem) {
         cancelAnimationFrame(activeAnimationFrameID);
     });
     
-    animationListenersAdded = true;
+    dropdownButtonElem.animationListenersAdded = true;
 }
