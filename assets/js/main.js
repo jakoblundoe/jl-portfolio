@@ -95,35 +95,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // DROPDOWN CONTENT TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
-    const resumeContentElem = document.getElementsByClassName("resume-content");
-
-    const resumeContentElements = [[], [], []];
-
-    for (const elem of resumeContentElem) {
-        const buttonContainerElem = elem.firstElementChild.firstElementChild;
-        const buttonElem = buttonContainerElem;
-        const contentElem = elem.children[1]?.firstElementChild;
-
-        const buttonContainerElemID = buttonContainerElem.id;
-        const buttonElemID = buttonElem.querySelector("button").id;
-        const contentElemID = contentElem.id;
-        resumeContentElements[0].push(buttonContainerElemID);
-        resumeContentElements[1].push(buttonElemID);
-        resumeContentElements[2].push(contentElemID);
-    }
-    console.log(resumeContentElements[0]);
-
     const aboutPageActive = (document.body.getAttribute("data-page").toLowerCase() === "about") || false;    
     if (!aboutPageActive)
         return;
+    
+    const resumeContentElem = document.getElementsByClassName("resume-content");
 
-    for (const arr of resumeContentElements) {
-        const dropdownButtonContainer = arr[0];
-        const dropdownButton = arr[1];
-        const dropdownContent = arr[2];
-        const buttonContainerElem = document.getElementById(dropdownButtonContainer);
-        const dropdownButtonElem = document.getElementById(dropdownButton);
-        const dropdownContentElem = document.getElementById(dropdownContent);
+    // const resumeContentElements = [[], [], []];
+
+    for (const elem of resumeContentElem) {
+        const buttonContainerElem = elem.firstElementChild.firstElementChild;
+
+        const buttonElemIDs = buttonContainerElem.querySelector("button").id;
+        const contentElemIDs = elem.children[1]?.firstElementChild.id;
+
+        const dropdownButtonElem = document.getElementById(buttonElemIDs);
+        const dropdownContentElem = document.getElementById(contentElemIDs);
 
         let isDropdownOpen = false;
         buttonContainerElem.addEventListener("click", () => {
