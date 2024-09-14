@@ -11,7 +11,7 @@ export function openDropdown (isDropdownOpen, dropdownButtonElem, dropdownConten
         dropdownContentElem.classList.remove("animate-collapse");
         dropdownContentElem.classList.add("animate-expand");
         if (!animationListenersAdded) {
-            addAnimationEventListeners();
+            addAnimationEventListeners(dropdownButtonElem);
         };
         return true;
     }
@@ -26,13 +26,12 @@ export function closeDropdown (isDropdownOpen, dropdownButtonElem, dropdownConte
     }
 }
 
-function addAnimationEventListeners () {
+function addAnimationEventListeners (dropdownButtonElem) {
     const animated = document.querySelector(".animate-expand");
     let activeAnimationFrameID;
 
     const scrollWithAnimation = () => {
-        const dropdownContainer = document.getElementById("dropdown-button-education");
-        dropdownContainer.scrollIntoView({ behaviour: "smooth", block: "start" });
+        dropdownButtonElem.scrollIntoView({ behaviour: "smooth", block: "start" });
         activeAnimationFrameID = requestAnimationFrame(scrollWithAnimation);
     }
 

@@ -95,20 +95,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // DROPDOWN CONTENT TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
-    //
-    const resumeContentElements = [["dropdown-button-container-education",
-                            "dropdown-button-education",
-                            "dropdown-content-education"],
-                            ["dropdown-button-container-experience",
-                            "dropdown-button-experience",
-                            "dropdown-content-experience"]];
-    //
+    const resumeContentElements = [["dropdown-button-container-Education",
+                            "dropdown-button-Education",
+                            "dropdown-content-Education"],
+                            ["dropdown-button-container-Experience",
+                            "dropdown-button-Experience",
+                            "dropdown-content-Experience"]];
+
+    const resumeContentElem = document.getElementsByClassName("resume-content");
+
+    for (const elem of resumeContentElem) {
+        const buttonContainerElem = elem.firstElementChild.firstElementChild;
+        console.log(buttonContainerElem);
+    }
+
     const aboutPageActive = (document.body.getAttribute("data-page").toLowerCase() === "about") || false;    
     if (!aboutPageActive)
         return;
 
     for (const arr of resumeContentElements) {
         const dropdownButtonContainer = arr[0];
+        console.log(dropdownButtonContainer)
         const dropdownButton = arr[1];
         const dropdownContent = arr[2];
         const buttonContainerElem = document.getElementById(dropdownButtonContainer);
@@ -123,6 +130,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 isDropdownOpen = dropdownToggle.closeDropdown(isDropdownOpen, dropdownButtonElem, dropdownContentElem);
             }
         });
-
     }
 });

@@ -1,5 +1,5 @@
 ---
-title: education
+title: Education
 someOrder: 0
 ---
 
