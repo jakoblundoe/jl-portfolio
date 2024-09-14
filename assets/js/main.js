@@ -118,5 +118,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 isDropdownOpen = dropdownToggle.closeDropdown(isDropdownOpen, dropdownButtonElem, dropdownContentElem);
             }
         });
-    }
+    };
 });

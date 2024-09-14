@@ -1,6 +1,3 @@
-// Because the .animate-expand class does not exist when the openDropdownContent is called,
-// it was necessary to create a global bool to check if event listeners is added (to prevent adding them again).
-let animationListenersAdded = false;
 let animationActive = false;
 
 // OPEN EDUCATION
@@ -10,7 +7,7 @@ export function openDropdown (isDropdownOpen, dropdownButtonElem, dropdownConten
         dropdownButtonElem.classList.remove("rotate-180");
         dropdownContentElem.classList.remove("animate-collapse");
         dropdownContentElem.classList.add("animate-expand");
-        console.log(dropdownButtonElem);
+
         // make sure listeners is only added once on each individual dropdownButtonElem
         if (!dropdownButtonElem.animationListenersAdded) {
             addAnimationEventListeners(dropdownButtonElem);
@@ -39,12 +36,10 @@ function addAnimationEventListeners (dropdownButtonElem) {
 
     animated.addEventListener("animationstart", () => {
         animationActive = true;
-        console.log(`Animationactive is: ${animationActive}`);
         scrollWithAnimation();
     });
     animated.addEventListener("animationend", () => {
         animationActive = false;
-        console.log(`Animationactive is: ${animationActive}`);
         cancelAnimationFrame(activeAnimationFrameID);
     });
     
