@@ -25,10 +25,17 @@ export function closeDropdown (isDropdownOpen, dropdownButtonElem, dropdownConte
 
 function addAnimationEventListeners (dropdownContentElem) {
     const animated = dropdownContentElem;
+    const headerOffset = 75;
+    let elementPosition = animated.getBoundingClientRect().top;
+    let offsetPosition = elementPosition + window.scrollY - headerOffset;
     let activeAnimationFrameID;
 
     const scrollWithAnimation = () => {
-        dropdownContentElem.scrollIntoView({ behaviour: "smooth", block: "start" });
+        // dropdownContentElem.scrollIntoView({ behaviour: "smooth", block: "start" });
+        window.scrollTo({
+            top: offsetPosition,
+            // behavior: "smooth"
+        });
         activeAnimationFrameID = requestAnimationFrame(scrollWithAnimation);
     };
 
