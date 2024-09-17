@@ -24,25 +24,24 @@ export function closeDropdown (isDropdownOpen, dropdownButtonElem, dropdownConte
 };
 
 function addAnimationEventListeners (dropdownContentElem) {
-    const animated = dropdownContentElem;
-    const headerOffset = 75;
-    let elementPosition = animated.getBoundingClientRect().top;
+    const animatedElem = dropdownContentElem;
+    const headerOffset = 68;
+    let elementPosition = animatedElem.getBoundingClientRect().top;
     let offsetPosition = elementPosition + window.scrollY - headerOffset;
     let activeAnimationFrameID;
 
     const scrollWithAnimation = () => {
-        // dropdownContentElem.scrollIntoView({ behaviour: "smooth", block: "start" });
         window.scrollTo({
             top: offsetPosition,
-            // behavior: "smooth"
+            behavior: "smooth"
         });
         activeAnimationFrameID = requestAnimationFrame(scrollWithAnimation);
     };
 
-    animated.addEventListener("animationstart", () => {
+    animatedElem.addEventListener("animationstart", () => {
         scrollWithAnimation();
     });
-    animated.addEventListener("animationend", () => {
+    animatedElem.addEventListener("animationend", () => {
         cancelAnimationFrame(activeAnimationFrameID);
     });
     
