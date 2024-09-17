@@ -1,5 +1,3 @@
-let animationActive = false;
-
 // OPEN EDUCATION
 export function openDropdown (isDropdownOpen, dropdownButtonElem, dropdownContentElem) {
 
@@ -10,11 +8,11 @@ export function openDropdown (isDropdownOpen, dropdownButtonElem, dropdownConten
 
         // make sure listeners is only added once on each individual dropdownButtonElem
         if (!dropdownButtonElem.animationListenersAdded) {
-            addAnimationEventListeners(dropdownButtonElem);
+            addAnimationEventListeners(dropdownButtonElem, dropdownContentElem);
         };
         return true;
-    }
-}
+    };
+};
 
 export function closeDropdown (isDropdownOpen, dropdownButtonElem, dropdownContentElem) {
     if (dropdownContentElem && dropdownButtonElem && isDropdownOpen) {
@@ -22,26 +20,24 @@ export function closeDropdown (isDropdownOpen, dropdownButtonElem, dropdownConte
         dropdownContentElem.classList.remove("animate-expand");
         dropdownContentElem.classList.add("animate-collapse");
         return false;
-    }
-}
+    };
+};
 
-function addAnimationEventListeners (dropdownButtonElem) {
-    const animated = document.querySelector(".animate-expand");
+function addAnimationEventListeners (dropdownButtonElem, dropdownContentElem) {
+    const animated = dropdownContentElem;
     let activeAnimationFrameID;
 
     const scrollWithAnimation = () => {
         dropdownButtonElem.scrollIntoView({ behaviour: "smooth", block: "start" });
         activeAnimationFrameID = requestAnimationFrame(scrollWithAnimation);
-    }
+    };
 
     animated.addEventListener("animationstart", () => {
-        animationActive = true;
         scrollWithAnimation();
     });
     animated.addEventListener("animationend", () => {
-        animationActive = false;
         cancelAnimationFrame(activeAnimationFrameID);
     });
     
     dropdownButtonElem.animationListenersAdded = true;
-}
+};
