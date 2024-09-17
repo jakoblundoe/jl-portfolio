@@ -33,7 +33,7 @@ function addAnimationEventListeners (dropdownContentElem) {
     const scrollWithAnimation = () => {
         window.scrollTo({
             top: offsetPosition,
-            behavior: "smooth"
+            behavior: "instant"
         });
         activeAnimationFrameID = requestAnimationFrame(scrollWithAnimation);
     };
