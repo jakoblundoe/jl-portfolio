@@ -4,9 +4,7 @@ export function openDropdown (isDropdownOpen, dropdownButtonElem, dropdownConten
         dropdownButtonElem.classList.remove("rotate-180");
         dropdownContentElem.classList.remove("animate-collapse");
         dropdownContentElem.classList.add("animate-expand");
-        const currentElementPosition = updateElementPosition(dropdownContentElem);
-        const latestPosition = currentElementPosition;
-        addAnimationEventListeners(dropdownContentElem, latestPosition);
+        addAnimationEventListeners(dropdownContentElem);
         return true;
     };
 };
@@ -17,49 +15,41 @@ export function closeDropdown (isDropdownOpen, dropdownButtonElem, dropdownConte
         dropdownButtonElem.classList.add("rotate-180");
         dropdownContentElem.classList.remove("animate-expand");
         dropdownContentElem.classList.add("animate-collapse");
-        const currentElementPosition = updateElementPosition(dropdownContentElem);
-        const latestPosition = currentElementPosition;
-        addAnimationEventListeners(dropdownContentElem, latestPosition);
+        addAnimationEventListeners(dropdownContentElem);
         return false;
     };
 };
 
-function addAnimationEventListeners (dropdownContentElem, latestPosition) {
+function addAnimationEventListeners (dropdownContentElem) {
     const animatedElem = dropdownContentElem;
     const headerOffset = 68;
-    let firstElementPosition = animatedElem.getBoundingClientRect().top;
-    // let currentElementPosition = 0;
-    let offsetPosition = firstElementPosition + window.scrollY - headerOffset;
+    let elementPosition = animatedElem.getBoundingClientRect().top;
+    let offsetPosition = elementPosition + window.scrollY - headerOffset;
 
     let animationActive = false;
     let frameId = null;
-
-    if (!dropdownContentElem.dataset.currentElementPosition) {
-        dropdownContentElem.dataset.currentElementPosition = '0';
-    }
+    let pageScrolled = false;
     
-    let currentElementPosition = parseFloat(dropdownContentElem.dataset.currentElementPosition);
-    
-    // check if offsetPosition is new since animation end oni specific element
-    console.log(`latestPosition is: ${latestPosition}`);
-    console.log(`firstElementPosition is: ${firstElementPosition}`);
-    console.log(`currentElementPosition is: ${currentElementPosition}`);
-
-    if ((currentElementPosition > 0) && (latestPosition !== currentElementPosition)) {
-        console.log(`latest position does not match with position when clicked`);
-        
-    }
+    // check if offsetPosition is new since animation end on specific element
 
     function scrollAnimate() {
-        window.scrollTo({
-            top:offsetPosition
-        })
+        if (pageScrolled) {
+            window.scrollTo({
+                top:offsetPosition,
+                behavior: 'smooth'
+            })
+        } else if(!pageScrolled) {
+            window.scrollTo({
+                top:offsetPosition,
+            })
+        }
         if (animationActive) {
             requestAnimationFrame(scrollAnimate);
         }
     }
 
     let isOpen = dropdownContentElem.getAttribute('data-isOpen');
+    let isClosed = dropdownContentElem.getAttribute('data-isClosed');
     dropdownContentElem.addEventListener('animationstart', function(anim) {
         if (anim.animationName === "expand" && !isOpen) {
 
@@ -76,17 +66,35 @@ function addAnimationEventListeners (dropdownContentElem, latestPosition) {
         if (anim.animationName === 'expand' && !isOpen) {
             cancelAnimationFrame(frameId);
             animationActive = false;
-            const getElementPosition = updateElementPosition(dropdownContentElem);
-            dropdownContentElem.dataset.currentElementPosition = getElementPosition.toString();
-            // console.log(`animation end invoked and currentElementPosition is: ${getElementPosition}`);
+
+            pageScrolled = false;
+            console.log(pageScrolled)
         }
+    })
+
+    dropdownContentElem.addEventListener('animationstart', function(anim) {
+        if (anim.animationName === 'collapse' && !isClosed) {
+            dropdownContentElem.setAttribute('data-isClosed', 'true');
+            pageScrolled = true;
+        }
+    })
+
+    dropdownContentElem.addEventListener('animationend', function(anim) {
+        if (anim.animationName === 'collapse' && !isClosed) {
+            pageScrolled = false;
+            console.log(pageScrolled)
+        }
+    })
+    document.addEventListener('scroll', () => {
+        console.log('scroll happening');
+        pageScrolled = true;
     })
 }
 
-function updateElementPosition (dropdownButtonElem) {
-    const animatedElem = dropdownButtonElem;
+// function updateElementPosition (dropdownButtonElem) {
+//     const animatedElem = dropdownButtonElem;
 
-    const elementPosition = animatedElem.getBoundingClientRect().top;
+//     const elementPosition = animatedElem.getBoundingClientRect().top;
 
-    return elementPosition;
-}
+//     return elementPosition;
+// }
