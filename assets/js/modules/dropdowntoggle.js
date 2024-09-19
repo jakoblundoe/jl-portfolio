@@ -29,21 +29,26 @@ function addAnimationEventListeners (dropdownContentElem) {
     let animationActive = false;
     let frameId = null;
     let pageScrolled = false;
-    
-    // check if offsetPosition is new since animation end on specific element
+    let elementIsExpanded = false;
 
     function scrollAnimate() {
-        console.log(`page scrolled is ${pageScrolled}`)
-        if (pageScrolled) {
-            window.scrollTo({
-                top:offsetPosition,
-                behavior: 'smooth'
-            })
-        } else if(!pageScrolled) {
-            window.scrollTo({
-                top:offsetPosition,
-            })
-        }
+        // TRIED TO FLAG INPUT SCROLL SO SMOOTH SCROLL WAS APPLIED ONLY WHEN MANUAL SCROLL HAD HAPPENED PRIOR TO THE ANIMATION.
+        // IT IS STILL JANKY THOUGH. FOR SOME UNKNOWN REASON IT IS STILL RANDOM WHEN THE SMOOTH BEHAVIOUR IS
+        // APPLIED. HAVE COMMENTED THE CODE THAT MAKES THE ANIMATION JANKY.
+
+        // if (pageScrolled && !elementIsExpanded) {
+        //     window.scrollTo({
+        //         top:offsetPosition,
+        //         behavior: 'smooth'
+        //     })
+        // } else if(!pageScrolled) {
+        //     window.scrollTo({
+        //         top:offsetPosition,
+        //     })
+        // }
+        window.scrollTo({
+            top: offsetPosition,
+        })
         if (animationActive) {
             requestAnimationFrame(scrollAnimate);
         }
@@ -68,6 +73,7 @@ function addAnimationEventListeners (dropdownContentElem) {
             cancelAnimationFrame(frameId);
             animationActive = false;
 
+            elementIsExpanded = true;
             pageScrolled = false;
             console.log(pageScrolled)
         }
@@ -82,20 +88,14 @@ function addAnimationEventListeners (dropdownContentElem) {
 
     dropdownContentElem.addEventListener('animationend', function(anim) {
         if (anim.animationName === 'collapse' && !isClosed) {
+            elementIsExpanded = false;
             pageScrolled = false;
             console.log(pageScrolled)
         }
     })
-    document.addEventListener('wheel', () => {
-        console.log('scroll happening');
-        pageScrolled = true;
-    })
+    // document.addEventListener('wheel', () => {
+    //     console.log('scroll happening');
+    //     console.log(animatedElem.getBoundingClientRect().top);
+    //     pageScrolled = true;
+    // })
 }
-
-// function updateElementPosition (dropdownButtonElem) {
-//     const animatedElem = dropdownButtonElem;
-
-//     const elementPosition = animatedElem.getBoundingClientRect().top;
-
-//     return elementPosition;
-// }
