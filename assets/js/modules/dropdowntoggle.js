@@ -33,6 +33,7 @@ function addAnimationEventListeners (dropdownContentElem) {
     // check if offsetPosition is new since animation end on specific element
 
     function scrollAnimate() {
+        console.log(`page scrolled is ${pageScrolled}`)
         if (pageScrolled) {
             window.scrollTo({
                 top:offsetPosition,
@@ -85,7 +86,7 @@ function addAnimationEventListeners (dropdownContentElem) {
             console.log(pageScrolled)
         }
     })
-    document.addEventListener('scroll', () => {
+    document.addEventListener('wheel', () => {
         console.log('scroll happening');
         pageScrolled = true;
     })
