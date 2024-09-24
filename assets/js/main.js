@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const videocontainer = document.getElementById("showreelvideocontainer");
     const video = document.getElementById("showreelvideo");
     const button = document.getElementById("showreelbutton");
+    const closeReelButton = document.getElementById("close-reel-button");
     const delayTime = 500;
     let timerActive = false;
     const showreelPageActive = (document.body.getAttribute("data-page").toLowerCase() === "showreel") || false;
@@ -32,6 +33,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     button.addEventListener("click", () => {
+        if (timerActive)
+            return;
+        cinemaModule.togglevideo(delayTime);
+        cinemaModule.overlayToggle();
+        cinemaModule.showreelButtonState();
+        firstClick = true;
+
+        timerActive = true;
+        setTimeout(() => {
+            timerActive = false;
+        }, delayTime);
+    });
+
+    closeReelButton.addEventListener("click", () => {
         if (timerActive)
             return;
         cinemaModule.togglevideo(delayTime);
