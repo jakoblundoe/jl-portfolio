@@ -9,6 +9,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      lineHeight: {
+        '2': '0.50rem',
+      },
       zIndex: {
         '60': '60',
       },
