@@ -9,6 +9,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      zIndex: {
+        '60': '60',
+      },
       colors: {
         'pink': '#e33c72',
         'semilightblack': '#323232',
