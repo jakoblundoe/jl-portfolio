@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const delayTime = 500;
     let timerActive = false;
     const showreelPageActive = (document.body.getAttribute("data-page").toLowerCase() === "showreel") || false;
-    let firstClick = true;
 
     if (!showreelPageActive)
         return;
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
             cinemaModule.togglevideo(delayTime);
             cinemaModule.overlayToggle();
             cinemaModule.showreelButtonState();
-            firstClick = true;
 
             timerActive = true;
             setTimeout(() => {
@@ -38,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
         cinemaModule.togglevideo(delayTime);
         cinemaModule.overlayToggle();
         cinemaModule.showreelButtonState();
-        firstClick = true;
 
         timerActive = true;
         setTimeout(() => {
@@ -52,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
         cinemaModule.togglevideo(delayTime);
         cinemaModule.overlayToggle();
         cinemaModule.showreelButtonState();
-        firstClick = true;
 
         timerActive = true;
         setTimeout(() => {
@@ -63,10 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("click", (clickEvent) => {
         if (timerActive)
             return;
-        if (firstClick) {
-            firstClick = false;
-            return;
-        }
         if (!video.contains(clickEvent.target) && videocontainer.classList.contains("flex")){
             cinemaModule.togglevideo(delayTime);
             cinemaModule.overlayToggle();
