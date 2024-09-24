@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="flex flex-col flex-nowrap justify-between min-h-dvh bg-white pb-14">
     {{ partial "header.html" . }}
-    <div class="flex flex-col flex-nowrap justify-center items-center gap-10 m-auto py-20 px-10">
+    <div class="flex flex-col flex-nowrap justify-center items-center gap-8 m-auto py-20 px-10">
         <div class="flex flex-row justify-center items-start gap-2.5 text-4xl font-medium tracking-wider text-center
                     sm:text-5xl">
             {{ with .Resources.Get "pagecontent/description.md" }}
@@ -9,8 +9,8 @@
             {{ end }}
         </div>
         <div class="flex flex-col flex-nowrap self-center gap-2.5">
-            <div class="flex self-center p-1 gap-2.5 font-light text-xl tracking-wide -mt-4
-                        sm:text-2xl">
+            <div class="flex self-center p-1 gap-2.5 font-normal text-lg tracking-wide -mt-4
+                        sm:text-xl">
                 {{ with .Resources.Get "pagecontent/email.md"}}
                     {{ .Content }}
                 {{ end }}
