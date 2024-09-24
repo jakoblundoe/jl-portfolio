@@ -26,7 +26,7 @@ Web design and development
 #### Jan 2023 - Aug 2023
 ### Software Developer, Sound Designer
 ##### Company: AateVR | Internship
-**Master's Thesis Collaboration**
+<span>Master's Thesis Collaboration</span>
 - Design, conceptualization and project management.
 - Programming in C# and Unity, as well as deploying the software (code signing and apple’s notarization proces).
 - Audio production and software implementation.
@@ -45,5 +45,7 @@ The film was screened as part of the official selection at ISFF 2ANNAS 2024 in R
 #### Aug 2022 - Dec 2022
 ### Lead Sound Designer
 ##### Program: DADIU | The National Film School of Denmark
-As **Lead Sound Designer** I participated in a semester long course in game development, with a *strong focus on the practical aspects of developing on large interdisciplinary teams*.
+As ***Lead Sound Designer*** I participated in a semester long course in game development, with a *strong focus on the practical aspects of developing on large interdisciplinary teams*.
+
+My two mentors during the production was <span>Bjørn Jacobsen (Cujo Sound)</span> and <span>Martin Stig Andersen</span>.
 

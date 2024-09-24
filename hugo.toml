@@ -5,3 +5,5 @@ title = 'JL-PORTFOLIO'
 name = 'Jakob Lundoe'
 [permalinks]
 pages = "/:slug/"
+[markup.goldmark.renderer]
+unsafe = true
