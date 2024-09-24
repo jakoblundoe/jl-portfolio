@@ -53,14 +53,16 @@ export function overlayToggle () {
 
 export function showreelButtonState() {
     const showreelButton = document.getElementById("showreelbutton");
-    const showreelButtonTextElement = showreelButton.querySelector("p"); // DOM element (not yet a string)
 
-    if (showreelButtonTextElement.textContent === "Play Showreel") {
-        showreelButton.classList.add("z-50");
-        showreelButtonTextElement.textContent = "Stop Showreel";
-    } else if (showreelButtonTextElement.textContent === "Stop Showreel") {
-        showreelButton.classList.remove("z-50");
-        showreelButtonTextElement.textContent = "Play Showreel";
+    if (showreelButton.classList.contains("opacity-100")) {
+        showreelButton.classList.remove("opacity-100");
+        showreelButton.classList.add("animate-fadeout");
+    } else if (showreelButton.classList.contains("animate-fadein")) {
+        showreelButton.classList.remove("animate-fadein");
+        showreelButton.classList.add("animate-fadeout");
+    } else if (showreelButton.classList.contains("animate-fadeout")) {
+        showreelButton.classList.remove("animate-fadeout");
+        showreelButton.classList.add("animate-fadein");
     }
 }
 
