@@ -2,7 +2,10 @@
 <div class="flex flex-col flex-nowrap justify-between min-h-dvh bg-no-repeat bg-center bg-cover pb-14" style="background-image: url('/img/pressphoto-jln.webp');">
     <div id="overlay" class="opacity-0 fixed w-full h-full bg-overlay-color z-40 cursor-pointer pointer-events-none"></div> 
     {{ partial "header.html" . }}
-    <div id="showreelvideocontainer" class="hidden justify-center items-center my-auto z-50 w-full h-[20vh]">
+    <div id="showreelvideocontainer" class="hidden justify-center items-center my-auto z-50 w-full h-[20vh] relative">
+        <button id="close-reel-button" class="right-20 z-60 absolute">
+            <img src="/img/close_cross_icon.webp" alt="close cross icon">
+        </button>
         <video playsinline preload="metadata" id="showreelvideo" class="flex-1 justify-center self-center basis-[500px] shrink-[5] m-5 object-contain object-center overflow-hidden h-auto max-w-[1400px] rounded-sm shadow-user-md" style="margin: min(5vw, 95%)" controls>
             <source src="/videos/Reel-temp-v1.mp4" type="video/mp4">
             Your browser does not support the video tag.
