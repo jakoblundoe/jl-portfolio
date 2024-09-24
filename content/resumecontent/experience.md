@@ -28,10 +28,18 @@ Web design and development
 ##### Company: AateVR | Internship
 <span>Master's Thesis Collaboration</span>
 - Design, conceptualization and project management.
-- Programming in C# and Unity, as well as deploying the software (code signing and apple’s notarization proces).
+- Programming in C# and Unity, as well as deploying the software (code signing and apple’s notarization process).
 - Audio production and software implementation.
 
 *Broadened my knowledge and experience with user testing as well as managing a development process within a larger research project.*
+
+#### Mar 2024 - Apr 2024
+### Mix Engineer, Composer
+##### Music Production | Freelance
+Published two tracks in a collaboration project. Follow [this link](https://open.spotify.com/artist/5PfedJraCFPDFBw2IMUvEb?si=g7ouBSKFQ-2VJilCM2eIww&nd=1&dlsi=225bcdd94a904d0c) to listen.
+- Composition
+- Music production
+- Mix engineering
 
 #### Apr 2023 - Aug 2023
 ### Sound Designer, Composer
