@@ -1,6 +1,7 @@
 export function openDropdown (isDropdownOpen, dropdownButtonElem, dropdownContentElem) {
 
     if (dropdownContentElem && dropdownButtonElem && !isDropdownOpen) {
+
         dropdownButtonElem.classList.remove("rotate-180");
         dropdownContentElem.classList.remove("animate-collapse");
         dropdownContentElem.classList.add("animate-expand");
@@ -112,8 +113,38 @@ function addAnimationEventListeners (dropdownContentElem) {
     // })
 }
 
-function calcAnimTime (dropdownContentElem) {
-    const elemHeight = parseFloat(dropdownContentElem.getAttribute('data-height'));
-    const timeDuration = elemHeight;
-    return timeDuration;
+// function calcAnimTime (dropdownContentElem) {
+//     const elemHeight = parseFloat(dropdownContentElem.getAttribute('data-height'));
+//     const timeDuration = elemHeight;
+//     return timeDuration;
+// }
+
+// function calcAnimTime(dropdownContentElem) {
+//     const elemHeight = parseFloat(dropdownContentElem.getAttribute('data-height')) || 0;
+
+//     // Define a scaling factor for the animation duration
+//     const baseDuration = 500; // Base duration for 500px height
+//     const scalingFactor = baseDuration / 500; // This will set the duration per pixel
+
+//     // Calculate the time duration based on height
+//     const timeDuration = elemHeight * scalingFactor;
+
+//     // Ensure the duration is a positive value and optionally set a minimum
+//     return Math.max(timeDuration, 100); // Returns at least 100ms
+// }
+
+function calcAnimTime(dropdownContentElem) {
+    const elemHeight = parseFloat(dropdownContentElem.getAttribute('data-height')) || 0;
+
+    const baseDuration = 500;
+    const minDuration = 200;
+    const maxDuration = 1200;
+    const scalingFactor = 0.50;
+
+    const timeDuration = Math.min(
+        Math.max(baseDuration * Math.pow((elemHeight / 500), scalingFactor), minDuration),
+        maxDuration
+    );
+
+    return Math.max(timeDuration, 100);
 }
