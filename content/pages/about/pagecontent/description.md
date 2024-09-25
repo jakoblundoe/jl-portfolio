@@ -1,8 +1,8 @@
-I am highly passionate about creating immersive interactive experiences through sound. Both the process of recording and designing sounds, and the development of interactive systems to implement the audio I find very enjoyable and rewarding.
+I am highly passionate about creating immersive interactive experiences through sound.
+I find the process of recording and designing sounds, as well as the development of interactive systems to implement the audio very enjoyable and rewarding.
 
-I have experience with the many different areas of sound design and audio-post which includes: field and studio recording, dialogue edit, sound effect design and edit, foley, mixing and mastering. On top of that I have a strong foundation in the implementation process of audio in games and interactive software. Other than using the middleware engines Wwise and Fmod I have experience with software development processes. This includes programming skills in C# and JavaScript and a general understanding of development environments, dependencies, version control, etc.
+I have experience in many different areas of sound design and audio-post, which includes: field and studio recording, dialogue edit, sound effect design and edit, foley, mixing and mastering. On top of that I have a strong foundation in the implementation process of audio in games and interactive software. Besides the middleware engines Wwise and Fmod I am also competent in the different software development processes. This covers programming in C# and JavaScript plus a general understanding of development environments, dependencies, version control, etc.
 
-Last, I have a background as an electronic musician and have a strong foundation in music composition and production. A skill I find very helpful in the audio implementation process where sound, soundscapes and music connects in harmony.
+Lastly, I have an extensive background in electronic music and a strong foundation in music composition and production. A skill I find very helpful in the audio implementation process where sound, soundscapes and music connects in harmony.
 
-Above all I love solving problems and finding creative solutions in collaboration with the team.
-The interdisciplinary field that is game development is an exciting one!
+Above all, I love solving problems and finding creative solutions in collaboration with the team. Game development is an interdisciplinary field after all, which I find truly exciting!
