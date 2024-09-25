@@ -92,6 +92,15 @@ function addAnimationEventListeners (dropdownContentElem) {
         }
     })
 
+    dropdownContentElem.addEventListener('animationcancel', function(anim) {
+        if ((anim.animationName === 'expand') && (!isOpen)) {
+            cancelAnimationFrame(frameId);
+            animationActive = false;
+            elementIsExpanded = true;
+            pageScrolled = false;
+        }
+    })
+
     dropdownContentElem.addEventListener('animationstart', function(anim) {
         if (anim.animationName === 'collapse' && !isClosed) {
             dropdownContentElem.setAttribute('data-isClosed', 'true');
@@ -103,35 +112,23 @@ function addAnimationEventListeners (dropdownContentElem) {
         if (anim.animationName === 'collapse' && !isClosed) {
             elementIsExpanded = false;
             pageScrolled = false;
-            console.log(pageScrolled)
         }
     })
+
+    dropdownContentElem.addEventListener('animationcancel', function(anim) {
+        if ((anim.animationName === 'collapse') && (!isClosed)) {
+            cancelAnimationFrame(frameId);
+            elementIsExpanded = false;
+            pageScrolled = false;
+        }
+    })
+
     // document.addEventListener('wheel', () => {
     //     console.log('scroll happening');
     //     console.log(animatedElem.getBoundingClientRect().top);
     //     pageScrolled = true;
     // })
 }
-
-// function calcAnimTime (dropdownContentElem) {
-//     const elemHeight = parseFloat(dropdownContentElem.getAttribute('data-height'));
-//     const timeDuration = elemHeight;
-//     return timeDuration;
-// }
-
-// function calcAnimTime(dropdownContentElem) {
-//     const elemHeight = parseFloat(dropdownContentElem.getAttribute('data-height')) || 0;
-
-//     // Define a scaling factor for the animation duration
-//     const baseDuration = 500; // Base duration for 500px height
-//     const scalingFactor = baseDuration / 500; // This will set the duration per pixel
-
-//     // Calculate the time duration based on height
-//     const timeDuration = elemHeight * scalingFactor;
-
-//     // Ensure the duration is a positive value and optionally set a minimum
-//     return Math.max(timeDuration, 100); // Returns at least 100ms
-// }
 
 function calcAnimTime(dropdownContentElem) {
     const elemHeight = parseFloat(dropdownContentElem.getAttribute('data-height')) || 0;
