@@ -125,5 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 isDropdownOpen = dropdownToggle.closeDropdown(isDropdownOpen, dropdownButtonElem, dropdownContentElem);
             }
         });
+        console.log(dropdownContentElem.offsetHeight);
     };
 });

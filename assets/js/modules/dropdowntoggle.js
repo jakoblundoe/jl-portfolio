@@ -1,10 +1,22 @@
 export function openDropdown (isDropdownOpen, dropdownButtonElem, dropdownContentElem) {
-    
+
     if (dropdownContentElem && dropdownButtonElem && !isDropdownOpen) {
         dropdownButtonElem.classList.remove("rotate-180");
         dropdownContentElem.classList.remove("animate-collapse");
         dropdownContentElem.classList.add("animate-expand");
-        addAnimationEventListeners(dropdownContentElem);
+
+        if(!dropdownContentElem.getAttribute('data-height')) {
+            const fullHeight = dropdownContentElem.offsetHeight;
+            dropdownContentElem.setAttribute('data-height', fullHeight);
+            const duration = calcAnimTime(dropdownContentElem);
+            dropdownContentElem.style.animationDuration = `${duration}ms`;
+            addAnimationEventListeners(dropdownContentElem);
+        } else {
+            const duration = calcAnimTime(dropdownContentElem);
+            dropdownContentElem.style.animationDuration = `${duration}ms`;
+            addAnimationEventListeners(dropdownContentElem);
+        }
+
         return true;
     };
 };
@@ -12,10 +24,12 @@ export function openDropdown (isDropdownOpen, dropdownButtonElem, dropdownConten
 export function closeDropdown (isDropdownOpen, dropdownButtonElem, dropdownContentElem) {
     
     if (dropdownContentElem && dropdownButtonElem && isDropdownOpen) {
+        dropdownContentElem.setAttribute('data-height', dropdownContentElem.offsetHeight);
         dropdownButtonElem.classList.add("rotate-180");
         dropdownContentElem.classList.remove("animate-expand");
         dropdownContentElem.classList.add("animate-collapse");
         addAnimationEventListeners(dropdownContentElem);
+
         return false;
     };
 };
@@ -29,7 +43,6 @@ function addAnimationEventListeners (dropdownContentElem) {
     let animationActive = false;
     let frameId = null;
     let pageScrolled = false;
-    let elementIsExpanded = false;
 
     function scrollAnimate() {
         // TRIED TO FLAG INPUT SCROLL SO SMOOTH SCROLL WAS APPLIED ONLY WHEN MANUAL SCROLL HAD HAPPENED PRIOR TO THE ANIMATION.
@@ -75,7 +88,6 @@ function addAnimationEventListeners (dropdownContentElem) {
 
             elementIsExpanded = true;
             pageScrolled = false;
-            console.log(pageScrolled)
         }
     })
 
@@ -98,4 +110,10 @@ function addAnimationEventListeners (dropdownContentElem) {
     //     console.log(animatedElem.getBoundingClientRect().top);
     //     pageScrolled = true;
     // })
+}
+
+function calcAnimTime (dropdownContentElem) {
+    const elemHeight = parseFloat(dropdownContentElem.getAttribute('data-height'));
+    const timeDuration = elemHeight;
+    return timeDuration;
 }
