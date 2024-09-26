@@ -51,7 +51,7 @@ export function overlayToggle () {
     }
 }
 
-export function showreelButtonState() {
+export function showreelButtonState(delayTime) {
     const showreelButton = document.getElementById("showreelbutton");
     const closeReelButton = document.getElementById("close-reel-button");
 
@@ -61,17 +61,29 @@ export function showreelButtonState() {
         closeReelButton.classList.remove("opacity-0");
         closeReelButton.classList.remove("animate-fadeout");
         closeReelButton.classList.add("animate-fadein");
+        setTimeout(() => {
+            showreelButton.disabled = true;
+            closeReelButton.disabled = false;
+        }, delayTime);
     } else if (showreelButton.classList.contains("animate-fadein")) {
         showreelButton.classList.remove("animate-fadein");
         showreelButton.classList.add("animate-fadeout");
         closeReelButton.classList.remove("opacity-0");
         closeReelButton.classList.remove("animate-fadeout");
         closeReelButton.classList.add("animate-fadein");
+        setTimeout(() => {
+            showreelButton.disabled = true;
+            closeReelButton.disabled = false;
+        }, delayTime);
     } else if (showreelButton.classList.contains("animate-fadeout")) {
         showreelButton.classList.remove("animate-fadeout");
         showreelButton.classList.add("animate-fadein");
         closeReelButton.classList.remove("animate-fadein");
         closeReelButton.classList.add("animate-fadeout");
+        setTimeout(() => {
+            showreelButton.disabled = false;
+            closeReelButton.disabled = true;
+        }, delayTime);
     }
 }
 

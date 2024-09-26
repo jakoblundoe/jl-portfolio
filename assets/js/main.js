@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (keydownEvent.key === "Escape" && videocontainer.classList.contains("flex")) {
             cinemaModule.togglevideo(delayTime);
             cinemaModule.overlayToggle();
-            cinemaModule.showreelButtonState();
+            cinemaModule.showreelButtonState(delayTime);
 
             timerActive = true;
             setTimeout(() => {
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         cinemaModule.togglevideo(delayTime);
         cinemaModule.overlayToggle();
-        cinemaModule.showreelButtonState();
+        cinemaModule.showreelButtonState(delayTime);
 
         timerActive = true;
         setTimeout(() => {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         cinemaModule.togglevideo(delayTime);
         cinemaModule.overlayToggle();
-        cinemaModule.showreelButtonState();
+        cinemaModule.showreelButtonState(delayTime);
 
         timerActive = true;
         setTimeout(() => {
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!video.contains(clickEvent.target) && videocontainer.classList.contains("flex")){
             cinemaModule.togglevideo(delayTime);
             cinemaModule.overlayToggle();
-            cinemaModule.showreelButtonState();
+            cinemaModule.showreelButtonState(delayTime);
 
             timerActive = true;
             setTimeout(() => {
