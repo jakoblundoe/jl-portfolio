@@ -2,10 +2,10 @@
 <div class="flex flex-col flex-nowrap justify-between min-h-dvh bg-no-repeat bg-center bg-cover pb-14" style="background-image: url('/img/pressphoto-jln.webp');">
     <div id="overlay" class="opacity-0 w-full h-full bg-overlay-color z-40 cursor-pointer pointer-events-none absolute"></div> 
     {{ partial "header.html" . }}
-    <div id="showreelvideocontainer" class="hidden place-items-center z-50">
+    <div id="showreelvideocontainer" class="hidden place-items-center z-50 relative">
         <div class="grid place-items-center">
             <div class="grid place-items-center w-full max-h-[85vh]">
-                <video playsinline preload="metadata" id="showreelvideo" src="/videos/Reel-temp-v1.mp4" type="video/mp4" class="max-w-[80%] max-h-[85vh] rounded-sm shadow-user-md" controls>
+                <video playsinline preload="metadata" src="/videos/Reel-temp-v1.mp4" type="video/mp4" class="max-w-[80%] max-h-[85vh] rounded-sm shadow-user-md" controls>
                     Your browser does not support the video tag.
                 </video>
             </div>

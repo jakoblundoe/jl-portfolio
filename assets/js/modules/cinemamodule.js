@@ -2,7 +2,7 @@ import * as sidebarToggle from '../modules/sidebartoggle.js';
 
 export function togglevideo (delayTime) {
     const videocontainer = document.getElementById("showreelvideocontainer");
-    const video = document.getElementById("showreelvideo");
+    const video = document.querySelector('video');
     // const delayTime = d;
 
     if (videocontainer.classList.contains("hidden")) {

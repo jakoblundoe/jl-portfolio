@@ -5,7 +5,7 @@ import * as dropdownToggle from './modules/dropdowntoggle.js';
 // VIDEO TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
     const videocontainer = document.getElementById("showreelvideocontainer");
-    const video = document.getElementById("showreelvideo");
+    const video = document.querySelector('video');
     const button = document.getElementById("showreelbutton");
     const closeReelButton = document.getElementById("close-reel-button");
     const delayTime = 500;
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("click", (clickEvent) => {
         if (timerActive)
             return;
-        if (!video.contains(clickEvent.target) && videocontainer.classList.contains("flex")){
+        if (!video.contains(clickEvent.target) && videocontainer.classList.contains("grid")){
             cinemaModule.togglevideo(delayTime);
             cinemaModule.overlayToggle();
             cinemaModule.showreelButtonState(delayTime);
