@@ -7,7 +7,7 @@ export function togglevideo (delayTime) {
 
     if (videocontainer.classList.contains("hidden")) {
         videocontainer.classList.remove("hidden", "animate-fadeout");
-        videocontainer.classList.add("flex", "animate-fadein");
+        videocontainer.classList.add("grid", "animate-fadein");
         sidebarToggle.closeMenu(false);
         video.volume = 0;
         fadeInVolume(video, 800, 1);
@@ -21,7 +21,7 @@ export function togglevideo (delayTime) {
         fadeOutVolume(video, 500);
         setTimeout(() => {
             video.pause();
-            videocontainer.classList.remove("flex");
+            videocontainer.classList.remove("grid");
             videocontainer.classList.add("hidden");
             video.currentTime = 0;
         }, delayTime);

@@ -1,20 +1,20 @@
 {{ define "main" }}
 <div class="flex flex-col flex-nowrap justify-between min-h-dvh bg-no-repeat bg-center bg-cover pb-14" style="background-image: url('/img/pressphoto-jln.webp');">
-    <div id="overlay" class="opacity-0 fixed bg-overlay-color z-40 cursor-pointer pointer-events-none"></div> 
+    <div id="overlay" class="opacity-0 w-full h-full bg-overlay-color z-40 cursor-pointer pointer-events-none absolute"></div> 
     {{ partial "header.html" . }}
-    <div id="showreelvideocontainer" class="hidden flex-col justify-start items-center">
+    <div id="showreelvideocontainer" class="hidden place-items-center z-50">
         <div class="grid place-items-center">
-            <div class="flex justify-center items-center w-full max-h-[85vh]">
-                    <video playsinline preload="metadata" id="showreelvideo" src="/videos/Reel-temp-v1.mp4" type="video/mp4" class="max-w-[80%] max-h-[85vh] rounded-sm shadow-user-md" controls>
-                        Your browser does not support the video tag.
-                    </video>
-                    <button id="close-reel-button" disabled="true" class="disabled:cursor-default disabled:opacity-0 disabled:pointer-events-none cursor-pointer opacity-0 z-60 pointer-events-auto fixed top-10 right-11 transition ease-out duration-150
-                    hover:opacity-70 hover:scale-105
-                    active:opacity-50
-                    ">
-                        <ion-icon name="close-circle-outline" size="large" style="color: white;" alt="circled cross icon"></ion-icon>
-                    </button>
+            <div class="grid place-items-center w-full max-h-[85vh]">
+                <video playsinline preload="metadata" id="showreelvideo" src="/videos/Reel-temp-v1.mp4" type="video/mp4" class="max-w-[80%] max-h-[85vh] rounded-sm shadow-user-md" controls>
+                    Your browser does not support the video tag.
+                </video>
             </div>
+            <button id="close-reel-button" disabled class="disabled:cursor-default disabled:opacity-0 disabled:pointer-events-none cursor-pointer opacity-0 z-60 pointer-events-auto transition ease-out duration-150
+            hover:opacity-70 hover:scale-105
+            active:opacity-50
+            ">
+                <ion-icon name="close-circle-outline" size="large" style="color: white;" alt="circled cross icon"></ion-icon>
+            </button>
         </div>
     </div>
     <div id="spacer" class="h-10">
