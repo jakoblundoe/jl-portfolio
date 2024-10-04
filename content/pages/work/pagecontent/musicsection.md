@@ -1,4 +1,4 @@
 ---
-title: Compositions | Music Production
+title: Compositions | Music Productions
 order: 1
 ---

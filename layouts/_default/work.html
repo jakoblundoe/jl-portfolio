@@ -1,21 +1,43 @@
 {{ define "main" }}
 <div class="flex flex-col flex-nowrap justify-between bg-white pb-14">
     {{ partial "header.html" . }}
-    <div class="flex h-[500px]">
+    <div class="flex justify-center mt-3">
+        <h1 class="text-5xl tracking-wider font-medium text-semilightblack">
+            {{ .Content }}
+        </h1>
+    </div>
+    <div class="flex flex-col h-[500px]">
+        <div class="flex justify-center mt-8">
+            <h2 class="font-mono text-3xl tracking-wide font-semibold text-semilightblack">
+                {{ with .Resources.Get "pagecontent/projectssection.md" }}
+                {{ .Title }}
+            {{ end }}
+            </h2>
+        </div>
+        <!-- <div class="relative after:absolute ml-6 after:border after:border-t-0 after:border-semilightblack after:w-11/12 after:left-1/2 after:-translate-x-1/2 after:mt-2"></div> -->
         <div class="m-auto p-10 pt-20 max-w-3xl text-black text-base font-light text-center
                     [&_p]:-mt-12 [&_p]:mb-12
                     [&_a]:text-pink [&_a]:font-medium hover:[&_a]:opacity-80 active:[&_a]:opacity-65
                     sm:text-left sm:text-xl">
-        {{ with .Resources.Get "pagecontent/workinprogress.md" }}
-            {{ .Content }}
-        {{ end }}
+            {{ with .Resources.Get "pagecontent/projectssection.md" }}
+                {{ .Content }}
+            {{ end }}
         </div> 
     </div>
     <div class="bg-gray-200">
+        <div class="flex justify-center m-4">
+            <h2 class="font-mono text-3xl tracking-wide font-semibold text-semilightblack">
+                {{ with .Resources.Get "pagecontent/musicsection.md" }}
+                    {{ .Title }}
+                {{ end }}
+            </h2>
+        </div>
+        <div id="music-container" class="">
+        </div>
+        <!-- <div class="relative after:absolute ml-6 after:border after:border-t-0 after:border-semilightblack after:w-11/12 after:left-1/2 after:-translate-x-1/2 after:mt-2"></div> -->
         <div class="w-[500px] h-[1000px]">
 
         </div>
-
     </div>
     {{ partial "footer.html" . }}
 </div>
