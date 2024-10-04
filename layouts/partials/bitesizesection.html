@@ -4,15 +4,14 @@
 {{ $pageVideoPath := .Params.videopath }}
 <div class="flex flex-col gap-2">
     <div class="flex justify-center">
-        <h3 class="text-lg font-semibold">
+        <h3 class="text-lg font-semibold text-semilightblack">
             {{ $pageTitle }}
         </h3>
     </div>
-    <div class="bg-white">
-        <div id="" class="bg-white shadow-user-sm">
+    <div>
+        <div id="" class="shadow-user-sm">
             <video playsinline preload="metadata" controls class="plyr-video max-h-[500px]" loop>
                 <source src="{{ $pageVideoPath }}" type="video/mp4">
-                {{ $pageVideoPath }}
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -23,5 +22,4 @@
         </p>
     </div>
 </div>
-
 {{ end }}
