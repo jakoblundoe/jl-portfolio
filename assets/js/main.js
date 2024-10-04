@@ -2,7 +2,16 @@ import * as cinemaModule from './modules/cinemamodule.js';
 import * as sidebarToggle from './modules/sidebartoggle.js';
 import * as dropdownToggle from './modules/dropdowntoggle.js';
 
-// Initialize Plyr for all video elements with the class 'plyr-video' applied
+// Initialize default Plyr for all video elements with the class 'plyr-video' applied
+import Plyr from 'plyr';
+Plyr.setup('.plyr-video'), {
+    controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen',],
+    clickToPlay: true,
+    keyboard: {
+        focused: true,
+        global: false,
+    },
+}
 
 document.addEventListener('DOMContentLoaded', (e) => {
 })
