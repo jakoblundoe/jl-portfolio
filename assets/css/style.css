@@ -17,10 +17,10 @@
     --plyr-color-main: rgb(111, 140, 184);
 }
 .plyr__video-wrapper {
-    border-radius: 4px; /* Adjust the value as needed */
+    border-radius: 2px; /* Adjust the value as needed */
     overflow: hidden;
 }
 .plyr {
-    border-radius: 4px; /* Adjust the value as needed */
+    border-radius: 2px; /* Adjust the value as needed */
     overflow: hidden;
 }
