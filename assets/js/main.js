@@ -6,7 +6,6 @@ import * as dropdownToggle from './modules/dropdowntoggle.js';
 import Plyr from 'plyr';
 Plyr.setup('.plyr-video'), {
     controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen',],
-    clickToPlay: true,
     keyboard: {
         focused: true,
         global: false,
