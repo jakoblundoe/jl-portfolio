@@ -2,13 +2,16 @@ import * as sidebarToggle from '../modules/sidebartoggle.js';
 
 import Plyr from 'plyr';
 
-export function togglevideo (delayTime, plyrInstance) {
+let plyrInstance;
+
+export function togglevideo (delayTime) {
     const videocontainer = document.getElementById("showreelvideocontainer");
     const video = document.querySelector('video');
 
     if (videocontainer.classList.contains("hidden")) {
-        let showreelPlayer = new Plyr('.plyr-reel', {
-            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen'],
+        plyrInstance = new Plyr('.plyr-reel', {
+            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen',],
+            clickToPlay: true,
             keyboard: {
                 focused: true,
                 global: true,
@@ -22,7 +25,7 @@ export function togglevideo (delayTime, plyrInstance) {
         setTimeout(() => {
             video.play();
         }, delayTime);
-        return showreelPlayer;
+        return true;
     } else if (videocontainer.classList.contains("animate-fadein")) {
         videocontainer.classList.remove("animate-fadein");
         videocontainer.classList.add("animate-fadeout");

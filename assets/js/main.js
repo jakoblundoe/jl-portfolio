@@ -16,8 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const delayTime = 500;
     let timerActive = false;
 
-    let showreelPlayer;
-
     const showreelPageActive = (document.body.getAttribute("data-page").toLowerCase() === "showreel") || false;
 
     if (!showreelPageActive)
@@ -26,9 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("keydown", (keydownEvent) => {
         if (timerActive)
             return;
-        if (keydownEvent.key === "Escape" && videocontainer.classList.contains("flex")) {
+        if (keydownEvent.key === "Escape" && videocontainer.classList.contains("grid")) {
 
-            showreelPlayer = cinemaModule.togglevideo(delayTime, showreelPlayer);
+            cinemaModule.togglevideo(delayTime);
             cinemaModule.overlayToggle();
             cinemaModule.showreelButtonState(delayTime);
 
@@ -39,10 +37,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // showreelPlayer.player.addEventListener('click', (e) => {
+    //     if (showreelPlayer.player.touch && e.target.tagName === 'VIDEO') {
+    //         if (showreelPlayer.player.playing) {
+    //             showreelPlayer.player.pause();
+    //         } else {
+    //             showreelPlayer.player.play();
+    //         }
+    //     }
+    // })
+
     button.addEventListener("click", () => {
         if (timerActive)
             return;
-        showreelPlayer = cinemaModule.togglevideo(delayTime, showreelPlayer);
+        cinemaModule.togglevideo(delayTime);
         cinemaModule.overlayToggle();
         cinemaModule.showreelButtonState(delayTime);
 
@@ -55,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     closeReelButton.addEventListener("click", () => {
         if (timerActive)
             return;
-        showreelPlayer = cinemaModule.togglevideo(delayTime, showreelPlayer);
+        cinemaModule.togglevideo(delayTime);
         cinemaModule.overlayToggle();
         cinemaModule.showreelButtonState(delayTime);
 
@@ -69,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (timerActive)
             return;
         if (!video.contains(clickEvent.target) && videocontainer.classList.contains("grid")){
-            showreelPlayer = cinemaModule.togglevideo(delayTime, showreelPlayer);
+            cinemaModule.togglevideo(delayTime);
             cinemaModule.overlayToggle();
             cinemaModule.showreelButtonState(delayTime);
 
