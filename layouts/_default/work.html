@@ -2,12 +2,13 @@
 <div class="flex flex-col flex-nowrap justify-between bg-white pb-14">
     {{ partial "header.html" . }}
     <div class="flex justify-center mt-3">
-        <h1 class="text-5xl tracking-wider font-medium text-semilightblack">
+        <h1 class="text-5xl tracking-wider font-medium text-semilightblack relative after:absolute ml-6 after:border after:border-t-0 after:border-semilightblack after:w-full after:left-1/2 after:-translate-x-1/2 after:mt-2">
             {{ .Content }}
         </h1>
     </div>
+    <div class=""></div>
     <div class="flex flex-col h-[500px]">
-        <div class="flex justify-center mt-8">
+        <div class="flex justify-center mt-10">
             <h2 class="font-mono text-3xl tracking-wide font-semibold text-semilightblack">
                 {{ with .Resources.Get "pagecontent/projectssection.md" }}
                 {{ .Title }}
