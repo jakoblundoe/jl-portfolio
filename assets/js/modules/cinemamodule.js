@@ -10,7 +10,7 @@ export function togglevideo (delayTime) {
         videocontainer.classList.add("grid", "animate-fadein");
         sidebarToggle.closeMenu(false);
         video.volume = 0;
-        fadeInVolume(video, 800, 1);
+        fadeInVolume(video, 800, 0.75);
         setTimeout(() => {
             video.play();
         }, delayTime);

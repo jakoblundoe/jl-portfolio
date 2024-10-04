@@ -7,7 +7,8 @@
     <div id="showreelvideocontainer" class="hidden place-items-center z-50">
         <div class="grid place-items-center max-w-[80%] max-h-dvh">
             <div class="relative inline-block my-2 mx-1 sm:my-10 sm:mx-4">
-                <video playsinline preload="metadata" src="/videos/Reel-temp-v1.mp4" type="video/mp4" class="w-full max-h-dvh rounded-sm shadow-user-md" controls>
+                <video playsinline preload="metadata" controls class="plyr-video w-full max-h-dvh rounded-sm shadow-user-md">
+                    <source src="/videos/Reel-temp-v1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <button id="close-reel-button" disabled class="scale-90 absolute animate-fadeout -mr-10 -mt-10 right-2 top-2 disabled:cursor-default disabled:opacity-0 disabled:pointer-events-none cursor-pointer z-60 pointer-events-auto transition ease-out duration-150

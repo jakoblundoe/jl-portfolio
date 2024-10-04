@@ -2,10 +2,16 @@ import * as cinemaModule from './modules/cinemamodule.js';
 import * as sidebarToggle from './modules/sidebartoggle.js';
 import * as dropdownToggle from './modules/dropdowntoggle.js';
 
+// Initialize Plyr for all video elements with the class 'plyr-video' applied
+import Plyr from 'plyr';
+Plyr.setup('.plyr-video', {
+  controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen'],
+});
+
 // VIDEO TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
-    const videocontainer = document.getElementById("showreelvideocontainer");
-    const video = document.querySelector('video');
+    const videocontainer = document.getElementById('showreelvideocontainer');
+    const video = document.querySelector('.plyr');
     const button = document.getElementById("showreelbutton");
     const closeReelButton = document.getElementById("close-reel-button");
     const delayTime = 500;

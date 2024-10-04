@@ -1,3 +1,4 @@
+@import 'plyr/dist/plyr.css';
 @tailwind base;
 
 @layer base {
@@ -10,3 +11,8 @@
 
 @tailwind components;
 @tailwind utilities;
+
+/* PLYR CUSTOMIZATION */
+:root {
+    --plyr-color-main: rgb(111, 140, 184);
+}

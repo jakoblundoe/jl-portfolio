@@ -3,7 +3,12 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  content: ['./layouts/**/*.html', './content/**/*.md', './assets/**/*.js'],
+  content: ['./layouts/**/*.html', './content/**/*.md', './assets/**/*.js','./node_modules/plyr/dist/plyr.css'],
+  safelist: [
+    'plyr__control',
+    'plyr--full-ui',
+    'plyr__volume'
+  ],
   future: {
     hoverOnlyWhenSupported: true
   },
