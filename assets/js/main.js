@@ -37,16 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // showreelPlayer.player.addEventListener('click', (e) => {
-    //     if (showreelPlayer.player.touch && e.target.tagName === 'VIDEO') {
-    //         if (showreelPlayer.player.playing) {
-    //             showreelPlayer.player.pause();
-    //         } else {
-    //             showreelPlayer.player.play();
-    //         }
-    //     }
-    // })
-
     button.addEventListener("click", () => {
         if (timerActive)
             return;
