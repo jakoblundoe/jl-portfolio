@@ -3,19 +3,21 @@ import * as sidebarToggle from './modules/sidebartoggle.js';
 import * as dropdownToggle from './modules/dropdowntoggle.js';
 
 // Initialize Plyr for all video elements with the class 'plyr-video' applied
-import Plyr from 'plyr';
-Plyr.setup('.plyr-video', {
-  controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen'],
-});
+
+document.addEventListener('DOMContentLoaded', (e) => {
+})
 
 // VIDEO TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
     const videocontainer = document.getElementById('showreelvideocontainer');
-    const video = document.querySelector('.plyr');
+    const video = document.querySelector('#reel-container');
     const button = document.getElementById("showreelbutton");
     const closeReelButton = document.getElementById("close-reel-button");
     const delayTime = 500;
     let timerActive = false;
+
+    let showreelPlayer;
+
     const showreelPageActive = (document.body.getAttribute("data-page").toLowerCase() === "showreel") || false;
 
     if (!showreelPageActive)
@@ -25,7 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (timerActive)
             return;
         if (keydownEvent.key === "Escape" && videocontainer.classList.contains("flex")) {
-            cinemaModule.togglevideo(delayTime);
+
+            showreelPlayer = cinemaModule.togglevideo(delayTime, showreelPlayer);
             cinemaModule.overlayToggle();
             cinemaModule.showreelButtonState(delayTime);
 
@@ -39,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
         if (timerActive)
             return;
-        cinemaModule.togglevideo(delayTime);
+        showreelPlayer = cinemaModule.togglevideo(delayTime, showreelPlayer);
         cinemaModule.overlayToggle();
         cinemaModule.showreelButtonState(delayTime);
 
@@ -52,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     closeReelButton.addEventListener("click", () => {
         if (timerActive)
             return;
-        cinemaModule.togglevideo(delayTime);
+        showreelPlayer = cinemaModule.togglevideo(delayTime, showreelPlayer);
         cinemaModule.overlayToggle();
         cinemaModule.showreelButtonState(delayTime);
 
@@ -66,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (timerActive)
             return;
         if (!video.contains(clickEvent.target) && videocontainer.classList.contains("grid")){
-            cinemaModule.togglevideo(delayTime);
+            showreelPlayer = cinemaModule.togglevideo(delayTime, showreelPlayer);
             cinemaModule.overlayToggle();
             cinemaModule.showreelButtonState(delayTime);
 

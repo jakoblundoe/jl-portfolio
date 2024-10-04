@@ -1,11 +1,19 @@
 import * as sidebarToggle from '../modules/sidebartoggle.js';
 
-export function togglevideo (delayTime) {
+import Plyr from 'plyr';
+
+export function togglevideo (delayTime, plyrInstance) {
     const videocontainer = document.getElementById("showreelvideocontainer");
     const video = document.querySelector('video');
-    // const delayTime = d;
 
     if (videocontainer.classList.contains("hidden")) {
+        let showreelPlayer = new Plyr('.plyr-reel', {
+            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen'],
+            keyboard: {
+                focused: true,
+                global: true,
+            },
+          });
         videocontainer.classList.remove("hidden", "animate-fadeout");
         videocontainer.classList.add("grid", "animate-fadein");
         sidebarToggle.closeMenu(false);
@@ -14,7 +22,7 @@ export function togglevideo (delayTime) {
         setTimeout(() => {
             video.play();
         }, delayTime);
-        return true;
+        return showreelPlayer;
     } else if (videocontainer.classList.contains("animate-fadein")) {
         videocontainer.classList.remove("animate-fadein");
         videocontainer.classList.add("animate-fadeout");
@@ -24,6 +32,10 @@ export function togglevideo (delayTime) {
             videocontainer.classList.remove("grid");
             videocontainer.classList.add("hidden");
             video.currentTime = 0;
+            if (plyrInstance) {
+                plyrInstance.destroy();
+                plyrInstance = null;
+            }
         }, delayTime);
         return false;
     } else {
