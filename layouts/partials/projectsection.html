@@ -1,0 +1,16 @@
+{{ $section := .Site.GetPage "section" "projectcontent" }}
+{{ range sort $section.Pages "Params.order" }}
+{{ $pageTitle := .Params.title }}
+
+<div>
+    <h3>
+        {{ $pageTitle }}
+    </h3>
+</div>
+<div id="card-description">
+    <p>
+        {{ .Content }}
+    </p>
+</div>
+
+{{ end }}
