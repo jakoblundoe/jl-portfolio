@@ -6,7 +6,8 @@ import * as dropdownToggle from './modules/dropdowntoggle.js';
 import Plyr from 'plyr';
 document.addEventListener('DOMContentLoaded', (e) => {
     // Initialize default Plyr for all video elements with the class 'plyr-video' applied
-    Plyr.setup('.plyr-video', {
+    //PLYR VIDEO PLAYERS (DEFAULT)
+    const videoPlayers = Plyr.setup('.plyr-video', {
         controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen',],
         keyboard: {
             focused: true,
@@ -17,7 +18,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
             enabled: false // Disable storing of volume/mute settings
         }
     });
-    Plyr.setup('.plyr-musicvideo', {
+
+    // PLYR MUSIC VIDEO PLAYERS
+    const musicVideoPlayers = Plyr.setup('.plyr-musicvideo', {
         controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'settings',],
         keyboard: {
             focused: true,
@@ -28,13 +31,28 @@ document.addEventListener('DOMContentLoaded', (e) => {
             enabled: false // Disable storing of volume/mute settings
         }
     })
+
+    // PLYR AUDIO PLAYERS
     // Initialize default Plyr for all audio elements with the class 'plyr-audio' applied
-    Plyr.setup('.plyr-audio', {
+    const audioPlayers = Plyr.setup('.plyr-audio', {
         // muted: false,
         volume: 0.8,
         storage: {
             enabled: false // Disable storing of volume/mute settings
         }
+    });
+
+    // MAKE SURE NO PLAYERS PLAY SIMULTANEOUSLY
+    const allPlyrPlayers = videoPlayers.concat(musicVideoPlayers, audioPlayers);
+    console.log(allPlyrPlayers);
+    allPlyrPlayers.forEach(player => {
+        player.on('play', () => {
+            allPlyrPlayers.forEach(otherPlayer => {
+                if (otherPlayer !== player) {
+                    otherPlayer.pause();
+                }
+            });
+        });
     });
 })
 
