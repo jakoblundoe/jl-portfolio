@@ -116,8 +116,8 @@ function audioMotionFadeIn(audioMotion) {
 
     const fadeIn = setInterval(() => {
         alpha += fadeInterval /fadeDuration;
-        if (alpha >= 0.5) {
-            alpha = 0.5;
+        if (alpha >= 0.75) {
+            alpha = 0.75;
             clearInterval(fadeIn);
         }
         audioMotion.setOptions({ bgAlpha: alpha });
@@ -126,7 +126,7 @@ function audioMotionFadeIn(audioMotion) {
 
 function pauseAudioMotionInstance (audioMotion) {
     if (audioMotion) {
-        let alpha = 0.5;
+        let alpha = 0.75;
         const fadeDuration = 500;
         const fadeInterval = 10;
 
