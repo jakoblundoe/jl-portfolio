@@ -1,4 +1,4 @@
 ---
-title: All the bite sized stuff
+title: Extras
 order: 2
 ---
