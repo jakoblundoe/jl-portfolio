@@ -1,13 +1,17 @@
 {{ $section := .Site.GetPage "section" "musiccontent" }}
 {{ range sort $section.Pages "Params.order" }}
 {{ $pageTitle := .Params.title }}
+{{ $pageAudioPath := .Params.audioPath }}
 
 <div>
     <h3 class="text-lg font-semibold text-semilightblack">
         {{ $pageTitle }}
     </h3>
 </div>
-<div id="card-description">
+<div class="">
+    <div>
+        <audio src="{{ $pageAudioPath }}" class="plyr-audio"></audio>
+    </div>
     <p>
         {{ .Content }}
     </p>
