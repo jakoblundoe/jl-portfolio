@@ -2,7 +2,8 @@
 <div class="flex flex-col flex-nowrap justify-between bg-white pb-14">
     {{ partial "header.html" . }}
     <div class="flex justify-center mt-3">
-        <h1 class="text-5xl tracking-wider font-medium text-semilightblack relative after:absolute ml-6 after:border after:border-t-0 after:border-semilightblack after:w-full after:left-1/2 after:-translate-x-1/2 after:mt-2">
+        <h1 class="text-5xl tracking-wider font-extralight text-semilightblack relative after:absolute ml-6 after:border after:border-t-0 after:border-grey after:w-full after:left-1/2 after:-translate-x-1/2 after:mt-2
+                    [&_span]:text-pink [&_span]:font-normal">
             {{ .Content }}
         </h1>
     </div>
@@ -17,20 +18,19 @@
         </div> 
     </div>
 
-    <div id="project-section" class="bg-white">
-        <div class="flex justify-center m-4">
-            <h2 class="font-mono text-3xl tracking-wide font-semibold text-semilightblack">
-                {{ with .Resources.Get "pagecontent/projectssection.md" }}
-                    {{ .Title }}
-                {{ end }}
-            </h2>
-        </div>
-        <div class="flex justify-center gap-16">
-            {{ partial "projectsection.html" . }}
-        </div>
-        <!-- <div class="relative after:absolute ml-6 after:border after:border-t-0 after:border-semilightblack after:w-11/12 after:left-1/2 after:-translate-x-1/2 after:mt-2"></div> -->
-        <div id="tempbox01" class="w-[500px] h-[1000px]">
-    
+    <div id="project-section" class="bg-white flex justify-center">
+        <div id="section-wrapper" class="flex flex-col justify-center max-w-[1200px] mb-20">
+            <div class="flex justify-center m-4">
+                <h2 class="font-inter text-3xl tracking-wide font-semibold text-semilightblack">
+                    {{ with .Resources.Get "pagecontent/projectssection.md" }}
+                        {{ .Title }}
+                    {{ end }}
+                </h2>
+            </div>
+            <div class="flex flex-wrap justify-center gap-16">
+                {{ partial "projectsection.html" . }}
+            </div>
+            <!-- <div class="relative after:absolute ml-6 after:border after:border-t-0 after:border-semilightblack after:w-11/12 after:left-1/2 after:-translate-x-1/2 after:mt-2"></div> -->
         </div>
     </div>
     <div id="music-section" class="bg-gray-200">
