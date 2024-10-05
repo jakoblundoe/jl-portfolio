@@ -1,13 +1,13 @@
-{{ $section := .Site.GetPage "section" "musiccontent" }}
+{{ $section := .Site.GetPage "section" "musiccontent-audio" }}
 {{ range sort $section.Pages "Params.order" }}
 {{ $pageTitle := .Params.title }}
 {{ $pageAudioPath := .Params.audioPath }}
 {{ $pageImg := .Params.imgPath }}
 
 <div class="flex flex-col gap-2">
-    <div class="rounded-sm shadow-md w-[480px]">
-        <div>
-            <img src="{{ $pageImg }}" alt="">
+    <div class="shadow-md w-[480px]">
+        <div style="border-radius: 4px;">
+            <img src="{{ $pageImg }}" alt="" style="border-top-left-radius: 2px; border-top-right-radius: 2px;">
             <audio src="{{ $pageAudioPath }}" class="plyr-audio"></audio>
         </div>
     </div>
@@ -20,5 +20,29 @@
         </p>
     </div>
 </div>
+{{ end }}
 
+{{ $section := .Site.GetPage "section" "musiccontent-video" }}
+{{ range sort $section.Pages "Params.order" }}
+{{ $pageTitle := .Params.title }}
+{{ $pageVideo := .Params.videoPath }}
+
+<div class="flex flex-col gap-2">
+    <div class="w-[480px]">
+        <div id="musicvideo" style="border-radius: 2px;">
+            <video playsinline preload="metadata" controls class="plyr-musicvideo max-h-[360px]" loop style="border-radius: 2px;">
+                <source src="{{ $pageVideo }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="flex justify-center">
+        <h3 class="text-lg font-semibold text-semilightblack">
+            {{ $pageTitle }}
+        </h3>
+        <p>
+            {{ .Content }}
+        </p>
+    </div>
+</div>
 {{ end }}

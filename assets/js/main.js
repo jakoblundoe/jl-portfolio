@@ -7,7 +7,7 @@ import Plyr from 'plyr';
 document.addEventListener('DOMContentLoaded', (e) => {
     // Initialize default Plyr for all video elements with the class 'plyr-video' applied
     Plyr.setup('.plyr-video', {
-        controls: ['play-large', 'play', 'progress', 'current-time', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen',],
+        controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen',],
         keyboard: {
             focused: true,
             global: false,
@@ -17,6 +17,17 @@ document.addEventListener('DOMContentLoaded', (e) => {
             enabled: false // Disable storing of volume/mute settings
         }
     });
+    Plyr.setup('.plyr-musicvideo', {
+        controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'settings',],
+        keyboard: {
+            focused: true,
+            global: false,
+        },
+        volume: 0.8,
+        storage: {
+            enabled: false // Disable storing of volume/mute settings
+        }
+    })
     // Initialize default Plyr for all audio elements with the class 'plyr-audio' applied
     Plyr.setup('.plyr-audio', {
         // muted: false,

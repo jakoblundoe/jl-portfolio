@@ -17,10 +17,18 @@
     --plyr-color-main: rgb(111, 140, 184);
 }
 .plyr__video-wrapper {
-    border-radius: 2px; /* Adjust the value as needed */
+    border-radius: 2px;
     overflow: hidden;
 }
 .plyr {
-    border-radius: 2px; /* Adjust the value as needed */
+    border-radius: 2px; /* Adjust as needed */
     overflow: hidden;
+}
+
+/* NOT WORKING */
+.plyr-musicvideo {
+    --plyr-video-background: rgba(255, 255, 255, 0);
+    --plyr-video-controls-background: white;
+    --plyr-video-control-color: rgb(74, 84, 100);
+    --plyr-video-progress-buffered-background: rgba(193, 200, 209, 0.6);
 }
