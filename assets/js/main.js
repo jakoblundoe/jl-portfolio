@@ -37,11 +37,36 @@ document.addEventListener('DOMContentLoaded', (e) => {
     // PLYR AUDIO PLAYERS
     // Initialize default Plyr for all audio elements with the class 'plyr-audio' applied
     const audioPlayers = Plyr.setup('.plyr-audio', {
-        // muted: false,
         volume: 0.8,
         storage: {
             enabled: false
         }
+    });
+
+    
+    audioPlayers.forEach((audioPlayer, index) => {
+        const playMusicBtn = document.querySelector(`#play-music-btn-${index}`);
+        const ionIconElem = playMusicBtn.querySelector('ion-icon');
+
+        if (playMusicBtn) {
+            playMusicBtn.addEventListener('click', () => {
+                if (!audioPlayer.playing) {
+                    audioPlayer.play();
+                } else if (audioPlayer.playing) {
+                    audioPlayer.pause();
+                }
+            })
+        }
+
+        audioPlayer.on('play', () => {
+            ionIconElem.setAttribute('name', 'pause-circle-outline');
+        })
+        audioPlayer.on('pause', () => {
+            ionIconElem.setAttribute('name', 'play-circle-outline');
+        })
+        audioPlayer.on('end', () => {
+            ionIconElem.setAttribute('name', 'play-circle-outline');
+        })
     });
 
     // MAKE SURE NO PLAYERS PLAY SIMULTANEOUSLY
