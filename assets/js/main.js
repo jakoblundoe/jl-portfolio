@@ -61,9 +61,47 @@ document.addEventListener('DOMContentLoaded', (e) => {
     });
 
     // ADDING AUDIO VISUALIZATION TO AUDIO SETUP
-    audioPlayers.forEach(audioPlayer => {
-        console.log(audioPlayer.playing);
-    })
+    audioPlayers.forEach((audioPlayer, index) => {
+        let audioMotion; // To store the AudioMotionAnalyzer instance
+        console.log(index)
+    
+        // Attach event listener to 'play' event
+        audioPlayer.on('play', () => {
+            if (!audioMotion) {
+                // Find the correct waveform container for this specific audio player
+                const audioContainer = document.querySelector(`#audioContainer-${index}`); // Adjust this if you have unique containers for each audio
+                if (audioContainer) {
+                    // Create AudioMotionAnalyzer for this player
+                    audioMotion = new AudioMotionAnalyzer(audioContainer, {
+                        source: audioPlayer.media,  // Use 'audioPlayer.media' to get the raw <audio> element
+                        height: audioContainer.clientHeight,
+                        width: audioContainer.clientWidth,
+                        ansiBands: false,
+                        showScaleX: false,
+                        bgAlpha: 0.5,
+                        overlay: true,
+                        smoothing: 0.7,
+                        mode: 0,
+                        channelLayout: "single",
+                        frequencyScale: "bark",
+                        gradient: "prism",
+                        linearAmplitude: true,
+                        linearBoost: 1.8,
+                        mirror: 0,
+                        radial: false,
+                        reflexAlpha: 0.25,
+                        reflexBright: 1,
+                        reflexFit: true,
+                        reflexRatio: 0.3,
+                        showPeaks: true,
+                        weightingFilter: "D"
+                    });
+                } else {
+                    console.error('Waveform container not found');
+                }
+            }
+        });
+    });
 })
 
 // VIDEO TOGGLE

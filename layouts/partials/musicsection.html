@@ -1,13 +1,17 @@
 {{ $section := .Site.GetPage "section" "musiccontent-audio" }}
-{{ range sort $section.Pages "Params.order" }}
-{{ $pageTitle := .Params.title }}
-{{ $pageAudioPath := .Params.audioPath }}
-{{ $pageImg := .Params.imgPath }}
+{{ range $index, $page := sort $section.Pages "Params.order" }}
+{{ $pageTitle := $page.Params.title }}
+{{ $pageAudioPath := $page.Params.audioPath }}
+{{ $pageImg := $page.Params.imgPath }}
 
 <div class="flex flex-col gap-2">
     <div class="shadow-md w-[480px]">
         <div style="border-radius: 4px;">
-            <img src="{{ $pageImg }}" alt="" style="border-top-left-radius: 2px; border-top-right-radius: 2px;">
+            <div class="relative">
+                <div id="audioContainer-{{ $index }}" class="absolute w-[480px] h-[360px] bg-transp-black">
+                </div>
+                <img src="{{ $pageImg }}" alt="" style="border-top-left-radius: 2px; border-top-right-radius: 2px;">
+            </div>
             <audio src="{{ $pageAudioPath }}" class="plyr-audio"></audio>
         </div>
     </div>
