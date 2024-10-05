@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "audiomotion-analyzer": "^4.5.0",
     "autoprefixer": "^10.4.19",
     "plyr": "^3.7.8",
     "postcss": "^8.4.39",

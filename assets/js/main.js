@@ -4,6 +4,8 @@ import * as dropdownToggle from './modules/dropdowntoggle.js';
 
 
 import Plyr from 'plyr';
+import AudioMotionAnalyzer from 'audiomotion-analyzer';
+
 document.addEventListener('DOMContentLoaded', (e) => {
     // Initialize default Plyr for all video elements with the class 'plyr-video' applied
     //PLYR VIDEO PLAYERS (DEFAULT)
@@ -43,8 +45,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
     });
 
     // MAKE SURE NO PLAYERS PLAY SIMULTANEOUSLY
+    const workPageActive = (document.body.getAttribute("data-page").toLowerCase() === "work") || false;
+
+    if (!workPageActive)
+        return;
     const allPlyrPlayers = videoPlayers.concat(musicVideoPlayers, audioPlayers);
-    console.log(allPlyrPlayers);
     allPlyrPlayers.forEach(player => {
         player.on('play', () => {
             allPlyrPlayers.forEach(otherPlayer => {
@@ -54,6 +59,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
             });
         });
     });
+
+    // ADDING AUDIO VISUALIZATION TO AUDIO SETUP
+    audioPlayers.forEach(audioPlayer => {
+        console.log(audioPlayer.playing);
+    })
 })
 
 // VIDEO TOGGLE
