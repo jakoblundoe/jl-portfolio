@@ -4,5 +4,4 @@ audioPath: /workcontent/music/sakasclub/sakasclub-composition.wav
 imgPath: /workcontent/music/sakasclub/sakasclub-thumbnail-v2(4-3).webp
 order: 0
 ---
-**Production, mix and master by me.**
-Composition made with a futuristic steampunk game universe in mind.
+**Composition, production, mix and master** by me.
