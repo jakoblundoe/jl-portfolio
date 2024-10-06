@@ -1,5 +1,7 @@
 ---
-title: Game Concept Theme Music
+title: Game Concept
+type: Soundtrack
 videoPath: /workcontent/music/Alex-gameconcept/alexgraphics.mp4
 order: 0
 ---
+**Composition. production, mix and master.**
