@@ -3,7 +3,7 @@
 {{ $pageTitle := .Params.title }}
 {{ $pageVideoPath := .Params.videopath }}
 <div class="flex flex-col gap-2">
-    <div class="flex justify-center">
+    <div class="select-text flex justify-center">
         <h3 class="text-lg font-semibold text-semilightblack">
             {{ $pageTitle }}
         </h3>
@@ -16,7 +16,7 @@
             </video>
         </div>
     </div>
-    <div>
+    <div class="select-text">
         <p>
             {{ .Content }}
         </p>
