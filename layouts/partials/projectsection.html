@@ -7,11 +7,11 @@
 {{ $projectURL := .Params.external_url }}
 
 <div class="flex flex-col gap-2">
-    <div class="flex flex-col justify-center w-[480px]">
+    <div class="flex flex-col justify-center max-w-[480px] min-w-[341px]">
         <div class="shadow-md">
             <a href="{{ $projectURL }}">
                 <div class="">
-                    <div class="relative w-[480px] h-[360px]">
+                    <div class="relative max-w-[480px] max-h-[360px]">
                         <img src="{{ $pageThumbnail }}" alt="" style="border-radius: 2px;">
                         <div style="border-radius: 2px;" class="absolute inset-0 flex justify-center items-center ease-in-out duration-300
                                                             hover:bg-less-transp-black hover:cursor-pointer">
@@ -44,7 +44,7 @@
                             {{ $projectType }}
                         </p>
                     </div>
-            <div class="select-text text-sm text-nowrap">
+            <div class="select-text text-sm">
                 {{ .Content }}
             </div>
         </div>
