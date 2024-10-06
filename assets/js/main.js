@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
             enabled: false
         }
     });
-
     
     audioPlayers.forEach((audioPlayer, index) => {
         const playMusicBtn = document.querySelector(`#play-music-btn-${index}`);
@@ -100,13 +99,22 @@ document.addEventListener('DOMContentLoaded', (e) => {
             }
         });
         audioPlayer.on('pause', () => {
-            console.log(`audioPlayer ${audioPlayer.media} is paused`);
             pauseAudioMotionInstance(audioMotion, audioPlayer);
         });
     });
 });
 
 function createAudioMotionInstance(audioContainer, audioPlayer) {
+    const options = {
+        colorStops: [
+            { pos: 0, color: 'rgba(70, 130, 180, 1)' },
+            { pos: 0.2, color: 'rgba(163, 193, 218, 1)' },
+            { pos: 0.4, color: 'rgba(204, 229, 255, 1)' },
+            { pos: 0.6, color: 'rgba(230, 240, 255, 1)' },
+            { pos: 0.8, color: 'rgba(240, 245, 250, 1)' },
+            { pos: 1, color: 'rgba(255, 255, 255, 1)' }
+        ]
+    }
     const audioMotion = new AudioMotionAnalyzer(audioContainer, {
         source: audioPlayer.media,
         height: audioContainer.clientHeight,
@@ -119,7 +127,7 @@ function createAudioMotionInstance(audioContainer, audioPlayer) {
         mode: 0,
         channelLayout: "single",
         frequencyScale: "bark",
-        gradient: "prism",
+        gradient: 'prism',
         linearAmplitude: true,
         linearBoost: 1.8,
         mirror: 0,
@@ -131,6 +139,9 @@ function createAudioMotionInstance(audioContainer, audioPlayer) {
         showPeaks: true,
         weightingFilter: "D"
     });
+    audioMotion.registerGradient( 'whiteGradient', options );
+    audioMotion.setOptions({ gradient: 'whiteGradient' });
+
     return audioMotion;
 }
 
@@ -162,7 +173,6 @@ function pauseAudioMotionInstance (audioMotion) {
                 clearInterval(fadeOut);
             }
             audioMotion.paused = true;
-            console.log(audioMotion.paused)
             audioMotion.setOptions({ bgAlpha: alpha });
         }, fadeInterval);
     }
