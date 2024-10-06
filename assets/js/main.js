@@ -1,11 +1,24 @@
 import * as cinemaModule from './modules/cinemamodule.js';
 import * as sidebarToggle from './modules/sidebartoggle.js';
 import * as dropdownToggle from './modules/dropdowntoggle.js';
+import * as touchscreenutilities from './modules/touchscreenutilities.js';
 
 import Plyr from 'plyr';
 import AudioMotionAnalyzer from 'audiomotion-analyzer';
 
 document.addEventListener('DOMContentLoaded', (e) => {
+
+    // HANDLE INTERACTIONS WITH OVERLAY BUTTONS
+    const playMusicOverlays = document.querySelectorAll("[id^='play-music-overlay-']");
+    playMusicOverlays.forEach((musicOverlay, index) => {
+        musicOverlay.addEventListener('mouseover', () => {
+            touchscreenutilities.applyOverlay(musicOverlay);
+        })
+        musicOverlay.addEventListener('mouseout', () => {
+            touchscreenutilities.removeOverlay(musicOverlay);
+        })
+    });
+
     // Initialize default Plyr for all video elements with the class 'plyr-video' applied
     //PLYR VIDEO PLAYERS (DEFAULT)
     const videoPlayers = Plyr.setup('.plyr-video', {
@@ -49,7 +62,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     
     audioPlayers.forEach((audioPlayer, index) => {
-        const playMusicBtn = document.querySelector(`#play-music-btn-${index}`);
+        const playMusicBtn = document.querySelector(`#play-music-overlay-${index}`);
         const ionIconElem = playMusicBtn.querySelector('ion-icon');
 
         if (playMusicBtn) {
