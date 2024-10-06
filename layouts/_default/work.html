@@ -7,7 +7,7 @@
             {{ .Content }}
         </h1>
     </div>
-    <div class="flex flex-col h-[500px]">
+    <!-- <div class="flex flex-col h-[500px]">
         <div class="m-auto p-10 pt-20 max-w-3xl text-black text-base font-light text-center
                     [&_p]:-mt-12 [&_p]:mb-12
                     [&_a]:text-pink [&_a]:font-medium hover:[&_a]:opacity-80 active:[&_a]:opacity-65
@@ -16,11 +16,11 @@
                 {{ .Content }}
             {{ end }}
         </div> 
-    </div>
+    </div> -->
 
     <div id="project-section" class="bg-white flex justify-center">
         <div id="section-wrapper" class="flex flex-col justify-center max-w-[1200px] mb-20">
-            <div class="flex justify-center m-4">
+            <div class="flex justify-center m-4 mb-8">
                 <h2 class="font-inter text-3xl tracking-wider font-light text-semilightblack">
                     {{ with .Resources.Get "pagecontent/projectssection.md" }}
                         {{ .Title }}
@@ -33,6 +33,7 @@
             <!-- <div class="relative after:absolute ml-6 after:border after:border-t-0 after:border-semilightblack after:w-11/12 after:left-1/2 after:-translate-x-1/2 after:mt-2"></div> -->
         </div>
     </div>
+
     <div id="music-section" class="bg-gray-200 flex justify-center">
         <div id="section-wrapper" class="flex flex-col justify-center max-w-[1200px] mb-20">
             <div class="flex justify-center m-4 mb-14">
