@@ -1,5 +1,7 @@
 ---
 title: Zebra
+year: 2023
 thumbnail: /workcontent/zebra/zebra-thumbnail(4-3).webp
-order: 3
+external_url: https://esbensloth.com/zebra
+order: 2
 ---

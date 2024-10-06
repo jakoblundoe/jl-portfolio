@@ -1,6 +1,7 @@
 {{ $section := .Site.GetPage "section" "projectcontent" }}
 {{ range sort $section.Pages "Params.order" }}
 {{ $pageTitle := .Params.title }}
+{{ $projectYear := .Params.year }}
 {{ $pageThumbnail := .Params.thumbnail }}
 {{ $projectURL := .Params.external_url }}
 
@@ -13,20 +14,21 @@
                         <img src="{{ $pageThumbnail }}" alt="" style="border-radius: 2px;">
                         <div style="border-radius: 2px;" class="absolute inset-0 flex justify-center items-center ease-in-out duration-300
                                                             hover:bg-less-transp-black hover:cursor-pointer">
-                            <div class="absolute inset-0 flex justify-center items-center ease-in-out duration-300 opacity-0
+                            <div class="absolute inset-0 flex flex-col justify-center items-center ease-in-out duration-300 opacity-0
                                         hover:opacity-100 group">
-                                <h3 class="font-bebas text-5xl text-white tracking-wide mb-48 ease-in-out duration-150
+                                <h3 class="font-bebas text-5xl text-white tracking-wide ease-in-out duration-150
                                             group-active:opacity-75">
                                     {{ $pageTitle }}
                                 </h3>
+                                <h4 class="font-bebas text-3xl text-light-grey tracking-wider ease-in-out duration-150
+                                            group-active:opacity-75">
+                                    {{ $projectYear }}
+                                </h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </a>
-        <!-- <div class="rounded-sm shadow-user-sm">
-            <img src="{{ $pageThumbnail }}" alt="project thumbnail image" class="max-w-[530px] rounded-sm">
-        </div> -->
         </div>
         <div class="select-text flex flex-col font-mono mt-2 ml-1
                     [&_a]:text-pink [&_a]:font-medium hover:[&_a]:opacity-80 active:[&_a]:opacity-65">
