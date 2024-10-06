@@ -16,6 +16,7 @@
 /* PLYR CUSTOMIZATION */
 :root {
     --plyr-color-main: rgb(111, 140, 184);
+    --plyr-video-control-background-hover: rgba(0, 0, 0, 0.705);
 }
 .plyr__video-wrapper {
     border-radius: 2px;

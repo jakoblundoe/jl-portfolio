@@ -5,9 +5,9 @@
 {{ $pageVideoPath := .Params.videopath }}
 <div class="flex flex-col gap-2">
     <div class="flex flex-col justify-center w-[480px]">
-        <div class="shadow-md">
-            <div>
-                <div id="" class="shadow-user-sm" style="border-radius: 2px;">
+        <div class="shadow-user-sm">
+            <div class="">
+                <div class="relative">
                     <video playsinline preload="metadata" controls class="plyr-video max-h-[500px]" loop style="border-radius: 2px;">
                         <source src="{{ $pageVideoPath }}" type="video/mp4">
                         Your browser does not support the video tag.
