@@ -42,6 +42,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
         }
     });
     
+    const workPageActive = (document.body.getAttribute("data-page").toLowerCase() === "work") || false;
+    if (!workPageActive) {
+        return;
+    }
+
+    
     audioPlayers.forEach((audioPlayer, index) => {
         const playMusicBtn = document.querySelector(`#play-music-btn-${index}`);
         const ionIconElem = playMusicBtn.querySelector('ion-icon');
@@ -68,10 +74,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
     });
 
     // MAKE SURE NO PLAYERS PLAY SIMULTANEOUSLY
-    const workPageActive = (document.body.getAttribute("data-page").toLowerCase() === "work") || false;
-
-    if (!workPageActive)
-        return;
     const allPlyrPlayers = videoPlayers.concat(musicVideoPlayers, audioPlayers);
     allPlyrPlayers.forEach(player => {
         player.on('play', () => {
