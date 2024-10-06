@@ -17,13 +17,14 @@
                     hover:cursor-pointer"
                     onmouseover="this.querySelector('ion-icon').style.opacity='1';"
                     onmouseout="this.querySelector('ion-icon').style.opacity='0';"
-                    onmousedown="this.querySelector('ion-icon').style.opacity='0.5'; this.querySelector('ion-icon').style.transition='opacity 0.1s ease-in-out';"
+                    onmousedown="this.querySelector('ion-icon').style.opacity='0.75'; this.querySelector('ion-icon').style.transition='opacity 0.1s ease-in-out';"
                     onmouseup="this.querySelector('ion-icon').style.opacity='1';">
                         <ion-icon id="play-music-btn" name="play-circle-outline" style="font-size: 64px; color: rgba(255, 255, 255, 0.9); opacity: 0; transition: opacity 0.3s ease-in-out;">
                         </ion-icon>
-                        <div class="absolute inset-0 flex justify-center items-center ease-in-out duration-300 opacity-0
+                        <div class="absolute inset-0 flex justify-center items-center ease-in-out duration-300 opacity-0 group
                                     hover:opacity-100">
-                            <h3 class="font-bebas text-5xl text-white tracking-wide mb-48">
+                            <h3 class="font-bebas text-5xl text-white tracking-wide mb-48 ease-in-out duration-150
+                                        group-active:opacity-75">
                                 {{ $pageTitle }}
                             </h3>
                         </div>
