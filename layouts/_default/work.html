@@ -20,14 +20,14 @@
 
     <div id="project-section" class="bg-white flex justify-center">
         <div id="section-wrapper" class="flex flex-col justify-center max-w-[1200px] mb-20">
-            <div class="flex justify-center m-4 mb-8">
+            <div class="flex justify-center m-4 mb-8 mt-14">
                 <h2 class="select-text font-inter text-3xl tracking-wider font-light text-semilightblack">
                     {{ with .Resources.Get "pagecontent/projectssection.md" }}
                         {{ .Title }}
                     {{ end }}
                 </h2>
             </div>
-            <div class="flex flex-wrap justify-center gap-16">
+            <div class="flex flex-wrap justify-center gap-10 px-8">
                 {{ partial "projectsection.html" . }}
             </div>
             <!-- <div class="relative after:absolute ml-6 after:border after:border-t-0 after:border-semilightblack after:w-11/12 after:left-1/2 after:-translate-x-1/2 after:mt-2"></div> -->

@@ -3,7 +3,7 @@
                 hover:opacity-70 hover:scale-105
                 active:opacity-50 active:scale-105
                 sm:flex sm:justify-center">
-        <a href="/showreel">
+        <a href="/showreel" data-internal-link="true">
             <img src="/img/jl-logo.webp" alt="Jakob Lundoe homepage logo" class="max-w-full max-h-full w-7">
         </a>
     </div>
@@ -16,9 +16,9 @@
         {{ with $pages }}
             {{ range sort $pages "Params.navbarOrder" }}
                 {{ if eq .RelPermalink $currentPage.RelPermalink }}
-                    <a href="{{ .RelPermalink }}" class="underline decoration-light-black decoration-1">{{ .Title }}</a>
+                    <a href="{{ .RelPermalink }}" data-internal-link="true" class="underline decoration-light-black decoration-1">{{ .Title }}</a>
                 {{ else }}
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <a href="{{ .RelPermalink }}" data-internal-link="true">{{ .Title }}</a>
                 {{ end }}
             {{ end }}
         {{ end }}

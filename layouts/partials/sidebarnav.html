@@ -11,9 +11,9 @@
         {{ with $pages }}
             {{ range sort $pages "Params.navbarOrder" }}
                 {{ if eq .RelPermalink $currentPage.RelPermalink }}
-                    <a href="{{ .RelPermalink }}" class="underline decoration-light-black decoration-1">{{ .Title }}</a>
+                    <a href="{{ .RelPermalink }}" data-internal-link="true" class="underline decoration-light-black decoration-1">{{ .Title }}</a>
                 {{ else }}
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <a href="{{ .RelPermalink }}" data-internal-link="true">{{ .Title }}</a>
                 {{ end }}
             {{ end }}
         {{ end }}
