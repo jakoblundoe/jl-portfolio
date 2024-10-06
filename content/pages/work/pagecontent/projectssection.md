@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: PROJECTS
 order: 0
 ---
 This page is currently under development. When finalized it will present all my past projects.

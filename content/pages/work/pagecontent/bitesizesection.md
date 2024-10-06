@@ -1,4 +1,4 @@
 ---
-title: Extras
+title: EXTRAS
 order: 2
 ---
