@@ -2,6 +2,7 @@
 {{ range sort $section.Pages "Params.order" }}
 {{ $pageTitle := .Params.title }}
 {{ $projectYear := .Params.year }}
+{{ $projectType := .Params.type }}
 {{ $pageThumbnail := .Params.thumbnail }}
 {{ $projectURL := .Params.external_url }}
 
@@ -32,10 +33,18 @@
         </div>
         <div class="select-text flex flex-col font-mono mt-2 ml-1
                     [&_a]:text-pink [&_a]:font-medium hover:[&_a]:opacity-80 active:[&_a]:opacity-65">
-            <h3 class="text-base font-semibold text-semilightblack">
-                {{ $pageTitle }}
-            </h3>
-            <div class="select-text text-sm">
+                    <div class="flex flex-row items-center gap-2 align-center">
+                        <p class="text-base font-semibold text-semilightblack">
+                            {{ $pageTitle }}
+                        </p>
+                        <p class="text-sm font-normal">
+                            |
+                        </p>
+                        <p class="text-sm font-normal mt-[2px]">
+                            {{ $projectType }}
+                        </p>
+                    </div>
+            <div class="select-text text-sm text-nowrap">
                 {{ .Content }}
             </div>
         </div>
