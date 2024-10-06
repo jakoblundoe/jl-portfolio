@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
         musicOverlay.addEventListener('mouseout', () => {
             touchscreenutilities.removeOverlay(musicOverlay);
         })
+        musicOverlay.addEventListener('touchstart', () => {
+            touchscreenutilities.applyTouchHoverEffect(musicOverlay);
+        })
     });
 
     // Initialize default Plyr for all video elements with the class 'plyr-video' applied
