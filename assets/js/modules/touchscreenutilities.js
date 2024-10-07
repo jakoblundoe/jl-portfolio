@@ -6,7 +6,6 @@ export function applyTouchHoverEffect (hoverNode) {
         hoverNode.isHovering = false;
     }
     if (hoverNode.isHovering) {
-        console.log(`hovernode isHovering set to: ${hoverNode.isHovering}`)
         clearTimeout(hoverNode.touchHoverTimeout);
     } else {
         hoverNode.classList.remove('opacity-0');
@@ -17,7 +16,6 @@ export function applyTouchHoverEffect (hoverNode) {
         hoverNode.classList.remove('opacity-100');
         hoverNode.classList.add('opacity-0');
         hoverNode.isHovering = false;
-        console.log(hoverNode.isHovering)
     }, 2000);
 }
 

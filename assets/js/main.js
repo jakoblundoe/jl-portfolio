@@ -174,7 +174,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
         });
         audioPlayers[index].on('seeking', () => {
             hasSeeked = true;
-            console.log(`isSeeking is: ${hasSeeked}`)
         });
     });
 
