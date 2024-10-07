@@ -2,6 +2,7 @@
   "dependencies": {
     "audiomotion-analyzer": "^4.5.0",
     "autoprefixer": "^10.4.19",
+    "hammerjs": "^2.0.8",
     "plyr": "^3.7.8",
     "postcss": "^8.4.39",
     "postcss-cli": "^11.0.0",

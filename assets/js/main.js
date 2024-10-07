@@ -5,40 +5,40 @@ import * as touchscreenutilities from './modules/touchscreenutilities.js';
 import * as audioMotionModule from './modules/audiomotion.js';
 
 import Plyr from 'plyr';
+import Hammer from 'hammerjs';
 
 document.addEventListener('DOMContentLoaded', (e) => {
     // HANDLE INTERACTIONS WITH PROJECT OVERLAY BUTTONS
     const projectOverlays = document.querySelectorAll("[id^='project-overlay-']");
     projectOverlays.forEach((projectOverlay) => {
+
         if (projectOverlay.isHovering === undefined) {
             projectOverlay.isHovering = false;
         }
 
         const parentLink = projectOverlay.closest('a');
+        const hammerProjectBtn = new Hammer(parentLink);
+
         parentLink.addEventListener('click', (e) => {
-            if(!projectOverlay.isHovering) {
+            // THIS CONDITION SHOULD BE REDUNDANT BUT FOR SOME REASON IT IS NEEDED.
+            if(touchscreenutilities.isTouchDevice()) {
+                e.preventDefault();
+            } // ...
+            if (!projectOverlay.isHovering) {
                 e.preventDefault();
             }
         })
-
         projectOverlay.addEventListener('mouseover', () => {
             touchscreenutilities.applyOverlay(projectOverlay);
         })
         projectOverlay.addEventListener('mouseout', () => {
             touchscreenutilities.removeOverlay(projectOverlay);
         })
-        parentLink.addEventListener('touchend', (e) => {
-            if(!projectOverlay.isHovering) {
-                e.preventDefault();
+        hammerProjectBtn.on('tap', () => {
+            if (!projectOverlay.isHovering) {
                 touchscreenutilities.applyTouchHoverEffect(projectOverlay);
-            }
-        })
-    });
-    document.addEventListener('click', (e) => {
-        projectOverlays.forEach((projectOverlay) => {
-            if (!projectOverlay.contains(e.target)) {
-                touchscreenutilities.removeOverlay(projectOverlay);
-                projectOverlay.isHovering = false;
+            } else {
+                window.location.href = parentLink.href;
             }
         });
     });
@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
         const playMusicBtn = document.querySelector(`#play-music-overlay-${index}`);
         const ionIconElem = playMusicBtn.querySelector('ion-icon');
+        const hammerMusicBtn = new Hammer(playMusicBtn);
 
         if (playMusicBtn) {
             playMusicBtn.addEventListener('click', (e) => {
@@ -114,7 +115,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     }
                 }
             })
-            playMusicBtn.addEventListener('touchend', () => {
+            hammerMusicBtn.on('tap', () => {
                 if(musicOverlay.isHovering) {
                     if (!audioPlayers[index].playing) {
                         audioPlayers[index].play();
