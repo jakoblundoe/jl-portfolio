@@ -22,6 +22,19 @@ document.addEventListener('DOMContentLoaded', (e) => {
         })
     });
 
+    const projectOverlays = document.querySelectorAll("[id^='project-overlay-']");
+    projectOverlays.forEach((projectOverlay) => {
+        projectOverlay.addEventListener('mouseover', () => {
+            touchscreenutilities.applyOverlay(projectOverlay);
+        })
+        projectOverlay.addEventListener('mouseout', () => {
+            touchscreenutilities.removeOverlay(projectOverlay);
+        })
+        projectOverlay.addEventListener('touchstart', () => {
+            touchscreenutilities.applyTouchHoverEffect(projectOverlay);
+        })
+    });
+
 
 
     // Initialize default Plyr for all video elements with the class 'plyr-video' applied
