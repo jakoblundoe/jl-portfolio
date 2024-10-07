@@ -1,7 +1,7 @@
 ---
 title: Sakas Club
 type: Soundtrack
-audioPath: /workcontent/music/sakasclub/sakasclub-composition.wav
+audioPath: /workcontent/music/sakasclub/sakasclub-composition.m4a
 imgPath: /workcontent/music/sakasclub/sakasclub-thumbnail-v2(4-3).webp
 order: 0
 ---

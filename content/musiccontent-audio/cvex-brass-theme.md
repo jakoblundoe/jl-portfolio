@@ -1,7 +1,7 @@
 ---
 title: Brass Theme
 type: Theme Music
-audioPath: /workcontent/music/CVEX-theme/Merc-theme-final-v10.wav
+audioPath: /workcontent/music/CVEX-theme/Merc-theme-final-v10.m4a
 imgPath: /workcontent/music/waveform-thumbnail(4-3).webp
 order: 4
 ---
