@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     // PLYR MUSIC VIDEO PLAYERS
     const musicVideoPlayers = Plyr.setup('.plyr-musicvideo', {
-        controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'settings',],
+        controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'settings',],
         keyboard: {
             focused: true,
             global: false,
