@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         projectOverlay.addEventListener('mouseout', () => {
             touchscreenutilities.removeOverlay(projectOverlay);
         })
-        parentLink.addEventListener('touchstart', (e) => {
+        parentLink.addEventListener('touchend', (e) => {
             if(!projectOverlay.isHovering) {
                 e.preventDefault();
                 touchscreenutilities.applyTouchHoverEffect(projectOverlay);
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     }
                 }
             })
-            playMusicBtn.addEventListener('touchstart', () => {
+            playMusicBtn.addEventListener('touchend', () => {
                 if(musicOverlay.isHovering) {
                     if (!audioPlayers[index].playing) {
                         audioPlayers[index].play();
