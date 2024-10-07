@@ -99,21 +99,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
         const hammerMusicBtn = new Hammer(playMusicBtn);
 
         if (playMusicBtn) {
-            // playMusicBtn.addEventListener('click', (e) => {
-            //     if (touchscreenutilities.isTouchDevice()) {
-            //         if(!musicOverlay.isHovering) {
-            //             e.preventDefault();
-            //             console.log('preventDefault called');
-            //         }
-            //     }
-            //     if (musicOverlay.isHovering) {
-            //         if (!audioPlayers[index].playing) {
-            //             audioPlayers[index].play();
-            //         } else if (audioPlayers[index].playing) {
-            //             audioPlayers[index].pause();
-            //         }
-            //     }
-            // })
             hammerMusicBtn.on('tap', () => {
                 if(musicOverlay.isHovering) {
                     if (!audioPlayers[index].playing) {
