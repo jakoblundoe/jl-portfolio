@@ -187,12 +187,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
     // MAKE SURE NO PLAYERS PLAY SIMULTANEOUSLY
     const allPlyrPlayers = videoPlayers.concat(musicVideoPlayers, audioPlayers);
     allPlyrPlayers.forEach(player => {
-        player.on('play', () => {
-            allPlyrPlayers.forEach(otherPlayer => {
-                if (otherPlayer !== player) {
+        player.on('play', async () => {
+            for (let otherPlayer of allPlyrPlayers) {
+                if (otherPlayer !== player &&  !otherPlayer.paused) {
                     otherPlayer.pause();
                 }
-            });
+            };
         });
     });
 });
