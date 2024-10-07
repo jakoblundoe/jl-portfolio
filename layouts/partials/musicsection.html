@@ -26,7 +26,9 @@
                         </div>
                     </div>
                 </div>
-                <audio src="{{ $pageAudioPath }}" alt="audio file" class="plyr-audio"></audio>
+                <audio playsinline preload="auto" alt="audio file" class="plyr-audio">
+                    <source src="{{ $pageAudioPath }}.mp3" type="audio/mpeg">
+                </audio>
             </div>
         </div>
         <div class="select-text flex flex-col font-mono mt-2 ml-1

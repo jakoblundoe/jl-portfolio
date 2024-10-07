@@ -16,7 +16,7 @@ export function applyTouchHoverEffect (hoverNode) {
         hoverNode.classList.remove('opacity-100');
         hoverNode.classList.add('opacity-0');
         hoverNode.isHovering = false;
-    }, 2000);
+    }, 2200);
 }
 
 export function applyOverlay (hoverNode) {
