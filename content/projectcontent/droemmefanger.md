@@ -6,4 +6,4 @@ thumbnail: /workcontent/droemmefanger/droemmefanger-thumbnail.webp
 external_url: "https://github.com/jakoblundoe/capturing-spaces"
 order: 3
 ---
-**Conceptualization, sound design and development.**
+Conceptualization, sound design, development

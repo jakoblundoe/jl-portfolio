@@ -6,4 +6,4 @@ thumbnail: /workcontent/zebra/zebra-thumbnail.webp
 external_url: https://esbensloth.com/zebra
 order: 2
 ---
-**Audio post production, sound design and scoring**.
+Audio post production, sound design, scoring

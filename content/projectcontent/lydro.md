@@ -6,4 +6,4 @@ thumbnail: /workcontent/lydro/lydro-thumbnail.webp
 external_url: ""
 order: 0
 ---
-**Concept, sound design, app development and programming**.
+Concept, sound design, app development, programming
