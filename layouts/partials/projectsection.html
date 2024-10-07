@@ -13,13 +13,12 @@
                 <div>
                     <div class="relative max-w-[480px] max-h-[360px] rounded-sm">
                         <img src="{{ $pageThumbnail }}" alt="project thumbnail image" class="rounded-sm">
-                        <div id="project-overlay-{{ $index }}" class="absolute inset-0 opacity-0 flex justify-center items-center bg-less-transp-black ease-in-out duration-300 rounded-sm hover:cursor-pointer">
+                        <div id="project-overlay-{{ $index }}" class="absolute inset-0 opacity-0 flex justify-center items-center bg-less-transp-black ease-in-out duration-500 rounded-sm hover:cursor-pointer">
                             <div id="link-overlay-btn" class="absolute inset-0 flex flex-col justify-center items-center ease-in-out duration-50 active:opacity-80 rounded-sm">
                                 <h3 class="font-bebas text-5xl text-white tracking-wide">
                                     {{ $pageTitle }}
                                 </h3>
-                                <h4 class="font-bebas text-3xl text-light-grey tracking-wider ease-in-out duration-150
-                                            group-active:opacity-75">
+                                <h4 class="font-bebas text-3xl text-light-grey tracking-wider">
                                     {{ $projectYear }}
                                 </h4>
                             </div>
