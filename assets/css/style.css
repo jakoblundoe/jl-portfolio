@@ -6,7 +6,7 @@
         @apply font-inter;
         @apply text-semilightblack;
         @apply select-none;
-        overflow-y: scroll;
+        overflow-y: scroll;        
     }
 }
 

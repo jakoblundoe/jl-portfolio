@@ -1,8 +1,8 @@
 {{ define "main" }}
-<div class="flex flex-col flex-nowrap justify-between bg-white pb-14">
+<div class="flex flex-col flex-nowrap justify-between bg-white pb-14 overflow-x-hidden">
     {{ partial "header.html" . }}
     <div class="select-text flex justify-center mt-3">
-        <h1 class="text-5xl tracking-wider font-extralight text-semilightblack relative after:absolute ml-6 after:border after:border-t-0 after:border-grey after:w-full after:left-1/2 after:-translate-x-1/2 after:mt-2
+        <h1 class="text-5xl tracking-wider font-extralight text-semilightblack relative after:absolute after:border after:border-t-0 after:border-grey after:w-full after:left-1/2 after:-translate-x-1/2 after:mt-2
                     [&_span]:text-pink [&_span]:font-normal">
             {{ .Content }}
         </h1>
