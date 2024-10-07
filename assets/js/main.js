@@ -139,19 +139,42 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
         // ADDING AUDIO VISUALIZATION TO AUDIO SETUP
         let audioMotion;
+        let isPlaying = false;
+        let isPaused;
+        let hasSeeked = false;
 
         const audioContainer = document.querySelector(`#audioContainer-${index}`);
         audioPlayers[index].on('play', () => {
+            if (isPlaying) return;
+            
             if (!audioMotion) {
                 audioMotion = audioMotionModule.createAudioMotionInstance(audioContainer, audioPlayers[index]);
                 audioMotionModule.audioMotionFadeIn(audioMotion);
-            } else {
-                audioMotion.pause = false;
-                audioMotionModule.audioMotionFadeIn(audioMotion);
             }
+
+            isPlaying = true;
+            isPaused = false;
+            setTimeout(() => {
+                if (!hasSeeked) {
+                    audioMotionModule.audioMotionFadeIn(audioMotion);
+                }
+            }, 10);
         });
         audioPlayers[index].on('pause', () => {
-            audioMotionModule.pauseAudioMotionInstance(audioMotion, audioPlayers[index]);
+            if (isPaused) return;
+
+            isPaused = true;
+            isPlaying = false;
+            hasSeeked = false;
+            setTimeout(() => {
+                if (!hasSeeked) {
+                    audioMotionModule.pauseAudioMotionInstance(audioMotion);
+                }
+            }, 10);
+        });
+        audioPlayers[index].on('seeking', () => {
+            hasSeeked = true;
+            console.log(`isSeeking is: ${hasSeeked}`)
         });
     });
 
