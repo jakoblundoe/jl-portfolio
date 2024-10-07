@@ -9,11 +9,11 @@
     <div class="flex flex-col justify-center max-w-[480px] min-w-[341px]">
         <div class="shadow-md">
             <div>
-                <div class="relative max-w-[480px]">
-                    <div id="audioContainer-{{ $index }}" class="absolute inset-0" style="border-radius: 2px;">
+                <div class="relative max-w-[480px]" style="border-top-left-radius: 2px; border-top-right-radius: 2px;">
+                    <div id="audioContainer-{{ $index }}" class="absolute inset-0 overflow-hidden" style="border-radius: inherit;">
                     </div>
-                    <img src="{{ $pageImg }}" alt="music cover image" style="border-top-left-radius: 2px; border-top-right-radius: 2px;">
-                    <div id="play-music-overlay-{{ $index }}" style="border-radius: 2px;" class="absolute inset-0 opacity-0 flex justify-center items-center bg-less-transp-black ease-in-out duration-300
+                    <img src="{{ $pageImg }}" alt="music cover image" style="border-radius: inherit;">
+                    <div id="play-music-overlay-{{ $index }}" style="border-radius: inherit;" class="absolute inset-0 opacity-0 flex justify-center items-center bg-less-transp-black ease-in-out duration-300
                                                                                             hover:cursor-pointer">
                         <div id="play-music-btn" class="ease-in-out duration-50 active:opacity-80">
                             <ion-icon name="play-circle-outline" style="font-size: 64px; color: rgba(255, 255, 255, 0.9);">

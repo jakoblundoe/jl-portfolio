@@ -6,15 +6,15 @@
 {{ $pageThumbnail := $page.Params.thumbnail }}
 {{ $projectURL := $page.Params.external_url }}
 
-<div class="flex flex-col gap-2">
-    <div class="flex flex-col justify-center max-w-[480px] min-w-[341px]">
-        <div class="shadow-md">
+<div class="flex flex-col gap-2 rounded-lg">
+    <div class="flex flex-col justify-center max-w-[480px] min-w-[341px] rounded-lg">
+        <div class="shadow-md rounded-sm">
             <a href="{{ $projectURL }}">
-                <div class="">
-                    <div class="relative max-w-[480px] max-h-[360px]">
-                        <img src="{{ $pageThumbnail }}" alt="project thumbnail image" style="border-radius: 2px;">
-                        <div id="project-overlay-{{ $index }}" style="border-radius: 2px;" class="absolute inset-0 opacity-0 flex justify-center items-center bg-less-transp-black ease-in-out duration-300 hover:cursor-pointer">
-                            <div id="link-overlay-btn" class="absolute inset-0 flex flex-col justify-center items-center ease-in-out duration-50 active:opacity-80">
+                <div>
+                    <div class="relative max-w-[480px] max-h-[360px] rounded-sm">
+                        <img src="{{ $pageThumbnail }}" alt="project thumbnail image" class="rounded-sm">
+                        <div id="project-overlay-{{ $index }}" style="border-radius: 12px;" class="absolute inset-0 opacity-0 flex justify-center items-center bg-less-transp-black ease-in-out duration-300 rounded-sm hover:cursor-pointer">
+                            <div id="link-overlay-btn" class="absolute inset-0 flex flex-col justify-center items-center ease-in-out duration-50 active:opacity-80 rounded-sm">
                                 <h3 class="font-bebas text-5xl text-white tracking-wide">
                                     {{ $pageTitle }}
                                 </h3>
