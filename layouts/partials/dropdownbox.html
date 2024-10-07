@@ -2,13 +2,15 @@
 {{ range sort $section.Pages "Params.order" }}
 {{ $pageTitle := .Params.title }}
 <div class="resume-content w-full">
-    <div class="mt-2">
+    <div class="mt-2 py-1">
         <div id="dropdown-button-container-{{ $pageTitle }}" class="flex flex-row flex-nowrap justify-start items-center pb-2 ml-3 hover:cursor-pointer">
-            <button id="dropdown-button-{{ $pageTitle }}" class="flex justify-center rotate-180 transition ease-out duration-300
+            <button id="dropdown-button-{{ $pageTitle }}" class="flex justify-center rotate-180 transition ease-out duration-300 mr-3 ml-2
                             hover:opacity-80 hover:scale-102
                             active:opacity-60
                             ">
-                <img src="/img/arrow-up-icon.webp" alt="dropdown arrow icon" style="width: 50px; height: auto;">
+                 <div class="flex justify-center">
+                     <ion-icon name="chevron-up-sharp" alt="dropdown arrow icon" style="color: rgb(50, 50, 50); font-size: 36px;"></ion-icon>
+                 </div>
             </button>
             <h2 class="select-text font-inter font-medium text-xl mx-2.5 text-semilightblack pt-1
                         hover:opacity-80
