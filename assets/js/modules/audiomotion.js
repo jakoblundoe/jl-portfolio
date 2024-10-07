@@ -42,7 +42,6 @@ export function createAudioMotionInstance(audioContainer, audioPlayer) {
 }
 
 export function audioMotionFadeIn(audioMotion) {
-    console.log("play triggered")
     let alpha = 0;
     const fadeDuration = 500;
     const fadeInterval = 10;
@@ -59,7 +58,6 @@ export function audioMotionFadeIn(audioMotion) {
 }
 
 export function pauseAudioMotionInstance (audioMotion) {
-    console.log("pause triggered")
     if (audioMotion) {
         let alpha = 0.75;
         const fadeDuration = 500;
