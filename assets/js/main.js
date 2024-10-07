@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     // HANDLE INTERACTIONS WITH OVERLAY BUTTONS
     const playMusicOverlays = document.querySelectorAll("[id^='play-music-overlay-']");
-    playMusicOverlays.forEach((musicOverlay, index) => {
+    playMusicOverlays.forEach((musicOverlay) => {
         musicOverlay.addEventListener('mouseover', () => {
             touchscreenutilities.applyOverlay(musicOverlay);
         })
@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
             touchscreenutilities.applyTouchHoverEffect(musicOverlay);
         })
     });
+
+
 
     // Initialize default Plyr for all video elements with the class 'plyr-video' applied
     //PLYR VIDEO PLAYERS (DEFAULT)
