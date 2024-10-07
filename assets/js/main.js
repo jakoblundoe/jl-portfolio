@@ -176,6 +176,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
             hasSeeked = true;
         });
     });
+    //PRELOAD AUDIO MEDIA
+    const audioElements = document.querySelectorAll('audio');
+    audioElements.forEach(audioElement => {
+        audioElement.preload = 'auto';
+        audioElement.load();
+    });
+    
 
     // MAKE SURE NO PLAYERS PLAY SIMULTANEOUSLY
     const allPlyrPlayers = videoPlayers.concat(musicVideoPlayers, audioPlayers);
