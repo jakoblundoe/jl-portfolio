@@ -2,7 +2,7 @@
 title: Sleepy Warrior
 type: Music
 audioPath: /workcontent/music/Kolo-music/SleepyWarrior_etmstr3.m4a
-imgPath: /workcontent/music/Kolo-music/sleepy-warrior-img(4-3).webp
+imgPath: /workcontent/music/Kolo-music/sleepy-warrior-img.webp
 order: 1
 ---
 **Production and mix** by me.
