@@ -7,35 +7,41 @@ import Plyr from 'plyr';
 import AudioMotionAnalyzer from 'audiomotion-analyzer';
 
 document.addEventListener('DOMContentLoaded', (e) => {
-
-    // HANDLE INTERACTIONS WITH OVERLAY BUTTONS
-    const playMusicOverlays = document.querySelectorAll("[id^='play-music-overlay-']");
-    playMusicOverlays.forEach((musicOverlay) => {
-        musicOverlay.addEventListener('mouseover', () => {
-            touchscreenutilities.applyOverlay(musicOverlay);
-        })
-        musicOverlay.addEventListener('mouseout', () => {
-            touchscreenutilities.removeOverlay(musicOverlay);
-        })
-        musicOverlay.addEventListener('touchstart', () => {
-            touchscreenutilities.applyTouchHoverEffect(musicOverlay);
-        })
-    });
-
+    // HANDLE INTERACTIONS WITH PROJECT OVERLAY BUTTONS
     const projectOverlays = document.querySelectorAll("[id^='project-overlay-']");
     projectOverlays.forEach((projectOverlay) => {
+        if (projectOverlay.isHovering === undefined) {
+            projectOverlay.isHovering = false;
+        }
+
+        const parentLink = projectOverlay.closest('a');
+        parentLink.addEventListener('click', (e) => {
+            if(!projectOverlay.isHovering) {
+                e.preventDefault();
+            }
+        })
+
         projectOverlay.addEventListener('mouseover', () => {
             touchscreenutilities.applyOverlay(projectOverlay);
         })
         projectOverlay.addEventListener('mouseout', () => {
             touchscreenutilities.removeOverlay(projectOverlay);
         })
-        projectOverlay.addEventListener('touchstart', () => {
-            touchscreenutilities.applyTouchHoverEffect(projectOverlay);
+        parentLink.addEventListener('touchstart', (e) => {
+            if(!projectOverlay.isHovering) {
+                e.preventDefault();
+                touchscreenutilities.applyTouchHoverEffect(projectOverlay);
+            }
         })
     });
-
-
+    document.addEventListener('click', (e) => {
+        projectOverlays.forEach((projectOverlay) => {
+            if (!projectOverlay.contains(e.target)) {
+                touchscreenutilities.removeOverlay(projectOverlay);
+                projectOverlay.isHovering = false;
+            }
+        });
+    });
 
     // Initialize default Plyr for all video elements with the class 'plyr-video' applied
     //PLYR VIDEO PLAYERS (DEFAULT)
@@ -78,30 +84,75 @@ document.addEventListener('DOMContentLoaded', (e) => {
         return;
     }
 
-    
-    audioPlayers.forEach((audioPlayer, index) => {
+    // HANDLE INTERACTIONS WITH MUSIC OVERLAY BUTTONS
+    const playMusicOverlays = document.querySelectorAll("[id^='play-music-overlay-']");
+    playMusicOverlays.forEach((musicOverlay, index) => {
+        if (musicOverlay.isHovering === undefined) {
+            musicOverlay.isHovering = false;
+        }
+        musicOverlay.addEventListener('mouseover', () => {
+            touchscreenutilities.applyOverlay(musicOverlay);
+        })
+        musicOverlay.addEventListener('mouseout', () => {
+            touchscreenutilities.removeOverlay(musicOverlay);
+        })
+
         const playMusicBtn = document.querySelector(`#play-music-overlay-${index}`);
         const ionIconElem = playMusicBtn.querySelector('ion-icon');
 
         if (playMusicBtn) {
-            playMusicBtn.addEventListener('click', () => {
-                if (!audioPlayer.playing) {
-                    audioPlayer.play();
-                } else if (audioPlayer.playing) {
-                    audioPlayer.pause();
+            playMusicBtn.addEventListener('click', (e) => {
+                if (touchscreenutilities.isTouchDevice()) {
+                    e.preventDefault();
+                    return;
+                }
+                if (musicOverlay.isHovering) {
+                    if (!audioPlayers[index].playing) {
+                        audioPlayers[index].play();
+                    } else if (audioPlayers[index].playing) {
+                        audioPlayers[index].pause();
+                    }
+                }
+            })
+            playMusicBtn.addEventListener('touchstart', () => {
+                if(musicOverlay.isHovering) {
+                    if (!audioPlayers[index].playing) {
+                        audioPlayers[index].play();
+                    } else if (audioPlayers[index].playing) {
+                        audioPlayers[index].pause();
+                    }
+                } else {
+                    touchscreenutilities.applyTouchHoverEffect(musicOverlay);
                 }
             })
         }
 
-        audioPlayer.on('play', () => {
+        audioPlayers[index].on('play', () => {
             ionIconElem.setAttribute('name', 'pause-circle-outline');
         })
-        audioPlayer.on('pause', () => {
+        audioPlayers[index].on('pause', () => {
             ionIconElem.setAttribute('name', 'play-circle-outline');
         })
-        audioPlayer.on('end', () => {
+        audioPlayers[index].on('end', () => {
             ionIconElem.setAttribute('name', 'play-circle-outline');
         })
+
+        // ADDING AUDIO VISUALIZATION TO AUDIO SETUP
+        let audioMotion;
+
+        const audioContainer = document.querySelector(`#audioContainer-${index}`);
+        audioPlayers[index].on('play', () => {
+            if (!audioMotion) {
+                audioMotion = createAudioMotionInstance(audioContainer, audioPlayers[index]);
+                audioMotionFadeIn(audioMotion);
+            } else {
+                audioMotion.pause = false;
+                audioMotionFadeIn(audioMotion);
+            }
+        });
+        audioPlayers[index].on('pause', () => {
+            pauseAudioMotionInstance(audioMotion, audioPlayers[index]);
+        });
     });
 
     // MAKE SURE NO PLAYERS PLAY SIMULTANEOUSLY
@@ -113,25 +164,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     otherPlayer.pause();
                 }
             });
-        });
-    });
-
-    // ADDING AUDIO VISUALIZATION TO AUDIO SETUP
-    audioPlayers.forEach((audioPlayer, index) => {
-        let audioMotion;
-
-        const audioContainer = document.querySelector(`#audioContainer-${index}`);
-        audioPlayer.on('play', () => {
-            if (!audioMotion) {
-                audioMotion = createAudioMotionInstance(audioContainer, audioPlayer);
-                audioMotionFadeIn(audioMotion);
-            } else {
-                audioMotion.pause = false;
-                audioMotionFadeIn(audioMotion);
-            }
-        });
-        audioPlayer.on('pause', () => {
-            pauseAudioMotionInstance(audioMotion, audioPlayer);
         });
     });
 });
