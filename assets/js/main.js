@@ -71,6 +71,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
         seekTime: 10,
         controls: ['play', 'progress', 'volume', 'mute'],
         disableContextMenu: true,
+        storage: {
+            enabled: false
+        }
     });
     
     const workPageActive = (document.body.getAttribute("data-page").toLowerCase() === "work") || false;

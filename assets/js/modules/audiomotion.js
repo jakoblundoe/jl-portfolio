@@ -20,6 +20,7 @@ export function createAudioMotionInstance(audioContainer, audioPlayer) {
         bgAlpha: 0,
         overlay: true,
         smoothing: 0.7,
+        fftsize: 256,
         mode: 0,
         channelLayout: "single",
         frequencyScale: "bark",
