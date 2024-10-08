@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     if(!seekPause) {
                         audioMotionModule.pauseAudioMotionInstance(audioMotion);
                     }
-                }, 20);
+                }, 10);
             });
 
             audioPlayers[index].on('seeking', () => {
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
                 const currentTime = Date.now();
                 console.log(`seekSeeked set to: ${seekPause}`)
-                if (currentTime - pauseTime < 10) {
+                if (currentTime - pauseTime < 5) {
                     seekPause = true;
                     console.log(`seekSeeked set to: ${seekPause}`)
                 };
