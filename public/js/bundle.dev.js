@@ -6378,8 +6378,10 @@
       if (!isTouchDevice()) {
         let audioMotion;
         let isPlaying = false;
-        let isPaused;
-        let hasSeeked = false;
+        let isPaused = true;
+        let isSeeking = false;
+        let pauseTime = 0;
+        let seekPause = false;
         const audioContainer = document.querySelector(`#audioContainer-${index}`);
         audioPlayers[index].on("play", () => {
           if (isPlaying) return;
@@ -6389,25 +6391,32 @@
           }
           isPlaying = true;
           isPaused = false;
-          setTimeout(() => {
-            if (!hasSeeked) {
-              audioMotionFadeIn(audioMotion);
-            }
-          }, 10);
+          if (!seekPause) {
+            audioMotionFadeIn(audioMotion);
+          } else {
+            seekPause = false;
+          }
         });
         audioPlayers[index].on("pause", () => {
           if (isPaused) return;
           isPaused = true;
           isPlaying = false;
-          hasSeeked = false;
+          pauseTime = Date.now();
           setTimeout(() => {
-            if (!hasSeeked) {
+            if (!seekPause) {
               pauseAudioMotionInstance(audioMotion);
             }
-          }, 10);
+          }, 20);
         });
         audioPlayers[index].on("seeking", () => {
-          hasSeeked = true;
+          isSeeking = true;
+          const currentTime = Date.now();
+          console.log(`seekSeeked set to: ${seekPause}`);
+          if (currentTime - pauseTime < 10) {
+            seekPause = true;
+            console.log(`seekSeeked set to: ${seekPause}`);
+          }
+          ;
         });
       }
     });
