@@ -11,6 +11,7 @@ export function createAudioMotionInstance(audioContainer, audioPlayer) {
             { pos: 1, color: 'rgba(255, 255, 255, 1)' }
         ]
     }
+
     const audioMotion = new AudioMotionAnalyzer(audioContainer, {
         source: audioPlayer.media,
         height: audioContainer.clientHeight,
@@ -20,7 +21,6 @@ export function createAudioMotionInstance(audioContainer, audioPlayer) {
         bgAlpha: 0,
         overlay: true,
         smoothing: 0.7,
-        fftsize: 256,
         mode: 0,
         channelLayout: "single",
         frequencyScale: "bark",
