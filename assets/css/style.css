@@ -20,11 +20,9 @@
 }
 .plyr__video-wrapper {
     border-radius: 2px;
-    overflow: hidden;
 }
 .plyr {
-    border-radius: 2px; /* Adjust as needed */
-    overflow: hidden;
+    border-radius: 2px;
 }
 
 /* NOT WORKING */

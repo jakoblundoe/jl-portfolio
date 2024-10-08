@@ -49,9 +49,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
             global: false,
         },
         volume: 0.8,
-        storage: {
-            enabled: false
-        }
     });
 
     // PLYR MUSIC VIDEO PLAYERS
@@ -71,9 +68,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
     // Initialize default Plyr for all audio elements with the class 'plyr-audio' applied
     const audioPlayers = Plyr.setup('.plyr-audio', {
         volume: 0.8,
-        storage: {
-            enabled: false
-        }
+        seekTime: 10,
+        controls: ['play', 'progress', 'volume', 'mute'],
+        disableContextMenu: true,
     });
     
     const workPageActive = (document.body.getAttribute("data-page").toLowerCase() === "work") || false;
