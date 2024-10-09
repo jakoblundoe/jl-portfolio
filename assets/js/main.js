@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             // THIS CONDITION SHOULD BE REDUNDANT BUT FOR SOME REASON IT IS NEEDED.
             if(touchscreenutilities.isTouchDevice()) {
                 e.preventDefault();
-            } // ...
+            }
         })
         projectOverlay.addEventListener('mouseover', () => {
             touchscreenutilities.applyOverlay(projectOverlay);
@@ -33,20 +33,38 @@ document.addEventListener('DOMContentLoaded', (e) => {
         })
         hammerProjectBtn.on('tap', () => {
             if (!projectOverlay.isHovering) {
-
+                linkOverlaysBtns[index].classList.remove('opacity-80');
+                linkOverlaysBtns[index].classList.add('opacity-100');
                 touchscreenutilities.applyTouchHoverEffect(projectOverlay);
             } else {
-                window.open(parentLink.href, '_blank', 'noopener,noreferrer');
+                linkOverlaysBtns[index].classList.remove('opacity-80');
+                linkOverlaysBtns[index].classList.add('opacity-100');
+                setTimeout(() => {
+                    window.open(parentLink.href, '_blank', 'noopener,noreferrer');
+                }, 15);
             }
         });
-        projectOverlay.addEventListener('touchstart', () => {
-            linkOverlaysBtns[index].classList.remove('opacity-100');
-            linkOverlaysBtns[index].classList.add('opacity-80');
-        });
-        projectOverlay.addEventListener('touchend', () => {
-            linkOverlaysBtns[index].classList.remove('opacity-80');
-            linkOverlaysBtns[index].classList.add('opacity-100');
-        });
+        if(touchscreenutilities.isTouchDevice()) {
+            projectOverlay.addEventListener('touchstart', () => {
+                linkOverlaysBtns[index].classList.remove('opacity-100');
+                linkOverlaysBtns[index].classList.add('opacity-80');
+            });
+            document.addEventListener('touchend', () => {
+                linkOverlaysBtns[index].classList.remove('opacity-80');
+                linkOverlaysBtns[index].classList.add('opacity-100');
+            });
+        } else {
+            projectOverlay.addEventListener('mousedown', () => {
+                if (projectOverlay.isHovering) {
+                    linkOverlaysBtns[index].classList.remove('opacity-100');
+                    linkOverlaysBtns[index].classList.add('opacity-80');
+                }
+            })
+            document.addEventListener('mouseup', () => {
+                linkOverlaysBtns[index].classList.remove('opacity-80');
+                linkOverlaysBtns[index].classList.add('opacity-100');
+            })
+        }
     });
 
     // Initialize default Plyr for all video elements with the class 'plyr-video' applied
@@ -120,14 +138,27 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     touchscreenutilities.applyTouchHoverEffect(musicOverlay);
                 }
             })
-            playMusicBtn.addEventListener('touchstart', () => {
-                musicOverlaysBtns[index].classList.remove('opacity-100');
-                musicOverlaysBtns[index].classList.add('opacity-80');
-            });
-            playMusicBtn.addEventListener('touchend', () => {
-                musicOverlaysBtns[index].classList.remove('opacity-80');
-                musicOverlaysBtns[index].classList.add('opacity-100');
-            });
+            if(touchscreenutilities.isTouchDevice()) {
+                playMusicBtn.addEventListener('touchstart', () => {
+                    musicOverlaysBtns[index].classList.remove('opacity-100');
+                    musicOverlaysBtns[index].classList.add('opacity-80');
+                });
+                document.addEventListener('touchend', () => {
+                    musicOverlaysBtns[index].classList.remove('opacity-80');
+                    musicOverlaysBtns[index].classList.add('opacity-100');
+                });
+            } else {
+                playMusicBtn.addEventListener('mousedown', () => {
+                    if (musicOverlay.isHovering) {
+                        musicOverlaysBtns[index].classList.remove('opacity-100');
+                        musicOverlaysBtns[index].classList.add('opacity-80');
+                    }
+                })
+                document.addEventListener('mouseup', () => {
+                    musicOverlaysBtns[index].classList.remove('opacity-80');
+                    musicOverlaysBtns[index].classList.add('opacity-100');
+                })
+            }
         }
 
         audioPlayers[index].on('play', () => {

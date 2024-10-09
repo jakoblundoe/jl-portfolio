@@ -6284,7 +6284,6 @@
     const projectOverlays = document.querySelectorAll("[id^='project-overlay-']");
     const linkOverlaysBtns = document.querySelectorAll("[id^='link-overlay-btn-']");
     projectOverlays.forEach((projectOverlay, index) => {
-      console.log(linkOverlaysBtns);
       if (projectOverlay.isHovering === void 0) {
         projectOverlay.isHovering = false;
       }
@@ -6303,19 +6302,38 @@
       });
       hammerProjectBtn.on("tap", () => {
         if (!projectOverlay.isHovering) {
+          linkOverlaysBtns[index].classList.remove("opacity-80");
+          linkOverlaysBtns[index].classList.add("opacity-100");
           applyTouchHoverEffect(projectOverlay);
         } else {
-          window.open(parentLink.href, "_blank", "noopener,noreferrer");
+          linkOverlaysBtns[index].classList.remove("opacity-80");
+          linkOverlaysBtns[index].classList.add("opacity-100");
+          setTimeout(() => {
+            window.open(parentLink.href, "_blank", "noopener,noreferrer");
+          }, 15);
         }
       });
-      projectOverlay.addEventListener("touchstart", () => {
-        linkOverlaysBtns[index].classList.remove("opacity-100");
-        linkOverlaysBtns[index].classList.add("opacity-80");
-      });
-      projectOverlay.addEventListener("touchend", () => {
-        linkOverlaysBtns[index].classList.remove("opacity-80");
-        linkOverlaysBtns[index].classList.add("opacity-100");
-      });
+      if (isTouchDevice()) {
+        projectOverlay.addEventListener("touchstart", () => {
+          linkOverlaysBtns[index].classList.remove("opacity-100");
+          linkOverlaysBtns[index].classList.add("opacity-80");
+        });
+        document.addEventListener("touchend", () => {
+          linkOverlaysBtns[index].classList.remove("opacity-80");
+          linkOverlaysBtns[index].classList.add("opacity-100");
+        });
+      } else {
+        projectOverlay.addEventListener("mousedown", () => {
+          if (projectOverlay.isHovering) {
+            linkOverlaysBtns[index].classList.remove("opacity-100");
+            linkOverlaysBtns[index].classList.add("opacity-80");
+          }
+        });
+        document.addEventListener("mouseup", () => {
+          linkOverlaysBtns[index].classList.remove("opacity-80");
+          linkOverlaysBtns[index].classList.add("opacity-100");
+        });
+      }
     });
     const videoPlayers = import_plyr2.default.setup(".plyr-video", {
       controls: ["play-large", "play", "progress", "current-time", "mute", "volume", "captions", "settings", "pip", "airplay", "fullscreen"],
@@ -6376,14 +6394,27 @@
             applyTouchHoverEffect(musicOverlay);
           }
         });
-        playMusicBtn.addEventListener("touchstart", () => {
-          musicOverlaysBtns[index].classList.remove("opacity-100");
-          musicOverlaysBtns[index].classList.add("opacity-80");
-        });
-        playMusicBtn.addEventListener("touchend", () => {
-          musicOverlaysBtns[index].classList.remove("opacity-80");
-          musicOverlaysBtns[index].classList.add("opacity-100");
-        });
+        if (isTouchDevice()) {
+          playMusicBtn.addEventListener("touchstart", () => {
+            musicOverlaysBtns[index].classList.remove("opacity-100");
+            musicOverlaysBtns[index].classList.add("opacity-80");
+          });
+          document.addEventListener("touchend", () => {
+            musicOverlaysBtns[index].classList.remove("opacity-80");
+            musicOverlaysBtns[index].classList.add("opacity-100");
+          });
+        } else {
+          playMusicBtn.addEventListener("mousedown", () => {
+            if (musicOverlay.isHovering) {
+              musicOverlaysBtns[index].classList.remove("opacity-100");
+              musicOverlaysBtns[index].classList.add("opacity-80");
+            }
+          });
+          document.addEventListener("mouseup", () => {
+            musicOverlaysBtns[index].classList.remove("opacity-80");
+            musicOverlaysBtns[index].classList.add("opacity-100");
+          });
+        }
       }
       audioPlayers[index].on("play", () => {
         ionIconElem.setAttribute("name", "pause-circle-outline");
@@ -6430,10 +6461,8 @@
         audioPlayers[index].on("seeking", () => {
           isSeeking = true;
           const currentTime = Date.now();
-          console.log(`seekSeeked set to: ${seekPause}`);
           if (currentTime - pauseTime < 5) {
             seekPause = true;
-            console.log(`seekSeeked set to: ${seekPause}`);
           }
           ;
         });
