@@ -1,17 +1,18 @@
 ## Description
 #### This is the repository for the development of my portfolio website.
 
-The basic goal is to build a functioning static website which serves the purpose of presenting my work. The requirement is that the website needs to be build in modules with the functionality of being easily adjusted giving the ability to add functionality and content in the future. Lastly I wanted to host it on my own linux server (using nginx web server).
+The goal is simply to build a functioning static website which serves the purpose of presenting my work.
 
-The development version can be accessed at [https://portfolio.jakoblundoe.com](https://portfolio.jakoblundoe.com/).
+Link to current version: [https://jakoblundoe.com](https://jakoblundoe.com/).
 
-**Tools, languages and frameworks used:** <br>
-> Hugo as the SSG<br>
-> Tailwind CSS framework<br>
-> Figma as the design tool<br>
-> CSS, HTML and JS<br>
-> Git as the version control tool<br>
-> Obsidian as my project management tool
+**Frameworks and dependencies:** <br>
+> [hugo](https://github.com/gohugoio/hugo.git)<br>
+> [tailwindcss](https://github.com/tailwindlabs/tailwindcss.git)<br>
+> [postcss](https://github.com/postcss/postcss.git)<br>
+> [plyr](https://github.com/sampotts/plyr.git)<br>
+> [audioMotion-analyzer](https://github.com/hvianna/audioMotion-analyzer.git)<br>
+> [hammer.js](https://github.com/hammerjs/hammer.js.git)<br>
+> [autoprefixer](https://github.com/postcss/autoprefixer.git)<br>
 
 ## Img
 
