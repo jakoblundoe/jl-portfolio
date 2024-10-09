@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const linkOverlaysBtns = document.querySelectorAll("[id^='link-overlay-btn-']");
 
     projectOverlays.forEach((projectOverlay, index) => {
-        console.log(linkOverlaysBtns)
         if (projectOverlay.isHovering === undefined) {
             projectOverlay.isHovering = false;
         }
@@ -188,10 +187,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 isSeeking = true;
 
                 const currentTime = Date.now();
-                console.log(`seekSeeked set to: ${seekPause}`)
                 if (currentTime - pauseTime < 5) {
                     seekPause = true;
-                    console.log(`seekSeeked set to: ${seekPause}`)
                 };
             });
         }
