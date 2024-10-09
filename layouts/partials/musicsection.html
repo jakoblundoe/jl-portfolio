@@ -59,7 +59,7 @@
 {{ $pageVideo := .Params.videoPath }}
 <div class="flex flex-col gap-2">
     <div class="max-w-[480px]">
-        <div id="musicvideo" style="border-radius: 2px;">
+        <div id="musicvideo" class="shadow-md" style="border-radius: 2px;">
             <video playsinline preload="metadata" controls class="plyr-musicvideo" loop style="border-radius: 2px;">
                 <source src="{{ $pageVideo }}" alt="video file" type="video/mp4">
                 Your browser does not support the video tag.
