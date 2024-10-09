@@ -6282,7 +6282,9 @@
   var import_hammerjs = __toESM(require_hammer());
   document.addEventListener("DOMContentLoaded", (e) => {
     const projectOverlays = document.querySelectorAll("[id^='project-overlay-']");
-    projectOverlays.forEach((projectOverlay) => {
+    const linkOverlaysBtns = document.querySelectorAll("[id^='link-overlay-btn-']");
+    projectOverlays.forEach((projectOverlay, index) => {
+      console.log(linkOverlaysBtns);
       if (projectOverlay.isHovering === void 0) {
         projectOverlay.isHovering = false;
       }
@@ -6305,6 +6307,14 @@
         } else {
           window.open(parentLink.href, "_blank", "noopener,noreferrer");
         }
+      });
+      projectOverlay.addEventListener("touchstart", () => {
+        linkOverlaysBtns[index].classList.remove("opacity-100");
+        linkOverlaysBtns[index].classList.add("opacity-80");
+      });
+      projectOverlay.addEventListener("touchend", () => {
+        linkOverlaysBtns[index].classList.remove("opacity-80");
+        linkOverlaysBtns[index].classList.add("opacity-100");
       });
     });
     const videoPlayers = import_plyr2.default.setup(".plyr-video", {
@@ -6340,6 +6350,7 @@
       return;
     }
     const playMusicOverlays = document.querySelectorAll("[id^='play-music-overlay-']");
+    const musicOverlaysBtns = document.querySelectorAll("[id^='play-music-btn-']");
     playMusicOverlays.forEach((musicOverlay, index) => {
       if (musicOverlay.isHovering === void 0) {
         musicOverlay.isHovering = false;
@@ -6364,6 +6375,14 @@
           } else {
             applyTouchHoverEffect(musicOverlay);
           }
+        });
+        playMusicBtn.addEventListener("touchstart", () => {
+          musicOverlaysBtns[index].classList.remove("opacity-100");
+          musicOverlaysBtns[index].classList.add("opacity-80");
+        });
+        playMusicBtn.addEventListener("touchend", () => {
+          musicOverlaysBtns[index].classList.remove("opacity-80");
+          musicOverlaysBtns[index].classList.add("opacity-100");
         });
       }
       audioPlayers[index].on("play", () => {

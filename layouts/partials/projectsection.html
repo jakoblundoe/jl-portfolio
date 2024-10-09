@@ -14,7 +14,7 @@
                     <div class="relative max-w-[480px] max-h-[360px] rounded-sm">
                         <img src="{{ $pageThumbnail }}" alt="project thumbnail image" class="rounded-sm">
                         <div id="project-overlay-{{ $index }}" class="absolute inset-0 opacity-0 flex justify-center items-center bg-less-transp-black ease-in-out duration-500 rounded-sm hover:cursor-pointer">
-                            <div id="link-overlay-btn" class="absolute inset-0 flex flex-col justify-center items-center ease-in-out duration-50 active:opacity-80 rounded-sm">
+                            <div id="link-overlay-btn-{{ $index }}" class="absolute inset-0 flex flex-col justify-center items-center ease-in-out duration-50 rounded-sm">
                                 <h3 class="font-bebas text-5xl text-white tracking-wide">
                                     {{ $pageTitle }}
                                 </h3>

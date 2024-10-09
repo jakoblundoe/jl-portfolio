@@ -10,12 +10,13 @@ import Hammer from 'hammerjs';
 document.addEventListener('DOMContentLoaded', (e) => {
     // HANDLE INTERACTIONS WITH PROJECT OVERLAY BUTTONS
     const projectOverlays = document.querySelectorAll("[id^='project-overlay-']");
-    projectOverlays.forEach((projectOverlay) => {
+    const linkOverlaysBtns = document.querySelectorAll("[id^='link-overlay-btn-']");
 
+    projectOverlays.forEach((projectOverlay, index) => {
+        console.log(linkOverlaysBtns)
         if (projectOverlay.isHovering === undefined) {
             projectOverlay.isHovering = false;
         }
-
         const parentLink = projectOverlay.closest('a');
         const hammerProjectBtn = new Hammer(parentLink);
 
@@ -33,10 +34,19 @@ document.addEventListener('DOMContentLoaded', (e) => {
         })
         hammerProjectBtn.on('tap', () => {
             if (!projectOverlay.isHovering) {
+
                 touchscreenutilities.applyTouchHoverEffect(projectOverlay);
             } else {
                 window.open(parentLink.href, '_blank', 'noopener,noreferrer');
             }
+        });
+        projectOverlay.addEventListener('touchstart', () => {
+            linkOverlaysBtns[index].classList.remove('opacity-100');
+            linkOverlaysBtns[index].classList.add('opacity-80');
+        });
+        projectOverlay.addEventListener('touchend', () => {
+            linkOverlaysBtns[index].classList.remove('opacity-80');
+            linkOverlaysBtns[index].classList.add('opacity-100');
         });
     });
 
@@ -83,6 +93,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     // HANDLE INTERACTIONS WITH MUSIC OVERLAY BUTTONS
     const playMusicOverlays = document.querySelectorAll("[id^='play-music-overlay-']");
+    const musicOverlaysBtns = document.querySelectorAll("[id^='play-music-btn-']");
     playMusicOverlays.forEach((musicOverlay, index) => {
         if (musicOverlay.isHovering === undefined) {
             musicOverlay.isHovering = false;
@@ -110,6 +121,14 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     touchscreenutilities.applyTouchHoverEffect(musicOverlay);
                 }
             })
+            playMusicBtn.addEventListener('touchstart', () => {
+                musicOverlaysBtns[index].classList.remove('opacity-100');
+                musicOverlaysBtns[index].classList.add('opacity-80');
+            });
+            playMusicBtn.addEventListener('touchend', () => {
+                musicOverlaysBtns[index].classList.remove('opacity-80');
+                musicOverlaysBtns[index].classList.add('opacity-100');
+            });
         }
 
         audioPlayers[index].on('play', () => {
