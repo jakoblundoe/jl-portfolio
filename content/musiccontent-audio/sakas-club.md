@@ -1,5 +1,5 @@
 ---
-title: Sakas Club
+title: Kaito's Club
 type: Soundtrack
 audioPath: /workcontent/music/sakasclub/sakasclub-composition
 imgPath: /workcontent/music/sakasclub/sakasclub-thumbnail-v2.webp
