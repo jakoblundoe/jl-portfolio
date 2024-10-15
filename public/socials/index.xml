@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Socials on JL-PORTFOLIO</title>
-    <link>https://jakoblundoe.com/socials/</link>
+    <link>http://localhost:1313/socials/</link>
     <description>Recent content in Socials on JL-PORTFOLIO</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://jakoblundoe.com/socials/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/socials/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://jakoblundoe.com/socials/github/</link>
+      <link>http://localhost:1313/socials/github/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jakoblundoe.com/socials/github/</guid>
+      <guid>http://localhost:1313/socials/github/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://jakoblundoe.com/socials/instagram/</link>
+      <link>http://localhost:1313/socials/instagram/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jakoblundoe.com/socials/instagram/</guid>
+      <guid>http://localhost:1313/socials/instagram/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://jakoblundoe.com/socials/linkedin/</link>
+      <link>http://localhost:1313/socials/linkedin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jakoblundoe.com/socials/linkedin/</guid>
+      <guid>http://localhost:1313/socials/linkedin/</guid>
       <description></description>
     </item>
   </channel>
