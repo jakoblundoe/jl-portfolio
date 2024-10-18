@@ -6368,11 +6368,10 @@
       return;
     }
     const playMusicOverlays = document.querySelectorAll("[id^='play-music-overlay-']");
-    const musicOverlaysBtns = document.querySelectorAll("[id^='play-music-btn-']");
     playMusicOverlays.forEach((musicOverlay, index) => {
       const musicOverlayID = musicOverlay.getAttribute("id");
       const customIndex = musicOverlayID.charAt(musicOverlayID.length - 1);
-      console.log(customIndex);
+      const musicOverlaysBtns = document.querySelector(`[id^='play-music-btn-${customIndex}']`);
       if (musicOverlay.isHovering === void 0) {
         musicOverlay.isHovering = false;
       }
@@ -6399,23 +6398,23 @@
         });
         if (isTouchDevice()) {
           playMusicBtn.addEventListener("touchstart", () => {
-            musicOverlaysBtns[customIndex].classList.remove("opacity-100");
-            musicOverlaysBtns[customIndex].classList.add("opacity-80");
+            musicOverlaysBtns.classList.remove("opacity-100");
+            musicOverlaysBtns.classList.add("opacity-80");
           });
-          document.addEventListener("touchend", () => {
-            musicOverlaysBtns[customIndex].classList.remove("opacity-80");
-            musicOverlaysBtns[customIndex].classList.add("opacity-100");
+          playMusicBtn.addEventListener("touchend", () => {
+            musicOverlaysBtns.classList.remove("opacity-80");
+            musicOverlaysBtns.classList.add("opacity-100");
           });
         } else {
           playMusicBtn.addEventListener("mousedown", () => {
             if (musicOverlay.isHovering) {
-              musicOverlaysBtns[customIndex].classList.remove("opacity-100");
-              musicOverlaysBtns[customIndex].classList.add("opacity-80");
+              musicOverlaysBtns.classList.remove("opacity-100");
+              musicOverlaysBtns.classList.add("opacity-80");
             }
           });
-          document.addEventListener("mouseup", () => {
-            musicOverlaysBtns[customIndex].classList.remove("opacity-80");
-            musicOverlaysBtns[customIndex].classList.add("opacity-100");
+          playMusicBtn.addEventListener("mouseup", () => {
+            musicOverlaysBtns.classList.remove("opacity-80");
+            musicOverlaysBtns.classList.add("opacity-100");
           });
         }
       }
