@@ -112,6 +112,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const playMusicOverlays = document.querySelectorAll("[id^='play-music-overlay-']");
     const musicOverlaysBtns = document.querySelectorAll("[id^='play-music-btn-']");
     playMusicOverlays.forEach((musicOverlay, index) => {
+        const musicOverlayID = musicOverlay.getAttribute('id');
+        const customIndex = musicOverlayID.charAt(musicOverlayID.length - 1);
+        console.log(customIndex)
         if (musicOverlay.isHovering === undefined) {
             musicOverlay.isHovering = false;
         }
@@ -122,7 +125,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             touchscreenutilities.removeOverlay(musicOverlay);
         })
 
-        const playMusicBtn = document.querySelector(`#play-music-overlay-${index}`);
+        const playMusicBtn = document.querySelector(`#play-music-overlay-${customIndex}`);
         const ionIconElem = playMusicBtn.querySelector('ion-icon');
         const hammerMusicBtn = new Hammer(playMusicBtn);
 
@@ -140,23 +143,23 @@ document.addEventListener('DOMContentLoaded', (e) => {
             })
             if(touchscreenutilities.isTouchDevice()) {
                 playMusicBtn.addEventListener('touchstart', () => {
-                    musicOverlaysBtns[index].classList.remove('opacity-100');
-                    musicOverlaysBtns[index].classList.add('opacity-80');
+                    musicOverlaysBtns[customIndex].classList.remove('opacity-100');
+                    musicOverlaysBtns[customIndex].classList.add('opacity-80');
                 });
                 document.addEventListener('touchend', () => {
-                    musicOverlaysBtns[index].classList.remove('opacity-80');
-                    musicOverlaysBtns[index].classList.add('opacity-100');
+                    musicOverlaysBtns[customIndex].classList.remove('opacity-80');
+                    musicOverlaysBtns[customIndex].classList.add('opacity-100');
                 });
             } else {
                 playMusicBtn.addEventListener('mousedown', () => {
                     if (musicOverlay.isHovering) {
-                        musicOverlaysBtns[index].classList.remove('opacity-100');
-                        musicOverlaysBtns[index].classList.add('opacity-80');
+                        musicOverlaysBtns[customIndex].classList.remove('opacity-100');
+                        musicOverlaysBtns[customIndex].classList.add('opacity-80');
                     }
                 })
                 document.addEventListener('mouseup', () => {
-                    musicOverlaysBtns[index].classList.remove('opacity-80');
-                    musicOverlaysBtns[index].classList.add('opacity-100');
+                    musicOverlaysBtns[customIndex].classList.remove('opacity-80');
+                    musicOverlaysBtns[customIndex].classList.add('opacity-100');
                 })
             }
         }
@@ -180,7 +183,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             let pauseTime = 0;
             let seekPause = false;
     
-            const audioContainer = document.querySelector(`#audioContainer-${index}`);
+            const audioContainer = document.querySelector(`#audioContainer-${customIndex}`);
             audioPlayers[index].on('play', () => {
                 if (isPlaying) return;
                 
