@@ -1,7 +1,8 @@
 ---
 title: Lazy Legacy
 type: Music
-audioPath: /workcontent/music/Kolo-music/LazyLegacy_etmstr3
+cardType: audio
+filePath: /workcontent/music/Kolo-music/LazyLegacy_etmstr3
 imgPath: /workcontent/music/Kolo-music/lazy-legacy-img.webp
 order: 2
 ---

@@ -1,7 +1,8 @@
 ---
 title: Sleepy Warrior
 type: Music
-audioPath: /workcontent/music/Kolo-music/SleepyWarrior_etmstr3
+cardType: audio
+filePath: /workcontent/music/Kolo-music/SleepyWarrior_etmstr3
 imgPath: /workcontent/music/Kolo-music/sleepy-warrior-img.webp
 order: 1
 ---
