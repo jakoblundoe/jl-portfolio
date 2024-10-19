@@ -7,7 +7,7 @@
 {{ $cardType := $page.Params.cardType}}
 
     {{ if eq $cardType "audio" }}
-    <div class="flex flex-col gap-2 mt-2">
+    <div class="flex flex-col gap-2 justify-start mt-2 mb-4" style="grid-row-end: span 20;">
         <div class="flex flex-col justify-start max-w-[480px] min-w-[341px] h-[484px]">
             <div class="shadow-md">
                 <div>
@@ -53,7 +53,7 @@
         </div>
     </div>
     {{ else if eq $cardType "video" }}
-    <div class="flex flex-col gap-2 h-[355px] mt-2">
+    <div class="flex flex-col gap-2 h-[355px] mt-2 mb-4" style="grid-row-end: span 16;">
         <div class="max-w-[480px]">
             <div id="musicvideo" class="shadow-md" style="border-radius: 2px;">
                 <video playsinline preload="metadata" controls class="plyr-musicvideo" loop style="border-radius: 2px;">
@@ -62,7 +62,7 @@
                 </video>
             </div>
         </div>
-        <div class="select-text flex flex-col font-mono mt-2 ml-1
+        <div class="select-text flex flex-col font-mono ml-1
         [&_a]:text-pink [&_a]:font-medium hover:[&_a]:opacity-80 active:[&_a]:opacity-65">
             <div class="flex flex-row items-center gap-2 align-center">
                 <p class="text-base font-semibold text-semilightblack">
