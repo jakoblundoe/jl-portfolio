@@ -3,7 +3,7 @@
     {{ partial "header.html" . }}
     <div class="select-text flex justify-center mt-3">
         <h1 class="text-5xl tracking-wider font-extralight text-semilightblack relative after:absolute after:border after:border-t-0 after:border-grey after:w-full after:left-1/2 after:-translate-x-1/2 after:mt-2
-                    [&_span]:text-pink [&_span]:font-normal">
+                    [&_span]:text-pink [&_span]:font-normal" style="font-size: min(9.6vw, 3rem);">
             {{ .Content }}
         </h1>
     </div>
@@ -11,7 +11,7 @@
     <div id="project-section" class="bg-white flex justify-center">
         <div id="section-wrapper" class="flex flex-col justify-center max-w-[1200px] mb-20">
             <div class="flex justify-center m-4 mb-8 mt-14">
-                <h2 class="select-text font-inter text-3xl tracking-wider font-light text-semilightblack px-4">
+                <h2 class="select-text font-inter text-3xl tracking-wider font-light text-semilightblack px-4" style="font-size: min(6.6vw, 1.875rem);">
                     {{ with .Resources.Get "pagecontent/projectsection.md" }}
                         {{ .Title }}
                     {{ end }}
@@ -20,29 +20,27 @@
             <div class="flex flex-wrap justify-center gap-10 px-8">
                 {{ partial "projectsection.html" . }}
             </div>
-            <!-- <div class="relative after:absolute ml-6 after:border after:border-t-0 after:border-semilightblack after:w-11/12 after:left-1/2 after:-translate-x-1/2 after:mt-2"></div> -->
         </div>
     </div>
 
     <div id="music-section" class="bg-gray-200 flex justify-center">
-        <div id="section-wrapper" class="flex flex-col justify-center max-w-[1200px] mb-20">
-            <div class="flex justify-center m-4 mb-8">
-                <h2 class="select-text font-inter text-3xl tracking-wider font-light text-semilightblack px-4">
+        <div id="section-wrapper" class="flex flex-col justify-center max-w-[1200px] sm:mb-20 mb-2">
+            <div class="flex justify-center m-4 sm:mb-8 mb-4">
+                <h2 class="select-text font-inter text-3xl text-nowrap tracking-wider font-light text-semilightblack px-4" style="font-size: min(4.6vw, 1.875rem); ">
                     {{ with .Resources.Get "pagecontent/musicsection.md" }}
-                        {{ .Title }}
+                        {{ .Title }} 
                     {{ end }}
                 </h2>
             </div>
-            <div class="flex flex-wrap justify-center gap-10 px-8">
+            <div class="flex flex-col flex-wrap justify-center self-center pb-20 3md:grid 3md:grid-rows-2rowfull 3md:grid-cols-2">
                 {{ partial "musicsection.html" . }}
             </div>
-            <!-- <div class="relative after:absolute ml-6 after:border after:border-t-0 after:border-semilightblack after:w-11/12 after:left-1/2 after:-translate-x-1/2 after:mt-2"></div> -->
         </div>
     </div>
     <div id="bitesized-section" class="bg-white flex justify-center">
-        <div id="section-wrapper" class="flex flex-col justify-center max-w-[1200px] mb-20">
+        <div id="section-wrapper" class="flex flex-col max-w-[1200px] mb-20">
             <div class="flex justify-center m-4 mb-8">
-                <h2 class="select-text font-inter text-3xl tracking-wider font-light text-semilightblack px-4">
+                <h2 class="select-text font-inter text-3xl tracking-wider font-light text-semilightblack px-4" style="font-size: min(6.6vw, 1.875rem);">
                     {{ with .Resources.Get "pagecontent/bitesizesection.md" }}
                         {{ .Title }}
                     {{ end }}

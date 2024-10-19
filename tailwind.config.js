@@ -20,6 +20,7 @@ module.exports = {
       screens: {
         '1md': '952px',
         '2md': '1053px',
+        '3md': '1081px',
       },
       lineHeight: {
         '2': '0.50rem',
@@ -71,6 +72,7 @@ module.exports = {
       gridTemplateRows: {
         '0fr': '0fr',
         '1fr': '1fr',
+        '2rowfull': 'repeat(2, 1fr)',
       },
       keyframes: {
         display_fadein: {
