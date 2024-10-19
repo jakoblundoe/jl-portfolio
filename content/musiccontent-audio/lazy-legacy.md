@@ -4,7 +4,7 @@ type: Music
 cardType: audio
 filePath: /workcontent/music/Kolo-music/LazyLegacy_etmstr3
 imgPath: /workcontent/music/Kolo-music/lazy-legacy-img.webp
-order: 2
+order: 1
 ---
 Production and mix by me.
 Composition made in collaboration with Oliver Dengsø.

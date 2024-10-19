@@ -20,6 +20,7 @@ module.exports = {
       screens: {
         '1md': '952px',
         '2md': '1053px',
+        '3md': '1081px',
       },
       lineHeight: {
         '2': '0.50rem',

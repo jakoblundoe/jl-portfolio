@@ -4075,7 +4075,7 @@
     }
   });
 
-  // ns-hugo:D:\FileFolder\repos\jl-portfolio\assets\js\modules\sidebartoggle.js
+  // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\sidebartoggle.js
   function openMenu(sidebarOpen) {
     const sideBar = document.getElementById("sidebarnav");
     const bottomNavbar = document.getElementById("bottomnavbar");
@@ -4103,7 +4103,7 @@
     }
   }
 
-  // ns-hugo:D:\FileFolder\repos\jl-portfolio\assets\js\modules\cinemamodule.js
+  // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\cinemamodule.js
   var import_plyr = __toESM(require_plyr_min());
   var plyrInstance;
   function togglevideo(delayTime) {
@@ -4223,7 +4223,7 @@
     }, interval);
   }
 
-  // ns-hugo:D:\FileFolder\repos\jl-portfolio\assets\js\modules\dropdowntoggle.js
+  // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\dropdowntoggle.js
   function openDropdown(isDropdownOpen, dropdownButtonElem, dropdownContentElem) {
     if (dropdownContentElem && dropdownButtonElem && !isDropdownOpen) {
       dropdownButtonElem.classList.remove("rotate-180");
@@ -4330,7 +4330,7 @@
     return Math.max(timeDuration, 100);
   }
 
-  // ns-hugo:D:\FileFolder\repos\jl-portfolio\assets\js\modules\touchscreenutilities.js
+  // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\touchscreenutilities.js
   function applyTouchHoverEffect(hoverNode) {
     if (hoverNode.touchHoverTimeout === void 0) {
       hoverNode.touchHoverTimeout = null;
@@ -6206,7 +6206,7 @@
   };
   var audioMotion_analyzer_default = AudioMotionAnalyzer;
 
-  // ns-hugo:D:\FileFolder\repos\jl-portfolio\assets\js\modules\audiomotion.js
+  // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\audiomotion.js
   function createAudioMotionInstance(audioContainer, audioPlayer) {
     const options = {
       colorStops: [
