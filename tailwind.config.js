@@ -72,6 +72,7 @@ module.exports = {
       gridTemplateRows: {
         '0fr': '0fr',
         '1fr': '1fr',
+        '2rowfull': 'repeat(2, 1fr)',
       },
       keyframes: {
         display_fadein: {
