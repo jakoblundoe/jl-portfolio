@@ -2,57 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Musiccontent-Audios on JL-PORTFOLIO</title>
-    <link>http://localhost:1313/musiccontent-audio/</link>
+    <link>https://jakoblundoe.com/musiccontent-audio/</link>
     <description>Recent content in Musiccontent-Audios on JL-PORTFOLIO</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/musiccontent-audio/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jakoblundoe.com/musiccontent-audio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Brass Theme</title>
-      <link>http://localhost:1313/musiccontent-audio/cvex-brass-theme/</link>
+      <link>https://jakoblundoe.com/musiccontent-audio/cvex-brass-theme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/musiccontent-audio/cvex-brass-theme/</guid>
+      <guid>https://jakoblundoe.com/musiccontent-audio/cvex-brass-theme/</guid>
       <description>Composition, production, mix and master by me. Made for a telegram mini-game.</description>
     </item>
     <item>
-<<<<<<< HEAD
-      <title>Kaito&#39;s Club</title>
-      <link>http://localhost:1313/musiccontent-audio/sakas-club/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-=======
       <title>Game Concept</title>
-      <link>http://localhost:1313/musiccontent-audio/alex-gameconcept-theme/</link>
+      <link>https://jakoblundoe.com/musiccontent-audio/alex-gameconcept-theme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/musiccontent-audio/alex-gameconcept-theme/</guid>
+      <guid>https://jakoblundoe.com/musiccontent-audio/alex-gameconcept-theme/</guid>
       <description>Composition, production, mix and master. Concept and graphics by Alexandar Kierkegaard.</description>
     </item>
     <item>
       <title>Kaito&#39;s Club</title>
-      <link>http://localhost:1313/musiccontent-audio/sakas-club/</link>
+      <link>https://jakoblundoe.com/musiccontent-audio/sakas-club/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
->>>>>>> develop
-      <guid>http://localhost:1313/musiccontent-audio/sakas-club/</guid>
+      <guid>https://jakoblundoe.com/musiccontent-audio/sakas-club/</guid>
       <description>Composition, production, mix and master by me.</description>
     </item>
     <item>
       <title>Lazy Legacy</title>
-      <link>http://localhost:1313/musiccontent-audio/lazy-legacy/</link>
+      <link>https://jakoblundoe.com/musiccontent-audio/lazy-legacy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/musiccontent-audio/lazy-legacy/</guid>
+      <guid>https://jakoblundoe.com/musiccontent-audio/lazy-legacy/</guid>
       <description>Production and mix by me. Composition made in collaboration with Oliver Dengsø. Listen on Spotify.</description>
     </item>
     <item>
       <title>Sleepy Warrior</title>
-      <link>http://localhost:1313/musiccontent-audio/sleepy-warrior/</link>
+      <link>https://jakoblundoe.com/musiccontent-audio/sleepy-warrior/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/musiccontent-audio/sleepy-warrior/</guid>
+      <guid>https://jakoblundoe.com/musiccontent-audio/sleepy-warrior/</guid>
       <description>Production and mix by me. Composition made in collaboration with Oliver Dengsø. Listen on Spotify.</description>
     </item>
     <item>
       <title>The Encore</title>
-      <link>http://localhost:1313/musiccontent-audio/theencore/</link>
+      <link>https://jakoblundoe.com/musiccontent-audio/theencore/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/musiccontent-audio/theencore/</guid>
+      <guid>https://jakoblundoe.com/musiccontent-audio/theencore/</guid>
       <description>Composition, production, mix and master by me.</description>
     </item>
   </channel>
