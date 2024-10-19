@@ -529,6 +529,10 @@ html{font-family:Inter, sans-serif;--tw-text-opacity:1;color:rgb(50 50 50 / var(
 .m-4{margin:1rem}
 .m-auto{margin:auto}
 .mx-1{margin-left:0.25rem;margin-right:0.25rem}
+<<<<<<< HEAD
+=======
+.mx-16{margin-left:4rem;margin-right:4rem}
+>>>>>>> develop
 .mx-2{margin-left:0.5rem;margin-right:0.5rem}
 .mx-2\.5{margin-left:0.625rem;margin-right:0.625rem}
 .mx-7{margin-left:1.75rem;margin-right:1.75rem}
@@ -542,7 +546,13 @@ html{font-family:Inter, sans-serif;--tw-text-opacity:1;color:rgb(50 50 50 / var(
 .-mt-10{margin-top:-2.5rem}
 .-mt-3{margin-top:-0.75rem}
 .-mt-4{margin-top:-1rem}
+<<<<<<< HEAD
 .mb-20{margin-bottom:5rem}
+=======
+.mb-2{margin-bottom:0.5rem}
+.mb-20{margin-bottom:5rem}
+.mb-4{margin-bottom:1rem}
+>>>>>>> develop
 .mb-48{margin-bottom:12rem}
 .mb-5{margin-bottom:1.25rem}
 .mb-7{margin-bottom:1.75rem}
@@ -771,7 +781,10 @@ html{font-family:Inter, sans-serif;--tw-text-opacity:1;color:rgb(50 50 50 / var(
 .after\:absolute::after{content:var(--tw-content);position:absolute}
 .after\:left-1\/2::after{content:var(--tw-content);left:50%}
 .after\:mt-2::after{content:var(--tw-content);margin-top:0.5rem}
+<<<<<<< HEAD
 .after\:w-11\/12::after{content:var(--tw-content);width:91.666667%}
+=======
+>>>>>>> develop
 .after\:w-full::after{content:var(--tw-content);width:100%}
 .after\:-translate-x-1\/2::after{content:var(--tw-content);--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
 .after\:border::after{content:var(--tw-content);border-width:1px}
@@ -806,6 +819,11 @@ html{font-family:Inter, sans-serif;--tw-text-opacity:1;color:rgb(50 50 50 / var(
 .sm\:mx-0{margin-left:0px;margin-right:0px}
 .sm\:mx-4{margin-left:1rem;margin-right:1rem}
 .sm\:my-10{margin-top:2.5rem;margin-bottom:2.5rem}
+<<<<<<< HEAD
+=======
+.sm\:mb-20{margin-bottom:5rem}
+.sm\:mb-8{margin-bottom:2rem}
+>>>>>>> develop
 .sm\:mr-2{margin-right:0.5rem}
 .sm\:mt-5{margin-top:1.25rem}
 .sm\:flex{display:flex}
@@ -839,6 +857,14 @@ html{font-family:Inter, sans-serif;--tw-text-opacity:1;color:rgb(50 50 50 / var(
 .\32md\:max-w-\[1380px\]{max-width:1380px}
 .\32md\:max-w-\[600px\]{max-width:600px}
 .\32md\:text-left{text-align:left}}
+<<<<<<< HEAD
+=======
+@media (min-width: 1081px){
+.\33md\:mx-4{margin-left:1rem;margin-right:1rem}
+.\33md\:grid{display:grid}
+.\33md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}
+.\33md\:grid-rows-2rowfull{grid-template-rows:repeat(2, 1fr)}}
+>>>>>>> develop
 .\[\&_a\]\:font-mono a{font-family:Roboto Mono, monospace}
 .\[\&_a\]\:font-medium a{font-weight:500}
 .\[\&_a\]\:font-normal a{font-weight:400}

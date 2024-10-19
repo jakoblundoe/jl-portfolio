@@ -30,7 +30,11 @@
   </url><url>
     <loc>http://localhost:1313/bitesizecontent/explosiondesign/</loc>
   </url><url>
+<<<<<<< HEAD
     <loc>http://localhost:1313/musiccontent-video/alex-gameconcept-theme/</loc>
+=======
+    <loc>http://localhost:1313/musiccontent-audio/alex-gameconcept-theme/</loc>
+>>>>>>> develop
   </url><url>
     <loc>http://localhost:1313/musiccontent-audio/sakas-club/</loc>
   </url><url>
@@ -40,6 +44,7 @@
   </url><url>
     <loc>http://localhost:1313/musiccontent-audio/</loc>
   </url><url>
+<<<<<<< HEAD
     <loc>http://localhost:1313/musiccontent-video/</loc>
   </url><url>
     <loc>http://localhost:1313/pages/</loc>
@@ -68,6 +73,34 @@
   </url><url>
     <loc>http://localhost:1313/work/</loc>
   </url><url>
+=======
+    <loc>http://localhost:1313/pages/</loc>
+  </url><url>
+    <loc>http://localhost:1313/projectcontent/</loc>
+  </url><url>
+    <loc>http://localhost:1313/resumecontent/</loc>
+  </url><url>
+    <loc>http://localhost:1313/archived/samplii/</loc>
+  </url><url>
+    <loc>http://localhost:1313/bitesizecontent/animation-sd/</loc>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/showreel/</loc>
+  </url><url>
+    <loc>http://localhost:1313/musiccontent-audio/sleepy-warrior/</loc>
+  </url><url>
+    <loc>http://localhost:1313/socials/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/musiccontent-audio/theencore/</loc>
+  </url><url>
+    <loc>http://localhost:1313/projectcontent/theoldones/</loc>
+  </url><url>
+    <loc>http://localhost:1313/work/</loc>
+  </url><url>
+>>>>>>> develop
     <loc>http://localhost:1313/projectcontent/zebra/</loc>
   </url>
 </urlset>

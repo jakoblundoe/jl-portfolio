@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             enabled: false
         }
     });
-    
+
     const workPageActive = (document.body.getAttribute("data-page").toLowerCase() === "work") || false;
     if (!workPageActive) {
         return;
@@ -110,8 +110,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     // HANDLE INTERACTIONS WITH MUSIC OVERLAY BUTTONS
     const playMusicOverlays = document.querySelectorAll("[id^='play-music-overlay-']");
-    const musicOverlaysBtns = document.querySelectorAll("[id^='play-music-btn-']");
+    // const musicOverlaysBtns = document.querySelectorAll("[id^='play-music-btn-']");
     playMusicOverlays.forEach((musicOverlay, index) => {
+        const musicOverlayID = musicOverlay.getAttribute('id');
+        const customIndex = musicOverlayID.charAt(musicOverlayID.length - 1);
+        const musicOverlaysBtns = document.querySelector(`[id^='play-music-btn-${customIndex}']`);
+
         if (musicOverlay.isHovering === undefined) {
             musicOverlay.isHovering = false;
         }
@@ -122,7 +126,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             touchscreenutilities.removeOverlay(musicOverlay);
         })
 
-        const playMusicBtn = document.querySelector(`#play-music-overlay-${index}`);
+        const playMusicBtn = document.querySelector(`#play-music-overlay-${customIndex}`);
         const ionIconElem = playMusicBtn.querySelector('ion-icon');
         const hammerMusicBtn = new Hammer(playMusicBtn);
 
@@ -138,25 +142,27 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     touchscreenutilities.applyTouchHoverEffect(musicOverlay);
                 }
             })
+
+
             if(touchscreenutilities.isTouchDevice()) {
                 playMusicBtn.addEventListener('touchstart', () => {
-                    musicOverlaysBtns[index].classList.remove('opacity-100');
-                    musicOverlaysBtns[index].classList.add('opacity-80');
+                    musicOverlaysBtns.classList.remove('opacity-100');
+                    musicOverlaysBtns.classList.add('opacity-80');
                 });
-                document.addEventListener('touchend', () => {
-                    musicOverlaysBtns[index].classList.remove('opacity-80');
-                    musicOverlaysBtns[index].classList.add('opacity-100');
+                playMusicBtn.addEventListener('touchend', () => {
+                    musicOverlaysBtns.classList.remove('opacity-80');
+                    musicOverlaysBtns.classList.add('opacity-100');
                 });
             } else {
                 playMusicBtn.addEventListener('mousedown', () => {
                     if (musicOverlay.isHovering) {
-                        musicOverlaysBtns[index].classList.remove('opacity-100');
-                        musicOverlaysBtns[index].classList.add('opacity-80');
+                        musicOverlaysBtns.classList.remove('opacity-100');
+                        musicOverlaysBtns.classList.add('opacity-80');
                     }
                 })
-                document.addEventListener('mouseup', () => {
-                    musicOverlaysBtns[index].classList.remove('opacity-80');
-                    musicOverlaysBtns[index].classList.add('opacity-100');
+                playMusicBtn.addEventListener('mouseup', () => {
+                    musicOverlaysBtns.classList.remove('opacity-80');
+                    musicOverlaysBtns.classList.add('opacity-100');
                 })
             }
         }
@@ -179,16 +185,16 @@ document.addEventListener('DOMContentLoaded', (e) => {
             let isSeeking = false;
             let pauseTime = 0;
             let seekPause = false;
-    
-            const audioContainer = document.querySelector(`#audioContainer-${index}`);
+
+            const audioContainer = document.querySelector(`#audioContainer-${customIndex}`);
             audioPlayers[index].on('play', () => {
                 if (isPlaying) return;
-                
+
                 if (!audioMotion) {
                     audioMotion = audioMotionModule.createAudioMotionInstance(audioContainer, audioPlayers[index]);
                     audioMotionModule.audioMotionFadeIn(audioMotion);
                 }
-    
+
                 isPlaying = true;
                 isPaused = false;
 
@@ -201,7 +207,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
             audioPlayers[index].on('pause', () => {
                 if (isPaused) return;
-                
+
                 isPaused = true;
                 isPlaying = false;
 
@@ -224,7 +230,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             });
         }
     });
-    
+
 
     // MAKE SURE NO PLAYERS PLAY SIMULTANEOUSLY
     const allPlyrPlayers = videoPlayers.concat(musicVideoPlayers, audioPlayers);
@@ -321,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuButton.addEventListener("click", () => (!sidebarOpen) ? sidebarOpen = sidebarToggle.openMenu(sidebarOpen) : sidebarOpen = sidebarToggle.closeMenu(sidebarOpen));
     closeMenuButton.addEventListener("click", () => (sidebarOpen) ? sidebarOpen = sidebarToggle.closeMenu(sidebarOpen) : sidebarOpen = sidebarToggle.openMenu(sidebarOpen));
-    
+
     document.addEventListener("click", (clickEvent) => {
         if (!sidebarOpen) {
             return;
@@ -341,10 +347,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // DROPDOWN CONTENT TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
-    const aboutPageActive = (document.body.getAttribute("data-page").toLowerCase() === "about") || false;    
+    const aboutPageActive = (document.body.getAttribute("data-page").toLowerCase() === "about") || false;
     if (!aboutPageActive)
         return;
-    
+
     const resumeContentElem = document.getElementsByClassName("resume-content");
 
     for (const elem of resumeContentElem) {

@@ -4075,7 +4075,11 @@
     }
   });
 
+<<<<<<< HEAD
   // ns-hugo:D:\FileFolder\repos\jl-portfolio\assets\js\modules\sidebartoggle.js
+=======
+  // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\sidebartoggle.js
+>>>>>>> develop
   function openMenu(sidebarOpen) {
     const sideBar = document.getElementById("sidebarnav");
     const bottomNavbar = document.getElementById("bottomnavbar");
@@ -4103,7 +4107,11 @@
     }
   }
 
+<<<<<<< HEAD
   // ns-hugo:D:\FileFolder\repos\jl-portfolio\assets\js\modules\cinemamodule.js
+=======
+  // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\cinemamodule.js
+>>>>>>> develop
   var import_plyr = __toESM(require_plyr_min());
   var plyrInstance;
   function togglevideo(delayTime) {
@@ -4223,7 +4231,11 @@
     }, interval);
   }
 
+<<<<<<< HEAD
   // ns-hugo:D:\FileFolder\repos\jl-portfolio\assets\js\modules\dropdowntoggle.js
+=======
+  // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\dropdowntoggle.js
+>>>>>>> develop
   function openDropdown(isDropdownOpen, dropdownButtonElem, dropdownContentElem) {
     if (dropdownContentElem && dropdownButtonElem && !isDropdownOpen) {
       dropdownButtonElem.classList.remove("rotate-180");
@@ -4330,7 +4342,11 @@
     return Math.max(timeDuration, 100);
   }
 
+<<<<<<< HEAD
   // ns-hugo:D:\FileFolder\repos\jl-portfolio\assets\js\modules\touchscreenutilities.js
+=======
+  // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\touchscreenutilities.js
+>>>>>>> develop
   function applyTouchHoverEffect(hoverNode) {
     if (hoverNode.touchHoverTimeout === void 0) {
       hoverNode.touchHoverTimeout = null;
@@ -6206,7 +6222,11 @@
   };
   var audioMotion_analyzer_default = AudioMotionAnalyzer;
 
+<<<<<<< HEAD
   // ns-hugo:D:\FileFolder\repos\jl-portfolio\assets\js\modules\audiomotion.js
+=======
+  // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\audiomotion.js
+>>>>>>> develop
   function createAudioMotionInstance(audioContainer, audioPlayer) {
     const options = {
       colorStops: [
@@ -6368,8 +6388,15 @@
       return;
     }
     const playMusicOverlays = document.querySelectorAll("[id^='play-music-overlay-']");
+<<<<<<< HEAD
     const musicOverlaysBtns = document.querySelectorAll("[id^='play-music-btn-']");
     playMusicOverlays.forEach((musicOverlay, index) => {
+=======
+    playMusicOverlays.forEach((musicOverlay, index) => {
+      const musicOverlayID = musicOverlay.getAttribute("id");
+      const customIndex = musicOverlayID.charAt(musicOverlayID.length - 1);
+      const musicOverlaysBtns = document.querySelector(`[id^='play-music-btn-${customIndex}']`);
+>>>>>>> develop
       if (musicOverlay.isHovering === void 0) {
         musicOverlay.isHovering = false;
       }
@@ -6379,7 +6406,11 @@
       musicOverlay.addEventListener("mouseout", () => {
         removeOverlay(musicOverlay);
       });
+<<<<<<< HEAD
       const playMusicBtn = document.querySelector(`#play-music-overlay-${index}`);
+=======
+      const playMusicBtn = document.querySelector(`#play-music-overlay-${customIndex}`);
+>>>>>>> develop
       const ionIconElem = playMusicBtn.querySelector("ion-icon");
       const hammerMusicBtn = new import_hammerjs.default(playMusicBtn);
       if (playMusicBtn) {
@@ -6396,16 +6427,26 @@
         });
         if (isTouchDevice()) {
           playMusicBtn.addEventListener("touchstart", () => {
+<<<<<<< HEAD
             musicOverlaysBtns[index].classList.remove("opacity-100");
             musicOverlaysBtns[index].classList.add("opacity-80");
           });
           document.addEventListener("touchend", () => {
             musicOverlaysBtns[index].classList.remove("opacity-80");
             musicOverlaysBtns[index].classList.add("opacity-100");
+=======
+            musicOverlaysBtns.classList.remove("opacity-100");
+            musicOverlaysBtns.classList.add("opacity-80");
+          });
+          playMusicBtn.addEventListener("touchend", () => {
+            musicOverlaysBtns.classList.remove("opacity-80");
+            musicOverlaysBtns.classList.add("opacity-100");
+>>>>>>> develop
           });
         } else {
           playMusicBtn.addEventListener("mousedown", () => {
             if (musicOverlay.isHovering) {
+<<<<<<< HEAD
               musicOverlaysBtns[index].classList.remove("opacity-100");
               musicOverlaysBtns[index].classList.add("opacity-80");
             }
@@ -6413,6 +6454,15 @@
           document.addEventListener("mouseup", () => {
             musicOverlaysBtns[index].classList.remove("opacity-80");
             musicOverlaysBtns[index].classList.add("opacity-100");
+=======
+              musicOverlaysBtns.classList.remove("opacity-100");
+              musicOverlaysBtns.classList.add("opacity-80");
+            }
+          });
+          playMusicBtn.addEventListener("mouseup", () => {
+            musicOverlaysBtns.classList.remove("opacity-80");
+            musicOverlaysBtns.classList.add("opacity-100");
+>>>>>>> develop
           });
         }
       }
@@ -6432,7 +6482,11 @@
         let isSeeking = false;
         let pauseTime = 0;
         let seekPause = false;
+<<<<<<< HEAD
         const audioContainer = document.querySelector(`#audioContainer-${index}`);
+=======
+        const audioContainer = document.querySelector(`#audioContainer-${customIndex}`);
+>>>>>>> develop
         audioPlayers[index].on("play", () => {
           if (isPlaying) return;
           if (!audioMotion) {

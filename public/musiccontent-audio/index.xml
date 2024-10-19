@@ -15,9 +15,22 @@
       <description>Composition, production, mix and master by me. Made for a telegram mini-game.</description>
     </item>
     <item>
+<<<<<<< HEAD
       <title>Kaito&#39;s Club</title>
       <link>http://localhost:1313/musiccontent-audio/sakas-club/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+=======
+      <title>Game Concept</title>
+      <link>http://localhost:1313/musiccontent-audio/alex-gameconcept-theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/musiccontent-audio/alex-gameconcept-theme/</guid>
+      <description>Composition, production, mix and master. Concept and graphics by Alexandar Kierkegaard.</description>
+    </item>
+    <item>
+      <title>Kaito&#39;s Club</title>
+      <link>http://localhost:1313/musiccontent-audio/sakas-club/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+>>>>>>> develop
       <guid>http://localhost:1313/musiccontent-audio/sakas-club/</guid>
       <description>Composition, production, mix and master by me.</description>
     </item>
