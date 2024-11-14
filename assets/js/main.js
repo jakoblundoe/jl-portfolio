@@ -69,14 +69,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     // Initialize default Plyr for all video elements with the class 'plyr-video' applied
     //PLYR VIDEO PLAYERS (DEFAULT)
-    const thumbnailPaths = [
-        '/workcontent/music/Kolo-music/lazy-legacy-img.webp',
-        '/workcontent/music/Kolo-music/lazy-legacy-img.webp',
-        '/workcontent/music/Kolo-music/lazy-legacy-img.webp',
-        '/workcontent/music/Kolo-music/lazy-legacy-img.webp',
-        '/workcontent/music/Kolo-music/lazy-legacy-img.webp',
-    ]
-
     const videoPlayers = Plyr.setup('.plyr-video', {
         controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen',],
         keyboard: {
