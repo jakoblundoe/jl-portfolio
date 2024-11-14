@@ -6335,6 +6335,13 @@
         });
       }
     });
+    const thumbnailPaths = [
+      "/workcontent/music/Kolo-music/lazy-legacy-img.webp",
+      "/workcontent/music/Kolo-music/lazy-legacy-img.webp",
+      "/workcontent/music/Kolo-music/lazy-legacy-img.webp",
+      "/workcontent/music/Kolo-music/lazy-legacy-img.webp",
+      "/workcontent/music/Kolo-music/lazy-legacy-img.webp"
+    ];
     const videoPlayers = import_plyr2.default.setup(".plyr-video", {
       controls: ["play-large", "play", "progress", "current-time", "mute", "volume", "captions", "settings", "pip", "airplay", "fullscreen"],
       keyboard: {
