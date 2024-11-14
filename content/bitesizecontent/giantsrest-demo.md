@@ -5,6 +5,6 @@ type: Sound Design and Implementation
 videopath: https://content.jakoblundoe.com/giants-rest-demo.mp4
 order: 0
 card_type: small
-thumbnail: /img/profilephoto_jakoblundoe.webp
+thumbnail: /img/thumbnails/giants-rest-thumbnail.webp
 ---
 Tools: Reaper, Wwise and Unity
