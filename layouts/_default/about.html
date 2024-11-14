@@ -5,8 +5,8 @@
                 2md:max-w-[1380px]">
         <div class="flex flex-row flex-wrap justify-center items-start py-12 px-2 gap-5 -mt-4
                     ">
-            <div class="flex flex-col flex-nowrap justify-start items-center max-w-[500px] gap-2.5 mt-1 px-6
-                        sm:px-8 sm:mt-5 sm:items-start
+            <div class="flex flex-col flex-nowrap justify-start items-start max-w-[500px] gap-2.5 mt-1 px-6
+                        sm:px-8 sm:mt-5
                         2md:max-w-[600px]"> 
                 <div class="select-text flex flex-row flex-nowrap gap-3 items-start font-medium text-pink text-4xl text-start tracking-wider mb-7 truncate
                             sm:text-5xl">
@@ -16,14 +16,14 @@
                     <h1 class="text-semilightblack text-4xl font-extralight truncate
                                 sm:text-5xl"> ABOUT ME </h1>
                 </div>
-                <div class="select-text flex flex-row items-start gap-2.5 -mt-3 font-medium text-lg text-justify tracking-wide
+                <div class="select-text flex flex-row items-start gap-2.5 -mt-3 font-medium text-lg tracking-wide
                             sm:text-xl sm:font-medium sm:tracking-wider
                             2md:text-left">
                     {{ with .Resources.Get "pagecontent/subheader.md" }}
                         {{ .Content }}
                     {{ end }}
                 </div>
-                <div class="select-text flex flex-col items-start gap-2.5 mt-4 pb-8 -mb-9 font-normal text-base text-justify
+                <div class="select-text flex flex-col items-start gap-2.5 mt-4 pb-8 -mb-9 font-normal text-base tracking-wide
                             sm:text-base sm:font-normal sm:tracking-wide
                             2md:text-left">
                     {{ with .Resources.Get "pagecontent/description.md" }}
