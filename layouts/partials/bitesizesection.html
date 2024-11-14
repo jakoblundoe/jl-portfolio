@@ -3,41 +3,83 @@
 {{ $pageTitle := .Params.title }}
 {{ $pageTitleTwo := .Params.title_two }}
 {{ $contentType := .Params.type }}
+{{ $cardType := .Params.card_type }}
 {{ $pageVideoPath := .Params.videopath }}
-<div class="flex flex-col gap-2">
-    <div class="flex flex-col justify-center max-w-[480px] min-w-[341px]">
-        <div class="shadow-md">
-            <div class="">
-                <div class="relative">
-                    <video playsinline preload="metadata" controls class="plyr-video max-h-[500px]" loop style="border-radius: 2px;">
-                        <source src="{{ $pageVideoPath }}" alt="video file" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+{{ $thumbnailPath := .Params.thumbnail }}
+
+    {{ if eq $cardType "small" }}
+        <div class="flex flex-col gap-2 overflow-hidden" style="grid-row-end: span 10;">
+            <div class="max-w-[480px] min-w-[341px]">
+                <div class="shadow-md">
+                    <div class="">
+                        <div class="relative">
+                            <video playsinline preload="metadata" controls class="plyr-video max-h-[500px]" loop style="border-radius: 2px;">
+                                <source src="{{ $pageVideoPath }}" alt="video file" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="select-text flex flex-col font-mono mt-2 ml-1
+                [&_a]:text-pink [&_a]:font-medium hover:[&_a]:opacity-80 active:[&_a]:opacity-65">
+                    <div class="flex flex-row items-start gap-2 align-center">
+                        <div>
+                            <p class="text-base font-semibold text-semilightblack text-nowrap">
+                                {{ $pageTitle }}
+                            </p>
+                            <p class="text-base font-semibold text-semilightblack text-nowrap">
+                                {{ $pageTitleTwo }}
+                            </p>
+                        </div>
+                        <p class="text-sm font-normal">
+                            |
+                        </p>
+                        <p class="text-sm font-normal mt-[2px]">
+                            {{ $contentType }}
+                        </p>
+                    </div>
+                    <div class="select-text text-sm text-nowrap mt-1">
+                        {{ .Content }}
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="select-text flex flex-col font-mono mt-2 ml-1
-        [&_a]:text-pink [&_a]:font-medium hover:[&_a]:opacity-80 active:[&_a]:opacity-65">
-            <div class="flex flex-row items-start gap-2 align-center">
-                <div>
-                    <p class="text-base font-semibold text-semilightblack text-nowrap">
-                        {{ $pageTitle }}
-                    </p>
-                    <p class="text-base font-semibold text-semilightblack text-nowrap">
-                        {{ $pageTitleTwo }}
-                    </p>
+    {{ else if eq $cardType "large" }}
+        <div class="flex flex-col gap-2 overflow-hidden" style="grid-row-end: span 14;">
+            <div class="max-w-[480px] min-w-[341px]">
+                <div class="shadow-md">
+                    <div class="">
+                        <div class="relative">
+                            <video playsinline preload="metadata" controls class="plyr-video max-h-[500px]" loop style="border-radius: 2px;">
+                                <source src="{{ $pageVideoPath }}" alt="video file" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-sm font-normal">
-                    |
-                </p>
-                <p class="text-sm font-normal mt-[2px]">
-                    {{ $contentType }}
-                </p>
-            </div>
-            <div class="select-text text-sm text-nowrap mt-1">
-                {{ .Content }}
+                <div class="select-text flex flex-col font-mono mt-2 ml-1
+                    [&_a]:text-pink [&_a]:font-medium hover:[&_a]:opacity-80 active:[&_a]:opacity-65">
+                    <div class="flex flex-row items-start gap-2 align-center">
+                        <div>
+                            <p class="text-base font-semibold text-semilightblack text-nowrap">
+                                {{ $pageTitle }}
+                            </p>
+                            <p class="text-base font-semibold text-semilightblack text-nowrap">
+                                {{ $pageTitleTwo }}
+                            </p>
+                        </div>
+                        <p class="text-sm font-normal">
+                            |
+                        </p>
+                        <p class="text-sm font-normal mt-[2px]">
+                            {{ $contentType }}
+                        </p>
+                    </div>
+                    <div class="select-text text-sm text-nowrap mt-1">
+                        {{ .Content }}
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    {{ end }}
 {{ end }}

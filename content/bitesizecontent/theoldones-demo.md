@@ -4,5 +4,6 @@ title_two: The Old Ones
 type: Sound Design and Implementation
 videopath: https://content.jakoblundoe.com/the-old-ones-demo.mp4
 order: 2
+card_type: small
 ---
 Tools: Reaper, Wwise and Unity
