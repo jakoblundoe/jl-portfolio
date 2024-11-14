@@ -18,6 +18,7 @@ module.exports = {
         '4/3': '4 / 3',
       },
       screens: {
+        '1sm': '669px',
         '1md': '952px',
         '2md': '1053px',
         '3md': '1081px',
