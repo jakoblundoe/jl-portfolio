@@ -1,6 +1,7 @@
 {{ $section := .Site.GetPage "section" "bitesizecontent" }}
 {{ range sort $section.Pages "Params.order" }}
 {{ $pageTitle := .Params.title }}
+{{ $pageTitleTwo := .Params.title_two }}
 {{ $contentType := .Params.type }}
 {{ $pageVideoPath := .Params.videopath }}
 <div class="flex flex-col gap-2">
@@ -17,10 +18,15 @@
         </div>
         <div class="select-text flex flex-col font-mono mt-2 ml-1
         [&_a]:text-pink [&_a]:font-medium hover:[&_a]:opacity-80 active:[&_a]:opacity-65">
-            <div class="flex flex-row items-center gap-2 align-center">
-                <p class="text-base font-semibold text-semilightblack">
-                    {{ $pageTitle }}
-                </p>
+            <div class="flex flex-row items-start gap-2 align-center">
+                <div>
+                    <p class="text-base font-semibold text-semilightblack text-nowrap">
+                        {{ $pageTitle }}
+                    </p>
+                    <p class="text-base font-semibold text-semilightblack text-nowrap">
+                        {{ $pageTitleTwo }}
+                    </p>
+                </div>
                 <p class="text-sm font-normal">
                     |
                 </p>
@@ -28,7 +34,7 @@
                     {{ $contentType }}
                 </p>
             </div>
-            <div class="select-text text-sm text-nowrap">
+            <div class="select-text text-sm text-nowrap mt-1">
                 {{ .Content }}
             </div>
         </div>
