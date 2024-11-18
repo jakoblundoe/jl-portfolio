@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projectcontents on JL-PORTFOLIO</title>
-    <link>https://jakoblundoe.com/projectcontent/</link>
+    <link>http://localhost:1313/projectcontent/</link>
     <description>Recent content in Projectcontents on JL-PORTFOLIO</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://jakoblundoe.com/projectcontent/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/projectcontent/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Droemmefanger</title>
-      <link>https://jakoblundoe.com/projectcontent/droemmefanger/</link>
+      <link>http://localhost:1313/projectcontent/droemmefanger/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jakoblundoe.com/projectcontent/droemmefanger/</guid>
+      <guid>http://localhost:1313/projectcontent/droemmefanger/</guid>
       <description>Conceptualization, sound design, development</description>
     </item>
     <item>
       <title>Lydro</title>
-      <link>https://jakoblundoe.com/projectcontent/lydro/</link>
+      <link>http://localhost:1313/projectcontent/lydro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jakoblundoe.com/projectcontent/lydro/</guid>
+      <guid>http://localhost:1313/projectcontent/lydro/</guid>
       <description>Concept, sound design, app development, programming</description>
     </item>
     <item>
       <title>The Old Ones</title>
-      <link>https://jakoblundoe.com/projectcontent/theoldones/</link>
+      <link>http://localhost:1313/projectcontent/theoldones/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jakoblundoe.com/projectcontent/theoldones/</guid>
+      <guid>http://localhost:1313/projectcontent/theoldones/</guid>
       <description>Sound design, technical implementation, sound recordist</description>
     </item>
     <item>
       <title>Žebra</title>
-      <link>https://jakoblundoe.com/projectcontent/zebra/</link>
+      <link>http://localhost:1313/projectcontent/zebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jakoblundoe.com/projectcontent/zebra/</guid>
+      <guid>http://localhost:1313/projectcontent/zebra/</guid>
       <description>Audio post production, sound design, scoring</description>
     </item>
   </channel>
