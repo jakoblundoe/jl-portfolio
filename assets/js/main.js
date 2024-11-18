@@ -3,6 +3,7 @@ import * as sidebarToggle from './modules/sidebartoggle.js';
 import * as dropdownToggle from './modules/dropdowntoggle.js';
 import * as touchscreenutilities from './modules/touchscreenutilities.js';
 import * as audioMotionModule from './modules/audiomotion.js';
+import * as urlStateManager from './modules/url-state-manager.js';
 
 import Plyr from 'plyr';
 import Hammer from 'hammerjs';
@@ -259,16 +260,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!showreelPageActive)
         return;
 
-    const updateURL = (isShowreelOn) => {
-        const url = new URL(window.location);
-        if (isShowreelOn) {
-            url.searchParams.set("showreel", "on");
-        } else {
-            url.searchParams.set("showreel", "off");
-        }
-        history.replaceState(null, "", url);
-    }
-
     const toggleShowreel = () => {
         if (timerActive)
             return;
@@ -277,7 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cinemaModule.showreelButtonState(delayTime);
 
         console.log(isShowreelOn);
-        updateURL(isShowreelOn);
+        urlStateManager.updateURL(isShowreelOn);
 
         timerActive = true;
         setTimeout(() => {
@@ -300,11 +291,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // on page load start video if url matches "on" state
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get("showreel") === "on") {
-        cinemaModule.togglevideo(500);
+        cinemaModule.togglevideo(delayTime);
         cinemaModule.overlayToggle();
-        cinemaModule.showreelButtonState(500);
+        cinemaModule.showreelButtonState(delayTime);
     }
 });
 

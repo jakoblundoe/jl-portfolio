@@ -6277,10 +6277,21 @@
     }
   }
 
+  // ns-hugo:D:\FileFolder\Repos\jl-portfolio\assets\js\modules\url-state-manager.js
+  var updateURL = (isShowreelOn) => {
+    const url = new URL(window.location);
+    if (isShowreelOn) {
+      url.searchParams.set("showreel", "on");
+    } else {
+      url.searchParams.set("showreel", "off");
+    }
+    history.replaceState(null, "", url);
+  };
+
   // <stdin>
   var import_plyr2 = __toESM(require_plyr_min());
   var import_hammerjs = __toESM(require_hammer());
-  document.addEventListener("DOMContentLoaded", (e) => {
+  document.addEventListener("DOMContentLoaded", () => {
     const projectOverlays = document.querySelectorAll("[id^='project-overlay-']");
     const linkOverlaysBtns = document.querySelectorAll("[id^='link-overlay-btn-']");
     projectOverlays.forEach((projectOverlay, index) => {
@@ -6289,9 +6300,9 @@
       }
       const parentLink = projectOverlay.closest("a");
       const hammerProjectBtn = new import_hammerjs.default(parentLink);
-      parentLink.addEventListener("click", (e2) => {
+      parentLink.addEventListener("click", (e) => {
         if (isTouchDevice()) {
-          e2.preventDefault();
+          e.preventDefault();
         }
       });
       projectOverlay.addEventListener("mouseover", () => {
@@ -6335,13 +6346,6 @@
         });
       }
     });
-    const thumbnailPaths = [
-      "/workcontent/music/Kolo-music/lazy-legacy-img.webp",
-      "/workcontent/music/Kolo-music/lazy-legacy-img.webp",
-      "/workcontent/music/Kolo-music/lazy-legacy-img.webp",
-      "/workcontent/music/Kolo-music/lazy-legacy-img.webp",
-      "/workcontent/music/Kolo-music/lazy-legacy-img.webp"
-    ];
     const videoPlayers = import_plyr2.default.setup(".plyr-video", {
       controls: ["play-large", "play", "progress", "current-time", "mute", "volume", "captions", "settings", "pip", "airplay", "fullscreen"],
       keyboard: {
@@ -6473,7 +6477,6 @@
           if (currentTime - pauseTime < 5) {
             seekPause = true;
           }
-          ;
         });
       }
     });
@@ -6485,7 +6488,6 @@
             otherPlayer.pause();
           }
         }
-        ;
       });
     });
   });
@@ -6499,54 +6501,37 @@
     const showreelPageActive = document.body.getAttribute("data-page").toLowerCase() === "showreel" || false;
     if (!showreelPageActive)
       return;
+    const toggleShowreel = () => {
+      if (timerActive)
+        return;
+      const isShowreelOn = togglevideo(delayTime);
+      overlayToggle();
+      showreelButtonState(delayTime);
+      console.log(isShowreelOn);
+      updateURL(isShowreelOn);
+      timerActive = true;
+      setTimeout(() => {
+        timerActive = false;
+      }, delayTime);
+    };
     document.addEventListener("keydown", (keydownEvent) => {
-      if (timerActive)
-        return;
       if (keydownEvent.key === "Escape" && videocontainer.classList.contains("grid")) {
-        togglevideo(delayTime);
-        overlayToggle();
-        showreelButtonState(delayTime);
-        timerActive = true;
-        setTimeout(() => {
-          timerActive = false;
-        }, delayTime);
+        toggleShowreel();
       }
     });
-    button.addEventListener("click", () => {
-      if (timerActive)
-        return;
-      togglevideo(delayTime);
-      overlayToggle();
-      showreelButtonState(delayTime);
-      timerActive = true;
-      setTimeout(() => {
-        timerActive = false;
-      }, delayTime);
-    });
-    closeReelButton.addEventListener("click", () => {
-      if (timerActive)
-        return;
-      togglevideo(delayTime);
-      overlayToggle();
-      showreelButtonState(delayTime);
-      timerActive = true;
-      setTimeout(() => {
-        timerActive = false;
-      }, delayTime);
-    });
+    button.addEventListener("click", toggleShowreel);
+    closeReelButton.addEventListener("click", toggleShowreel);
     window.addEventListener("click", (clickEvent) => {
-      if (timerActive)
-        return;
       if (!video.contains(clickEvent.target) && videocontainer.classList.contains("grid")) {
-        togglevideo(delayTime);
-        overlayToggle();
-        showreelButtonState(delayTime);
-        timerActive = true;
-        setTimeout(() => {
-          timerActive = false;
-        }, delayTime);
+        toggleShowreel();
       }
     });
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("showreel") === "on") {
+      togglevideo(delayTime);
+      overlayToggle();
+      showreelButtonState(delayTime);
+    }
   });
   document.addEventListener("DOMContentLoaded", () => {
     const closeMenuButton = document.getElementById("closemenubutton");
@@ -6589,7 +6574,6 @@
         }
       });
     }
-    ;
   });
 })();
 /*! Bundled license information:
