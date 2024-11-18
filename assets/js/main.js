@@ -7,7 +7,7 @@ import * as audioMotionModule from './modules/audiomotion.js';
 import Plyr from 'plyr';
 import Hammer from 'hammerjs';
 
-document.addEventListener('DOMContentLoaded', (e) => {
+document.addEventListener('DOMContentLoaded', () => {
     // HANDLE INTERACTIONS WITH PROJECT OVERLAY BUTTONS
     const projectOverlays = document.querySelectorAll("[id^='project-overlay-']");
     const linkOverlaysBtns = document.querySelectorAll("[id^='link-overlay-btn-']");
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 const currentTime = Date.now();
                 if (currentTime - pauseTime < 5) {
                     seekPause = true;
-                };
+                }
             });
         }
     });
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 if (otherPlayer !== player &&  !otherPlayer.paused) {
                     otherPlayer.pause();
                 }
-            };
+            }
         });
     });
 });
@@ -341,5 +341,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 isDropdownOpen = dropdownToggle.closeDropdown(isDropdownOpen, dropdownButtonElem, dropdownContentElem);
             }
         });
-    };
+    }
 });
