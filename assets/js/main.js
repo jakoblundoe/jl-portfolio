@@ -259,60 +259,31 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!showreelPageActive)
         return;
 
-    document.addEventListener("keydown", (keydownEvent) => {
+    const toggleShowreel = () => {
         if (timerActive)
             return;
+        cinemaModule.togglevideo(delayTime);
+        cinemaModule.overlayToggle();
+        cinemaModule.showreelButtonState(delayTime);
+
+        timerActive = true;
+        setTimeout(() => {
+            timerActive = false;
+        }, delayTime);
+    }
+
+    document.addEventListener("keydown", (keydownEvent) => {
         if (keydownEvent.key === "Escape" && videocontainer.classList.contains("grid")) {
-
-            cinemaModule.togglevideo(delayTime);
-            cinemaModule.overlayToggle();
-            cinemaModule.showreelButtonState(delayTime);
-
-            timerActive = true;
-            setTimeout(() => {
-                timerActive = false;
-            }, delayTime);
+            toggleShowreel()
         }
     });
 
-    button.addEventListener("click", () => {
-        if (timerActive)
-            return;
-        cinemaModule.togglevideo(delayTime);
-        cinemaModule.overlayToggle();
-        cinemaModule.showreelButtonState(delayTime);
-
-        timerActive = true;
-        setTimeout(() => {
-            timerActive = false;
-        }, delayTime);
-    });
-
-    closeReelButton.addEventListener("click", () => {
-        if (timerActive)
-            return;
-        cinemaModule.togglevideo(delayTime);
-        cinemaModule.overlayToggle();
-        cinemaModule.showreelButtonState(delayTime);
-
-        timerActive = true;
-        setTimeout(() => {
-            timerActive = false;
-        }, delayTime);
-    });
+    button.addEventListener("click", toggleShowreel);
+    closeReelButton.addEventListener("click", toggleShowreel);
 
     window.addEventListener("click", (clickEvent) => {
-        if (timerActive)
-            return;
         if (!video.contains(clickEvent.target) && videocontainer.classList.contains("grid")){
-            cinemaModule.togglevideo(delayTime);
-            cinemaModule.overlayToggle();
-            cinemaModule.showreelButtonState(delayTime);
-
-            timerActive = true;
-            setTimeout(() => {
-                timerActive = false;
-            }, delayTime);
+            toggleShowreel()
         }
     });
 });
