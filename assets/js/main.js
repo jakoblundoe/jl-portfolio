@@ -259,12 +259,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!showreelPageActive)
         return;
 
+    const updateURL = (isShowreelOn) => {
+        const url = new URL(window.location);
+        if (isShowreelOn) {
+            url.searchParams.set("showreel", "on");
+        } else {
+            url.searchParams.set("showreel", "off");
+        }
+        history.replaceState(null, "", url);
+    }
+
     const toggleShowreel = () => {
         if (timerActive)
             return;
-        cinemaModule.togglevideo(delayTime);
+        const isShowreelOn = cinemaModule.togglevideo(delayTime);
         cinemaModule.overlayToggle();
         cinemaModule.showreelButtonState(delayTime);
+
+        console.log(isShowreelOn);
+        updateURL(isShowreelOn);
 
         timerActive = true;
         setTimeout(() => {
@@ -286,6 +299,13 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleShowreel()
         }
     });
+
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("showreel") === "on") {
+        cinemaModule.togglevideo(500);
+        cinemaModule.overlayToggle();
+        cinemaModule.showreelButtonState(500);
+    }
 });
 
 // NAV SIDEBAR TOGGLE
