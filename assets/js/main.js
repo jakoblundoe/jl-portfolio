@@ -291,6 +291,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    window.addEventListener("popstate", toggleShowreel);
+
     // on page load start video if url matches "on" state
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get("showreel") === "on") {

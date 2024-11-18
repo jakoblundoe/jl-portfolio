@@ -3,7 +3,7 @@ export const updateURL = (isShowreelOn) => {
     if (isShowreelOn) {
         url.searchParams.set("showreel", "on");
     } else {
-        url.searchParams.set("showreel", "off");
+        url.searchParams.delete("showreel");
     }
-    history.replaceState(null, "", url);
+    history.pushState(null, "", url.toString());
 }
