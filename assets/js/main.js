@@ -3,11 +3,12 @@ import * as sidebarToggle from './modules/sidebartoggle.js';
 import * as dropdownToggle from './modules/dropdowntoggle.js';
 import * as touchscreenutilities from './modules/touchscreenutilities.js';
 import * as audioMotionModule from './modules/audiomotion.js';
+import * as urlStateManager from './modules/url-state-manager.js';
 
 import Plyr from 'plyr';
 import Hammer from 'hammerjs';
 
-document.addEventListener('DOMContentLoaded', (e) => {
+document.addEventListener('DOMContentLoaded', () => {
     // HANDLE INTERACTIONS WITH PROJECT OVERLAY BUTTONS
     const projectOverlays = document.querySelectorAll("[id^='project-overlay-']");
     const linkOverlaysBtns = document.querySelectorAll("[id^='link-overlay-btn-']");
@@ -226,7 +227,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 const currentTime = Date.now();
                 if (currentTime - pauseTime < 5) {
                     seekPause = true;
-                };
+                }
             });
         }
     });
@@ -240,7 +241,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 if (otherPlayer !== player &&  !otherPlayer.paused) {
                     otherPlayer.pause();
                 }
-            };
+            }
         });
     });
 });
@@ -259,62 +260,46 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!showreelPageActive)
         return;
 
-    document.addEventListener("keydown", (keydownEvent) => {
+    const toggleShowreel = () => {
         if (timerActive)
             return;
+        const isShowreelOn = cinemaModule.togglevideo(delayTime);
+        cinemaModule.overlayToggle();
+        cinemaModule.showreelButtonState(delayTime);
+
+        console.log(isShowreelOn);
+        urlStateManager.updateURL(isShowreelOn);
+
+        timerActive = true;
+        setTimeout(() => {
+            timerActive = false;
+        }, delayTime);
+    }
+
+    document.addEventListener("keydown", (keydownEvent) => {
         if (keydownEvent.key === "Escape" && videocontainer.classList.contains("grid")) {
-
-            cinemaModule.togglevideo(delayTime);
-            cinemaModule.overlayToggle();
-            cinemaModule.showreelButtonState(delayTime);
-
-            timerActive = true;
-            setTimeout(() => {
-                timerActive = false;
-            }, delayTime);
+            toggleShowreel()
         }
     });
 
-    button.addEventListener("click", () => {
-        if (timerActive)
-            return;
-        cinemaModule.togglevideo(delayTime);
-        cinemaModule.overlayToggle();
-        cinemaModule.showreelButtonState(delayTime);
-
-        timerActive = true;
-        setTimeout(() => {
-            timerActive = false;
-        }, delayTime);
-    });
-
-    closeReelButton.addEventListener("click", () => {
-        if (timerActive)
-            return;
-        cinemaModule.togglevideo(delayTime);
-        cinemaModule.overlayToggle();
-        cinemaModule.showreelButtonState(delayTime);
-
-        timerActive = true;
-        setTimeout(() => {
-            timerActive = false;
-        }, delayTime);
-    });
+    button.addEventListener("click", toggleShowreel);
+    closeReelButton.addEventListener("click", toggleShowreel);
 
     window.addEventListener("click", (clickEvent) => {
-        if (timerActive)
-            return;
         if (!video.contains(clickEvent.target) && videocontainer.classList.contains("grid")){
-            cinemaModule.togglevideo(delayTime);
-            cinemaModule.overlayToggle();
-            cinemaModule.showreelButtonState(delayTime);
-
-            timerActive = true;
-            setTimeout(() => {
-                timerActive = false;
-            }, delayTime);
+            toggleShowreel()
         }
     });
+
+    window.addEventListener("popstate", toggleShowreel);
+
+    // on page load start video if url matches "on" state
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("showreel") === "on") {
+        cinemaModule.togglevideo(delayTime);
+        cinemaModule.overlayToggle();
+        cinemaModule.showreelButtonState(delayTime);
+    }
 });
 
 // NAV SIDEBAR TOGGLE
@@ -370,5 +355,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 isDropdownOpen = dropdownToggle.closeDropdown(isDropdownOpen, dropdownButtonElem, dropdownContentElem);
             }
         });
-    };
+    }
 });
