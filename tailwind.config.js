@@ -22,6 +22,7 @@ module.exports = {
         '1md': '952px',
         '2md': '1053px',
         '3md': '1081px',
+        '4md': '1344px',
       },
       lineHeight: {
         '2': '0.50rem',
