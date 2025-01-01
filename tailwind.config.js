@@ -23,6 +23,9 @@ module.exports = {
         '2md': '1053px',
         '3md': '1081px',
         '4md': '1344px',
+        'landscapes': {
+          'raw': 'only screen and (max-height: 600px) and (orientation: landscape)',
+        }
       },
       lineHeight: {
         '2': '0.50rem',
