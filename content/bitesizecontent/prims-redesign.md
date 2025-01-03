@@ -7,5 +7,5 @@ order: 3
 card_type: small
 thumbnail: /img/thumbnails/prism-redesign-thumbnail.webp
 ---
-An attempt to re-create prism entertainments sound logo <br> as closely as possible.
-Created with only using soft <br> synths and processing.
+An attempt to re-create prism entertainments sound logo as closely as possible.
+Created with only using soft synths and processing.
