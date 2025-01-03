@@ -2,184 +2,191 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Showreel on JL-PORTFOLIO</title>
-    <link>http://localhost:1313/</link>
+    <link>https://jakoblundoe.com/</link>
     <description>Recent content in Showreel on JL-PORTFOLIO</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jakoblundoe.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/socials/github/</link>
+      <link>https://jakoblundoe.com/socials/github/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/socials/github/</guid>
+      <guid>https://jakoblundoe.com/socials/github/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/socials/instagram/</link>
+      <link>https://jakoblundoe.com/socials/instagram/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/socials/instagram/</guid>
+      <guid>https://jakoblundoe.com/socials/instagram/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/socials/linkedin/</link>
+      <link>https://jakoblundoe.com/socials/linkedin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/socials/linkedin/</guid>
+      <guid>https://jakoblundoe.com/socials/linkedin/</guid>
       <description></description>
     </item>
     <item>
       <title>ABOUT</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://jakoblundoe.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://jakoblundoe.com/about/</guid>
       <description></description>
     </item>
     <item>
-      <title>Brass Theme</title>
-      <link>http://localhost:1313/musiccontent-audio/cvex-brass-theme/</link>
+      <title>Audio Recreation</title>
+      <link>https://jakoblundoe.com/bitesizecontent/prims-redesign/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/musiccontent-audio/cvex-brass-theme/</guid>
+      <guid>https://jakoblundoe.com/bitesizecontent/prims-redesign/</guid>
+      <description>An attempt to re-create prism entertainments sound logo as closely as possible. Created with only using soft synths and processing.</description>
+    </item>
+    <item>
+      <title>Brass Theme</title>
+      <link>https://jakoblundoe.com/musiccontent-audio/cvex-brass-theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jakoblundoe.com/musiccontent-audio/cvex-brass-theme/</guid>
       <description>Composition, production, mix and master by me. Made for a telegram mini-game.</description>
     </item>
     <item>
       <title>CONTACT</title>
-      <link>http://localhost:1313/contact/</link>
+      <link>https://jakoblundoe.com/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
+      <guid>https://jakoblundoe.com/contact/</guid>
       <description></description>
     </item>
     <item>
       <title>Courses</title>
-      <link>http://localhost:1313/resumecontent/courses/</link>
+      <link>https://jakoblundoe.com/resumecontent/courses/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/resumecontent/courses/</guid>
+      <guid>https://jakoblundoe.com/resumecontent/courses/</guid>
       <description>2024 The Odin Project - Foundational Course Extensive course in event-driven programming and front-end software development. Some of the topics included: version control with git, algorithmic understanding, JavaScript, html and css.&#xA;2022 Wwise 301 - Wwise Unity Integration A course which covers the integration between Wwise and Unity and covers all the tools necessary to implement audio and music from Wwise into the Unity game engine.&#xA;Wwise 201 - Interactive Music A course which covers everything related to implementing dynamic music with Wwise and highly focused on the possibilities and obstacles present when composing in an interactive context.</description>
     </item>
     <item>
       <title>Droemmefanger</title>
-      <link>http://localhost:1313/projectcontent/droemmefanger/</link>
+      <link>https://jakoblundoe.com/projectcontent/droemmefanger/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projectcontent/droemmefanger/</guid>
+      <guid>https://jakoblundoe.com/projectcontent/droemmefanger/</guid>
       <description>Conceptualization, sound design, development</description>
     </item>
     <item>
       <title>Education</title>
-      <link>http://localhost:1313/resumecontent/education/</link>
+      <link>https://jakoblundoe.com/resumecontent/education/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/resumecontent/education/</guid>
+      <guid>https://jakoblundoe.com/resumecontent/education/</guid>
       <description>2021 - 2024 Audio Design | Aarhus University Master of Science (MSc) in Information Technology (Digital Design, Audio Design).&#xA;2017 - 2020 Bachelor of Music | The Royal Academy of Music With a focus on audio engineering and production, sound design and contemporary electronic music.</description>
     </item>
     <item>
       <title>Experience</title>
-      <link>http://localhost:1313/resumecontent/experience/</link>
+      <link>https://jakoblundoe.com/resumecontent/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/resumecontent/experience/</guid>
+      <guid>https://jakoblundoe.com/resumecontent/experience/</guid>
       <description>Jun 2024 - present Frontend Developer Project | Part time Web design and development&#xA;Project Management UX/UI design HTML, CSS, Javascript Versions Control (Git) From design to development of my portfolio website I have gained a lot of knowledge with the general concepts of web frontend development.&#xA;Aug 2023 - Feb 2024 Technical Sound Designer Company: Gumbo Games (startup) | Part time Developing audiosystems in Unity with C#. Using the version control software tool Git in the development process.</description>
     </item>
     <item>
       <title>Explosion Design</title>
-      <link>http://localhost:1313/bitesizecontent/explosiondesign/</link>
+      <link>https://jakoblundoe.com/bitesizecontent/explosiondesign/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/bitesizecontent/explosiondesign/</guid>
+      <guid>https://jakoblundoe.com/bitesizecontent/explosiondesign/</guid>
       <description></description>
     </item>
     <item>
       <title>Game Concept</title>
-      <link>http://localhost:1313/musiccontent-audio/alex-gameconcept-theme/</link>
+      <link>https://jakoblundoe.com/musiccontent-audio/alex-gameconcept-theme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/musiccontent-audio/alex-gameconcept-theme/</guid>
+      <guid>https://jakoblundoe.com/musiccontent-audio/alex-gameconcept-theme/</guid>
       <description>Composition, production, mix and master. Concept and graphics by Alexandar Kierkegaard.</description>
     </item>
     <item>
       <title>Game Jam -</title>
-      <link>http://localhost:1313/bitesizecontent/giantsrest-demo/</link>
+      <link>https://jakoblundoe.com/bitesizecontent/giantsrest-demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/bitesizecontent/giantsrest-demo/</guid>
+      <guid>https://jakoblundoe.com/bitesizecontent/giantsrest-demo/</guid>
       <description>Tools: Reaper, Wwise and Unity</description>
     </item>
     <item>
       <title>Kaito&#39;s Club</title>
-      <link>http://localhost:1313/musiccontent-audio/sakas-club/</link>
+      <link>https://jakoblundoe.com/musiccontent-audio/sakas-club/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/musiccontent-audio/sakas-club/</guid>
+      <guid>https://jakoblundoe.com/musiccontent-audio/sakas-club/</guid>
       <description>Composition, production, mix and master by me.</description>
     </item>
     <item>
       <title>Lazy Legacy</title>
-      <link>http://localhost:1313/musiccontent-audio/lazy-legacy/</link>
+      <link>https://jakoblundoe.com/musiccontent-audio/lazy-legacy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/musiccontent-audio/lazy-legacy/</guid>
+      <guid>https://jakoblundoe.com/musiccontent-audio/lazy-legacy/</guid>
       <description>Production and mix by me. Composition made in collaboration with Oliver Dengsø. Listen on Spotify.</description>
     </item>
     <item>
       <title>Lydro</title>
-      <link>http://localhost:1313/projectcontent/lydro/</link>
+      <link>https://jakoblundoe.com/projectcontent/lydro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projectcontent/lydro/</guid>
+      <guid>https://jakoblundoe.com/projectcontent/lydro/</guid>
       <description>Concept, sound design, app development, programming</description>
     </item>
     <item>
       <title>Samplii</title>
-      <link>http://localhost:1313/archived/samplii/</link>
+      <link>https://jakoblundoe.com/archived/samplii/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/archived/samplii/</guid>
+      <guid>https://jakoblundoe.com/archived/samplii/</guid>
       <description></description>
     </item>
     <item>
       <title>Short Animation</title>
-      <link>http://localhost:1313/bitesizecontent/animation-sd/</link>
+      <link>https://jakoblundoe.com/bitesizecontent/animation-sd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/bitesizecontent/animation-sd/</guid>
+      <guid>https://jakoblundoe.com/bitesizecontent/animation-sd/</guid>
       <description>Animations by Mathias Gregersen.</description>
     </item>
     <item>
       <title>SHOWREEL</title>
-      <link>http://localhost:1313/showreel/</link>
+      <link>https://jakoblundoe.com/showreel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/showreel/</guid>
+      <guid>https://jakoblundoe.com/showreel/</guid>
       <description></description>
     </item>
     <item>
       <title>Sleepy Warrior</title>
-      <link>http://localhost:1313/musiccontent-audio/sleepy-warrior/</link>
+      <link>https://jakoblundoe.com/musiccontent-audio/sleepy-warrior/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/musiccontent-audio/sleepy-warrior/</guid>
+      <guid>https://jakoblundoe.com/musiccontent-audio/sleepy-warrior/</guid>
       <description>Production and mix by me. Composition made in collaboration with Oliver Dengsø. Listen on Spotify.</description>
     </item>
     <item>
       <title>Student Game -</title>
-      <link>http://localhost:1313/bitesizecontent/theoldones-demo/</link>
+      <link>https://jakoblundoe.com/bitesizecontent/theoldones-demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/bitesizecontent/theoldones-demo/</guid>
+      <guid>https://jakoblundoe.com/bitesizecontent/theoldones-demo/</guid>
       <description>Tools: Reaper, Wwise and Unity</description>
     </item>
     <item>
       <title>The Encore</title>
-      <link>http://localhost:1313/musiccontent-audio/theencore/</link>
+      <link>https://jakoblundoe.com/musiccontent-audio/theencore/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/musiccontent-audio/theencore/</guid>
+      <guid>https://jakoblundoe.com/musiccontent-audio/theencore/</guid>
       <description>Composition, production, mix and master by me.</description>
     </item>
     <item>
       <title>The Old Ones</title>
-      <link>http://localhost:1313/projectcontent/theoldones/</link>
+      <link>https://jakoblundoe.com/projectcontent/theoldones/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projectcontent/theoldones/</guid>
+      <guid>https://jakoblundoe.com/projectcontent/theoldones/</guid>
       <description>Sound design, technical implementation, sound recordist</description>
     </item>
     <item>
       <title>WORK</title>
-      <link>http://localhost:1313/work/</link>
+      <link>https://jakoblundoe.com/work/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/work/</guid>
+      <guid>https://jakoblundoe.com/work/</guid>
       <description>MY WORK</description>
     </item>
     <item>
       <title>Žebra</title>
-      <link>http://localhost:1313/projectcontent/zebra/</link>
+      <link>https://jakoblundoe.com/projectcontent/zebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projectcontent/zebra/</guid>
+      <guid>https://jakoblundoe.com/projectcontent/zebra/</guid>
       <description>Audio post production, sound design, scoring</description>
     </item>
   </channel>
