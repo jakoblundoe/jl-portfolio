@@ -7,6 +7,7 @@ import * as urlStateManager from './modules/url-state-manager.js';
 
 import Plyr from 'plyr';
 import Hammer from 'hammerjs';
+import {toggleTextBox} from "./modules/cinemamodule.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     // HANDLE INTERACTIONS WITH PROJECT OVERLAY BUTTONS
@@ -284,6 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const isShowreelOn = cinemaModule.togglevideo(delayTime);
         cinemaModule.overlayToggle();
         cinemaModule.showreelButtonState(delayTime);
+        cinemaModule.toggleTextBox();
 
         console.log(isShowreelOn);
         urlStateManager.updateURL(isShowreelOn);
