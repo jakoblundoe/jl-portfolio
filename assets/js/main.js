@@ -98,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
         allVideoPlayers.forEach(player => {
             const playerElement = player.elements.container;
             const hammerVideoBtn = new Hammer(playerElement);
-            console.log(hammerVideoBtn);
             hammerVideoBtn.on('tap', (e) => {
                 if (e.target.closest('.plyr__controls')) {
                     e.stopPropagation();
