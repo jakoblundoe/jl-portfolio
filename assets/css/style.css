@@ -35,7 +35,7 @@
 
 .plyr__controls,
 .plyr__control--overlaid {
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.15s ease;
     opacity: 1;
 }
 
@@ -43,10 +43,6 @@
 .plyr.plyr--paused:not(:hover) .plyr__controls,
 .plyr.plyr--paused:not(:hover) .plyr__control--overlaid {
     opacity: 0;
-}
-
-.plyr__control.plyr__control--overlaid {
-    transition: background-color 0.15s ease;
 }
 
 .plyr__control.plyr__control--overlaid:hover {
