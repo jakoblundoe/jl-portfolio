@@ -39,9 +39,9 @@
     opacity: 1;
 }
 
-.plyr.plyr--stopped:not(:hover) .plyr__controls,
-.plyr.plyr--paused:not(:hover) .plyr__controls,
-.plyr.plyr--paused:not(:hover) .plyr__control--overlaid {
+.plyr--video.plyr--stopped:not(:hover) .plyr__controls,
+.plyr--video.plyr--paused:not(:hover) .plyr__controls,
+.plyr--video.plyr--paused:not(:hover) .plyr__control--overlaid {
     opacity: 0;
 }
 
