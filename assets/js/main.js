@@ -92,6 +92,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+    // HANDLE TOUCH INTERACTIONS WITH VIDEO PLAYERS
+    if(touchscreenutilities.isTouchDevice()) {
+        const allVideoPlayers = videoPlayers.concat(musicVideoPlayers);
+        allVideoPlayers.forEach(player => {
+            const playerElement = player.elements.container;
+            const hammerVideoBtn = new Hammer(playerElement);
+            console.log(hammerVideoBtn);
+            hammerVideoBtn.on('tap', (e) => {
+                if (e.target.closest('.plyr__controls')) {
+                    e.stopPropagation();
+                } else {
+                    if (player.playing) {
+                        player.pause();
+                    }
+                }
+            });
+        });
+    }
+
     // PLYR AUDIO PLAYERS
     // Initialize default Plyr for all audio elements with the class 'plyr-audio' applied
     const audioPlayers = Plyr.setup('.plyr-audio', {
