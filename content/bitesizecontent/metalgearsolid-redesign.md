@@ -2,7 +2,7 @@
 title: Cinematic
 title_two:
 type: Sound Redesign
-videopath: https://content.jakoblundoe.com/SoundRedesign-MetalGearSolidV.mp4
+videopath: https://content.jakoblundoe.com/SoundRedesign-MetalGearSolidV-v3.mp4
 order: 0
 card_type: small
 thumbnail: /img/thumbnails/SD-MetalGearSolid-thumbnail.webp
