@@ -32,3 +32,23 @@
     --plyr-video-control-color: rgb(74, 84, 100);
     --plyr-video-progress-buffered-background: rgba(193, 200, 209, 0.6);
 }
+
+.plyr__controls,
+.plyr__control--overlaid {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 1;
+}
+
+.plyr.plyr--stopped:not(:hover) .plyr__controls,
+.plyr.plyr--paused:not(:hover) .plyr__controls,
+.plyr.plyr--paused:not(:hover) .plyr__control--overlaid {
+    opacity: 0;
+}
+
+.plyr__control.plyr__control--overlaid {
+    transition: background-color 0.15s ease;
+}
+
+.plyr__control.plyr__control--overlaid:hover {
+    background-color: black;
+}
