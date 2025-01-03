@@ -66,6 +66,18 @@ export function overlayToggle () {
     }
 }
 
+export function toggleTextBox () {
+    const textBox = document.querySelector('#intro-textbox');
+
+    if (textBox.classList.contains("animate-fadeout")) {
+        textBox.classList.remove("animate-fadeout");
+        textBox.classList.add("animate-fadein");
+    } else {
+        textBox.classList.remove("animate-fadein");
+        textBox.classList.add("animate-fadeout");
+    }
+}
+
 export function showreelButtonState(delayTime) {
     const showreelButton = document.getElementById("showreelbutton");
     const closeReelButton = document.getElementById("close-reel-button");
