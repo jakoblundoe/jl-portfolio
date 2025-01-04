@@ -520,8 +520,8 @@ html{font-family:Inter, sans-serif;--tw-text-opacity:1;color:rgb(50 50 50 / var(
 .container{max-width:1024px}}
 @media (min-width: 1053px){
 .container{max-width:1053px}}
-@media (min-width: 1081px){
-.container{max-width:1081px}}
+@media (min-width: 1064px){
+.container{max-width:1064px}}
 @media (min-width: 1280px){
 .container{max-width:1280px}}
 @media (min-width: 1344px){
@@ -893,7 +893,7 @@ html{font-family:Inter, sans-serif;--tw-text-opacity:1;color:rgb(50 50 50 / var(
 .\32md\:max-w-\[1380px\]{max-width:1380px}
 .\32md\:max-w-\[600px\]{max-width:600px}
 .\32md\:text-left{text-align:left}}
-@media (min-width: 1081px){
+@media (min-width: 1064px){
 .\33md\:mx-4{margin-left:1rem;margin-right:1rem}
 .\33md\:grid{display:grid}
 .\33md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}
