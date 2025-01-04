@@ -21,7 +21,7 @@ module.exports = {
         '1sm': '669px',
         '1md': '952px',
         '2md': '1053px',
-        '3md': '1081px',
+        '3md': '1064px',
         '4md': '1344px',
         'landscapes': {
           'raw': 'only screen and (max-height: 600px) and (orientation: landscape)',
