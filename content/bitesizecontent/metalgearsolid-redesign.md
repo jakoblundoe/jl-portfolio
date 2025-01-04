@@ -2,7 +2,7 @@
 title: Cinematic
 title_two:
 type: Sound Redesign
-videopath: https://content.jakoblundoe.com/Cinematic-MGS5.mp4
+videopath: https://content.jakoblundoe.com/Cinematic-MGS5-60FPS-2K.mp4
 order: 0
 card_type: small
 thumbnail: /img/thumbnails/SD-MetalGearSolid-thumbnail.webp
