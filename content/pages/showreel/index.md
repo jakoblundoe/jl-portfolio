@@ -1,6 +1,6 @@
 ---
 layout: showreel
-title: SHOWREEL
+title: HOME
 tabTitle: Showreel
 inNavbar: true
 navbarOrder: 1
