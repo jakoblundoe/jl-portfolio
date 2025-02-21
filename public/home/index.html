@@ -3,7 +3,7 @@
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Portfolio | Jakob Lundoe</title>
+    <title>Showreel - Portfolio | Jakob Lundoe</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +37,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 <script src="/js/bundle.dev.js" defer></script>
 </head>
-    <body data-page="CONTACT">
+    <body data-page="HOME">
         <div id="mainviewport">
             <div id="sidebarnav" class="fixed top-0 left-0 h-full -translate-x-full bg-white z-30 pl-6 pr-3 border-r border-black">
                 <div class="flex flex-col flex-nowrap justify-end items-start gap-12 h-full">
@@ -53,7 +53,7 @@
         
             
                 
-                    <a href="/home/" data-internal-link="true">HOME</a>
+                    <a href="/home/" data-internal-link="true" class="underline decoration-light-black decoration-1">HOME</a>
                 
             
                 
@@ -65,11 +65,7 @@
                 
             
                 
-                    <a href="/contact/" data-internal-link="true" class="underline decoration-light-black decoration-1">CONTACT</a>
-                
-            
-                
-                    <a href="/content/" data-internal-link="true">CONTENT</a>
+                    <a href="/contact/" data-internal-link="true">CONTACT</a>
                 
             
         
@@ -82,50 +78,67 @@
 </div>
             </div>
             
-<div class="flex flex-col flex-nowrap justify-between min-h-dvh bg-white pb-14">
-    
+<div class="flex justify-center items-center min-h-dvh overflow-x-hidden bg-no-repeat bg-center bg-cover" style="background-image: url('/img/pressphoto-jln.webp');">
+    <div id="overlay" class="fixed opacity-0 w-full h-full bg-overlay-color z-40 cursor-pointer pointer-events-none"></div>
+    <div class="fixed left-0 top-0">
+        
 <div class="py-4 px-6 flex-col gap-3.5">
     
-    <div class="select-text text-nowrap relative after:absolute after:border after:w-full after:border-b-0 after:border-grey">
-        <h1 class="text-5xl" style="font-size: min(8vw, 37.5px);">Portfolio | Jakob Lundoe</h1>
-        <h2 class="text-3xl py-1" style="font-size: min(4.28vw, 22.5px);">Sound Designer, Developer and Composer</h2>
+    <div class="select-text text-white shadow-black text-shadow-md text-nowrap">
+        <h1 class="text-5xl" style="font-size: min(8vw, 50px);">Portfolio | Jakob Lundoe</h1>
+        <h2 class="text-3xl py-2" style="font-size: min(4.28vw, 30px);">Sound Designer, Developer and Composer</h2>
     </div>
     
 </div>
-    <div class="flex flex-col flex-nowrap justify-center items-center gap-8 m-auto py-20 px-10">
-        <div class="select-text flex flex-row justify-center items-start gap-2.5 text-4xl font-medium tracking-wider text-center
-                    sm:text-5xl">
-            
-                <p>LET&rsquo;S TALK!</p>
-
-            
-        </div>
-        <div class="select-text flex flex-col flex-nowrap self-center gap-2.5">
-            <div class="flex self-center p-1 gap-2.5 font-normal text-lg tracking-wide -mt-4
-                        sm:text-xl">
-                
-                    <p><a href="mailto:me@jakoblundoe.com">me@jakoblundoe.com</a></p>
-
-                
-            </div>
-            <div class="flex flex-col justify-center items-center mt-9 gap-2.5">
-                <a href="mailto:me@jakoblundoe.com" class="flex flex-row flex-nowrap justify-center items-center py-5 px-7 gap-2.5 mt-8 border-2 border-solid border-pink rounded-md transition ease-out duration-200 font-normal text-xl text-pink tracking-wide shadow-user-xsm text-shadow-sm
-                hover:bg-transp-grey hover:scale-102 hover:shadow-user-sm
-                active:opacity-70
-                sm:text-2xl">
-                    
-                        <p>CLICK TO EMAIL</p>
-
-                    
-                </a>
+    </div>
+    <div id="showreelvideocontainer" class="hidden place-items-center z-50">
+        <div class="grid place-items-center max-w-[80%] max-h-dvh">
+            <div id="reel-container" class="relative inline-block my-2 mx-1 sm:my-10 sm:mx-4">
+                <video playsinline preload="metadata" controls class="plyr-reel w-full max-h-dvh shadow-user-md z-60">
+                    <source src="https://content.jakoblundoe.com/jl-reel-short-temp-v1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button id="close-reel-button" disabled class="scale-90 absolute animate-fadeout -mr-10 -mt-10 right-2 top-2 disabled:cursor-default disabled:opacity-0 disabled:pointer-events-none cursor-pointer z-60 pointer-events-auto transition ease-out duration-150
+                hover:opacity-25
+                active:opacity-35
+                sm:scale-100
+                ">
+                    <ion-icon name="close-circle-outline" size="large" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1" onmousedown="this.style.opacity=0.5" onmouseup="this.style.opacity=1" style="color: rgba(255, 255, 255, 0.884); transition: opacity 0.3s ease;" alt="circled cross icon"></ion-icon>
+                </button>
             </div>
         </div>
     </div>
+    <div id="spacer" class="h-10">
+    </div>
+    <div id="intro-textbox" class="fixed bottom-24 4md:left-14 shadow-user-sm mt-2.5 landscapes:hidden"> 
+        <div class="absolute inset-0 bg-black translate-x-1 translate-y-1 -z-10 shadow-user-sm">
+        </div>
+        <div class="relative bg-white w-[340px] h-auto border-[1px] border-black px-4 pt-3 pb-2 text-sm [&_p]:pb-3 sm:w-[460px] sm:text-base">
+            <div>
+                
+                <p><strong>Hey there!</strong> My name is Jakob and I am a technical sound designer and software developer. I am passionate about creating engaging interactive software experiences and systems/tools of all kinds and forms!</p>
+<p>Navigate to the <em>Work</em> and <em>About</em> page if you are interested in learning more about my journey with development and audio, up to now.</p>
+<p>Feel free to reach out for a talk or for any questions - I’d be happy to hear from you! <span><ion-icon name="happy-outline" style="font-size: 20px; margin-bottom: -4px; margin-left: 2px"></ion-icon></span></p>
+
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
     
 
 <div id="footer" class="flex flex-row flex-nowrap justify-end items-center pr-6 pl-4 h-12 bg-white fixed bottom-0 w-full z-20 transition ease-out duration-2000
       sm:flex-row sm:justify-between
-      border-t border-solid border-semilightblack">
+      ">
       <div id="bottomnavbar" class="flex flex-row flex-nowrap mr-auto h-12">
         <div class="flex flex-row flex-nowrap justify-center items-center -mr-1">
     <div class="hidden w-12 h-auto items-center justify-start opacity-80 transition ease-out duration-100
@@ -145,7 +158,7 @@
         
             
                 
-                    <a href="/home/" data-internal-link="true">HOME</a>
+                    <a href="/home/" data-internal-link="true" class="underline decoration-light-black decoration-1">HOME</a>
                 
             
                 
@@ -157,11 +170,7 @@
                 
             
                 
-                    <a href="/contact/" data-internal-link="true" class="underline decoration-light-black decoration-1">CONTACT</a>
-                
-            
-                
-                    <a href="/content/" data-internal-link="true">CONTENT</a>
+                    <a href="/contact/" data-internal-link="true">CONTACT</a>
                 
             
         
