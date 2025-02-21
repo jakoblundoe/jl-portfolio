@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bitesizecontents on JL-PORTFOLIO</title>
-    <link>http://localhost:1313/bitesizecontent/</link>
+    <link>https://jakoblundoe.com/bitesizecontent/</link>
     <description>Recent content in Bitesizecontents on JL-PORTFOLIO</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/bitesizecontent/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jakoblundoe.com/bitesizecontent/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Audio Recreation</title>
-      <link>http://localhost:1313/bitesizecontent/prims-redesign/</link>
+      <link>https://jakoblundoe.com/bitesizecontent/prims-redesign/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/bitesizecontent/prims-redesign/</guid>
+      <guid>https://jakoblundoe.com/bitesizecontent/prims-redesign/</guid>
       <description>&lt;p&gt;An attempt to re-create prism entertainments sound logo as closely as possible.&#xA;Created with only using soft synths and processing.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cinematic</title>
-      <link>http://localhost:1313/bitesizecontent/metalgearsolid-redesign/</link>
+      <link>https://jakoblundoe.com/bitesizecontent/metalgearsolid-redesign/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/bitesizecontent/metalgearsolid-redesign/</guid>
+      <guid>https://jakoblundoe.com/bitesizecontent/metalgearsolid-redesign/</guid>
       <description>&lt;p&gt;Cinematic redesign from Metal Gear Solid V.&#xA;My main focus in the design of this clip was to create a realistic feel&#xA;while simultaneously communicating the story and chaos of the individual moments.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Explosion Design</title>
-      <link>http://localhost:1313/bitesizecontent/explosiondesign/</link>
+      <link>https://jakoblundoe.com/bitesizecontent/explosiondesign/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/bitesizecontent/explosiondesign/</guid>
+      <guid>https://jakoblundoe.com/bitesizecontent/explosiondesign/</guid>
       <description></description>
     </item>
     <item>
       <title>Game Jam -</title>
-      <link>http://localhost:1313/bitesizecontent/giantsrest-demo/</link>
+      <link>https://jakoblundoe.com/bitesizecontent/giantsrest-demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/bitesizecontent/giantsrest-demo/</guid>
+      <guid>https://jakoblundoe.com/bitesizecontent/giantsrest-demo/</guid>
       <description>&lt;p&gt;Tools: Reaper, Wwise and Unity&lt;/p&gt;</description>
     </item>
     <item>
       <title>Short Animation</title>
-      <link>http://localhost:1313/bitesizecontent/animation-sd/</link>
+      <link>https://jakoblundoe.com/bitesizecontent/animation-sd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/bitesizecontent/animation-sd/</guid>
+      <guid>https://jakoblundoe.com/bitesizecontent/animation-sd/</guid>
       <description>&lt;p&gt;&lt;em&gt;Animations by Mathias Gregersen.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Student Game -</title>
-      <link>http://localhost:1313/bitesizecontent/theoldones-demo/</link>
+      <link>https://jakoblundoe.com/bitesizecontent/theoldones-demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/bitesizecontent/theoldones-demo/</guid>
+      <guid>https://jakoblundoe.com/bitesizecontent/theoldones-demo/</guid>
       <description>&lt;p&gt;Tools: Reaper, Wwise and Unity&lt;/p&gt;</description>
     </item>
   </channel>

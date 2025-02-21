@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on JL-PORTFOLIO</title>
-    <link>http://localhost:1313/pages/</link>
+    <link>https://jakoblundoe.com/pages/</link>
     <description>Recent content in Pages on JL-PORTFOLIO</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jakoblundoe.com/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ABOUT</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://jakoblundoe.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://jakoblundoe.com/about/</guid>
       <description></description>
     </item>
     <item>
       <title>CONTACT</title>
-      <link>http://localhost:1313/contact/</link>
+      <link>https://jakoblundoe.com/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
+      <guid>https://jakoblundoe.com/contact/</guid>
       <description></description>
     </item>
     <item>
       <title>CONTENT</title>
-      <link>http://localhost:1313/content/</link>
+      <link>https://jakoblundoe.com/content/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/content/</guid>
-      <description>&lt;p&gt;test&lt;/p&gt;</description>
+      <guid>https://jakoblundoe.com/content/</guid>
+      <description></description>
     </item>
     <item>
       <title>HOME</title>
-      <link>http://localhost:1313/home/</link>
+      <link>https://jakoblundoe.com/home/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/</guid>
+      <guid>https://jakoblundoe.com/home/</guid>
       <description></description>
     </item>
     <item>
       <title>WORK</title>
-      <link>http://localhost:1313/work/</link>
+      <link>https://jakoblundoe.com/work/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/work/</guid>
+      <guid>https://jakoblundoe.com/work/</guid>
       <description>&lt;p&gt;&lt;span&gt;MY&lt;/span&gt; WORK&lt;/p&gt;</description>
     </item>
   </channel>

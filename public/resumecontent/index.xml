@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Resumecontents on JL-PORTFOLIO</title>
-    <link>http://localhost:1313/resumecontent/</link>
+    <link>https://jakoblundoe.com/resumecontent/</link>
     <description>Recent content in Resumecontents on JL-PORTFOLIO</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/resumecontent/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jakoblundoe.com/resumecontent/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Courses</title>
-      <link>http://localhost:1313/resumecontent/courses/</link>
+      <link>https://jakoblundoe.com/resumecontent/courses/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/resumecontent/courses/</guid>
+      <guid>https://jakoblundoe.com/resumecontent/courses/</guid>
       <description>&lt;h4 id=&#34;2024&#34;&gt;2024&lt;/h4&gt;&#xA;&lt;h3 id=&#34;the-odin-project---foundational-course&#34;&gt;The Odin Project - Foundational Course&lt;/h3&gt;&#xA;&lt;p&gt;Extensive course in event-driven programming and front-end software development. Some of the topics included: version control with git, algorithmic understanding, JavaScript, html and css.&lt;/p&gt;&#xA;&lt;h4 id=&#34;2022&#34;&gt;2022&lt;/h4&gt;&#xA;&lt;h3 id=&#34;wwise-301---wwise-unity-integration&#34;&gt;Wwise 301 - Wwise Unity Integration&lt;/h3&gt;&#xA;&lt;p&gt;A course which covers the integration between Wwise and Unity and covers all the tools necessary to implement audio and music from Wwise into the Unity game engine.&lt;/p&gt;&#xA;&lt;h3 id=&#34;wwise-201---interactive-music&#34;&gt;Wwise 201 - Interactive Music&lt;/h3&gt;&#xA;&lt;p&gt;A course which covers everything related to implementing dynamic music with Wwise and highly focused on the possibilities and obstacles present when composing in an interactive context.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Education</title>
-      <link>http://localhost:1313/resumecontent/education/</link>
+      <link>https://jakoblundoe.com/resumecontent/education/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/resumecontent/education/</guid>
+      <guid>https://jakoblundoe.com/resumecontent/education/</guid>
       <description>&lt;h4 id=&#34;2021---2024&#34;&gt;2021 - 2024&lt;/h4&gt;&#xA;&lt;h3 id=&#34;audio-design--aarhus-university&#34;&gt;Audio Design | Aarhus University&lt;/h3&gt;&#xA;&lt;p&gt;Master of Science (MSc) in Information Technology (Digital Design, Audio Design).&lt;/p&gt;&#xA;&lt;h4 id=&#34;2017---2020&#34;&gt;2017 - 2020&lt;/h4&gt;&#xA;&lt;h3 id=&#34;bachelor-of-music--the-royal-academy-of-music&#34;&gt;Bachelor of Music | The Royal Academy of Music&lt;/h3&gt;&#xA;&lt;p&gt;With a focus on &lt;strong&gt;audio engineering and production&lt;/strong&gt;, &lt;strong&gt;sound design&lt;/strong&gt; and contemporary &lt;strong&gt;electronic music&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Experience</title>
-      <link>http://localhost:1313/resumecontent/experience/</link>
+      <link>https://jakoblundoe.com/resumecontent/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/resumecontent/experience/</guid>
+      <guid>https://jakoblundoe.com/resumecontent/experience/</guid>
       <description>&lt;h4 id=&#34;jun-2024---present&#34;&gt;Jun 2024 - present&lt;/h4&gt;&#xA;&lt;h3 id=&#34;frontend-developer&#34;&gt;Frontend Developer&lt;/h3&gt;&#xA;&lt;h5 id=&#34;project--part-time&#34;&gt;Project | Part time&lt;/h5&gt;&#xA;&lt;p&gt;Web design and development&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Project Management&lt;/li&gt;&#xA;&lt;li&gt;UX/UI design&lt;/li&gt;&#xA;&lt;li&gt;HTML, CSS, Javascript&lt;/li&gt;&#xA;&lt;li&gt;Versions Control (Git)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;em&gt;From design to development of my portfolio website I have gained a lot of knowledge with the general concepts of web frontend development.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;aug-2023---feb-2024&#34;&gt;Aug 2023 - Feb 2024&lt;/h4&gt;&#xA;&lt;h3 id=&#34;technical-sound-designer&#34;&gt;Technical Sound Designer&lt;/h3&gt;&#xA;&lt;h5 id=&#34;company-gumbo-games-startup--part-time&#34;&gt;Company: Gumbo Games (startup) | Part time&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Developing audiosystems in Unity with C#.&lt;/li&gt;&#xA;&lt;li&gt;Using the version control software tool Git in the development process.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;em&gt;Learned a lot about remote collaboration and how to use version control tool Git in the development process.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
