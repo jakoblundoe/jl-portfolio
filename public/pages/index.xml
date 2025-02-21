@@ -22,6 +22,13 @@
       <description></description>
     </item>
     <item>
+      <title>CONTENT</title>
+      <link>http://localhost:1313/content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/content/</guid>
+      <description>&lt;p&gt;test&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>HOME</title>
       <link>http://localhost:1313/home/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

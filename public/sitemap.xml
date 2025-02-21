@@ -24,6 +24,8 @@
   </url><url>
     <loc>http://localhost:1313/contact/</loc>
   </url><url>
+    <loc>http://localhost:1313/content/</loc>
+  </url><url>
     <loc>http://localhost:1313/resumecontent/courses/</loc>
   </url><url>
     <loc>http://localhost:1313/projectcontent/droemmefanger/</loc>
